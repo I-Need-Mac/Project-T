@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ public class CSVReader
     const string TABLE_HOME = "Table/";
 
     private static Dictionary<string, Dictionary<string, Dictionary<string, object>>> cachedTable = new Dictionary<string, Dictionary<string, Dictionary<string, object>>>();
-
+    
     public static object Read(string file, string row, string col)
     {
         Dictionary<string, Dictionary<string, object>> dataDic = Read(file);
@@ -26,7 +26,7 @@ public class CSVReader
             }
         }
 
-        DebugManager.Instance.PrintDebug("[Read] {0} µ¥ÀÌÅÍ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.", col);
+        DebugManager.Instance.PrintDebug("[Read] {0} ë°ì´í„°ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.", col);
         return null;
     }
 
@@ -37,18 +37,18 @@ public class CSVReader
 
         if (cachedTable.ContainsKey(file))
         {
-            DebugManager.Instance.PrintDebug("[Read] Ä³½Ã µ¥ÀÌÅÍ »ç¿ë");
+            DebugManager.Instance.PrintDebug("[Read] ìºì‹œ ë°ì´í„° ì‚¬ìš©");
             dataDic = cachedTable[file];
         }
 
         else
         {
-            DebugManager.Instance.PrintDebug("[Read] ½Å±Ô µ¥ÀÌÅÍ ·Îµå »ç¿ë");
+            DebugManager.Instance.PrintDebug("[Read] ì‹ ê·œ ë°ì´í„° ë¡œë“œ ì‚¬ìš©");
             TextAsset data = Resources.Load(TABLE_HOME + file) as TextAsset;
 
             if (data == null)
             {
-                Debug.LogErrorFormat("[Read] {0} ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.", TABLE_HOME + file);
+                Debug.LogErrorFormat("[Read] {0} íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.", TABLE_HOME + file);
                 return null;
             }
 
@@ -56,7 +56,7 @@ public class CSVReader
 
             if (lines.Length <= 3)
             {
-                Debug.LogErrorFormat("[Read] ÇØ´ç ÆÄÀÏÀÇ ³»¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+                Debug.LogErrorFormat("[Read] í•´ë‹¹ íŒŒì¼ì˜ ë‚´ìš©ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 return null;
             }
 
@@ -96,7 +96,7 @@ public class CSVReader
 
         if (data == null)
         {
-            Debug.LogErrorFormat("[FindRead] {0} ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.", file);
+            Debug.LogErrorFormat("[FindRead] {0} íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.", file);
             return null;
         }
 
@@ -104,7 +104,7 @@ public class CSVReader
 
         if (lines.Length <= 3)
         {
-            Debug.LogErrorFormat("[FindRead] ÇØ´ç ÆÄÀÏÀÇ ³»¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+            Debug.LogErrorFormat("[FindRead] í•´ë‹¹ íŒŒì¼ì˜ ë‚´ìš©ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
             return null;
         }
 
@@ -181,7 +181,7 @@ public class CSVReader
 
 //	if (data == null)
 //       {
-//		Debug.LogErrorFormat("[Read] {0} ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.", file);
+//		Debug.LogErrorFormat("[Read] {0} íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.", file);
 //		return null;
 //       }
 
@@ -189,7 +189,7 @@ public class CSVReader
 
 //	if (lines.Length <= 3)
 //	{
-//		Debug.LogErrorFormat("[Read] ÇØ´ç ÆÄÀÏÀÇ ³»¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+//		Debug.LogErrorFormat("[Read] í•´ë‹¹ íŒŒì¼ì˜ ë‚´ìš©ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 //		return null;
 //	}
 
@@ -238,7 +238,7 @@ public class CSVReader
 
 //       if (data == null)
 //       {
-//           Debug.LogErrorFormat("[Read] {0} ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.", file);
+//           Debug.LogErrorFormat("[Read] {0} íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.", file);
 //           return null;
 //       }
 
@@ -246,7 +246,7 @@ public class CSVReader
 
 //       if (lines.Length <= 3)
 //       {
-//           Debug.LogErrorFormat("[Read] ÇØ´ç ÆÄÀÏÀÇ ³»¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+//           Debug.LogErrorFormat("[Read] í•´ë‹¹ íŒŒì¼ì˜ ë‚´ìš©ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 //           return null;
 //       }
 
