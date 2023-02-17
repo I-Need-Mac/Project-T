@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,31 +6,31 @@ using UnityEngine;
 public class LocalizeManager : SingleTon<LocalizeManager>
 {
 
-    private string[] LANGUAGE = new string[] { "Korean", "English", "Japanese" };                                                           //¾ğ¾î Ä®·³¸í
-    private int langType;                                                                                                                   //¾ğ¾î ³Ñ¹ö¸µ 0 ÇÑ±¹¾î, 1 ¿µ¾î, 2 ÀÏº»¾î
-    private Dictionary<string, Dictionary<string, object>> localTableData = new Dictionary<string, Dictionary<string, object>>();           //·ÎÄÃ¶óÀÌÁî ID µñ¼Å³Ê¸® ¾ÆÀÌµğ°ªÀ¸·Î ¸ğµç µ¥ÀÌÅÍ¸¦ ³ÖÀ½
+    private string[] LANGUAGE = new string[] { "Korean", "English", "Japanese" };                                                           //ì–¸ì–´ ì¹¼ëŸ¼ëª…
+    private int langType;                                                                                                                   //ì–¸ì–´ ë„˜ë²„ë§ 0 í•œêµ­ì–´, 1 ì˜ì–´, 2 ì¼ë³¸ì–´
+    private Dictionary<string, Dictionary<string, object>> localTableData = new Dictionary<string, Dictionary<string, object>>();           //ë¡œì»¬ë¼ì´ì¦ˆ ID ë”•ì…”ë„ˆë¦¬ ì•„ì´ë””ê°’ìœ¼ë¡œ ëª¨ë“  ë°ì´í„°ë¥¼ ë„£ìŒ
 
     public LocalizeManager()
-    {                                                                                                              //·ÎÄÃ¶óÀÌÁî ¸Å´ÏÀú »ı¼º
-        SetLocalizeManager();                                                                                                               //·ÎÄÃ¶óÀÌÁî ±âº» ¼³Á¤
+    {                                                                                                              //ë¡œì»¬ë¼ì´ì¦ˆ ë§¤ë‹ˆì € ìƒì„±
+        SetLocalizeManager();                                                                                                               //ë¡œì»¬ë¼ì´ì¦ˆ ê¸°ë³¸ ì„¤ì •
     }
     public void SetLocalizeManager()
-    {                                                                                                       //·ÎÄÃ¶óÀÌ½º ¼ÂÆÃ ÇÔ¼ö (¼³Á¤¿¡¼­ ¾ğ¾î º¯°æ ½Ã ÇØÁà¾ßÇÔ)
+    {                                                                                                       //ë¡œì»¬ë¼ì´ìŠ¤ ì…‹íŒ… í•¨ìˆ˜ (ì„¤ì •ì—ì„œ ì–¸ì–´ ë³€ê²½ ì‹œ í•´ì¤˜ì•¼í•¨)
         SetLangType();
         GetLocalizeTable();
     }
     public void SetLangType()
-    {                                                                                                             //¼³Á¤ÆÄÀÏ¿¡¼­ µ¥ÀÌÅÍ¸¦ ÀĞ¾î¿Í¼­ ±âÁØ ¾ğ¾î·Î ¼¼ÆÃ
+    {                                                                                                             //ì„¤ì •íŒŒì¼ì—ì„œ ë°ì´í„°ë¥¼ ì½ì–´ì™€ì„œ ê¸°ì¤€ ì–¸ì–´ë¡œ ì„¸íŒ…
         langType = SettingManager.Instance.GetSettingValue("lang");
     }
 
     public void GetLocalizeTable()
-    {                                                                                                        //·ÎÄÃ¶óÀÌÁî µ¥ÀÌÅÍ¸¦ Å×ÀÌºí¿¡¼­ ·Îµå
+    {                                                                                                        //ë¡œì»¬ë¼ì´ì¦ˆ ë°ì´í„°ë¥¼ í…Œì´ë¸”ì—ì„œ ë¡œë“œ
         localTableData = CSVReader.Read("Localize");
     }
 
     public string GetText(string targetID)
-    {                                                                                                //¾ÆÀÌµğ·Î µ¥ÀÌÅÍ¸¦ ¹İÈ¯ÇÔ
+    {                                                                                                //ì•„ì´ë””ë¡œ ë°ì´í„°ë¥¼ ë°˜í™˜í•¨
         return Convert.ToString(localTableData[targetID][LANGUAGE[langType]]);
     }
 }
