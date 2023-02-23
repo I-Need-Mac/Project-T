@@ -6,26 +6,25 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public TMP_Text StoryText;
-    public TMP_Text Choice_1;
-    public TMP_Text Choice_2;
-    public TMP_Text Choice_3;
-    public TMP_Text Choice_4;
+    public TMP_Text[] ChoiceText;
+
+    Dictionary<string, Dictionary<string, object>> story_load;
+    Dictionary<string, Dictionary<string, object>> story;
+    Dictionary<string, Dictionary<string, object>> choice;
 
     // Start is called before the first frame update
     void Start()
     {
-        Dictionary<string, Dictionary<string, object>> story_load = CSVReader.Read("Story_load");
+        story_load = CSVReader.Read("Story_load");
         DebugManager.Instance.PrintDebug("story_load");
 
-        Dictionary<string, Dictionary<string, object>> story = CSVReader.Read("Story");
+        story = CSVReader.Read("Story");
         DebugManager.Instance.PrintDebug("story");
-        //Dictionary<string, Dictionary<string, object>> choice = CSVReader.Read("Choice");
+        
+        choice = CSVReader.Read("Choice");
+        DebugManager.Instance.PrintDebug("choice");
 
-        DebugManager.Instance.PrintDebug(story_load["RYTA1001"]["choice_group_ID"]);
-
-        DebugManager.Instance.PrintDebug(story);
-
-        DebugManager.Instance.PrintDebug((string)(story["RYTA1001"]["story"]));
+        StoryUpdate("RYTA1001");
 
     }
 
@@ -35,13 +34,40 @@ public class GameManager : MonoBehaviour
         
     }
 
+    //스토리 매니저에 들어갈 부분
+    void StoryUpdate(string storyID)
+    {
+        string storyT = (string)story[storyID]["story"];
+        string choice_ID = (string)story_load[storyID]["choice_group_ID"];
+
+        DebugManager.Instance.PrintDebug(storyT);
+
+        storyT = storyT.Replace("\\c", ",").Replace("\\n", "\n");
+
+        DebugManager.Instance.PrintDebug(storyT);
+
+        StoryChange(storyT);
+
+        string choice_1 = choice.ContainsKey(choice_ID + "1") ? (string)choice[choice_ID + "1"]["choice_text_ID"] : "";
+        string choice_2 = choice.ContainsKey(choice_ID + "2") ? (string)choice[choice_ID + "2"]["choice_text_ID"] : "";
+        string choice_3 = choice.ContainsKey(choice_ID + "3") ? (string)choice[choice_ID + "3"]["choice_text_ID"] : "";
+        string choice_4 = choice.ContainsKey(choice_ID + "4") ? (string)choice[choice_ID + "4"]["choice_text_ID"] : "";
+
+
+        ChoiceChange(choice_1, choice_2, choice_3, choice_4);
+    }
+    //UI 매니저에 들어갈 부분
     public void StoryChange(string story)
     {
         StoryText.text = story;
     }
-    public void choiceChange(string story)
+    public void ChoiceChange(string choice_1, string choice_2, string choice_3, string choice_4)
     {
-        //오류 있어서 좀 물어봐야함.
-        StoryText.text = story;
+        // 나눠주는거 구현들어오는거 판단해서 
+        ChoiceText[0].text = choice_1;
+        ChoiceText[1].text = choice_2;
+        ChoiceText[2].text = choice_3;
+        ChoiceText[3].text = choice_4;
     }
+
 }

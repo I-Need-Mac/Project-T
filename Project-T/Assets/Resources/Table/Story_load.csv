@@ -1,5 +1,5 @@
 story_ID,choice_group_ID,Target_type,Target_change_value,hidden_Choice_condition_type,hidden_Choice_condition_value
-½ºÅä¸®,¼±ÅÃÁö,¾ÆÀÌÅÛ ¼ö·® º¯°æ,,¼û°ÜÁø ¼±ÅÃÁö¸¦ ³ëÃâÇÒ Áö È®ÀÎÇÏ´Â Á¶°Ç,
+ìŠ¤í† ë¦¬,ì„ íƒì§€,ì•„ì´í…œ ìˆ˜ëŸ‰ ë³€ê²½,,ìˆ¨ê²¨ì§„ ì„ íƒì§€ë¥¼ ë…¸ì¶œí•  ì§€ í™•ì¸í•˜ëŠ” ì¡°ê±´,
 String,String,String,int,string,int
 RYTA1001,RYTA_C1001,NULL,0,NULL,0
 RYTA1002,,NULL,0,NULL,0
