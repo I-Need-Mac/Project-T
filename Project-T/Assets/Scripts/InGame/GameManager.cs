@@ -5,14 +5,23 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject StoryArea;
+    public GameObject OptionArea;
+
     public TMP_Text StoryText;
     public TMP_Text[] ChoiceText;
 
     public string curentStoryID;
 
+    RectTransform StoryRectTran;
+    RectTransform OptionRectTran;
+
     // Start is called before the first frame update
     void Start()
     {
+        StoryRectTran = StoryArea.GetComponent<RectTransform>();
+        OptionRectTran = OptionArea.GetComponent<RectTransform>();
+
         DebugManager.Instance.PrintDebug("choice");
 
         StoryUpdate("RYTA1001");
@@ -57,8 +66,15 @@ public class GameManager : MonoBehaviour
     }
     public void ChoiceChange(string[] choice)
     {
+        int count = choice.Length;
+
+        OptionRectTran.anchoredPosition = new Vector3(0, 55 * count, 0);
+        OptionRectTran.sizeDelta = new Vector2(OptionRectTran.sizeDelta.x, 110 * count);
+
+        StoryRectTran.offsetMin = new Vector2(StoryRectTran.offsetMin.x, 110 * count);
+
         // 나눠주는거 구현들어오는거 판단해서 
-        for (int i = 0; i < choice.Length; i++)
+        for (int i = 0; i < count; i++)
         {
             ChoiceText[i].text = choice[i];
         }
