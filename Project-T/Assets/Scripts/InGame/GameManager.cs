@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public string curentStoryID;
 
+    public string[] choiceStoryID = new string[4];
+
     RectTransform StoryRectTran;
     RectTransform OptionRectTran;
 
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < choices.Length; i++)
         {
             choice[i] = (string)choices[i]["choice_text_ID"];
+            choiceStoryID[i] = (string)choices[i]["And_result"];
         }
 
         ChoiceChange(choice);
@@ -79,5 +82,23 @@ public class GameManager : MonoBehaviour
             ChoiceText[i].text = choice[i];
         }
     }
+
+    public void SelectChoice1()
+    {
+        StoryUpdate(choiceStoryID[0]);
+    }
+    public void SelectChoice2()
+    {
+        StoryUpdate(choiceStoryID[1]);
+    }
+    public void SelectChoice3()
+    {
+        StoryUpdate(choiceStoryID[2]);
+    }
+    public void SelectChoice4()
+    {
+        StoryUpdate(choiceStoryID[3]);
+    }
+
 
 }

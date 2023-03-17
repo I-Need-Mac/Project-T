@@ -1,6 +1,6 @@
 choice_TID,result_Index,choice_group_ID,hidden_bool,choice_text_ID,condition1_type,condition1_standard,condition_1_value,condition_2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result
 ,,,,,컨디션 1 판별 기준,,,컨디션2 판별 기준,,,"컨디션1,2 모두 성공",컨디션1 성공,컨디션2 성공,"컨디션1,2 모두 실패"
 String,int,,bool,string,string,string,int,string,string,int,string,string,string,string
-RYTA_C10011,1,RYTA_C1001,FALSE,순수한 아이들이 읽었을 때 때묻지 않은 상상력을 펼칠 수 있는 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA_C1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
-RYTA_C10012,2,RYTA_C1001,FALSE,아이들이 읽는 현실성 없는 판타지적 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA_C1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
-RYTA_C10013,3,RYTA_C1001,FALSE,지금은 읽을 수 없는 유치한 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA_C1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
+RYTA_C10011,1,RYTA_C1001,FALSE,순수한 아이들이 읽었을 때 때묻지 않은 상상력을 펼칠 수 있는 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
+RYTA_C10012,2,RYTA_C1001,FALSE,아이들이 읽는 현실성 없는 판타지적 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
+RYTA_C10013,3,RYTA_C1001,FALSE,지금은 읽을 수 없는 유치한 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
