@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject StoryArea;
     public GameObject OptionArea;
 
+    public GameObject sizeFit;
+
     public TMP_Text StoryText;
     public TMP_Text[] ChoiceText;
 
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     RectTransform StoryRectTran;
     RectTransform OptionRectTran;
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour
     {
         StoryText.text = story;
     }
+
     public void ChoiceChange(string[] choice)
     {
         int count = choice.Length;
