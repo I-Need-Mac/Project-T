@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
     public GameObject StoryArea;
     public GameObject OptionArea;
 
-    public GameObject sizeFit;
-
     public TMP_Text StoryText;
     public TMP_Text[] ChoiceText;
 

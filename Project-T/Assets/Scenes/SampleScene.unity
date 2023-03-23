@@ -1604,37 +1604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit
-
-    sizeFit'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5aea87e9a3665e4dbe84464dd954070, type: 2}
   m_sharedMaterial: {fileID: -6677361102528859099, guid: c5aea87e9a3665e4dbe84464dd954070, type: 2}
