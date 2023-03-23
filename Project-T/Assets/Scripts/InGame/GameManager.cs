@@ -11,9 +11,10 @@ public class GameManager : MonoBehaviour
     public TMP_Text StoryText;
     public TMP_Text[] ChoiceText;
 
-    public string curentStoryID;
+    private string curentStoryID;
 
-    public string[] choiceStoryID = new string[4];
+    private string[] choiceStoryID = new string[4];
+    private string[] choiceResultID = new string[4];
 
     RectTransform StoryRectTran;
     RectTransform OptionRectTran;
@@ -85,19 +86,28 @@ public class GameManager : MonoBehaviour
 
     public void SelectChoice1()
     {
-        StoryUpdate(choiceStoryID[0]);
+        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[0]);
+
+        StoryUpdate((string)choice_Result["Story_id_1"]);
+
     }
     public void SelectChoice2()
     {
-        StoryUpdate(choiceStoryID[1]);
+        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[1]);
+
+        StoryUpdate((string)choice_Result["Story_id_1"]);
     }
     public void SelectChoice3()
     {
-        StoryUpdate(choiceStoryID[2]);
+        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[2]);
+
+        StoryUpdate((string)choice_Result["Story_id_1"]);
     }
     public void SelectChoice4()
     {
-        StoryUpdate(choiceStoryID[3]);
+        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[3]);
+
+        StoryUpdate((string)choice_Result["Story_id_1"]);
     }
 
 
