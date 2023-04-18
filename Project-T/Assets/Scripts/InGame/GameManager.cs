@@ -11,10 +11,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text StoryText;
     public TMP_Text[] ChoiceText;
 
-    private string curentStoryID;
+    Dictionary<string, object>[] choices;
 
     private string[] choiceStoryID = new string[4];
-    private string[] choiceResultID = new string[4];
 
     RectTransform StoryRectTran;
     RectTransform OptionRectTran;
@@ -28,7 +27,7 @@ public class GameManager : MonoBehaviour
 
         DebugManager.Instance.PrintDebug("choice");
 
-        StoryUpdate("RYTA1001");
+        StoryUpdate("Story_0001");
 
     }
 
@@ -52,13 +51,12 @@ public class GameManager : MonoBehaviour
         StoryChange(storyT);
 
 
-        Dictionary<string, object>[] choices = StoryManager.Instance.getChoice(choiceID);
+        choices = StoryManager.Instance.getChoice(choiceID);
 
         string[] choice = new string[choices.Length];
         for(int i = 0; i < choices.Length; i++)
         {
             choice[i] = (string)choices[i]["choice_text_ID"];
-            choiceStoryID[i] = (string)choices[i]["And_result"];
         }
 
         ChoiceChange(choice);
@@ -88,28 +86,36 @@ public class GameManager : MonoBehaviour
 
     public void SelectChoice1()
     {
-        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[0]);
-
-        StoryUpdate((string)choice_Result["Story_id_1"]);
-
+        StoryUpdate(ResultDecode((string)choices[0]["fail_result"]));
     }
     public void SelectChoice2()
     {
-        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[1]);
-
-        StoryUpdate((string)choice_Result["Story_id_1"]);
+        StoryUpdate(ResultDecode((string)choices[1]["fail_result"]));
     }
     public void SelectChoice3()
     {
-        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[2]);
-
-        StoryUpdate((string)choice_Result["Story_id_1"]);
+        StoryUpdate(ResultDecode((string)choices[2]["fail_result"]));
     }
     public void SelectChoice4()
     {
-        Dictionary<string, object> choice_Result = StoryManager.Instance.getChoice_result(choiceStoryID[3]);
+        StoryUpdate(ResultDecode((string)choices[3]["fail_result"]));
+    }
 
-        StoryUpdate((string)choice_Result["Story_id_1"]);
+    public string ResultDecode(string resultText)
+    {
+        string[] resultSplit = resultText.Split("_");
+
+        int randomNum = Random.Range(0, 100);
+
+        for (int i = 0; i < resultText.Length/2; i++)
+        {
+            randomNum -= int.Parse(resultSplit[i * 2 + 1].Substring(1));
+            if(randomNum < 0)
+            {
+                return resultSplit[i * 2].Replace("R", "Story_");
+            }
+        }
+        return "오류";
     }
 
 

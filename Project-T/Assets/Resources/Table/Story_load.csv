@@ -1,4 +1,4 @@
-story_ID,choice_group_ID,Target_type,Target_change_value,Target_type,Target_change_value
+story_ID,choice_group_ID,Target1_type,Target1_change_value,Target2_type,Target2_change_value
 Story_0001,선택지,아이템 수량 변경,,아이템 수량 변경,
 String,String,String,int,String,int
 Story_0001,Choice_FoodMenu_00,,,,
@@ -19,11 +19,11 @@ Story_0015,Choice_VisitStore_01,,,,
 Story_0016,Choice_StoryFlow_04,Item_Money,-1000,,
 Story_0017,Choice_StoryFlow_04,Item_Money,-1000,,
 Story_0018,Choice_StoryFlow_04,,,,
-Story_0019,Choice_StoryFlow_04,,,,
-Story_0020,Choice_ GetItem_00,,,,
-Story_0021,Choice_StoryFlow_05,Item_Bag,1,,
-Story_0022,Choice_lossItem_00,,,,
-Story_0023,Choice_StoryFlow_06,Item_Bag,-1,,
+Story_0019,Choice_ GetItem_00,,,,
+Story_0020,Choice_StoryFlow_05,Item_Bag,1,,
+Story_0021,Choice_lossItem_00,,,,
+Story_0022,Choice_StoryFlow_06,Item_Bag,-1,,
+Story_0023,,,,,
 Story_0024,,,,,
 Story_0025,,,,,
 Story_0026,,,,,
