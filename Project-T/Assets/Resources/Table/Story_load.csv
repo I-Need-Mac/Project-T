@@ -1,7 +1,7 @@
 story_ID,choice_group_ID,Target1_type,Target1_change_value,Target2_type,Target2_change_value
 Story_0001,선택지,아이템 수량 변경,,아이템 수량 변경,
 String,String,String,int,String,int
-Story_0001,Choice_FoodMenu_00,,,,
+Story_0001,Choice_FoodMenu_00,Item_Money,1000,,
 Story_0002,Choice_StoryFlow_00,Item_Hamberger,-1,,
 Story_0003,Choice_StoryFlow_00,Item_Pizza,-1,,
 Story_0004,Choice_StoryFlow_00,Item_Chicken,-1,,

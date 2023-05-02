@@ -7,6 +7,7 @@ public class StoryManager : SingleTon<StoryManager>
     private Dictionary<string, Dictionary<string, object>> story_load;
     private Dictionary<string, Dictionary<string, object>> story;
     private Dictionary<string, Dictionary<string, object>> choice;
+    private Dictionary<string, Dictionary<string, object>> item;
 
     public StoryManager()
     {
@@ -27,6 +28,9 @@ public class StoryManager : SingleTon<StoryManager>
 
         choice = CSVReader.Read("Choice");
         DebugManager.Instance.PrintDebug("choice");
+
+        item = CSVReader.Read("Item_Definition");
+        DebugManager.Instance.PrintDebug("Item_Definition");
 
     }
 
@@ -60,5 +64,9 @@ public class StoryManager : SingleTon<StoryManager>
         return Choices;
     }
 
+    public Dictionary<string, object> getItem(string itemID)
+    {
+        return item[itemID];
+    }
 
 }
