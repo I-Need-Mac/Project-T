@@ -34,17 +34,17 @@ public class StoryManager : SingleTon<StoryManager>
 
     }
 
-    public Dictionary<string, object> getStory_load(string storyID)
+    public Dictionary<string, object> GetStory_load(string storyID)
     {
         return story_load[storyID];
     }
 
-    public Dictionary<string, object> getStory(string storyID)
+    public Dictionary<string, object> GetStory(string storyID)
     {
         return story[storyID];
     }
 
-    public Dictionary<string, object>[] getChoice(string choiceID)
+    public Dictionary<string, object>[] GetChoice(string choiceID)
     {
         int countChoice = 0;
         for(int i = 1; i <= 4; i++)
@@ -64,7 +64,7 @@ public class StoryManager : SingleTon<StoryManager>
         return Choices;
     }
 
-    public Dictionary<string, object> getItem(string itemID)
+    public Dictionary<string, object> GetItem(string itemID)
     {
         return item[itemID];
     }

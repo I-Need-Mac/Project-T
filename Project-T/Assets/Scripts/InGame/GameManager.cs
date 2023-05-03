@@ -39,23 +39,23 @@ public class GameManager : MonoBehaviour
 
     void StoryUpdate(string storyID)
     {
-        Dictionary<string, object> StoryLoad = StoryManager.Instance.getStory_load(storyID);
+        Dictionary<string, object> StoryLoad = StoryManager.Instance.GetStory_load(storyID);
 
         //아이템 
 
         if (!string.Equals((string)StoryLoad["Target1_type"], ""))
         {
-            InventoryManager.Instance.add((string)StoryLoad["Target1_type"], (string)StoryLoad["Target1_change_value"]);
+            InventoryManager.Instance.Add((string)StoryLoad["Target1_type"], (string)StoryLoad["Target1_change_value"]);
         }
 
         if (!string.Equals((string)StoryLoad["Target2_type"], ""))
         {
-            InventoryManager.Instance.add((string)StoryLoad["Target1_type"], (string)StoryLoad["Target2_change_value"]);
+            InventoryManager.Instance.Add((string)StoryLoad["Target1_type"], (string)StoryLoad["Target2_change_value"]);
         }
 
         // 스토리 로드
 
-        string storyT = (string)StoryManager.Instance.getStory(storyID)["story"];
+        string storyT = (string)StoryManager.Instance.GetStory(storyID)["story"];
         string choiceID = (string)StoryLoad["choice_group_ID"];
 
         DebugManager.Instance.PrintDebug(storyT);
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         StoryChange(storyT);
 
 
-        choices = StoryManager.Instance.getChoice(choiceID);
+        choices = StoryManager.Instance.GetChoice(choiceID);
 
         string[] choice = new string[choices.Length];
         for(int i = 0; i < choices.Length; i++)
@@ -102,8 +102,8 @@ public class GameManager : MonoBehaviour
 
     public void SelectChoice1()
     {
-        bool isCondition1 = InventoryManager.Instance.isCondition((string)choices[0]["condition1_type"], (string)choices[0]["condition1_standard"], (string)choices[0]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.isCondition((string)choices[0]["condition2_type"], (string)choices[0]["condition2_standard"], (string)choices[0]["condition2_value"]);
+        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[0]["condition1_type"], (string)choices[0]["condition1_standard"], (string)choices[0]["condition1_value"]);
+        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[0]["condition2_type"], (string)choices[0]["condition2_standard"], (string)choices[0]["condition2_value"]);
 
         if (isCondition1)
         {
@@ -131,8 +131,8 @@ public class GameManager : MonoBehaviour
     public void SelectChoice2()
     {
         
-        bool isCondition1 = InventoryManager.Instance.isCondition((string)choices[1]["condition1_type"], (string)choices[1]["condition1_standard"], (string)choices[1]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.isCondition((string)choices[1]["condition2_type"], (string)choices[1]["condition2_standard"], (string)choices[1]["condition2_value"]);
+        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[1]["condition1_type"], (string)choices[1]["condition1_standard"], (string)choices[1]["condition1_value"]);
+        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[1]["condition2_type"], (string)choices[1]["condition2_standard"], (string)choices[1]["condition2_value"]);
 
         if (isCondition1)
         {
@@ -159,8 +159,8 @@ public class GameManager : MonoBehaviour
     }
     public void SelectChoice3()
     {
-        bool isCondition1 = InventoryManager.Instance.isCondition((string)choices[2]["condition1_type"], (string)choices[2]["condition1_standard"], (string)choices[2]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.isCondition((string)choices[2]["condition2_type"], (string)choices[2]["condition2_standard"], (string)choices[2]["condition2_value"]);
+        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[2]["condition1_type"], (string)choices[2]["condition1_standard"], (string)choices[2]["condition1_value"]);
+        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[2]["condition2_type"], (string)choices[2]["condition2_standard"], (string)choices[2]["condition2_value"]);
 
         if (isCondition1)
         {
@@ -187,8 +187,8 @@ public class GameManager : MonoBehaviour
     }
     public void SelectChoice4()
     {
-        bool isCondition1 = InventoryManager.Instance.isCondition((string)choices[3]["condition1_type"], (string)choices[3]["condition1_standard"], (string)choices[3]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.isCondition((string)choices[3]["condition2_type"], (string)choices[3]["condition2_standard"], (string)choices[3]["condition2_value"]);
+        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[3]["condition1_type"], (string)choices[3]["condition1_standard"], (string)choices[3]["condition1_value"]);
+        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[3]["condition2_type"], (string)choices[3]["condition2_standard"], (string)choices[3]["condition2_value"]);
 
         if (isCondition1)
         {

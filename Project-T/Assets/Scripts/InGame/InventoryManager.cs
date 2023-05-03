@@ -5,57 +5,45 @@ using UnityEngine;
 public class InventoryManager : SingleTon<InventoryManager>
 {
 
-    private List<Item> _items;
+    private Dictionary<string, Item> itemList;
 
     public InventoryManager()
     {
-        _items = new List<Item>();
+        itemList = new Dictionary<string, Item>();
     }
 
-    public bool isCondition(string itemid, string standard, string value)
+    public bool IsCondition(string itemid, string standard, string value)
     {
-        for (int i = 0; i < _items.Count; i++)
+        if (itemList.ContainsKey(itemid))
         {
-            if (string.Equals(_items[i].Data._id, itemid))
+            switch(standard)
             {
-                switch(standard)
-                {
-                    case "More":
-                        if (_items[i].Data._amount > int.Parse(value)) return true;
-                        else return false;
-                    case "Less":
-                        if (_items[i].Data._amount < int.Parse(value)) return true;
-                        else return false;
-                    case "Equal":
-                        if (_items[i].Data._amount == int.Parse(value)) return true;
-                        else return false;
-
-                }
+                case "More":
+                    if (itemList[itemid].Data.amount > int.Parse(value)) return true;
+                    else return false;
+                case "Less":
+                    if (itemList[itemid].Data.amount < int.Parse(value)) return true;
+                    else return false;
+                case "Equal":
+                    if (itemList[itemid].Data.amount == int.Parse(value)) return true;
+                    else return false;
 
             }
         }
         return false;
     }
-    public void add(string itemid, string value)
+    public void Add(string itemid, string value)
     {
         DebugManager.Instance.PrintDebug("add 실행");
-        Dictionary<string, object> itemT = StoryManager.Instance.getItem(itemid);
+        Dictionary<string, object> itemT = StoryManager.Instance.GetItem(itemid);
 
-        bool isValid = false;
-
-        for (int i = 0; i < _items.Count; i++)
+        if (itemList.ContainsKey(itemid))
         {
-            if (string.Equals(_items[i].Data._id, itemid))
-            {
-                _items[i].Data._amount += int.Parse(value);
-                isValid = true;
-            }
+            itemList[itemid].Data.SetAmount(itemList[itemid].Data.amount + int.Parse(value));
         }
-
-        if (!isValid)
+        else
         {
-            ItemData itemdata = new ItemData(itemid, (string)itemT["Item_name"], (string)itemT["Item_description"], int.Parse(value));
-            _items.Add(new Item(itemdata));
+            itemList.Add(itemid, new Item(itemid, (string)itemT["Item_name"], (string)itemT["Item_description"], int.Parse(value)));
         }
         
     }
