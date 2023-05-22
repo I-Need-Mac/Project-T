@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     Dictionary<string, object>[] choices;
 
     List<Dictionary<string, object>> outputChoices;
-
+    Dictionary<string, object> resource;
 
     // Start is called before the first frame update
     void Start()
@@ -52,24 +52,33 @@ public class GameManager : MonoBehaviour
 
     void StoryUpdate(string storyID)
     {
-        Dictionary<string, object> StoryLoad = StoryManager.Instance.GetStory_load(storyID);
+        Dictionary<string, object> storyLoad = StoryManager.Instance.GetStory_load(storyID);
 
         //아이템 
 
-        if (!string.Equals((string)StoryLoad["Target1_type"], ""))
+        if (!string.Equals((string)storyLoad["Target1_type"], ""))
         {
-            InventoryManager.Instance.Add((string)StoryLoad["Target1_type"], (string)StoryLoad["Target1_change_value"]);
+            InventoryManager.Instance.Add((string)storyLoad["Target1_type"], (string)storyLoad["Target1_change_value"]);
         }
 
-        if (!string.Equals((string)StoryLoad["Target2_type"], ""))
+        if (!string.Equals((string)storyLoad["Target2_type"], ""))
         {
-            InventoryManager.Instance.Add((string)StoryLoad["Target1_type"], (string)StoryLoad["Target2_change_value"]);
+            InventoryManager.Instance.Add((string)storyLoad["Target1_type"], (string)storyLoad["Target2_change_value"]);
+        }
+
+        //리소스
+
+        resource = StoryManager.Instance.GetResource(storyID);
+
+        if (!string.Equals((string)resource["Illustration"], ""))
+        {
+            ImageChange((string)resource["Illustration"]);
         }
 
         // 스토리 로드
 
         string storyT = (string)StoryManager.Instance.GetStory(storyID)["story"];
-        string choiceID = (string)StoryLoad["choice_group_ID"];
+        string choiceID = (string)storyLoad["choice_group_ID"];
 
         DebugManager.Instance.PrintDebug(storyT);
 
@@ -171,6 +180,13 @@ public class GameManager : MonoBehaviour
 
 
     //UI 매니저에 들어갈 부분 ex) 단순 텍스트 요소 변경
+    public void ImageChange(string path)
+    {
+        GameObject imageInstance = Instantiate(imageContent);
+        imageInstance.transform.parent = storyContent.transform;
+        imageInstance.transform.localScale = new Vector3(1, 1, 1);
+        imageInstance.GetComponent<Image>().sprite = ImageLoader.Instance.LoadLocalImageToSprite(path);
+    }
     public void StoryChange(string story)
     {
         GameObject textInstance = Instantiate(textContent);
