@@ -1,29 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject StoryArea;
-    public GameObject OptionArea;
+    //-------UI 요소들----------
+    public GameObject storyArea;
+    public GameObject optionArea;
 
-    public TMP_Text StoryText;
-    public TMP_Text[] ChoiceText;
+    public GameObject storyContent;
+    public TMP_Text[] choiceText;
+    public Button[] choicebtn;
+
+    GameObject textContent;
+    GameObject imageContent;
+
+    RectTransform storyRectTran;
+    RectTransform optionRectTran;
+
+    ScrollRect scrollRect;
+    //---------------------------
 
     Dictionary<string, object>[] choices;
 
-    private string[] choiceStoryID = new string[4];
-
-    RectTransform StoryRectTran;
-    RectTransform OptionRectTran;
+    List<Dictionary<string, object>> outputChoices;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        StoryRectTran = StoryArea.GetComponent<RectTransform>();
-        OptionRectTran = OptionArea.GetComponent<RectTransform>();
+        scrollRect = GameObject.Find("Scroll View").GetComponent<ScrollRect>();
+        storyRectTran = storyArea.GetComponent<RectTransform>();
+        optionRectTran = optionArea.GetComponent<RectTransform>();
+
+        textContent = Resources.Load<GameObject>("Prefabs/TextContent");
+        imageContent = Resources.Load<GameObject>("Prefabs/ImageContent");
 
         DebugManager.Instance.PrintDebug("choice");
 
@@ -66,150 +79,74 @@ public class GameManager : MonoBehaviour
 
         StoryChange(storyT);
 
-
+        //선택지 관리
         choices = StoryManager.Instance.GetChoice(choiceID);
 
-        string[] choice = new string[choices.Length];
-        for(int i = 0; i < choices.Length; i++)
+        outputChoices = new List<Dictionary<string, object>>();
+
+        for (int i = 0; i < choices.Length; i++)
         {
-            choice[i] = (string)choices[i]["choice_text_ID"];
+            string choiceType = (string)choices[i]["Choice_type"];
+            if(string.Equals(choiceType, "Hidden"))
+            {
+                if (InventoryManager.Instance.IsCondition((string)choices[i]["hidden_Choice_condition_type"], (string)choices[i]["hidden_Choice_condition_Standard"], (string)choices[i]["hidden_Choice_condition_value"]))
+                {
+                    outputChoices.Add(choices[i]);
+                }
+            }
+            else
+            {
+                outputChoices.Add(choices[i]);
+            }
+
         }
 
-        ChoiceChange(choice);
+        ChoiceChange(outputChoices);
+
+
     }
-
-    //UI 매니저에 들어갈 부분
-    public void StoryChange(string story)
-    {
-        StoryText.text = story;
-    }
-
-    public void ChoiceChange(string[] choice)
-    {
-        int count = choice.Length;
-
-        OptionRectTran.anchoredPosition = new Vector3(0, 55 * count, 0);
-        OptionRectTran.sizeDelta = new Vector2(OptionRectTran.sizeDelta.x, 110 * count);
-
-        StoryRectTran.offsetMin = new Vector2(StoryRectTran.offsetMin.x, 110 * count);
-
-        // 나눠주는거 구현들어오는거 판단해서 
-        for (int i = 0; i < count; i++)
-        {
-            ChoiceText[i].text = choice[i];
-        }
-    }
-
     public void SelectChoice1()
     {
-        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[0]["condition1_type"], (string)choices[0]["condition1_standard"], (string)choices[0]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[0]["condition2_type"], (string)choices[0]["condition2_standard"], (string)choices[0]["condition2_value"]);
-
-        if (isCondition1)
-        {
-            if (isCondition2)
-            {
-                StoryUpdate(ResultDecode((string)choices[0]["And_result"]));
-            }
-            else
-            {
-                StoryUpdate(ResultDecode((string)choices[0]["Condition1_result"]));
-            }
-        }
-        else
-        {
-            if (isCondition2)
-            {
-                StoryUpdate(ResultDecode((string)choices[0]["Condition2_result"]));
-            }
-            else
-            {
-                StoryUpdate(ResultDecode((string)choices[0]["fail_result"]));
-            }
-        }
+        SelectChoice(0);
     }
     public void SelectChoice2()
     {
-        
-        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[1]["condition1_type"], (string)choices[1]["condition1_standard"], (string)choices[1]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[1]["condition2_type"], (string)choices[1]["condition2_standard"], (string)choices[1]["condition2_value"]);
-
-        if (isCondition1)
-        {
-            if (isCondition2)
-            {
-                StoryUpdate(ResultDecode((string)choices[1]["And_result"]));
-            }
-            else
-            {
-                StoryUpdate(ResultDecode((string)choices[1]["Condition1_result"]));
-            }
-        }
-        else
-        {
-            if (isCondition2)
-            {
-                StoryUpdate(ResultDecode((string)choices[1]["Condition2_result"]));
-            }
-            else
-            {
-                StoryUpdate(ResultDecode((string)choices[1]["fail_result"]));
-            }
-        }
+        SelectChoice(1);
     }
     public void SelectChoice3()
     {
-        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[2]["condition1_type"], (string)choices[2]["condition1_standard"], (string)choices[2]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[2]["condition2_type"], (string)choices[2]["condition2_standard"], (string)choices[2]["condition2_value"]);
-
-        if (isCondition1)
-        {
-            if (isCondition2)
-            {
-                StoryUpdate(ResultDecode((string)choices[2]["And_result"]));
-            }
-            else
-            {
-                StoryUpdate(ResultDecode((string)choices[2]["Condition1_result"]));
-            }
-        }
-        else
-        {
-            if (isCondition2)
-            {
-                StoryUpdate(ResultDecode((string)choices[2]["Condition2_result"]));
-            }
-            else
-            {
-                StoryUpdate(ResultDecode((string)choices[2]["fail_result"]));
-            }
-        }
+        SelectChoice(2);
     }
     public void SelectChoice4()
     {
-        bool isCondition1 = InventoryManager.Instance.IsCondition((string)choices[3]["condition1_type"], (string)choices[3]["condition1_standard"], (string)choices[3]["condition1_value"]);
-        bool isCondition2 = InventoryManager.Instance.IsCondition((string)choices[3]["condition2_type"], (string)choices[3]["condition2_standard"], (string)choices[3]["condition2_value"]);
+        SelectChoice(3);
+    }
+
+    public void SelectChoice(int btnNum)
+    {
+        bool isCondition1 = InventoryManager.Instance.IsCondition((string)outputChoices[btnNum]["condition1_type"], (string)outputChoices[btnNum]["condition1_standard"], (string)outputChoices[btnNum]["condition1_value"]);
+        bool isCondition2 = InventoryManager.Instance.IsCondition((string)outputChoices[btnNum]["condition2_type"], (string)outputChoices[btnNum]["condition2_standard"], (string)outputChoices[btnNum]["condition2_value"]);
 
         if (isCondition1)
         {
             if (isCondition2)
             {
-                StoryUpdate(ResultDecode((string)choices[3]["And_result"]));
+                StoryUpdate(ResultDecode((string)outputChoices[btnNum]["And_result"]));
             }
             else
             {
-                StoryUpdate(ResultDecode((string)choices[3]["Condition1_result"]));
+                StoryUpdate(ResultDecode((string)outputChoices[btnNum]["Condition1_result"]));
             }
         }
         else
         {
             if (isCondition2)
             {
-                StoryUpdate(ResultDecode((string)choices[3]["Condition2_result"]));
+                StoryUpdate(ResultDecode((string)outputChoices[btnNum]["Condition2_result"]));
             }
             else
             {
-                StoryUpdate(ResultDecode((string)choices[3]["fail_result"]));
+                StoryUpdate(ResultDecode((string)outputChoices[btnNum]["fail_result"]));
             }
         }
     }
@@ -230,6 +167,48 @@ public class GameManager : MonoBehaviour
         }
         return "오류";
     }
+
+
+
+    //UI 매니저에 들어갈 부분 ex) 단순 텍스트 요소 변경
+    public void StoryChange(string story)
+    {
+        GameObject textInstance = Instantiate(textContent);
+        textInstance.transform.parent = storyContent.transform;
+        textInstance.transform.localScale = new Vector3(1, 1, 1);
+        textInstance.GetComponent<TextMeshProUGUI>().text = story;
+    }
+
+    public void ChoiceChange(List<Dictionary<string, object>> choices)
+    {
+        int count = 0;
+
+        // 나눠주는거 구현들어오는거 판단해서 
+        foreach(Dictionary<string, object> choice in choices)
+        {
+            string choiceType = (string)choice["Choice_type"];
+            if (string.Equals(choiceType, "Dimmed"))
+            {
+                choicebtn[count].interactable = InventoryManager.Instance.IsCondition((string)choice["hidden_Choice_condition_type"], (string)choice["hidden_Choice_condition_Standard"], (string)choice["hidden_Choice_condition_value"]);
+            }
+            else
+            {
+                choicebtn[count].interactable = true;
+                
+            }
+            choiceText[count].text = (string)choice["choice_text_ID"];
+            count++;
+        }
+
+        optionRectTran.anchoredPosition = new Vector3(0, 55 * count, 0);
+        optionRectTran.sizeDelta = new Vector2(optionRectTran.sizeDelta.x, 110 * count);
+
+        storyRectTran.offsetMin = new Vector2(storyRectTran.offsetMin.x, 110 * count);
+
+    }
+    //------------------------------------------------
+
+    
 
 
 }
