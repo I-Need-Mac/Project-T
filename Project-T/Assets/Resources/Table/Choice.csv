@@ -1,6 +1,24 @@
-choice_TID,result_Index,choice_group_ID,hidden_bool,choice_text_ID,condition1_type,condition1_standard,condition_1_value,condition_2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result
-,,,,,컨디션 1 판별 기준,,,컨디션2 판별 기준,,,"컨디션1,2 모두 성공",컨디션1 성공,컨디션2 성공,"컨디션1,2 모두 실패"
-String,int,,bool,string,string,string,int,string,string,int,string,string,string,string
-RYTA_C10011,1,RYTA_C1001,FALSE,순수한 아이들이 읽었을 때 때묻지 않은 상상력을 펼칠 수 있는 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA_C1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
-RYTA_C10012,2,RYTA_C1001,FALSE,아이들이 읽는 현실성 없는 판타지적 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA_C1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
-RYTA_C10013,3,RYTA_C1001,FALSE,지금은 읽을 수 없는 유치한 이야기.,NULL,NULL,0,NULL,NULL,0,RYTA_C1002,RYTA_C1002,RYTA_C1002,RYTA_C1002
+choice_TID,choice_group_ID,result_Index,Choice_type,hidden_Choice_condition_type,hidden_Choice_condition_Standard,hidden_Choice_condition_value,choice_text_ID,condition1_type,condition1_standard,condition1_value,condition2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result, 
+수식,Choice_부가설명_00,수식,히든이냐 딤드냐,,,,,컨디션 1 판별 기준,,,컨디션2 판별 기준,,,"컨디션1,2 모두 성공",컨디션1 성공,컨디션2 성공,"컨디션1,2 모두 실패",
+,String,int,Enum,,,,string,string,Enum,int,string,Enum,int,string,string,string,string,
+Choice_FoodMenu_001,Choice_FoodMenu_00,1,Normal,Null,Null,0,햄버거,,,,,,,,,,R0002_P100,
+Choice_FoodMenu_002,Choice_FoodMenu_00,2,Normal,Null,Null,0,피자,,,,,,,,,,R0003_P100,
+Choice_FoodMenu_003,Choice_FoodMenu_00,3,Normal,Null,Null,0,치킨,,,,,,,,,,R0004_P100,
+Choice_FoodMenu_004,Choice_FoodMenu_00,4,Normal,Null,Null,0,굶기,,,,,,,,,,R0005_P100,
+Choice_StoryFlow_001,Choice_StoryFlow_00,1,Normal,Null,Null,0,룰루랄라 길을 나선다.,,,,,,,,,,R0006_P100,
+Choice_OpenDoor_001,Choice_OpenDoor_00,1,Dimmed,Item_Key,More,0,문을 연다,,,,,,,,,,R0007_P100,
+Choice_OpenDoor_002,Choice_OpenDoor_00,2,Normal,Null,Null,0,지나친다.,,,,,,,,,,R0008_P100,
+Choice_StoryFlow_011,Choice_StoryFlow_01,1,Normal,Null,Null,0,계속 나아간다.,,,,,,,,,,R0009_P100,
+Choice_OpenDoor_011,Choice_OpenDoor_01,1,Normal,Null,Null,0,발로 찬다.,,,,,,,,,,R0010_P100,
+Choice_OpenDoor_012,Choice_OpenDoor_01,2,Hidden,Item_Key,More,0,문을 연다.,,,,,,,,,,R0011_P100,
+Choice_StoryFlow_021,Choice_StoryFlow_02,1,Normal,Null,Null,0,계속 나아간다.,,,,,,,,,,R0012_P100,
+Choice_VisitStore_001,Choice_VisitStore_00,1,Normal,Null,Null,0,문구점으로 들어간다.,Item_Money,More,999,,,,,R0013_P100,,R0014_P100,
+Choice_VisitStore_002,Choice_VisitStore_00,2,Normal,Null,Null,0,문구점을 지나친다.,,,,,,,,,,R0015_P100,
+Choice_StoryFlow_031,Choice_StoryFlow_03,1,Normal,Null,Null,0,다시 가던 길을 간다.,,,,,,,,,,R0015_P100,
+Choice_VisitStore_011,Choice_VisitStore_01,1,Normal,Null,Null,0,문구점을 들린다,Item_Money,More,999,,,,,R0016_P90_R0017_P10,,R0018_P100,
+Choice_VisitStore_012,Choice_VisitStore_01,2,Normal,Null,Null,0,문구점을 들리지 않는다,,,,,,,,,,R0019_P100,
+Choice_StoryFlow_041,Choice_StoryFlow_04,1,Normal,Null,Null,0,또 다시 가던 길을 간다,,,,,,,,,,R0020_P100,
+Choice_ GetItem_001,Choice_ GetItem_00,1,Normal,Null,Null,0,가방을 받는다,,,,,,,,,,R0021_P100,
+Choice_StoryFlow_051,Choice_StoryFlow_05,1,Normal,Null,Null,0,길을 나선다,,,,,,,,,,R0022_P100,
+Choice_lossItem_001,Choice_lossItem_00,1,Normal,Null,Null,0,가방을 준다,,,,,,,,,,R0023_P100,
+Choice_StoryFlow_061,Choice_StoryFlow_06,1,Normal,Null,Null,0,길을 나선다,,,,,,,,,,R0024_P100,

@@ -1,0 +1,9 @@
+Item_ID,Item_name,Item_description,Max_Count_type,Is_Show
+단어,,,0= 셀수없어서 카운팅이됨1= 있다없다만 판별,
+string,string,string,int,Bool
+Item_Hamberger,햄버거,블라,0,TRUE
+Item_Pizza,피자,블라,0,TRUE
+Item_Chicken,치킨,블라,0,TRUE
+Item_Key,열쇠,열쇠,0,TRUE
+Item_Money,돈,돈,0,
+Item_Bag,가방,가방,0,

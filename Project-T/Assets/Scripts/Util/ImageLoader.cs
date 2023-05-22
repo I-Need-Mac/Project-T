@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
 public class ImageLoader : SingleTon<ImageLoader>
 {
-    private const String DEFULT_PATH = "Arts/";
+    private const String DEFULT_PATH = "Art/";
 
     private Dictionary<string, Texture2D> cachedImageTexture2D = new Dictionary<string, Texture2D>();
     private Dictionary<string, Sprite> cachedImageSprite = new Dictionary<string, Sprite>();
@@ -23,17 +23,17 @@ public class ImageLoader : SingleTon<ImageLoader>
         Texture2D return2D;
         if (cachedImageTexture2D.ContainsKey(DEFULT_PATH + path))
         {
-            DebugManager.Instance.PrintDebug("[ImageLoader] Ä³½ÌµÈ ÀÌ¹ÌÁö : " + path);
+            DebugManager.Instance.PrintDebug("[ImageLoader] ìºì‹±ëœ ì´ë¯¸ì§€ : " + path);
             return2D = cachedImageTexture2D[DEFULT_PATH + path];
         }
         else
         {
-            DebugManager.Instance.PrintDebug("[ImageLoader] ½Å±Ô ÀÌ¹ÌÁö : " + path);
+            DebugManager.Instance.PrintDebug("[ImageLoader] ì‹ ê·œ ì´ë¯¸ì§€ : " + path);
 
             return2D = Resources.Load(DEFULT_PATH + path, typeof(Texture2D)) as Texture2D;
             if (return2D == null)
             {
-                DebugManager.Instance.PrintDebug("[ImageLoader] Dummy ÀÌ¹ÌÁö : °æ·Î ÀÌ»ó");
+                DebugManager.Instance.PrintDebug("[ImageLoader] Dummy ì´ë¯¸ì§€ : ê²½ë¡œ ì´ìƒ");
                 return2D = cachedImageTexture2D["Dummy"];
             }
             else { cachedImageTexture2D.Add(DEFULT_PATH + path, return2D); }
@@ -47,17 +47,17 @@ public class ImageLoader : SingleTon<ImageLoader>
         Sprite returnSprite;
         if (cachedImageSprite.ContainsKey(DEFULT_PATH + path))
         {
-            DebugManager.Instance.PrintDebug("[ImageLoader] Ä³½ÌµÈ ÀÌ¹ÌÁö : " + path);
+            DebugManager.Instance.PrintDebug("[ImageLoader] ìºì‹±ëœ ì´ë¯¸ì§€ : " + path);
             returnSprite = cachedImageSprite[DEFULT_PATH + path];
         }
         else
         {
-            DebugManager.Instance.PrintDebug("[ImageLoader] ½Å±Ô ÀÌ¹ÌÁö : " + path);
+            DebugManager.Instance.PrintDebug("[ImageLoader] ì‹ ê·œ ì´ë¯¸ì§€ : " + path);
 
             returnSprite = Resources.Load(DEFULT_PATH + path, typeof(Sprite)) as Sprite;
             if (returnSprite == null)
             {
-                DebugManager.Instance.PrintDebug("[ImageLoader] Dummy ÀÌ¹ÌÁö : °æ·Î ÀÌ»ó");
+                DebugManager.Instance.PrintDebug("[ImageLoader] Dummy ì´ë¯¸ì§€ : ê²½ë¡œ ì´ìƒ");
                 returnSprite = cachedImageSprite[DEFULT_PATH + "Dummy"];
             }
             else
