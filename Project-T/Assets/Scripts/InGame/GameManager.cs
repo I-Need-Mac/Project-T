@@ -6,37 +6,26 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    //-------UI 요소들----------
-    public GameObject storyArea;
-    public GameObject optionArea;
-
-    public GameObject storyContent;
-    public TMP_Text[] choiceText;
-    public Button[] choicebtn;
-
-    GameObject textContent;
-    GameObject imageContent;
-
-    RectTransform storyRectTran;
-    RectTransform optionRectTran;
-
-    ScrollRect scrollRect;
-    //---------------------------
-
+    
     Dictionary<string, object>[] choices;
 
     List<Dictionary<string, object>> outputChoices;
     Dictionary<string, object> resource;
+    
+    GameObject textContent;
+    GameObject imageContent;
 
     // Start is called before the first frame update
     void Start()
     {
-        scrollRect = GameObject.Find("Scroll View").GetComponent<ScrollRect>();
-        storyRectTran = storyArea.GetComponent<RectTransform>();
-        optionRectTran = optionArea.GetComponent<RectTransform>();
+        //scrollRect = GameObject.Find("Scroll View").GetComponent<ScrollRect>();
+        //storyRectTran = storyArea.GetComponent<RectTransform>();
+        //optionRectTran = optionArea.GetComponent<RectTransform>();
 
         textContent = Resources.Load<GameObject>("Prefabs/TextContent");
         imageContent = Resources.Load<GameObject>("Prefabs/ImageContent");
+
+        //contentH = 1100.0f;
 
         DebugManager.Instance.PrintDebug("choice");
 
@@ -70,10 +59,6 @@ public class GameManager : MonoBehaviour
 
         resource = StoryManager.Instance.GetResource(storyID);
 
-        if (!string.Equals((string)resource["Illustration"], ""))
-        {
-            ImageChange((string)resource["Illustration"]);
-        }
 
         // 스토리 로드
 
@@ -86,8 +71,7 @@ public class GameManager : MonoBehaviour
 
         DebugManager.Instance.PrintDebug(storyT);
 
-        StoryChange(storyT);
-
+        
         //선택지 관리
         choices = StoryManager.Instance.GetChoice(choiceID);
 
@@ -110,8 +94,29 @@ public class GameManager : MonoBehaviour
 
         }
 
-        ChoiceChange(outputChoices);
+        UIManager.Instance.ChoiceChange(outputChoices);
 
+        if (!string.Equals((string)resource["Illustration"], ""))
+        {
+            GameObject imageInstance = Instantiate(imageContent);
+            imageInstance.GetComponent<Image>().sprite = ImageLoader.Instance.LoadLocalImageToSprite((string)resource["Illustration"]);
+
+            GameObject textInstance = Instantiate(textContent);
+
+            StartCoroutine(UIManager.Instance.StartTyping(textInstance, storyT));
+            //textInstance.GetComponent<TextMeshProUGUI>().text = storyT;
+
+            StartCoroutine(UIManager.Instance.ScrollSmoothly(UIManager.Instance.ImageStoryChange(imageInstance, textInstance)));
+        }
+        else
+        {
+            GameObject textInstance = Instantiate(textContent);
+            StartCoroutine(UIManager.Instance.StartTyping(textInstance, storyT));
+
+            //textInstance.GetComponent<TextMeshProUGUI>().text = storyT;
+
+            StartCoroutine(UIManager.Instance.ScrollSmoothly(UIManager.Instance.StoryChange(textInstance)));
+        }
 
     }
     public void SelectChoice1()
@@ -177,54 +182,6 @@ public class GameManager : MonoBehaviour
         return "오류";
     }
 
-
-
-    //UI 매니저에 들어갈 부분 ex) 단순 텍스트 요소 변경
-    public void ImageChange(string path)
-    {
-        GameObject imageInstance = Instantiate(imageContent);
-        imageInstance.transform.parent = storyContent.transform;
-        imageInstance.transform.localScale = new Vector3(1, 1, 1);
-        imageInstance.GetComponent<Image>().sprite = ImageLoader.Instance.LoadLocalImageToSprite(path);
-    }
-    public void StoryChange(string story)
-    {
-        GameObject textInstance = Instantiate(textContent);
-        textInstance.transform.parent = storyContent.transform;
-        textInstance.transform.localScale = new Vector3(1, 1, 1);
-        textInstance.GetComponent<TextMeshProUGUI>().text = story;
-    }
-
-    public void ChoiceChange(List<Dictionary<string, object>> choices)
-    {
-        int count = 0;
-
-        // 나눠주는거 구현들어오는거 판단해서 
-        foreach(Dictionary<string, object> choice in choices)
-        {
-            string choiceType = (string)choice["Choice_type"];
-            if (string.Equals(choiceType, "Dimmed"))
-            {
-                choicebtn[count].interactable = InventoryManager.Instance.IsCondition((string)choice["hidden_Choice_condition_type"], (string)choice["hidden_Choice_condition_Standard"], (string)choice["hidden_Choice_condition_value"]);
-            }
-            else
-            {
-                choicebtn[count].interactable = true;
-                
-            }
-            choiceText[count].text = (string)choice["choice_text_ID"];
-            count++;
-        }
-
-        optionRectTran.anchoredPosition = new Vector3(0, 55 * count, 0);
-        optionRectTran.sizeDelta = new Vector2(optionRectTran.sizeDelta.x, 110 * count);
-
-        storyRectTran.offsetMin = new Vector2(storyRectTran.offsetMin.x, 110 * count);
-
-    }
-    //------------------------------------------------
-
-    
 
 
 }
