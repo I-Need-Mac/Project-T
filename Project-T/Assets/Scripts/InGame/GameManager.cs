@@ -18,14 +18,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //scrollRect = GameObject.Find("Scroll View").GetComponent<ScrollRect>();
-        //storyRectTran = storyArea.GetComponent<RectTransform>();
-        //optionRectTran = optionArea.GetComponent<RectTransform>();
 
         textContent = Resources.Load<GameObject>("Prefabs/TextContent");
         imageContent = Resources.Load<GameObject>("Prefabs/ImageContent");
-
-        //contentH = 1100.0f;
 
         DebugManager.Instance.PrintDebug("choice");
 
@@ -104,7 +99,6 @@ public class GameManager : MonoBehaviour
             GameObject textInstance = Instantiate(textContent);
 
             StartCoroutine(UIManager.Instance.StartTyping(textInstance, storyT));
-            //textInstance.GetComponent<TextMeshProUGUI>().text = storyT;
 
             StartCoroutine(UIManager.Instance.ScrollSmoothly(UIManager.Instance.ImageStoryChange(imageInstance, textInstance)));
         }
@@ -113,12 +107,12 @@ public class GameManager : MonoBehaviour
             GameObject textInstance = Instantiate(textContent);
             StartCoroutine(UIManager.Instance.StartTyping(textInstance, storyT));
 
-            //textInstance.GetComponent<TextMeshProUGUI>().text = storyT;
-
             StartCoroutine(UIManager.Instance.ScrollSmoothly(UIManager.Instance.StoryChange(textInstance)));
         }
 
     }
+
+    //각 버튼 함수
     public void SelectChoice1()
     {
         SelectChoice(0);

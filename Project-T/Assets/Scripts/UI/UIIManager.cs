@@ -6,26 +6,15 @@ using TMPro;
 
 public class UIManager : SingleTon<UIManager>
 {
-
-    GameObject storyArea;
     GameObject optionArea;
 
     GameObject storyContent;
     TMP_Text[] choiceText;
     Button[] choiceBtn;
 
-    Button itemBtn;
-
-    GameObject textContent;
-    GameObject imageContent;
-
-    RectTransform storyRectTran;
     RectTransform optionRectTran;
 
     ScrollRect scrollRect;
-
-    float contentH;
-    float preferredH;
 
     float typingSpeed = 0.05f;
 
@@ -37,7 +26,6 @@ public class UIManager : SingleTon<UIManager>
 
     public UIManager()
     {
-        storyArea = GameObject.Find("StoryArea");
         optionArea = GameObject.Find("OptionArea");
 
         storyContent = GameObject.Find("Content");
@@ -55,71 +43,64 @@ public class UIManager : SingleTon<UIManager>
         choiceBtn[2] = GameObject.Find("Choice_3").GetComponent<Button>();
         choiceBtn[3] = GameObject.Find("Choice_4").GetComponent<Button>();
 
-        itemBtn = GameObject.Find("ItemButton").GetComponent<Button>();
-
         scrollRect = GameObject.Find("Scroll View").GetComponent<ScrollRect>();
-        storyRectTran = storyArea.GetComponent<RectTransform>();
         optionRectTran = optionArea.GetComponent<RectTransform>();
 
-        textContent = Resources.Load<GameObject>("Prefabs/TextContent");
-        imageContent = Resources.Load<GameObject>("Prefabs/ImageContent");
-
-        contentH = 1200.0f;
     }
-
-    public Vector2 ImageStoryChange(GameObject imageInstance, GameObject textInstance)
+    
+    public Vector2 ImageStoryChange(GameObject imageInstance, GameObject textInstance) //이미지, 텍스트 추가
     {
-        float curContentH = 0;
+        //이미지 콘텐츠 설정
         imageInstance.transform.parent = storyContent.transform;
         imageInstance.transform.localScale = new Vector3(1, 1, 1);
         imageInstance.transform.SetSiblingIndex(imageInstance.transform.GetSiblingIndex() - 1);
 
-
-        curContentH += imageInstance.GetComponent<RectTransform>().rect.height;
-
+        //텍스트 콘텐츠 설정
         textInstance.transform.parent = storyContent.transform;
         textInstance.transform.localScale = new Vector3(1, 1, 1);
         textInstance.transform.SetSiblingIndex(textInstance.transform.GetSiblingIndex() - 1);
 
-        //RectTransform textRectTransform = textInstance.GetComponent<RectTransform>();
-
-        //float preferredH = textInstance.GetComponent<TextMeshProUGUI>().preferredHeight;
-        //textRectTransform.sizeDelta = new Vector2(textRectTransform.sizeDelta.x, preferredH);
-
-        //curContentH += preferredH;
-
+        //계산 전 리빌드
         LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
-        
-        Vector2 scrollVector = new Vector2(1, 1 - ((contentH - 1200f) / (contentH + curContentH - scrollRect.viewport.rect.size.y)));
-        
-        contentH += curContentH;
+
+        //스크롤 위치 반환값 계산
+        float contentH = scrollRect.content.rect.height;
+        float imageH = imageInstance.GetComponent<RectTransform>().rect.height;
+        Vector2 scrollVector = new Vector2(1, 1 - ((contentH - imageH - 1200f) / (contentH - scrollRect.viewport.rect.size.y)));
 
         return scrollVector;
     }
-    public Vector2 StoryChange(GameObject textInstance)
+    public Vector2 StoryChange(GameObject textInstance) //텍스트 추가
     {
+        //텍스트 콘텐츠 설정
         textInstance.transform.parent = storyContent.transform;
         textInstance.transform.localScale = new Vector3(1, 1, 1);
         textInstance.transform.SetSiblingIndex(textInstance.transform.GetSiblingIndex() - 1);
 
-        //RectTransform textRectTransform = textInstance.GetComponent<RectTransform>();
-        //float preferredH = textInstance.GetComponent<TextMeshProUGUI>().preferredHeight;
-        //textRectTransform.sizeDelta = new Vector2(textRectTransform.sizeDelta.x, preferredH);
-
+        //계산 전 리빌드
         LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
+
+        //스크롤 위치 반환값 계산
+        float contentH = scrollRect.content.rect.height;
         Vector2 scrollVector = new Vector2(1, 1 - ((contentH - 1200f) / (contentH - scrollRect.viewport.rect.size.y)));
 
         return scrollVector;
     }
 
-    public void ChoiceChange(List<Dictionary<string, object>> choices)
+    public void ChoiceChange(List<Dictionary<string, object>> choices) //선택지 관리
     {
         optionRectTran.anchoredPosition = new Vector3(0, 0, 0);
         optionRectTran.sizeDelta = new Vector2(optionRectTran.sizeDelta.x, 0);
 
         choiceCount = 0;
 
-        // 나눠주는거 구현들어오는거 판단해서 
+        //초기화
+        choiceBtn[0].interactable = false;
+        choiceBtn[1].interactable = false;
+        choiceBtn[2].interactable = false;
+        choiceBtn[3].interactable = false;
+
+        //딤드를 포함한 선택지 구조 설정
         foreach (Dictionary<string, object> choice in choices)
         {
             string choiceType = (string)choice["Choice_type"];
@@ -135,23 +116,9 @@ public class UIManager : SingleTon<UIManager>
             choiceText[choiceCount].text = (string)choice["choice_text_ID"];
             choiceCount++;
         }
-
-        
-
-        //optionRectTran.anchoredPosition = new Vector3(0, 55 * choiceCount, 0);
-        //optionRectTran.sizeDelta = new Vector2(optionRectTran.sizeDelta.x, 110 * choiceCount);
-
-        //storyRectTran.offsetMin = new Vector2(storyRectTran.offsetMin.x, 110 * count);
-
     }
 
-    public void SelectItemBtn()
-    {
-        DebugManager.Instance.PrintDebug("실제 위치 값");
-        DebugManager.Instance.PrintDebug(scrollRect.normalizedPosition);
-    }
-
-    public IEnumerator StartTyping(GameObject textInstance, string targetText)
+    public IEnumerator StartTyping(GameObject textInstance, string targetText) //타이핑 IEnumerator
     {
         TextMeshProUGUI textComponent = textInstance.GetComponent<TextMeshProUGUI>();
 
@@ -168,24 +135,19 @@ public class UIManager : SingleTon<UIManager>
         EndTyping(textInstance);
     }
 
-    private void EndTyping(GameObject textInstance)
+    private void EndTyping(GameObject textInstance) //타이핑 종료 후 텍스트 높이 조절
     {
         RectTransform textRectTransform = textInstance.GetComponent<RectTransform>();
 
-        preferredH = textInstance.GetComponent<TextMeshProUGUI>().preferredHeight;
-        textRectTransform.sizeDelta = new Vector2(textRectTransform.sizeDelta.x, preferredH);
+        textRectTransform.sizeDelta = new Vector2(textRectTransform.sizeDelta.x, textInstance.GetComponent<TextMeshProUGUI>().preferredHeight);
         LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
-
-        contentH += preferredH;
-
-        // 선택창 올리기
 
         optionRectTran.anchoredPosition = new Vector3(0, 55 * choiceCount, 0);
         optionRectTran.sizeDelta = new Vector2(optionRectTran.sizeDelta.x, 110 * choiceCount);
 
     }
 
-    public IEnumerator ScrollSmoothly(Vector2 targetNormalizedPosition)
+    public IEnumerator ScrollSmoothly(Vector2 targetNormalizedPosition) //스크롤 IEnumerator
     {
         isScrolling = true;
 
