@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
     GameObject textContent;
     GameObject imageContent;
 
+    string storyT;
+    GameObject textInstance;
+
+    float typingSpeed = 0.05f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +63,7 @@ public class GameManager : MonoBehaviour
 
         // 스토리 로드
 
-        string storyT = (string)StoryManager.Instance.GetStory(storyID)["story"];
+        storyT = (string)StoryManager.Instance.GetStory(storyID)["story"];
         string choiceID = (string)storyLoad["choice_group_ID"];
 
         DebugManager.Instance.PrintDebug(storyT);
@@ -90,26 +96,28 @@ public class GameManager : MonoBehaviour
         }
 
         UIManager.Instance.ChoiceChange(outputChoices);
+        UIManager.Instance.SetTextLength(storyT);
 
         if (!string.Equals((string)resource["Illustration"], ""))
         {
             GameObject imageInstance = Instantiate(imageContent);
             imageInstance.GetComponent<Image>().sprite = ImageLoader.Instance.LoadLocalImageToSprite((string)resource["Illustration"]);
 
-            GameObject textInstance = Instantiate(textContent);
+            textInstance = Instantiate(textContent);
 
-            StartCoroutine(UIManager.Instance.StartTyping(textInstance, storyT));
-
-            StartCoroutine(UIManager.Instance.ScrollSmoothly(UIManager.Instance.ImageStoryChange(imageInstance, textInstance)));
+            StartCoroutine(ScrollSmoothly(UIManager.Instance.ImageStoryChange(imageInstance, textInstance)));
         }
         else
         {
-            GameObject textInstance = Instantiate(textContent);
-            StartCoroutine(UIManager.Instance.StartTyping(textInstance, storyT));
+            textInstance = Instantiate(textContent);
 
-            StartCoroutine(UIManager.Instance.ScrollSmoothly(UIManager.Instance.StoryChange(textInstance)));
+            StartCoroutine(ScrollSmoothly(UIManager.Instance.StoryChange(textInstance)));
         }
+    }
 
+    public void OptionUP()
+    {
+        StartCoroutine(SmoothlyUP());
     }
 
     //각 버튼 함수
@@ -176,6 +184,73 @@ public class GameManager : MonoBehaviour
         return "오류";
     }
 
+    public IEnumerator StartTyping(GameObject textInstance, string targetText) //타이핑 IEnumerator
+    {
+        TextMeshProUGUI textComponent = textInstance.GetComponent<TextMeshProUGUI>();
 
+        for (int i = 0; i <= targetText.Length; i++)
+        {
+            textComponent.text = targetText.Substring(0, i);
+            yield return new WaitForSeconds(typingSpeed);
+        }
 
+        RectTransform textRectTransform = textInstance.GetComponent<RectTransform>();
+
+        textRectTransform.sizeDelta = new Vector2(textRectTransform.sizeDelta.x, textInstance.GetComponent<TextMeshProUGUI>().preferredHeight);
+
+        UIManager.Instance.RebuildLayout();
+
+        StartCoroutine(SmoothlyUP());
+    }
+
+    public IEnumerator ScrollSmoothly(Vector2 targetNormalizedPosition) //스크롤 IEnumerator
+    {
+        Vector2 startPosition = UIManager.Instance.scrollRect.normalizedPosition;
+        Vector2 targetPosition = targetNormalizedPosition;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < UIManager.Instance.scrollDuration)
+        {
+            float t = elapsedTime / UIManager.Instance.scrollDuration;
+            UIManager.Instance.scrollRect.normalizedPosition = Vector2.Lerp(startPosition, targetPosition, t);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        UIManager.Instance.scrollRect.normalizedPosition = targetPosition;
+
+        StartCoroutine(StartTyping(textInstance, storyT));
+    }
+
+    public IEnumerator SmoothlyUP()
+    {
+        float elapsedTime = 0f;
+
+        Vector2 startPosition = UIManager.Instance.optionRectTran.anchoredPosition;
+        Vector3 targetPosition = new Vector3(0, 55 * UIManager.Instance.choiceCount, 0);
+
+        Vector2 startPosition2 = UIManager.Instance.optionRectTran.sizeDelta;
+        Vector2 targetPosition2 = new Vector2(UIManager.Instance.optionRectTran.sizeDelta.x, 110 * (UIManager.Instance.choiceCount));
+
+        Vector2 startPosition3 = UIManager.Instance.scrollRect.normalizedPosition;
+        
+        Vector2 targetPosition3 = UIManager.Instance.IsOver() ? new Vector2(1, Mathf.Clamp01(UIManager.Instance.scrollRect.normalizedPosition.y - ((110 * UIManager.Instance.choiceCount) / UIManager.Instance.scrollRect.content.rect.height))) : UIManager.Instance.scrollRect.normalizedPosition;
+
+        while (elapsedTime < UIManager.Instance.scrollDuration)
+        {
+            float t = elapsedTime / UIManager.Instance.scrollDuration;
+            UIManager.Instance.optionRectTran.anchoredPosition = Vector2.Lerp(startPosition, targetPosition, t);
+            UIManager.Instance.optionRectTran.sizeDelta = Vector2.Lerp(startPosition2, targetPosition2, t);
+            UIManager.Instance.scrollRect.normalizedPosition = Vector2.Lerp(startPosition3, targetPosition3, t);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        UIManager.Instance.optionRectTran.anchoredPosition = targetPosition;
+        UIManager.Instance.optionRectTran.sizeDelta = targetPosition2;
+        UIManager.Instance.scrollRect.normalizedPosition = targetPosition3;
+    }
 }

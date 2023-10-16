@@ -6,23 +6,25 @@ using TMPro;
 
 public class UIManager : SingleTon<UIManager>
 {
-    GameObject optionArea;
+    public GameObject optionArea;
+    public float EmptyContent;
 
-    GameObject storyContent;
-    TMP_Text[] choiceText;
-    Button[] choiceBtn;
+    public GameObject storyContent;
+    public TMP_Text[] choiceText;
+    public Button[] choiceBtn;
 
-    RectTransform optionRectTran;
+    public RectTransform optionRectTran;
 
-    ScrollRect scrollRect;
+    public ScrollRect scrollRect;
 
-    float typingSpeed = 0.05f;
+    public TMP_Text TextLengthContent;
 
-    int choiceCount;
 
-    private float scrollDuration = 0.3f;
+    public int choiceCount;
 
-    bool isScrolling = true;
+    public float scrollDuration = 0.3f;
+
+    public float contentHeight = 0;
 
     public UIManager()
     {
@@ -46,17 +48,20 @@ public class UIManager : SingleTon<UIManager>
         scrollRect = GameObject.Find("Scroll View").GetComponent<ScrollRect>();
         optionRectTran = optionArea.GetComponent<RectTransform>();
 
+        EmptyContent = GameObject.Find("EmptyContent").GetComponent<RectTransform>().sizeDelta.y;
+
+        TextLengthContent = GameObject.Find("LengthText").GetComponent<TMP_Text>(); ;
     }
     
     public Vector2 ImageStoryChange(GameObject imageInstance, GameObject textInstance) //이미지, 텍스트 추가
     {
         //이미지 콘텐츠 설정
-        imageInstance.transform.parent = storyContent.transform;
+        imageInstance.transform.SetParent(storyContent.transform, false);
         imageInstance.transform.localScale = new Vector3(1, 1, 1);
         imageInstance.transform.SetSiblingIndex(imageInstance.transform.GetSiblingIndex() - 1);
 
         //텍스트 콘텐츠 설정
-        textInstance.transform.parent = storyContent.transform;
+        textInstance.transform.SetParent(storyContent.transform, false);
         textInstance.transform.localScale = new Vector3(1, 1, 1);
         textInstance.transform.SetSiblingIndex(textInstance.transform.GetSiblingIndex() - 1);
 
@@ -66,14 +71,16 @@ public class UIManager : SingleTon<UIManager>
         //스크롤 위치 반환값 계산
         float contentH = scrollRect.content.rect.height;
         float imageH = imageInstance.GetComponent<RectTransform>().rect.height;
-        Vector2 scrollVector = new Vector2(1, 1 - ((contentH - imageH - 1200f) / (contentH - scrollRect.viewport.rect.size.y)));
+        Vector2 scrollVector = new Vector2(1, 1 - ((contentH - imageH - EmptyContent) / (contentH - scrollRect.viewport.rect.size.y)));
+
+        contentHeight = imageH + TextLengthContent.rectTransform.rect.height;
 
         return scrollVector;
     }
     public Vector2 StoryChange(GameObject textInstance) //텍스트 추가
     {
         //텍스트 콘텐츠 설정
-        textInstance.transform.parent = storyContent.transform;
+        textInstance.transform.SetParent(storyContent.transform, false);
         textInstance.transform.localScale = new Vector3(1, 1, 1);
         textInstance.transform.SetSiblingIndex(textInstance.transform.GetSiblingIndex() - 1);
 
@@ -82,7 +89,9 @@ public class UIManager : SingleTon<UIManager>
 
         //스크롤 위치 반환값 계산
         float contentH = scrollRect.content.rect.height;
-        Vector2 scrollVector = new Vector2(1, 1 - ((contentH - 1200f) / (contentH - scrollRect.viewport.rect.size.y)));
+        Vector2 scrollVector = new Vector2(1, 1 - ((contentH - EmptyContent) / (contentH - scrollRect.viewport.rect.size.y)));
+
+        contentHeight = TextLengthContent.rectTransform.rect.height;
 
         return scrollVector;
     }
@@ -118,57 +127,95 @@ public class UIManager : SingleTon<UIManager>
         }
     }
 
-    public IEnumerator StartTyping(GameObject textInstance, string targetText) //타이핑 IEnumerator
+    public void RebuildLayout()
     {
-        TextMeshProUGUI textComponent = textInstance.GetComponent<TextMeshProUGUI>();
-
-        for (int i = 0; i <= targetText.Length; i++)
-        {
-            textComponent.text = targetText.Substring(0, i);
-            yield return new WaitForSeconds(typingSpeed);
-        }
-
-        while (isScrolling)
-        {
-            yield return new WaitForSeconds(typingSpeed);
-        }
-        EndTyping(textInstance);
-    }
-
-    private void EndTyping(GameObject textInstance) //타이핑 종료 후 텍스트 높이 조절
-    {
-        RectTransform textRectTransform = textInstance.GetComponent<RectTransform>();
-
-        textRectTransform.sizeDelta = new Vector2(textRectTransform.sizeDelta.x, textInstance.GetComponent<TextMeshProUGUI>().preferredHeight);
         LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
-
-        optionRectTran.anchoredPosition = new Vector3(0, 55 * choiceCount, 0);
-        optionRectTran.sizeDelta = new Vector2(optionRectTran.sizeDelta.x, 110 * choiceCount);
-
     }
 
-    public IEnumerator ScrollSmoothly(Vector2 targetNormalizedPosition) //스크롤 IEnumerator
+    public void SetTextLength(string text)
     {
-        isScrolling = true;
+        TextLengthContent.text = text;
+    }
 
-        Vector2 startPosition = scrollRect.normalizedPosition;
-        Vector2 targetPosition = targetNormalizedPosition;
+    public bool IsOver()
+    {
+        return (1164 - 110 * choiceCount) < contentHeight;
+    }
 
-        float elapsedTime = 0f;
+    //public IEnumerator StartTyping(GameObject textInstance, string targetText) //타이핑 IEnumerator
+    //{
+    //    TextMeshProUGUI textComponent = textInstance.GetComponent<TextMeshProUGUI>();
 
-        while (elapsedTime < scrollDuration)
-        {
-            float t = elapsedTime / scrollDuration; 
-            scrollRect.normalizedPosition = Vector2.Lerp(startPosition, targetPosition, t);
+    //    for (int i = 0; i <= targetText.Length; i++)
+    //    {
+    //        textComponent.text = targetText.Substring(0, i);
+    //        yield return new WaitForSeconds(typingSpeed);
+    //    }
 
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
+    //    while (isScrolling)
+    //    {
+    //        yield return new WaitForSeconds(typingSpeed);
+    //    }
+
+    //    EndTyping(textInstance);
+    //}
+
+    //private void EndTyping(GameObject textInstance) //타이핑 종료 후 텍스트 높이 조절
+    //{
+    //    RectTransform textRectTransform = textInstance.GetComponent<RectTransform>();
+
+    //    textRectTransform.sizeDelta = new Vector2(textRectTransform.sizeDelta.x, textInstance.GetComponent<TextMeshProUGUI>().preferredHeight);
+    //    LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
+
+    //}
+
+    //public void ScrollSmoothly(Vector2 targetNormalizedPosition) //스크롤 IEnumerator
+    //{
+    //    isScrolling = true;
+
+    //    Vector2 startPosition = scrollRect.normalizedPosition;
+    //    Vector2 targetPosition = targetNormalizedPosition;
+
+    //    float elapsedTime = 0f;
+
+    //    while (elapsedTime < scrollDuration)
+    //    {
+    //        float t = elapsedTime / scrollDuration; 
+    //        scrollRect.normalizedPosition = Vector2.Lerp(startPosition, targetPosition, t);
+
+    //        elapsedTime += Time.deltaTime;
+    //        yield return null;
+    //    }
         
 
-        scrollRect.normalizedPosition = targetPosition;
+    //    scrollRect.normalizedPosition = targetPosition;
 
-        isScrolling = false;
-    }
+    //    isScrolling = false;
+    //}
+
+    //public IEnumerator SmoothlyUP()
+    //{
+    //    float elapsedTime = 0f;
+
+    //    Vector2 startPosition = optionRectTran.anchoredPosition;
+    //    Vector3 targetPosition = new Vector3(0, 55 * choiceCount, 0);
+
+    //    Vector2 startPosition2 = optionRectTran.sizeDelta;
+    //    Vector2 targetPosition2 = new Vector2(optionRectTran.sizeDelta.x, 110 * choiceCount);
+
+    //    while (elapsedTime < scrollDuration)
+    //    {
+    //        float t = elapsedTime / scrollDuration;
+    //        optionRectTran.anchoredPosition = Vector2.Lerp(startPosition, targetPosition, t);
+    //        optionRectTran.sizeDelta = Vector2.Lerp(startPosition2, targetPosition2, t);
+
+
+    //        elapsedTime += Time.deltaTime;
+    //        yield return null;
+    //    }
+
+    //    optionRectTran.anchoredPosition = new Vector3(0, 55 * choiceCount, 0);
+    //    optionRectTran.sizeDelta = new Vector2(optionRectTran.sizeDelta.x, 110 * choiceCount);
+    //}
 }
 
