@@ -1,9 +1,10 @@
+Column1,Column2,Column3,Column4,Column5,Column6
 Item_ID,Item_name,Item_description,Max_Count_type,Is_Show,Image_Path
-ë‹¨ì–´,,,0= ì…€ìˆ˜ì—†ì–´ì„œ ì¹´ìš´íŒ…ì´ë¨1= ìˆë‹¤ì—†ë‹¤ë§Œ íŒë³„,,
+´Ü¾î,,,0= ¼¿¼ö¾ø¾î¼­ Ä«¿îÆÃÀÌµÊ1= ÀÖ´Ù¾ø´Ù¸¸ ÆÇº°,,
 string,string,string,int,Bool,
-Item_Hamberger,í–„ë²„ê±°,ë¸”ë¼,0,TRUE,
-Item_Pizza,í”¼ì,ë¸”ë¼,0,TRUE,
-Item_Chicken,ì¹˜í‚¨,ë¸”ë¼,0,TRUE,
-Item_Key,ì—´ì‡ ,ì—´ì‡ ,0,TRUE,
-Item_Money,ëˆ,ëˆ,0,,
-Item_Bag,ê°€ë°©,ê°€ë°©,0,,
+Item_Hamberger,ÇÜ¹ö°Å,ºí¶ó,0,TRUE,
+Item_Pizza,ÇÇÀÚ,ºí¶ó,0,TRUE,
+Item_Chicken,Ä¡Å²,ºí¶ó,0,TRUE,
+Item_Key,¿­¼è,¿­¼è,0,TRUE,
+Item_Money,µ·,µ·,0,,
+Item_Bag,°¡¹æ,°¡¹æ,0,,
