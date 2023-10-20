@@ -1,30 +1,10 @@
-Column1,Column2
 story_ID,story
-½ºÅä¸®,³»¿ë
+ìŠ¤í† ë¦¬,ë‚´ìš©
 string,string
-Story_0001,¡º¡¤¡¤¡¤ »ç½Ç ¾î¶»°Ô »ý°¢ÇÏµç »ó°ü¾ø½À´Ï´Ù. Áö±ÝºÎÅÏ ¾î¶»°Ô »ý°¢ÇÏµçÁö°£¿¡ ´ç½ÅÀº ÀÌ ¡®¸®Å¸(ryta)¡¯¿¡¼­ ÀÌ¾ß±â¸¦ »õ·Î ½á°¡¾ßÇÒ Å×´Ï±î¿ä.¡»
-Story_0002,¡º¡¤¡¤¡¤ »ç½Ç ¾î¶»°Ô »ý°¢ÇÏµç »ó°ü¾ø½À´Ï´Ù. Áö±ÝºÎÅÏ ¾î¶»°Ô »ý°¢ÇÏµçÁö°£¿¡ ´ç½ÅÀº ÀÌ ¡®¸®Å¸(ryta)¡¯¿¡¼­ ÀÌ¾ß±â¸¦ »õ·Î ½á°¡¾ßÇÒ Å×´Ï±î¿ä.¡»
-Story_0003,ÇÇÀÚ°¡ ¸ÀÀÖ´Ù
-Story_0004,Ä¡Å²ÀÌ ¸ÀÀÖ´Ù
-Story_0005,¹è°íÇÁ´Ù
-Story_0006,Àá°Ü ÀÖ´Â ¹®À» ¹ß°ßÇß´Ù
-Story_0007,¿­¼è¸¦ »ç¿ëÇÏ¿© ¹®À» ¿­¾ú´õ´Ï ¾Æ¹«°Íµµ ¾ø¾ú´Ù.
-Story_0008,Áö³ªÃÆ´Ù
-Story_0009,¶Ç ´Ù¸¥ ¹®À» ¹ß°ßÇß´Ù
-Story_0010,¹ß·Î Ã¡Áö¸¸ ¿­Áö ¸øÇß´Ù.
-Story_0011,¿­¼è¸¦ »ç¿ëÇÏ¿© ¹®À» ¿­¾ú´õ´Ï ¶Ç ¾Æ¹«°Íµµ ¾ø¾ú´Ù.
-Story_0012,Áö³ª°¡´Âµ¥ ¹®±¸Á¡ÀÌ º¸ÀÎ´Ù
-Story_0013,µé¾î°¡¼­ µÑ·¯º¸°í ½Í¾îÁø ³ª´Â ¹®±¸Á¡À¸·Î µé¾î°¬´Ù.....
-Story_0014,³Ê¹« ÀÌ»Û ¸¸±¹±âµéÀÌ ¹®±¸Á¡¿¡ °É·ÁÀÖ´Ù.....
-Story_0015,¹®±¸Á¡ÀÌ ÇÏ³ª ´õ º¸ÀÎ´Ù
-Story_0016,¹®±¸Á¡¿¡¼­ °£½ÄÀÌ ÀÖ¾î¼­ ±¸¸ÅÇß´Ù.
-Story_0017,¹®±¸Á¡¿¡¼­ ÃÑÀ» ÆÈ°íÀÖ¾î¼­ ¹Ù·Î ±¸¸ÅÇß´Ù.
-Story_0018,µé¾î°¡ºÃÁö¸¸ µ·ÀÌ ¾ø¾î¼­ ¾Æ¹«°Íµµ »ì ¼ö ¾ø¾ú´Ù.
-Story_0019,Áö³ª°¡´Ù°¡ ÇàÀÎÀÌ °¡¹æÀ» Áá´Ù.
-Story_0020,°¡¹æÀ»
-Story_0021,¾ÆÀÌ°¡ °¡¹æÀ» ÃÄ´Ùº¸°í ÀÖ´Ù
-Story_0022,°¡¹æÀ» ¾ÆÀÌ¿¡°Ô Áá´Ù.
-Story_0023,
-Story_0024,
-Story_0025,
-Story_0026,
+Story_0000,ê°ìžë¥¼ ë´¤ë‹¤.
+Story_0004,ë§›ìžˆë‹¤ì²´ë ¥ì´ ì°»ë‹¤
+Story_0005,ì‚¬ì‹¤ ë…ê°ìžì˜€ë‹¤.
+Story_0006,ê°ìžë¥¼ ì–»ì—ˆë‹¤
+Story_0008,ë°°ê°€ ê³ í”„ë‹¤
+Story_0011,ê°ìžê°€ ë§›ìžˆë‹¤
+Story_0012,êµ¶ì—ˆë‹¤.ì²´ë ¥ì´ ë‹³ì•˜

@@ -1,24 +1,10 @@
-choice_TID,choice_group_ID,result_Index,Choice_type,hidden_Choice_condition_type,hidden_Choice_condition_Standard,hidden_Choice_condition_value,choice_text_ID,condition1_type,condition1_standard,condition1_value,condition2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result, 
-¼ö½Ä,Choice_ºÎ°¡¼³¸í_00,¼ö½Ä,È÷µçÀÌ³Ä µõµå³Ä,,,,,ÄÁµğ¼Ç 1 ÆÇº° ±âÁØ,,,ÄÁµğ¼Ç2 ÆÇº° ±âÁØ,,,"ÄÁµğ¼Ç1,2 ¸ğµÎ ¼º°ø",ÄÁµğ¼Ç1 ¼º°ø,ÄÁµğ¼Ç2 ¼º°ø,"ÄÁµğ¼Ç1,2 ¸ğµÎ ½ÇÆĞ",
-,String,int,Enum,,,,string,string,Enum,int,string,Enum,int,string,string,string,string,
-Choice_FoodMenu_001,Choice_FoodMenu_00,1,Normal,Null,Null,0,ÇÜ¹ö°Å,,,,,,,,,,R0002_P100,
-Choice_FoodMenu_002,Choice_FoodMenu_00,2,Normal,Null,Null,0,ÇÇÀÚ,,,,,,,,,,R0003_P100,
-Choice_FoodMenu_003,Choice_FoodMenu_00,3,Normal,Null,Null,0,Ä¡Å²,,,,,,,,,,R0004_P100,
-Choice_FoodMenu_004,Choice_FoodMenu_00,4,Normal,Null,Null,0,±¾±â,,,,,,,,,,R0005_P100,
-Choice_StoryFlow_001,Choice_StoryFlow_00,1,Normal,Null,Null,0,·ê·ç¶ö¶ó ±æÀ» ³ª¼±´Ù.,,,,,,,,,,R0006_P100,
-Choice_OpenDoor_001,Choice_OpenDoor_00,1,Dimmed,Item_Key,More,0,¹®À» ¿¬´Ù,,,,,,,,,,R0007_P100,
-Choice_OpenDoor_002,Choice_OpenDoor_00,2,Normal,Null,Null,0,Áö³ªÄ£´Ù.,,,,,,,,,,R0008_P100,
-Choice_StoryFlow_011,Choice_StoryFlow_01,1,Normal,Null,Null,0,°è¼Ó ³ª¾Æ°£´Ù.,,,,,,,,,,R0009_P100,
-Choice_OpenDoor_011,Choice_OpenDoor_01,1,Normal,Null,Null,0,¹ß·Î Âù´Ù.,,,,,,,,,,R0010_P100,
-Choice_OpenDoor_012,Choice_OpenDoor_01,2,Hidden,Item_Key,More,0,¹®À» ¿¬´Ù.,,,,,,,,,,R0011_P100,
-Choice_StoryFlow_021,Choice_StoryFlow_02,1,Normal,Null,Null,0,°è¼Ó ³ª¾Æ°£´Ù.,,,,,,,,,,R0012_P100,
-Choice_VisitStore_001,Choice_VisitStore_00,1,Normal,Null,Null,0,¹®±¸Á¡À¸·Î µé¾î°£´Ù.,Item_Money,More,999,,,,,R0013_P100,,R0014_P100,
-Choice_VisitStore_002,Choice_VisitStore_00,2,Normal,Null,Null,0,¹®±¸Á¡À» Áö³ªÄ£´Ù.,,,,,,,,,,R0015_P100,
-Choice_StoryFlow_031,Choice_StoryFlow_03,1,Normal,Null,Null,0,´Ù½Ã °¡´ø ±æÀ» °£´Ù.,,,,,,,,,,R0015_P100,
-Choice_VisitStore_011,Choice_VisitStore_01,1,Normal,Null,Null,0,¹®±¸Á¡À» µé¸°´Ù,Item_Money,More,999,,,,,R0016_P90_R0017_P10,,R0018_P100,
-Choice_VisitStore_012,Choice_VisitStore_01,2,Normal,Null,Null,0,¹®±¸Á¡À» µé¸®Áö ¾Ê´Â´Ù,,,,,,,,,,R0019_P100,
-Choice_StoryFlow_041,Choice_StoryFlow_04,1,Normal,Null,Null,0,¶Ç ´Ù½Ã °¡´ø ±æÀ» °£´Ù,,,,,,,,,,R0020_P100,
-Choice_ GetItem_001,Choice_ GetItem_00,1,Normal,Null,Null,0,°¡¹æÀ» ¹Ş´Â´Ù,,,,,,,,,,R0021_P100,
-Choice_StoryFlow_051,Choice_StoryFlow_05,1,Normal,Null,Null,0,±æÀ» ³ª¼±´Ù,,,,,,,,,,R0022_P100,
-Choice_lossItem_001,Choice_lossItem_00,1,Normal,Null,Null,0,°¡¹æÀ» ÁØ´Ù,,,,,,,,,,R0023_P100,
-Choice_StoryFlow_061,Choice_StoryFlow_06,1,Normal,Null,Null,0,±æÀ» ³ª¼±´Ù,,,,,,,,,,R0024_P100,
+choice_TID,choice_group_ID,result_Index,Choice_type,hidden_Choice_condition_type,hidden_Choice_condition_Standard,hidden_Choice_condition_value,choice_text_ID,condition1_type,condition1_standard,condition1_value,condition2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result
+ìˆ˜ì‹,Choice_ë¶€ê°€ì„¤ëª…_00,ìˆ˜ì‹,íˆë“ ì´ëƒ ë”¤ë“œëƒ,,,,,ì»¨ë””ì…˜ 1 íŒë³„ ê¸°ì¤€,,,ì»¨ë””ì…˜2 íŒë³„ ê¸°ì¤€,,,ì»¨ë””ì…˜1 2 ëª¨ë‘ ì„±ê³µ,ì»¨ë””ì…˜1 ì„±ê³µ,ì»¨ë””ì…˜2 ì„±ê³µ,ì»¨ë””ì…˜1 2 ëª¨ë‘ ì‹¤íŒ¨
+String,String,int,Enum,,,,string,string,Enum,int,string,Enum,int,string,string,string,string
+Choice_Story_00001,Choice_Story_0000,1,Normal,Null,Null,,ì¤ëŠ”ë‹¤,Null,Null,,Null,Null,,,,,R0006_P100
+Choice_Story_00002,Choice_Story_0000,2,Normal,Null,Null,,ë¨¹ëŠ”ë‹¤,Null,Null,,Null,Null,,,,,R0004_P90_R0005_P10
+Choice_Story_00041,Choice_Story_0004,1,Normal,Null,Null,,ì§„í–‰í•œë‹¤.,Null,Null,,Null,Null,,,,,R0008_P100
+Choice_Story_00051,Choice_Story_0005,1,Normal,Null,Null,,ì§„í–‰í•œë‹¤.,Null,Null,,Null,Null,,,,,R0008_P100
+Choice_Story_00061,Choice_Story_0006,1,Normal,Null,Null,,ì§„í–‰í•œë‹¤.,Null,Null,,Null,Null,,,,,R0008_P100
+Choice_Story_00081,Choice_Story_0008,1,Dimmed,item_potato,More,0,ê°ìë¥¼ ë¨¹ì,Null,Null,,Null,Null,,,,,R0011_P100
+Choice_Story_00082,Choice_Story_0008,2,Normal,Null,Null,,êµ¶ì–´ì•¼ì§€ ë­...,Null,Null,,Null,Null,,,,,R0012_P100

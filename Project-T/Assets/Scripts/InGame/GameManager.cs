@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
         DebugManager.Instance.PrintDebug("choice");
 
-        StoryUpdate("Story_0001");
+        StoryUpdate("Story_0000");
 
     }
 
@@ -46,12 +46,12 @@ public class GameManager : MonoBehaviour
 
         //아이템 
 
-        if (!string.Equals((string)storyLoad["Target1_type"], ""))
+        if (!string.Equals((string)storyLoad["Target1_type"], "Null"))
         {
             InventoryManager.Instance.Add((string)storyLoad["Target1_type"], (string)storyLoad["Target1_change_value"]);
         }
 
-        if (!string.Equals((string)storyLoad["Target2_type"], ""))
+        if (!string.Equals((string)storyLoad["Target2_type"], "Null"))
         {
             InventoryManager.Instance.Add((string)storyLoad["Target1_type"], (string)storyLoad["Target2_change_value"]);
         }
