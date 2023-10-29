@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -70,6 +70,7 @@ public class StoryManager : SingleTon<StoryManager>
 
     public Dictionary<string, object> GetItem(string itemID)
     {
+        Debug.Log(itemID);
         return item[itemID];
     }
 
