@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     }
     public void choiceChange(string story)
     {
-        //¿À·ù ÀÖ¾î¼­ Á» ¹°¾îºÁ¾ßÇÔ.
+        //ì˜¤ë¥˜ ìˆì–´ì„œ ì¢€ ë¬¼ì–´ë´ì•¼í•¨.
         StoryText.text = story;
     }
 }

@@ -1,6 +1,0 @@
-choice_result_ID,Story_id_1,Story_id_1_rate,Story_id_2,Story_id_2_rate
-string,string,int,string,int
-결과110011,메인스토리1002,100,메인스토리1002,0
-결과110012,메인스토리1002,60,메인스토리1002,40
-결과110013,메인스토리1002,50,메인스토리1002,50
-결과110014,메인스토리1001,100,TM_1001,0
