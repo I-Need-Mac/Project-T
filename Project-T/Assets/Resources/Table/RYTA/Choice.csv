@@ -1,0 +1,4 @@
+choice_TID,choice_group_ID,result_Index,Choice_type,hidden_Choice_condition_type,hidden_Choice_condition_Standard,hidden_Choice_condition_value,choice_text_ID,condition1_type,condition1_standard,condition1_value,condition2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result
+수식,Choice_부가설명_00,수식,히든이냐 딤드냐,,,,,컨디션 1 판별 기준,,,컨디션2 판별 기준,,,컨디션1 2 모두 성공,컨디션1 성공,컨디션2 성공,컨디션1 2 모두 실패
+String,String,int,Enum,,,,string,string,Enum,int,string,Enum,int,string,string,string,string
+Choice_Story_00001,Choice_Story_0000,1,Normal,Null,Null,,,Null,Null,,Null,Null,,,,,
