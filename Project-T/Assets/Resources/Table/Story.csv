@@ -1,13 +1,11 @@
 story_ID,story
 스토리,내용
 string,string
-Story_0000,바닥에 감자가 있다
-Story_0001,감자를 주웠다
-Story_0005,맛있게 먹었다.
-Story_0007,독감자였다!
-Story_0008,가던길을 마저 갔다
-Story_0009,배가 고프다
-Story_0014,트랩을 밟았다.
-Story_0016,죽다 살았다!
-Story_0017,죽었다!
-Story_0019,살았다!
+Story_0000,감자를 보았다
+Story_0004,독이 든 감자였다
+Story_0005,맛있다
+Story_0007,주워서 가방안에 넣었다.
+Story_0008,무시하기로 했다.
+Story_0010,배가 고프다
+Story_0013,감자가 맛있다
+Story_0014,굶었다
