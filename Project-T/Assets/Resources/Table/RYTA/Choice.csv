@@ -1,4 +1,18 @@
 choice_TID,choice_group_ID,result_Index,Choice_type,hidden_Choice_condition_type,hidden_Choice_condition_Standard,hidden_Choice_condition_value,choice_text_ID,condition1_type,condition1_standard,condition1_value,condition2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result
 수식,Choice_부가설명_00,수식,히든이냐 딤드냐,,,,,컨디션 1 판별 기준,,,컨디션2 판별 기준,,,컨디션1 2 모두 성공,컨디션1 성공,컨디션2 성공,컨디션1 2 모두 실패
 String,String,int,Enum,,,,string,string,Enum,int,string,Enum,int,string,string,string,string
-Choice_Story_00001,Choice_Story_0000,1,Normal,Null,Null,,,Null,Null,,Null,Null,,,,,
+Choice_Story_00001,Choice_Story_0000,1,Normal,Null,Null,,순수한 아이들이 읽었을 때 때묻지 않은 상상력을 펼칠 수 있는 이야기.,Null,Null,,Null,Null,,,,,R0004_P100
+Choice_Story_00002,Choice_Story_0000,2,Normal,Null,Null,,아이들이 읽는 현실성 없는 판타지적 이야기.,Null,Null,,Null,Null,,,,,R0004_P100
+Choice_Story_00003,Choice_Story_0000,3,Normal,Null,Null,,지금은 읽을 수 없는 유치한 이야기.,Null,Null,,Null,Null,,,,,R0004_P100
+Choice_Story_00041,Choice_Story_0004,1,Normal,Null,Null,,발걸음을 돌려 아예 다른 곳으로 자리를 옮긴다,Null,Null,,Null,Null,,,,,R0006_P100
+Choice_Story_00061,Choice_Story_0006,1,Normal,Null,Null,,문을 연다.,Null,Null,,Null,Null,,,,,R0008_P100
+Choice_Story_00081,Choice_Story_0008,1,Normal,Null,Null,,뒤를 돈다.,Null,Null,,Null,Null,,,,,R0010_P100
+Choice_Story_00101,Choice_Story_0010,1,Normal,Null,Null,,“어\c어.. 혹시 여기 명빈도서관 아닌가요?”,Null,Null,,Null,Null,,,,,R0012_P100
+Choice_Story_00121,Choice_Story_0012,1,Normal,Null,Null,,“어\c어.. 그럼 여기 어디에요?”,Null,Null,,Null,Null,,,,,R0014_P100
+Choice_Story_00141,Choice_Story_0014,1,Normal,Null,Null,,옷?,Null,Null,,Null,Null,,,,,R0017_P100
+Choice_Story_00142,Choice_Story_0014,2,Normal,Null,Null,,빨간 모자?,Null,Null,,Null,Null,,,,,
+Choice_Story_00171,Choice_Story_0017,1,Normal,Null,Null,,다가간다.,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00172,Choice_Story_0017,2,Normal,Null,Null,,그 자리에서 지켜본다.,Null,Null,,Null,Null,,,,,
+Choice_Story_00181,Choice_Story_0018,1,Normal,Null,Null,,다가간다.,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00182,Choice_Story_0018,2,Normal,Null,Null,,그 자리에서 지켜본다.,Null,Null,,Null,Null,,,,,
+Choice_Story_00201,Choice_Story_0020,1,Normal,Null,Null,,조금이라도 보기 위해 사람들 사이의 좁은 틈으로 쳐다본다,Null,Null,,Null,Null,,,,,
