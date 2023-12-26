@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/main.uss?fileID=7433441132597879392&amp;guid=6ad2df40f183b2d4fbbef958cd742b4f&amp;type=3#main" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(255, 255, 255); background-image: none; align-items: center;">
+        <ui:VisualElement style="width: 100%; height: 56px; padding-left: 20px; padding-right: 20px;">
+            <ui:VisualElement style="width: 24px; height: 100%; align-items: flex-start; justify-content: center;">
+                <ui:Label text="◀" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-SemiBold&apos;); color: rgba(17, 18, 18, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="width: 100%; padding-left: 20px; padding-right: 20px; padding-top: 18px; padding-bottom: 18px; flex-direction: row; justify-content: space-between;">
+            <ui:Label text="전체 음량" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-SemiBold&apos;); color: rgb(17, 18, 18); -unity-text-align: middle-left;" />
+            <ui:VisualElement style="flex-direction: row; align-items: center;">
+                <ui:VisualElement style="width: 24px; height: 24px; background-image: resource(&apos;UI/Icon/ic_minus_active&apos;);" />
+                <ui:Label text="20" display-tooltip-when-elided="true" style="-unity-text-align: middle-center; font-size: 16px; color: rgba(17, 18, 18, 255); -unity-font: resource(&apos;UI/Font/public/static/Pretendard-Regular&apos;); -unity-font-definition: none; width: 20px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 8px; margin-right: 8px;" />
+                <ui:VisualElement style="width: 24px; height: 24px; background-image: resource(&apos;UI/Icon/ic_plus_active&apos;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
