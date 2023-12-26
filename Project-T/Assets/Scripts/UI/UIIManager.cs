@@ -31,6 +31,15 @@ public class UIManager : SingleTon<UIManager>
     private VisualElement _handleContainer;
     private VisualElement _buttonList;
 
+    private VisualElement _sidemenuBtn;
+    private VisualElement _sidemenuBg;
+    private VisualElement _sidemenu;
+    private VisualElement _sidemenuCloseBtn;
+
+    private VisualElement _inventoryBtn;
+    private VisualElement _inventoryContainer;
+    private VisualElement _inventoryCloseBtn;
+
     private VisualElement[] _line = new VisualElement[4];
     private Button[] _choiceBtn = new Button[4];
 
@@ -73,7 +82,22 @@ public class UIManager : SingleTon<UIManager>
         _choiceBtn[2] = root.Q<Button>("choice-2");
         _choiceBtn[3] = root.Q<Button>("choice-3");
 
+        _sidemenuBtn = root.Q<VisualElement>("sidemenu-btn");
+        _sidemenuBg = root.Q<VisualElement>("menu-background");
+        _sidemenu = root.Q<VisualElement>("sidemenu");
+        _sidemenuCloseBtn = root.Q<VisualElement>("sidemenu-close");
+
+        _inventoryBtn = root.Q<VisualElement>("inventory-btn");
+        _inventoryContainer = root.Q<VisualElement>("inventory-container");
+        _inventoryCloseBtn = root.Q<VisualElement>("inventory-close-btn");
+
         _handleContainer.RegisterCallback<ClickEvent>(OnOffBottom);
+
+        _sidemenuBtn.RegisterCallback<ClickEvent>(OnSideMenu);
+        _sidemenuCloseBtn.RegisterCallback<ClickEvent>(OffSideMenu);
+
+        _inventoryBtn.RegisterCallback<ClickEvent>(OnInventoryMenu);
+        _inventoryCloseBtn.RegisterCallback<ClickEvent>(OffInventoryMenu);
     }
     
 
@@ -91,6 +115,27 @@ public class UIManager : SingleTon<UIManager>
     public void OnOffBottom(ClickEvent evt)
     {
         _bottomList.ToggleInClassList("bottomlist--up");
+    }
+
+    public void OnSideMenu(ClickEvent evt)
+    {
+        _sidemenuBg.AddToClassList("container--open");
+        _sidemenu.AddToClassList("sidemenu--open");
+    }
+
+    public void OffSideMenu(ClickEvent evt)
+    {
+        _sidemenuBg.RemoveFromClassList("container--open");
+        _sidemenu.RemoveFromClassList("sidemenu--open");
+    }
+    public void OnInventoryMenu(ClickEvent evt)
+    {
+        _inventoryContainer.AddToClassList("itemcontainer--open");
+    }
+
+    public void OffInventoryMenu(ClickEvent evt)
+    {
+        _inventoryContainer.RemoveFromClassList("itemcontainer--open");
     }
 
     public void ChoiceChange(List<Dictionary<string, object>> choices) //선택지 관리
