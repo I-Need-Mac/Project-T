@@ -1,4 +1,7 @@
 Item_ID,Item_name,Item_description,Item_type,Is_Show,Image_Path
 단어,,,0= 셀수없어서 카운팅이됨1= 있다없다만 판별,,
 string,string,string,int,Bool,
-Item_potato,감자,맛있어 보인다.,0,True,
+Item_probability,확률,큐브를 풀 확률이다.,50,False,
+Item_c0c1,chap0 choise1,,0,False,
+Item_c0c2,,,0,False,
+Item_c0c3,,,0,False,
