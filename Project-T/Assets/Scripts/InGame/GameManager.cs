@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 using TMPro;
+
+using Image = UnityEngine.UI.Image;
+using Button = UnityEngine.UIElements.Button;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,15 +24,27 @@ public class GameManager : MonoBehaviour
 
     float typingSpeed = 0.05f;
 
+    public Button[] choiceBtn = new Button[4];
 
     // Start is called before the first frame update
     void Start()
     {
+        var root = GameObject.Find("UIDocument").GetComponent<UIDocument>().rootVisualElement;
 
         textContent = Resources.Load<GameObject>("Prefabs/TextContent");
         imageContent = Resources.Load<GameObject>("Prefabs/ImageContent");
 
         DebugManager.Instance.PrintDebug("choice");
+
+        choiceBtn[0] = root.Q<Button>("choice-0");
+        choiceBtn[1] = root.Q<Button>("choice-1");
+        choiceBtn[2] = root.Q<Button>("choice-2");
+        choiceBtn[3] = root.Q<Button>("choice-3");
+
+        choiceBtn[0].RegisterCallback<ClickEvent>(SelectChoice1);
+        choiceBtn[1].RegisterCallback<ClickEvent>(SelectChoice2);
+        choiceBtn[2].RegisterCallback<ClickEvent>(SelectChoice3);
+        choiceBtn[3].RegisterCallback<ClickEvent>(SelectChoice4);
 
         StoryUpdate("Story_0000");
 
@@ -94,6 +110,27 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        int choiceCount = 0;
+        foreach (Dictionary<string, object> outputChoice in outputChoices)
+        {
+            string choiceType = (string)outputChoice["Choice_type"];
+            if (string.Equals(choiceType, "Dimmed"))
+            {
+                if (InventoryManager.Instance.IsCondition((string)outputChoice["hidden_Choice_condition_type"], (string)outputChoice["hidden_Choice_condition_Standard"], (string)outputChoice["hidden_Choice_condition_value"]))
+                {
+                    SelectChoiceInt(choiceCount);
+                }
+                else
+                {
+                    UnSelectChoiceInt(choiceCount);
+                }
+            }
+            else
+            {
+                SelectChoiceInt(choiceCount);
+            }
+            choiceCount++;
+        }
 
         UIManager.Instance.ChoiceChange(outputChoices);
         UIManager.Instance.SetTextLength(storyT);
@@ -115,31 +152,66 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void OptionUP()
-    {
-        StartCoroutine(SmoothlyUP());
-    }
-
     //각 버튼 함수
-    public void SelectChoice1()
+    public void SelectChoice1(ClickEvent evt)
     {
         SelectChoice(0);
     }
-    public void SelectChoice2()
+    public void SelectChoice2(ClickEvent evt)
     {
         SelectChoice(1);
     }
-    public void SelectChoice3()
+    public void SelectChoice3(ClickEvent evt)
     {
         SelectChoice(2);
     }
-    public void SelectChoice4()
+    public void SelectChoice4(ClickEvent evt)
     {
         SelectChoice(3);
     }
 
+    public void SelectChoiceInt(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                choiceBtn[0].RegisterCallback<ClickEvent>(SelectChoice1);
+                break;
+            case 1:
+                choiceBtn[1].RegisterCallback<ClickEvent>(SelectChoice2);
+                break;
+            case 2:
+                choiceBtn[2].RegisterCallback<ClickEvent>(SelectChoice3);
+                break;
+            case 3:
+                choiceBtn[3].RegisterCallback<ClickEvent>(SelectChoice4);
+                break;
+        }
+    }
+
+    public void UnSelectChoiceInt(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                choiceBtn[0].UnregisterCallback<ClickEvent>(SelectChoice1);
+                break;
+            case 1:
+                choiceBtn[1].UnregisterCallback<ClickEvent>(SelectChoice2);
+                break;
+            case 2:
+                choiceBtn[2].UnregisterCallback<ClickEvent>(SelectChoice3);
+                break;
+            case 3:
+                choiceBtn[3].UnregisterCallback<ClickEvent>(SelectChoice4);
+                break;
+        }
+    }
+
     public void SelectChoice(int btnNum)
     {
+        UIManager.Instance.StoryStateSetting();
+
         bool isCondition1 = InventoryManager.Instance.IsCondition((string)outputChoices[btnNum]["condition1_type"], (string)outputChoices[btnNum]["condition1_standard"], (string)outputChoices[btnNum]["condition1_value"]);
         bool isCondition2 = InventoryManager.Instance.IsCondition((string)outputChoices[btnNum]["condition2_type"], (string)outputChoices[btnNum]["condition2_standard"], (string)outputChoices[btnNum]["condition2_value"]);
 
@@ -200,7 +272,8 @@ public class GameManager : MonoBehaviour
 
         UIManager.Instance.RebuildLayout();
 
-        StartCoroutine(SmoothlyUP());
+        UIManager.Instance.ChoiceStateSetting();
+        //StartCoroutine(SmoothlyUP());
     }
 
     public IEnumerator ScrollSmoothly(Vector2 targetNormalizedPosition) //스크롤 IEnumerator
@@ -223,7 +296,7 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(StartTyping(textInstance, storyT));
     }
-
+    /*
     public IEnumerator SmoothlyUP()
     {
         float elapsedTime = 0f;
@@ -253,4 +326,5 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.optionRectTran.sizeDelta = targetPosition2;
         UIManager.Instance.scrollRect.normalizedPosition = targetPosition3;
     }
+    */
 }
