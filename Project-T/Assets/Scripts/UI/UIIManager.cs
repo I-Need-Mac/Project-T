@@ -43,6 +43,9 @@ public class UIManager : SingleTon<UIManager>
     private VisualElement[] _line = new VisualElement[4];
     private Button[] _choiceBtn = new Button[4];
 
+    public Transform InventoryCanvas;
+    public Transform InventoryContent;
+
     //추가
 
 
@@ -66,6 +69,11 @@ public class UIManager : SingleTon<UIManager>
         scrollRect = GameObject.Find("Scroll View").GetComponent<ScrollRect>();
         EmptyContent = GameObject.Find("EmptyContent").GetComponent<RectTransform>().sizeDelta.y;
         TextLengthContent = GameObject.Find("LengthText").GetComponent<TMP_Text>();
+
+        InventoryCanvas = GameObject.Find("CanvasContainer").transform.Find("Inventory Canvas");
+        InventoryContent = InventoryCanvas.GetChild(1).GetChild(0).GetChild(0).GetChild(0);
+
+        InventoryCanvas.gameObject.SetActive(false);
 
         var root = GameObject.Find("UIDocument").GetComponent<UIDocument>().rootVisualElement;
 
@@ -98,6 +106,7 @@ public class UIManager : SingleTon<UIManager>
 
         _inventoryBtn.RegisterCallback<ClickEvent>(OnInventoryMenu);
         _inventoryCloseBtn.RegisterCallback<ClickEvent>(OffInventoryMenu);
+
     }
     
 
@@ -131,11 +140,13 @@ public class UIManager : SingleTon<UIManager>
     public void OnInventoryMenu(ClickEvent evt)
     {
         _inventoryContainer.AddToClassList("itemcontainer--open");
+        InventoryCanvas.gameObject.SetActive(true);
     }
 
     public void OffInventoryMenu(ClickEvent evt)
     {
         _inventoryContainer.RemoveFromClassList("itemcontainer--open");
+        InventoryCanvas.gameObject.SetActive(false);
     }
 
     public void ChoiceChange(List<Dictionary<string, object>> choices) //선택지 관리
