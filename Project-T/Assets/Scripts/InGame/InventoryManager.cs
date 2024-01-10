@@ -11,7 +11,10 @@ public class InventoryManager : SingleTon<InventoryManager>
     {
         itemList = new Dictionary<string, Item>();
     }
-
+    public Dictionary<string, Item> GetItemList()
+    {
+        return itemList;
+    }
     public bool IsCondition(string itemid, string standard, string value)
     {
         if (itemList.ContainsKey(itemid))

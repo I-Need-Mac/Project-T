@@ -210,7 +210,6 @@ public class GameManager : MonoBehaviour
 
     public void SelectChoice(int btnNum)
     {
-        UIManager.Instance.StoryStateSetting();
 
         bool isCondition1 = InventoryManager.Instance.IsCondition((string)outputChoices[btnNum]["condition1_type"], (string)outputChoices[btnNum]["condition1_standard"], (string)outputChoices[btnNum]["condition1_value"]);
         bool isCondition2 = InventoryManager.Instance.IsCondition((string)outputChoices[btnNum]["condition2_type"], (string)outputChoices[btnNum]["condition2_standard"], (string)outputChoices[btnNum]["condition2_value"]);

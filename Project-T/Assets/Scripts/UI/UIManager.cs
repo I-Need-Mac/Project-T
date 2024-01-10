@@ -45,6 +45,7 @@ public class UIManager : SingleTon<UIManager>
 
     public Transform InventoryCanvas;
     public Transform InventoryContent;
+    //public GameObject ItemLineContent;
 
     //추가
 
@@ -72,6 +73,7 @@ public class UIManager : SingleTon<UIManager>
 
         InventoryCanvas = GameObject.Find("CanvasContainer").transform.Find("Inventory Canvas");
         InventoryContent = InventoryCanvas.GetChild(1).GetChild(0).GetChild(0).GetChild(0);
+        //ItemLineContent = Resources.Load<GameObject>("Prefabs/ItemLine");
 
         InventoryCanvas.gameObject.SetActive(false);
 
@@ -109,11 +111,61 @@ public class UIManager : SingleTon<UIManager>
 
     }
     
+    public void InventoryItemLoad()
+    {
+        Dictionary<string, Item> itemList = InventoryManager.Instance.GetItemList();
+        int invenCount = 0;
+        int currentLine = 0;
 
+        foreach (KeyValuePair<string, Item> entry in itemList)
+        {
+            int currentSlot = invenCount % 3;
+            if (entry.Value.Data.type == 0 && entry.Value.Data.isShow == true && entry.Value.Data.isShow == true) {
+                if (currentSlot == 0)
+                {
+                    currentLine = invenCount / 3;
+                    InventoryContent.GetChild(currentLine).gameObject.SetActive(true);
+                    InventoryContent.GetChild(currentLine).GetChild(0).gameObject.SetActive(false);
+                    InventoryContent.GetChild(currentLine).GetChild(1).gameObject.SetActive(false);
+                    InventoryContent.GetChild(currentLine).GetChild(2).gameObject.SetActive(false);
+                }
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).gameObject.SetActive(true);
+                if (!string.Equals(entry.Value.Data.imagePath, ""))
+                {
+                    InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = ImageLoader.Instance.LoadLocalImageToSprite(entry.Value.Data.imagePath);
+                }
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(1).GetComponent<TextMeshProUGUI>().text = entry.Value.Data.itemname;
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(2).gameObject.SetActive(false);
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(3).gameObject.SetActive(false);
+
+                invenCount++;
+            }
+            else if(entry.Value.Data.type == 1 && entry.Value.Data.isShow == true && entry.Value.Data.isShow == true) {
+                if (currentSlot == 0)
+                {
+                    currentLine = invenCount / 3;
+                    InventoryContent.GetChild(currentLine).gameObject.SetActive(true);
+                    InventoryContent.GetChild(currentLine).GetChild(0).gameObject.SetActive(false);
+                    InventoryContent.GetChild(currentLine).GetChild(1).gameObject.SetActive(false);
+                    InventoryContent.GetChild(currentLine).GetChild(2).gameObject.SetActive(false);
+                }
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).gameObject.SetActive(true);
+                if (!string.Equals(entry.Value.Data.imagePath, ""))
+                {
+                    InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = ImageLoader.Instance.LoadLocalImageToSprite(entry.Value.Data.imagePath);
+                }
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(1).GetComponent<TextMeshProUGUI>().text = entry.Value.Data.itemname;
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(2).gameObject.SetActive(true);
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(3).gameObject.SetActive(true);
+                InventoryContent.GetChild(currentLine).GetChild(currentSlot).GetChild(3).GetComponent<TextMeshProUGUI>().text = entry.Value.Data.amount + "개";
+                invenCount++;
+            }
+        }
+    }
     public void StoryStateSetting()
     {
-        _bottomList.RemoveFromClassList("bottomlist--up");
         _bottomList.style.display = DisplayStyle.None;
+        _bottomList.RemoveFromClassList("bottomlist--up");
     }
     public void ChoiceStateSetting()
     {
@@ -140,6 +192,7 @@ public class UIManager : SingleTon<UIManager>
     public void OnInventoryMenu(ClickEvent evt)
     {
         _inventoryContainer.AddToClassList("itemcontainer--open");
+        InventoryItemLoad();
         InventoryCanvas.gameObject.SetActive(true);
     }
 
