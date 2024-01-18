@@ -1,7 +1,23 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/main.uss?fileID=7433441132597879392&amp;guid=e6697b872e172fe43973de1ddec618d6&amp;type=3#main" />
+    <ui:VisualElement name="top-navi" style="height: 56px; background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; max-height: 56px; min-height: 56px; flex-shrink: 0; align-items: center; flex-direction: row;">
+        <ui:VisualElement name="sidemenu-btn" style="width: 24px; height: 32px; flex-shrink: 0; justify-content: center; align-items: center; -unity-background-scale-mode: scale-to-fit;">
+            <ui:VisualElement style="width: 20px; height: 20px; background-image: resource(&apos;UI/Icon/ic_menu&apos;); -unity-background-scale-mode: scale-and-crop;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="width: auto; height: 100%; flex-basis: 100%; justify-content: center; align-items: flex-end; padding-right: 10px;">
+            <ui:VisualElement style="width: auto; height: 32px; background-color: rgb(255, 249, 219); border-top-left-radius: 16s; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; padding-left: 10px; padding-right: 10px; align-items: center; justify-content: space-between; flex-direction: row;">
+                <ui:VisualElement style="width: 16px; height: 18px; background-image: resource(&apos;UI/Icon/ic_coin&apos;); -unity-background-scale-mode: scale-to-fit;" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="money_1" style="font-size: 14px; -unity-text-align: upper-right; padding-left: 6px; color: rgb(33, 37, 41); -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-Regular&apos;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="width: 32px; height: 100%; justify-content: center; align-items: center; flex-shrink: 0;">
+            <ui:VisualElement name="inventory-btn" style="width: 32px; height: 32px; background-color: rgb(248, 249, 249); border-top-left-radius: 16s; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; padding-left: 4px; padding-right: 4px; align-items: center; justify-content: center;">
+                <ui:VisualElement style="width: 16px; height: 18px; background-image: resource(&apos;UI/Icon/ic_bag&apos;); -unity-background-scale-mode: scale-to-fit;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
     <ui:VisualElement name="bottom-list" class="bottomlist bottomlist--up">
-        <ui:VisualElement name="handle-container" style="justify-content: flex-end; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 18px; height: auto; width: 100%; flex-shrink: 0; top: -30px; border-top-left-radius: 16px; border-top-right-radius: 16px; background-color: rgb(35, 35, 36); position: absolute; border-bottom-width: 5px; border-left-color: rgb(35, 35, 36); border-right-color: rgb(35, 35, 36); border-top-color: rgb(35, 35, 36); border-bottom-color: rgb(35, 35, 36);">
+        <ui:VisualElement name="handle-container" style="justify-content: flex-end; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 18px; height: auto; width: 100%; flex-shrink: 0; top: -30px; border-top-left-radius: 16s; border-top-right-radius: 16s; background-color: rgb(35, 35, 36); position: absolute; border-bottom-width: 5px; border-left-color: rgb(35, 35, 36); border-right-color: rgb(35, 35, 36); border-top-color: rgb(35, 35, 36); border-bottom-color: rgb(35, 35, 36);">
             <ui:VisualElement name="handle" style="width: 40px; height: 4px; background-color: rgb(122, 124, 127); border-top-left-radius: 2px; border-bottom-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; max-height: 4px; min-height: 4px; max-width: 40px; min-width: 40px;" />
         </ui:VisualElement>
         <ui:VisualElement name="button-list" style="width: 100%; padding-left: 20px; padding-right: 20px; flex-basis: auto; align-items: stretch; height: auto; max-height: none; min-height: auto; justify-content: flex-start; padding-top: 0; padding-bottom: 20px; flex-shrink: 0; display: flex; background-color: rgb(35, 35, 36);">
@@ -22,22 +38,6 @@
             </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="top-navi" style="height: 56px; background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; max-height: 56px; min-height: 56px; flex-shrink: 0; align-items: center; flex-direction: row;">
-        <ui:VisualElement name="sidemenu-btn" style="width: 24px; height: 100%; flex-shrink: 0; justify-content: center; align-items: center;">
-            <ui:VisualElement style="width: 20px; height: 20px; background-image: resource(&apos;UI/Icon/ic_menu&apos;); -unity-background-scale-mode: scale-to-fit;" />
-        </ui:VisualElement>
-        <ui:VisualElement style="width: auto; height: 100%; flex-basis: 100%; justify-content: center; align-items: flex-end; padding-right: 10px;">
-            <ui:VisualElement style="width: auto; height: 32px; background-color: rgb(255, 249, 219); border-top-left-radius: 16s; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; padding-left: 10px; padding-right: 10px; align-items: center; justify-content: space-between; flex-direction: row;">
-                <ui:VisualElement style="width: 16px; height: 18px; background-image: resource(&apos;UI/Icon/ic_bag&apos;); -unity-background-scale-mode: scale-to-fit;" />
-                <ui:Label text="4,350" display-tooltip-when-elided="true" style="font-size: 14px; -unity-text-align: upper-right; padding-left: 6px; color: rgb(33, 37, 41); -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-Regular&apos;);" />
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement name="VisualElement" style="width: 32px; height: 100%; justify-content: center; align-items: center; flex-shrink: 0;">
-            <ui:VisualElement name="inventory-btn" style="width: 32px; height: 32px; background-color: rgb(248, 249, 249); border-top-left-radius: 16s; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; padding-left: 4px; padding-right: 4px; align-items: center; justify-content: center;">
-                <ui:VisualElement style="width: 16px; height: 18px; background-image: resource(&apos;UI/Icon/ic_bag&apos;); -unity-background-scale-mode: scale-to-fit;" />
-            </ui:VisualElement>
-        </ui:VisualElement>
-    </ui:VisualElement>
     <ui:VisualElement name="inventory-container" class="itemcontainer">
         <ui:VisualElement style="flex-grow: 1; background-color: rgb(255, 255, 255); position: relative;">
             <ui:VisualElement style="position: relative; height: 56px; width: 100%; padding-left: 20px; padding-right: 20px; flex-direction: row; align-items: center; justify-content: space-between;">
@@ -46,8 +46,8 @@
                 </ui:VisualElement>
                 <ui:VisualElement style="width: 24px; height: 100%; flex-shrink: 0; justify-content: center; align-items: center; flex-grow: 1;" />
                 <ui:VisualElement style="width: auto; height: 32px; background-color: rgb(255, 249, 219); border-top-left-radius: 16s; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; padding-left: 10px; padding-right: 10px; align-items: center; justify-content: space-between; flex-direction: row;">
-                    <ui:VisualElement style="width: 16px; height: 18px; background-image: resource(&apos;UI/Icon/ic_bag&apos;); -unity-background-scale-mode: scale-to-fit;" />
-                    <ui:Label text="4,350" display-tooltip-when-elided="true" style="font-size: 14px; -unity-text-align: upper-right; padding-left: 6px; color: rgb(33, 37, 41);" />
+                    <ui:VisualElement style="width: 16px; height: 18px; background-image: resource(&apos;UI/Icon/ic_coin&apos;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="money_2" style="font-size: 14px; -unity-text-align: upper-right; padding-left: 6px; color: rgb(33, 37, 41);" />
                 </ui:VisualElement>
                 <ui:Label text="인벤토리" display-tooltip-when-elided="true" style="position: absolute; color: rgb(17, 18, 18); -unity-text-align: middle-center; font-size: 16px; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-Regular&apos;); white-space: nowrap; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; left: 50%; right: 50%; -unity-font-style: bold;" />
             </ui:VisualElement>
@@ -69,23 +69,24 @@
     </ui:VisualElement>
     <ui:VisualElement name="menu-background" class="container">
         <ui:VisualElement name="sidemenu" class="sidemenu">
-            <ui:VisualElement style="width: 100%; height: 56px; justify-content: flex-end;">
-                <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" name="sidemenu-close" style="margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; position: absolute; left: 20px; width: 16px; height: 16px; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;UI/Icon/ic_close_white&apos;); -unity-background-scale-mode: scale-to-fit; bottom: 16px; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+            <ui:VisualElement style="width: 100%; height: 56px; justify-content: center; align-items: flex-start;">
+                <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" name="sidemenu-close" style="margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; width: 16px; height: 16px; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;UI/Icon/ic_close_white&apos;); -unity-background-scale-mode: scale-to-fit; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); left: 20px;" />
             </ui:VisualElement>
-            <ui:Button text="자동 저장까지" display-tooltip-when-elided="true" class="button-setting" style="height: 60px; -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-SemiBold&apos;);">
+            <ui:Button text="자동 저장까지" display-tooltip-when-elided="true" class="button-setting">
                 <ui:Label text="30초전.." display-tooltip-when-elided="true" style="right: 20px; position: absolute; font-size: 14px; border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; background-color: rgba(206, 212, 218, 0); padding-left: 10px; padding-right: 10px; padding-top: 2px; padding-bottom: 2px; border-left-color: rgb(206, 212, 218); border-right-color: rgb(206, 212, 218); border-top-color: rgb(206, 212, 218); border-bottom-color: rgb(206, 212, 218); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; width: 76px; -unity-text-align: middle-center; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-Regular&apos;);" />
             </ui:Button>
             <ui:VisualElement name="line" style="border-top-width: 1px; border-left-color: rgb(52, 53, 54); border-right-color: rgb(52, 53, 54); border-top-color: rgb(52, 53, 54); border-bottom-color: rgb(52, 53, 54); width: auto; margin-left: 20px; margin-right: 20px;" />
-            <ui:Button text="        스토어" display-tooltip-when-elided="true" class="button-setting" style="height: 60px; flex-grow: 0; -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-SemiBold&apos;);">
+            <ui:Button text="        스토어" display-tooltip-when-elided="true" class="button-setting">
                 <ui:VisualElement style="position: absolute; width: 18px; height: 18px; background-image: resource(&apos;UI/Icon/ic_shop&apos;); left: 20px;" />
             </ui:Button>
             <ui:VisualElement name="line" style="border-top-width: 1px; border-left-color: rgb(52, 53, 54); border-right-color: rgb(52, 53, 54); border-top-color: rgb(52, 53, 54); border-bottom-color: rgb(52, 53, 54); width: auto; margin-left: 20px; margin-right: 20px;" />
-            <ui:Button text="        설정" display-tooltip-when-elided="true" class="button-setting" style="height: 60px; -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-SemiBold&apos;);">
+            <ui:Button text="        설정" display-tooltip-when-elided="true" class="button-setting">
                 <ui:VisualElement style="position: absolute; width: 18px; height: 18px; background-image: resource(&apos;UI/Icon/ic_options&apos;); left: 20px;" />
             </ui:Button>
-            <ui:Button text="        저장하고 나가기" display-tooltip-when-elided="true" class="button-setting" style="height: 60px; bottom: 0; position: absolute; width: 100%; -unity-font-definition: none; -unity-font: resource(&apos;UI/Font/public/static/Pretendard-SemiBold&apos;); background-color: rgb(35, 35, 36); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;">
+            <ui:Button text="        저장하고 나가기" display-tooltip-when-elided="true" class="button-setting" style="height: 60px; bottom: 0; position: absolute; width: 100%;">
                 <ui:VisualElement style="position: absolute; width: 16px; height: 16px; background-image: resource(&apos;UI/Icon/ic_back-arrow&apos;); left: 20px;" />
             </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:Label text="Toast" display-tooltip-when-elided="true" name="toast" class="toastsetting toastsetting--pop" />
 </ui:UXML>

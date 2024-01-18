@@ -6,22 +6,27 @@ using UnityEngine;
 
 public class SettingManager
 {
+    public const string TOTAL_SOUND = "TOTAL_SOUND";
+    public const string BGM_SOUND = "BGM_SOUND";
+    public const string EFFECT_SOUND = "EFFECT_SOUND";
+    public const string VOCIE_SOUND = "VOCIE_SOUND";
+
     private Dictionary<string, int> _settings { get; set; }
     public Dictionary<string, int> settings
     {
-        set
-        {
+        set { 
             _settings = value;
         }
 
-        get
-        {
-            return _settings ?? (_settings = new Dictionary<string, int>());
+        get { 
+            return _settings ??( _settings= new Dictionary<string, int>());
         }
     }
 
     private FileStream settingFileR;
     private FileStream settingFileW;
+    private Dictionary<string, Dictionary<string, object>> configData;
+
     private static SettingManager _instance { get; set; }
     public static SettingManager Instance
     {
@@ -32,81 +37,97 @@ public class SettingManager
         }
     }
 
-    public void WriteSettingFile()
-    {
+    public SettingManager() { 
+        ReadSettingFile();
+        configData = CSVReader.Read("Config");
+    }
+
+    public void WriteSettingFile() {
         settingFileW = new FileStream("./setting.txt", FileMode.Create);
         StreamWriter sw = new StreamWriter(settingFileW);
         DebugManager.Instance.PrintDrawLine();
-        DebugManager.Instance.PrintDebug("¼ÂÆÃ ÆÄÀÏ ÀúÀå");
+        DebugManager.Instance.PrintDebug("ì…‹íŒ… íŒŒì¼ ì €ì¥");
         foreach (KeyValuePair<string, int> item in settings)
         {
-            sw.Write(item.Key + "=" + item.Value + "\n");
-            DebugManager.Instance.PrintDebug("¼ÂÆÃ ÆÄÀÏ ÀÛ¼º", item.Key + " : " + item.Value);
+            sw.Write(item.Key + "=" + item.Value+"\n");
+            DebugManager.Instance.PrintDebug("ì…‹íŒ… íŒŒì¼ ì‘ì„±", item.Key+" : "+item.Value);
         }
         sw.Close();
-        DebugManager.Instance.PrintDebug("¼ÂÆÃ ÆÄÀÏ ÀúÀå Á¾·á");
+        DebugManager.Instance.PrintDebug("ì…‹íŒ… íŒŒì¼ ì €ì¥ ì¢…ë£Œ");
         DebugManager.Instance.PrintDrawLine();
     }
 
 
-    public void ReadSettingFile()
-    {
-        settingFileR = new FileStream("./setting.txt", FileMode.Open);
+    public void ReadSettingFile() {
+        settingFileR = new FileStream("./Assets/Resources/setting.txt", FileMode.Open);
         //settingFileR = new FileStream("./Assets/Resources/setting.txt", FileMode.Open);
         StreamReader sr = new StreamReader(settingFileR);
 
         DebugManager.Instance.PrintDrawLine();
-        DebugManager.Instance.PrintDebug("¼ÂÆÃ ÆÄÀÏ ·Îµå");
-
-        string source = sr.ReadLine();
-        string[] values;
+        DebugManager.Instance.PrintDebug("ì…‹íŒ… íŒŒì¼ ë¡œë“œ");
+        
+        string source = sr.ReadLine();Â  Â  Â  Â 
+        string [] values;
         while (source != null)
         {
-            values = source.Split('=');  // ½°Ç¥·Î ±¸ºĞÇÑ´Ù. ÀúÀå½Ã¿¡ ½°Ç¥·Î ±¸ºĞÇÏ¿© ÀúÀåÇÏ¿´´Ù.           
-            if (values.Length == 0)
-            {
-                sr.Close();
-                return;
+            values = source.Split('=');  // ì‰¼í‘œë¡œ êµ¬ë¶„í•œë‹¤. ì €ì¥ì‹œì— ì‰¼í‘œë¡œ êµ¬ë¶„í•˜ì—¬ ì €ì¥í•˜ì˜€ë‹¤.Â  Â  Â  Â  Â  Â 
+            if( values.Length == 0 ){Â  Â  Â  Â  Â  Â  Â  Â 
+                sr.Close();Â  Â  Â  Â  Â  Â  Â  Â  
+                return;Â  Â  Â  Â  Â  Â  
             }
-            settings.Add(values[0], int.Parse(values[1]));
-            source = sr.ReadLine();    // ÇÑÁÙ ÀĞ´Â´Ù.        
+            if (!settings.ContainsKey(values[0])) { 
+                settings.Add(values[0],int.Parse(values[1]));
+            }
+            else {
+                settings[values[0]]= int.Parse(values[1]);
+
+            }
+            source = sr.ReadLine();Â  Â  // í•œì¤„ ì½ëŠ”ë‹¤.Â  Â  Â  Â  
         }
         sr.Close();
 
-        foreach (KeyValuePair<string, int> item in settings)
+        foreach(KeyValuePair<string,int> item in settings)
         {
-            DebugManager.Instance.PrintDebug(item.Key, item.Value);
+            DebugManager.Instance.PrintDebug(item.Key,item.Value);
         }
 
-        DebugManager.Instance.PrintDebug("¼ÂÆÃ ÆÄÀÏ ·Îµå ¿Ï·á");
+        DebugManager.Instance.PrintDebug("ì…‹íŒ… íŒŒì¼ ë¡œë“œ ì™„ë£Œ");
         DebugManager.Instance.PrintDrawLine();
     }
 
 
-    public int GetSettingValue(string target)
-    {
-        if (settings.TryGetValue(target, out int value))
-        {
+    public int GetSettingValue(string target) { 
+        if(settings.TryGetValue(target, out int value)){
             DebugManager.Instance.PrintDrawLine();
-            DebugManager.Instance.PrintDebug("Setting ÆÄÀÏ °ª È£Ãâ", target + " : " + value);
+            DebugManager.Instance.PrintDebug("Setting íŒŒì¼ ê°’ í˜¸ì¶œ", target + " : " + value);
             DebugManager.Instance.PrintDrawLine();
             return value;
         }
         return -1;
-
+        
     }
     public bool SetSettingValue(string target, int value)
     {
-        if (settings[target] != null)
+        if (settings[target]!= null)
         {
             settings[target] = value;
             DebugManager.Instance.PrintDrawLine();
-            DebugManager.Instance.PrintDebug("Setting ÆÄÀÏ °ª ¼¼ÆÃ", target + " : " + value);
+            DebugManager.Instance.PrintDebug("Setting íŒŒì¼ ê°’ ì„¸íŒ…", target + " : " + value);
             DebugManager.Instance.PrintDrawLine();
+
+            WriteSettingFile();
             return true;
         }
         return false;
 
     }
 
+    public string GetConfigSetting(string id) {
+        if (configData.ContainsKey(id)) { 
+            return configData[id]["Value"].ToString();
+        }
+        else { 
+            return "Wrong ID";
+        }
+    }
 }

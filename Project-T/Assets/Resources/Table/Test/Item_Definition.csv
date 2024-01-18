@@ -1,0 +1,7 @@
+Item_ID,Item_name,Item_description,Item_type,Is_Show,Image_Path
+단어,,,0= 셀수없어서 카운팅이됨1= 있다없다만 판별,,
+string,string,string,int,Bool,
+Item_isOk,반복 확인용 ,1111 기,3,True,
+Item_chu,추억,셀 수 없는 아이,0,True,story_Image_RYTA_14.png
+Item_pen,연필,셀 수 있는 아이템,1,True,story_Image_RYTA_02.png
+Item_money,돈,기본으로 주어지는 상단 재화입니다.,2,True,

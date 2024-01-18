@@ -64,30 +64,6 @@
     background-color: rgb(35, 35, 36);
 }
 
-.button-setting {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    width: auto;
-    height: auto;
-    background-color: rgba(149, 126, 126, 0);
-    -unity-text-align: middle-left;
-    font-size: 16px;
-    -unity-font: resource('UI/Font/public/static/Pretendard-Regular');
-    -unity-font-style: normal;
-    color: rgb(255, 255, 255);
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    justify-content: center;
-    border-left-color: rgba(38, 23, 23, 0);
-    border-right-color: rgba(38, 23, 23, 0);
-    border-top-color: rgba(38, 23, 23, 0);
-    border-bottom-color: rgba(38, 23, 23, 0);
-}
-
 .sidemenu {
     position: absolute;
     height: 100%;
@@ -140,4 +116,66 @@
 
 .itemcontainer--open {
     display: flex;
+}
+
+.button-setting {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(35, 35, 36, 0);
+    -unity-text-align: middle-left;
+    font-size: 16px;
+    -unity-font: resource('UI/Font/public/static/alternative/Pretendard-SemiBold');
+    -unity-font-style: normal;
+    color: rgb(255, 255, 255);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    -unity-font-definition: none;
+    border-left-color: rgb(35, 35, 36);
+    border-right-color: rgb(35, 35, 36);
+    border-top-color: rgb(35, 35, 36);
+    border-bottom-color: rgb(35, 35, 36);
+}
+
+.button-setting:active {
+    background-color: rgb(51, 51, 51);
+}
+
+.toastsetting {
+    transition-property: scale, opacity, display;
+    transition-duration: 0.1s, 0s, 0s;
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    -unity-text-align: middle-center;
+    font-size: 16px;
+    background-color: rgb(255, 212, 148);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -unity-font: resource('UI/Font/public/static/alternative/Pretendard-SemiBold');
+    -unity-font-definition: none;
+    color: rgb(35, 35, 36);
+    bottom: 20px;
+}
+
+.toastsetting--pop {
+    opacity: 0;
+    display: none;
+    transition-property: opacity, display, scale;
+    transition-duration: 1.5s, 0s, 0s;
+    transition-timing-function: ease-out, ease, ease;
+    transition-delay: 0s, 1.5s, 1.5s;
+    scale: 0.8 0.8;
 }
