@@ -1,3 +1,10 @@
 Item_ID,Item_name,Item_description,Item_type,Is_Show,Image_Path
 단어,,,0= 셀수없어서 카운팅이됨1= 있다없다만 판별,,
 string,string,string,int,Bool,
+Item_repeat,반복 확인,반복을 확인하는 용도이다.,3,True,
+Item_money,돈,돈(페이)이다.,0,True,
+Item_cam,캠코더,녹화가 가능한 캠코더이다.,0,True,
+Item_card,명함,정 가이드의 명함이다.,0,True,
+Item_map,지도,빨간 줄이 그어진 지도이다.,0,True,
+Item_repeat1,반복 확인,마법의 상점에서 반복을 확인하는 용도이다.,3,True,
+Item_pp,종이와 펜,종이와 펜이다.,0,True,
