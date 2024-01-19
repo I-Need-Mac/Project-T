@@ -1,0 +1,53 @@
+choice_TID,choice_group_ID,result_Index,Choice_type,hidden_Choice_condition_type,hidden_Choice_condition_Standard,hidden_Choice_condition_value,choice_text_ID,condition1_type,condition1_standard,condition1_value,condition2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result
+수식,Choice_부가설명_00,수식,히든이냐 딤드냐,,,,,컨디션 1 판별 기준,,,컨디션2 판별 기준,,,컨디션1 2 모두 성공,컨디션1 성공,컨디션2 성공,컨디션1 2 모두 실패
+String,String,int,Enum,,,,string,string,Enum,int,string,Enum,int,string,string,string,string
+Choice_Story_00001,Choice_Story_0000,1,Normal,Null,Null,,반복 처리 테스트,Null,Null,,Null,Null,,,,,R0005_P100
+Choice_Story_00002,Choice_Story_0000,2,Normal,Null,Null,,리소스 정상 출력 테스트,Null,Null,,Null,Null,,,,,R0022_P100
+Choice_Story_00003,Choice_Story_0000,3,Normal,Null,Null,,아이템 처리에 따른 dimmed\c hidden 확인 테스트,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00004,Choice_Story_0000,4,Normal,Null,Null,,다른 테스트 진행,Null,Null,,Null,Null,,,,,R0053_P100
+Choice_Story_00051,Choice_Story_0005,1,Dimmed,Item_isOk,Equal,1000,선택지 1번,Null,Null,,Null,Null,,,,,R0011_P100
+Choice_Story_00052,Choice_Story_0005,2,Dimmed,Item_isOk,Equal,100,선택지 2번,Null,Null,,Null,Null,,,,,R0012_P100
+Choice_Story_00053,Choice_Story_0005,3,Dimmed,Item_isOk,Equal,10,선택지 3번,Null,Null,,Null,Null,,,,,R0013_P100
+Choice_Story_00054,Choice_Story_0005,4,Dimmed,Item_isOk,Equal,1,선택지 4번,Null,Null,,Null,Null,,,,,R0014_P100
+Choice_Story_00111,Choice_Story_0011,1,Normal,Null,Null,,1번 선택지 연장 예시,Null,Null,,Null,Null,,,,,R0016_P100
+Choice_Story_00121,Choice_Story_0012,1,Normal,Null,Null,,계속하여 진행,Item_isOk,Equal,0000,Null,Null,,,R0019_P100,,R0005_P100
+Choice_Story_00131,Choice_Story_0013,1,Normal,Null,Null,,계속하여 진행,Item_isOk,Equal,0000,Null,Null,,,R0019_P100,,R0005_P100
+Choice_Story_00141,Choice_Story_0014,1,Normal,Null,Null,,계속하여 진행,Item_isOk,Equal,0000,Null,Null,,,R0019_P100,,R0005_P100
+Choice_Story_00161,Choice_Story_0016,1,Normal,Null,Null,,계속하여 진행,Item_isOk,Equal,0000,Null,Null,,,R0019_P100,,R0005_P100
+Choice_Story_00191,Choice_Story_0019,1,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00221,Choice_Story_0022,1,Normal,Null,Null,,일러스트 출력,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00222,Choice_Story_0022,2,Normal,Null,Null,,bgm 출력,Null,Null,,Null,Null,,,,,R0029_P100
+Choice_Story_00223,Choice_Story_0022,3,Normal,Null,Null,,효과음 출력,Null,Null,,Null,Null,,,,,R0030_P100
+Choice_Story_00224,Choice_Story_0022,4,Normal,Null,Null,,toast 출력,Null,Null,,Null,Null,,,,,R0031_P100
+Choice_Story_00281,Choice_Story_0028,1,Normal,Null,Null,,계속하여 리소스 확인 진행,Null,Null,,Null,Null,,,,,R0022_P100
+Choice_Story_00282,Choice_Story_0028,2,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00291,Choice_Story_0029,1,Normal,Null,Null,,계속하여 리소스 확인 진행,Null,Null,,Null,Null,,,,,R0022_P100
+Choice_Story_00292,Choice_Story_0029,2,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00301,Choice_Story_0030,1,Normal,Null,Null,,계속하여 리소스 확인 진행,Null,Null,,Null,Null,,,,,R0022_P100
+Choice_Story_00302,Choice_Story_0030,2,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00311,Choice_Story_0031,1,Normal,Null,Null,,계속하여 리소스 확인 진행,Null,Null,,Null,Null,,,,,R0022_P100
+Choice_Story_00312,Choice_Story_0031,2,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00351,Choice_Story_0035,1,Normal,Null,Null,,셀 수 없는 아이템 : 추억,Null,Null,,Null,Null,,,,,R0039_P100
+Choice_Story_00352,Choice_Story_0035,2,Normal,Null,Null,,셀 수 있는 아이템 : 연필 획득,Null,Null,,Null,Null,,,,,R0040_P100
+Choice_Story_00353,Choice_Story_0035,3,Normal,Null,Null,,셀 수 있는 아이템 : 연필 상실,Null,Null,,Null,Null,,,,,R0045_P100
+Choice_Story_00354,Choice_Story_0035,4,Normal,Null,Null,,상단 재화 아이템 : 돈,Null,Null,,Null,Null,,,,,R0041_P100
+Choice_Story_00391,Choice_Story_0039,1,Normal,Null,Null,,처음으로 돌아가서 아이템 획득하기,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00392,Choice_Story_0039,2,Normal,Null,Null,,선택지 확인으로 넘어가기 (연필 5개 기준),Null,Null,,Null,Null,,,,,R0046_P100
+Choice_Story_00401,Choice_Story_0040,1,Normal,Null,Null,,처음으로 돌아가서 아이템 획득하기,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00402,Choice_Story_0040,2,Normal,Null,Null,,선택지 확인으로 넘어가기 (연필 5개 기준),Null,Null,,Null,Null,,,,,R0046_P100
+Choice_Story_00411,Choice_Story_0041,1,Normal,Null,Null,,처음으로 돌아가서 아이템 획득하기,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00412,Choice_Story_0041,2,Normal,Null,Null,,선택지 확인으로 넘어가기 (연필 5개 기준),Null,Null,,Null,Null,,,,,R0046_P100
+Choice_Story_00451,Choice_Story_0045,1,Normal,Null,Null,,처음으로 돌아가서 아이템 획득하기,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00452,Choice_Story_0045,2,Normal,Null,Null,,선택지 확인으로 넘어가기 (연필 5개 기준),Null,Null,,Null,Null,,,,,R0046_P100
+Choice_Story_00461,Choice_Story_0046,1,Hidden,Item_pen,More,4,연필이 5개 이상 있다면 보입니다.,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00462,Choice_Story_0046,2,Dimmed,Item_pen,Less,5,연필이 5개 이상 있다면 비활성화 됩니다.,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00463,Choice_Story_0046,3,Normal,Null,Null,,처음으로 돌아가서 아이템 획득하기,Null,Null,,Null,Null,,,,,R0035_P100
+Choice_Story_00464,Choice_Story_0046,4,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00531,Choice_Story_0053,1,Normal,Null,Null,,확률 테스트,Null,Null,,Null,Null,,,,,R0055_P100
+Choice_Story_00532,Choice_Story_0053,2,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00551,Choice_Story_0055,1,Normal,Null,Null,,진행하기,Null,Null,,Null,Null,,,,,R0061_P10_R0060_P20_R0058_P30_R0059_P40
+Choice_Story_00552,Choice_Story_0055,2,Normal,Null,Null,,첫 화면으로 돌아가기,Null,Null,,Null,Null,,,,,R0000_P100
+Choice_Story_00581,Choice_Story_0058,1,Normal,Null,Null,,계속하여 진행,Null,Null,,Null,Null,,,,,R0055_P100
+Choice_Story_00591,Choice_Story_0059,1,Normal,Null,Null,,계속하여 진행,Null,Null,,Null,Null,,,,,R0055_P100
+Choice_Story_00601,Choice_Story_0060,1,Normal,Null,Null,,계속하여 진행,Null,Null,,Null,Null,,,,,R0055_P100
+Choice_Story_00611,Choice_Story_0061,1,Normal,Null,Null,,계속하여 진행,Null,Null,,Null,Null,,,,,R0055_P100

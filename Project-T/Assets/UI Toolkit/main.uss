@@ -1,0 +1,181 @@
+.btn-choice {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 58px;
+    max-height: none;
+    min-height: auto;
+    font-size: 16px;
+    align-items: stretch;
+    -unity-text-align: middle-left;
+    width: auto;
+    background-color: rgb(35, 35, 36);
+    border-left-color: rgb(35, 35, 36);
+    border-right-color: rgb(35, 35, 36);
+    border-top-color: rgb(35, 35, 36);
+    border-bottom-color: rgb(35, 35, 36);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: rgb(255, 255, 255);
+    white-space: normal;
+    justify-content: center;
+    -unity-font: resource('UI/Font/public/variable/PretendardVariable');
+}
+
+.btn-choice:active {
+    background-color: rgb(51, 51, 51);
+}
+
+.bottomlist {
+    justify-content: flex-end;
+    height: auto;
+    align-items: center;
+    flex-shrink: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-sine;
+    transition-property: all;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    translate: 0 100%;
+}
+
+.bottomlist--up {
+    translate: 0 1%;
+}
+
+.btn-choice-dimmed {
+    color: rgb(105, 106, 109);
+}
+
+.btn-choice-dimmed:active {
+    background-color: rgb(35, 35, 36);
+}
+
+.sidemenu {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background-color: rgb(35, 35, 36);
+    translate: -100% 0;
+    transition-timing-function: ease-out-sine;
+    transition-duration: 0.5s;
+    visibility: visible;
+    display: flex;
+}
+
+.sidemenu--open {
+    translate: -0.1% 0;
+}
+
+.container {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+    visibility: visible;
+    transition-property: background-color, display;
+    transition-duration: 0.5s, 0s;
+    transition-timing-function: ease-out-sine, ease-out-sine;
+    transition-delay: 0s, 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.container--open {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.78);
+    transition-property: background-color, display;
+    transition-delay: 0s, 0s;
+    transition-duration: 0.5s, 0s;
+    transition-timing-function: ease-out-sine, ease;
+}
+
+.itemcontainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: visible;
+    visibility: visible;
+    opacity: 1;
+}
+
+.itemcontainer--open {
+    display: flex;
+}
+
+.button-setting {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(35, 35, 36, 0);
+    -unity-text-align: middle-left;
+    font-size: 16px;
+    -unity-font: resource('UI/Font/public/static/alternative/Pretendard-SemiBold');
+    -unity-font-style: normal;
+    color: rgb(255, 255, 255);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    -unity-font-definition: none;
+    border-left-color: rgb(35, 35, 36);
+    border-right-color: rgb(35, 35, 36);
+    border-top-color: rgb(35, 35, 36);
+    border-bottom-color: rgb(35, 35, 36);
+}
+
+.button-setting:active {
+    background-color: rgb(51, 51, 51);
+}
+
+.toastsetting {
+    transition-property: scale, opacity, display;
+    transition-duration: 0.1s, 0s, 0s;
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    -unity-text-align: middle-center;
+    font-size: 16px;
+    background-color: rgb(255, 212, 148);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -unity-font: resource('UI/Font/public/static/alternative/Pretendard-SemiBold');
+    -unity-font-definition: none;
+    color: rgb(35, 35, 36);
+    bottom: 20px;
+}
+
+.toastsetting--pop {
+    opacity: 0;
+    display: none;
+    transition-property: opacity, display, scale;
+    transition-duration: 1.5s, 0s, 0s;
+    transition-timing-function: ease-out, ease, ease;
+    transition-delay: 0s, 1.5s, 1.5s;
+    scale: 0.8 0.8;
+}

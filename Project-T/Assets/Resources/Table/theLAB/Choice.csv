@@ -1,0 +1,62 @@
+choice_TID,choice_group_ID,result_Index,Choice_type,hidden_Choice_condition_type,hidden_Choice_condition_Standard,hidden_Choice_condition_value,choice_text_ID,condition1_type,condition1_standard,condition1_value,condition2_type,condition2_standard,condition2_value,And_result,Condition1_result,Condition2_result,fail_result
+수식,Choice_부가설명_00,수식,히든이냐 딤드냐,,,,,컨디션 1 판별 기준,,,컨디션2 판별 기준,,,컨디션1 2 모두 성공,컨디션1 성공,컨디션2 성공,컨디션1 2 모두 실패
+String,String,int,Enum,,,,string,string,Enum,int,string,Enum,int,string,string,string,string
+Choice_Story_00001,Choice_Story_0000,1,Normal,Null,Null,,(다가간다),Null,Null,,Null,Null,,,,,R0001_P100
+Choice_Story_00011,Choice_Story_0001,1,Normal,Null,Null,,저기... (말을 건다),Null,Null,,Null,Null,,,,,R0010_P100
+Choice_Story_00012,Choice_Story_0001,2,Normal,Null,Null,,(기척을 좀 더 낸다),Null,Null,,Null,Null,,,,,R0029_P100
+Choice_Story_00013,Choice_Story_0001,3,Normal,Null,Null,,('아이'가 들고있는 큐브를 빼앗는다),Null,Null,,Null,Null,,,,,R0006_P100
+Choice_Story_00061,Choice_Story_0006,1,Normal,Null,Null,,(큐브를 풀어본다) (30% 확률로 성공),Null,Null,,Null,Null,,,,,R0009_P30_R0008_P70
+Choice_Story_00062,Choice_Story_0006,2,Normal,Null,Null,,(순순히 돌려준다),Null,Null,,Null,Null,,,,,R0040_P100
+Choice_Story_00081,Choice_Story_0008,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
+Choice_Story_00082,Choice_Story_0008,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
+Choice_Story_00083,Choice_Story_0008,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00091,Choice_Story_0009,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
+Choice_Story_00092,Choice_Story_0009,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
+Choice_Story_00093,Choice_Story_0009,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00101,Choice_Story_0010,1,Normal,Null,Null,,아\c 응\c 왜?,Null,Null,,Null,Null,,,,,R0013_P100
+Choice_Story_00102,Choice_Story_0010,2,Normal,Null,Null,,어? 아\c 내 이름은 '저기'도 아니고 '누구'도 아닌데?,Null,Null,,Null,Null,,,,,R0014_P100
+Choice_Story_00131,Choice_Story_0013,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
+Choice_Story_00132,Choice_Story_0013,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
+Choice_Story_00133,Choice_Story_0013,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00141,Choice_Story_0014,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
+Choice_Story_00142,Choice_Story_0014,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
+Choice_Story_00143,Choice_Story_0014,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00181,Choice_Story_0018,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00182,Choice_Story_0018,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00183,Choice_Story_0018,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
+Choice_Story_00184,Choice_Story_0018,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00191,Choice_Story_0019,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00192,Choice_Story_0019,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00193,Choice_Story_0019,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
+Choice_Story_00194,Choice_Story_0019,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00201,Choice_Story_0020,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00202,Choice_Story_0020,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00203,Choice_Story_0020,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
+Choice_Story_00204,Choice_Story_0020,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00251,Choice_Story_0025,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00252,Choice_Story_0025,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00253,Choice_Story_0025,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
+Choice_Story_00254,Choice_Story_0025,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00261,Choice_Story_0026,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00262,Choice_Story_0026,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00263,Choice_Story_0026,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
+Choice_Story_00264,Choice_Story_0026,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00271,Choice_Story_0027,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00272,Choice_Story_0027,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00273,Choice_Story_0027,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
+Choice_Story_00274,Choice_Story_0027,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00291,Choice_Story_0029,1,Normal,Null,Null,,저기... (말을 건다),Null,Null,,Null,Null,,,,,R0032_P100
+Choice_Story_00292,Choice_Story_0029,2,Normal,Null,Null,,(기척을 열심히 낸다),Null,Null,,Null,Null,,,,,R0033_P100
+Choice_Story_00321,Choice_Story_0032,1,Normal,Null,Null,,아\c 응\c 왜?,Null,Null,,Null,Null,,,,,R0013_P100
+Choice_Story_00322,Choice_Story_0032,2,Normal,Null,Null,,어? 아\c 내 이름은 '저기'도 아니고 '누구'도 아닌데?,Null,Null,,Null,Null,,,,,R0014_P100
+Choice_Story_00331,Choice_Story_0033,1,Normal,Null,Null,,(펜을 받는다),Null,Null,,Null,Null,,,,,R0036_P100
+Choice_Story_00332,Choice_Story_0033,2,Normal,Null,Null,,(목소리를 낸다),Null,Null,,Null,Null,,,,,R0037_P100
+Choice_Story_00361,Choice_Story_0036,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
+Choice_Story_00362,Choice_Story_0036,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
+Choice_Story_00363,Choice_Story_0036,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00371,Choice_Story_0037,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
+Choice_Story_00372,Choice_Story_0037,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
+Choice_Story_00373,Choice_Story_0037,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00401,Choice_Story_0040,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
+Choice_Story_00402,Choice_Story_0040,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
+Choice_Story_00403,Choice_Story_0040,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100

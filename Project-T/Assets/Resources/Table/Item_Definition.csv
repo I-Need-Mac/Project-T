@@ -1,5 +1,0 @@
-Item_ID,Item_name,Item_description,Max_Count_type,Is_Show,Image_Path
-단어,,,0= 셀수없어서 카운팅이됨1= 있다없다만 판별,,
-string,string,string,int,Bool,
-Item_potato,감자,배고플 때 먹을거,0,True,
-Item_hp,체력 ,다 떨어지면 죽는다.,1,False,
