@@ -32,7 +32,7 @@ public class StoryManager : SingletonBehaviour<StoryManager>
         Dictionary<string, object> curStoryLoad = storyLoadTable[curStoryId];
         Dictionary<string, object> curResource = resourceTable[curStoryId];
 
-        string curStoryText = curStory["story"].ToString().Replace("\\c", ",").Replace("\\n", "\n");
+        string curStoryText = curStory["story"].ToString().Replace("\\c", ",").Replace("\\n", "\n").Replace("\\q", "\"");
         Dictionary<string, object>[] curChoices = GetChoices(curStoryLoad["choice_group_ID"].ToString());
         InventoryManager.Instance.ItemChange(curStoryLoad);
 

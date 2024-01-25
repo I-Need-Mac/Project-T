@@ -177,7 +177,7 @@ public class PlayingUITK : MonoBehaviour
             }
 
             //글자 넣기
-            _choiceBtn[choiceCount].text = choice["choice_text_ID"].ToString().Replace("\\c", ",").Replace("\\n", "\n");
+            _choiceBtn[choiceCount].text = choice["choice_text_ID"].ToString().Replace("\\c", ",").Replace("\\n", "\n").Replace("\\q", "\""); ;
 
             //버튼 켜기 + 라인 포함
             if (choiceCount == 0)
