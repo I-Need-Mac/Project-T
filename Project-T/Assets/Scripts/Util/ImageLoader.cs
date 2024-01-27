@@ -5,7 +5,7 @@ using System;
 
 public class ImageLoader : SingleTon<ImageLoader>
 {
-    private const String DEFULT_PATH = "Art/";
+    private const String DEFULT_PATH="Art/";
 
     private Dictionary<string, Texture2D> cachedImageTexture2D = new Dictionary<string, Texture2D>();
     private Dictionary<string, Sprite> cachedImageSprite = new Dictionary<string, Sprite>();
@@ -20,6 +20,8 @@ public class ImageLoader : SingleTon<ImageLoader>
 
     public Texture2D LoadLocalImageToTexture2D(string path)
     {
+        path = path.Split(".")[0];
+
         Texture2D return2D;
         if (cachedImageTexture2D.ContainsKey(DEFULT_PATH + path))
         {
@@ -44,6 +46,8 @@ public class ImageLoader : SingleTon<ImageLoader>
 
     public Sprite LoadLocalImageToSprite(string path)
     {
+        path = path.Split(".")[0];
+
         Sprite returnSprite;
         if (cachedImageSprite.ContainsKey(DEFULT_PATH + path))
         {
@@ -53,6 +57,7 @@ public class ImageLoader : SingleTon<ImageLoader>
         else
         {
             DebugManager.Instance.PrintDebug("[ImageLoader] 신규 이미지 : " + path);
+
 
             returnSprite = Resources.Load(DEFULT_PATH + path, typeof(Sprite)) as Sprite;
             if (returnSprite == null)

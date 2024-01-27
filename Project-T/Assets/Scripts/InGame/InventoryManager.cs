@@ -1,17 +1,31 @@
+using BFM;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : SingleTon<InventoryManager>
+public class InventoryManager : SingletonBehaviour<InventoryManager>
 {
 
     private Dictionary<string, Item> itemList;
 
-    public InventoryManager()
+    private Dictionary<string, Dictionary<string, object>> itemTable;
+
+    protected override void Awake()
     {
-        itemList = new Dictionary<string, Item>();
+
     }
 
+    public void InventoryManagerInit(string storyPath)
+    {
+        itemList = new Dictionary<string, Item>();
+        itemTable = CSVReader.Read(storyPath + "/Item_Definition");
+    }
+    public Dictionary<string, Item> GetItemList()
+    {
+        return itemList;
+    }
+
+    //아이템 요건 충족 확인 함수
     public bool IsCondition(string itemid, string standard, string value)
     {
         if (itemList.ContainsKey(itemid))
@@ -66,9 +80,8 @@ public class InventoryManager : SingleTon<InventoryManager>
         }
         else if(itemid != "Null")
         {
-            Dictionary<string, object> itemT = StoryManager.Instance.GetItem(itemid);
-            int itemType = int.Parse((string)itemT["Item_type"]);
-            Debug.Log(itemType);
+            Dictionary<string, object> itemT = itemTable[itemid];
+            int itemType = int.Parse(itemT["Item_type"].ToString());
             if (itemType != 3)
             {
                 switch (standard)
@@ -112,10 +125,31 @@ public class InventoryManager : SingleTon<InventoryManager>
         }
         return false;
     }
+
+    public void ItemChange(Dictionary<string, object> itemChangeInfo)
+    {
+        if (!string.Equals(itemChangeInfo["Target1_type"].ToString(), "Null"))
+        {
+            Add(itemChangeInfo["Target1_type"].ToString(), itemChangeInfo["Target1_change_value"].ToString());
+        }
+        if (!string.Equals(itemChangeInfo["Target2_type"].ToString(), "Null"))
+        {
+            Add(itemChangeInfo["Target2_type"].ToString(), itemChangeInfo["Target2_change_value"].ToString());
+        }
+        if (itemList.ContainsKey("Item_money"))
+        {
+            PlayUI.Instance.SetMoney(itemList["Item_money"].Data.amount.ToString("N0"));
+        }
+        else
+        {
+            PlayUI.Instance.SetMoney("0");
+        }
+    }
+    //아이템 변동 함수
     public void Add(string itemid, string value)
     {
         DebugManager.Instance.PrintDebug("add 실행");
-        Dictionary<string, object> itemT = StoryManager.Instance.GetItem(itemid);
+        Dictionary<string, object> itemT = itemTable[itemid];
 
         if (itemList.ContainsKey(itemid))
         {
@@ -123,12 +157,26 @@ public class InventoryManager : SingleTon<InventoryManager>
             if (itemType == 1 || itemType == 2)
             {
                 int result = itemList[itemid].Data.amount + int.Parse(value);
-                itemList[itemid].Data.SetAmount(result < 0 ? 0 : result);
+                if(result <= 0)
+                {
+                    itemList.Remove(itemid);
+                }
+                else
+                {
+                    itemList[itemid].Data.SetAmount(result);
+                }
             }
             else if (itemType == 0)
             {
                 int result = itemList[itemid].Data.amount + int.Parse(value);
-                itemList[itemid].Data.SetAmount(result >= 1 ? 1 : 0);
+                if (result <= 0)
+                {
+                    itemList.Remove(itemid);
+                }
+                else
+                {
+                    itemList[itemid].Data.SetAmount(1);
+                }
             }
             else if (itemType == 3)
             {
@@ -161,24 +209,31 @@ public class InventoryManager : SingleTon<InventoryManager>
                         break;
                 }
                 itemList[itemid].Data.SetAmount(result);
+                DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
             }
         }
         else
         {
-            int itemType = int.Parse((string)itemT["Item_type"]);
+            int itemType = int.Parse(itemT["Item_type"].ToString());
             if (itemType == 1 || itemType == 2)
             {
-                itemList.Add(itemid, new Item(itemid, (string)itemT["Item_name"],
-                    (string)itemT["Item_description"], int.Parse((string)itemT["Item_type"]),
-                    (string)itemT["Is_Show"] == "True", (string)itemT["Image_Path"],
-                    int.Parse(value) < 0 ? 0 : int.Parse(value)));
+                if (int.Parse(value) > 0)
+                {
+                    itemList.Add(itemid, new Item(itemid, itemT["Item_name"].ToString(),
+                    itemT["Item_description"].ToString(), int.Parse(itemT["Item_type"].ToString()),
+                    itemT["Is_Show"].ToString() == "True", itemT["Image_Path"].ToString(),
+                    int.Parse(value)));
+                }
+
             }
             else if (itemType == 0)
             {
-                itemList.Add(itemid, new Item(itemid, (string)itemT["Item_name"],
-                    (string)itemT["Item_description"], int.Parse((string)itemT["Item_type"]),
-                    (string)itemT["Is_Show"] == "True", (string)itemT["Image_Path"],
-                    int.Parse(value) > 1 ? 1 : 0));
+                if (int.Parse(value) > 0) {
+                    itemList.Add(itemid, new Item(itemid, itemT["Item_name"].ToString(),
+                    itemT["Item_description"].ToString(), int.Parse(itemT["Item_type"].ToString()),
+                    itemT["Is_Show"].ToString() == "True", itemT["Image_Path"].ToString(),
+                    int.Parse(value) == 1 ? 1 : 1));
+                }
             }
             else if (itemType == 3)
             {
@@ -198,10 +253,11 @@ public class InventoryManager : SingleTon<InventoryManager>
                         result = 1110;
                         break;
                 }
-                itemList.Add(itemid, new Item(itemid, (string)itemT["Item_name"],
-                    (string)itemT["Item_description"], int.Parse((string)itemT["Item_type"]),
-                    (string)itemT["Is_Show"] == "True", (string)itemT["Image_Path"],
-                    result)); 
+                itemList.Add(itemid, new Item(itemid, itemT["Item_name"].ToString(),
+                    itemT["Item_description"].ToString(), int.Parse(itemT["Item_type"].ToString()),
+                    itemT["Is_Show"].ToString() == "True", itemT["Image_Path"].ToString(),
+                    result));
+                DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
             }
         }
     }
