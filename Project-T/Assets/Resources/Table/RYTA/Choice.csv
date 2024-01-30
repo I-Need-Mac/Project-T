@@ -186,7 +186,7 @@ Choice_Story_02881,Choice_Story_0288,1,Normal,Null,Null,,\q무조건 살아남�
 Choice_Story_02901,Choice_Story_0290,1,Normal,Null,Null,,\q잠깐만요.\q,Null,Null,,Null,Null,,,,,R0292_P100
 Choice_Story_02921,Choice_Story_0292,1,Normal,Null,Null,,\q끝인가요?\q,Null,Null,,Null,Null,,,,,R0294_P100
 Choice_Story_02941,Choice_Story_0294,1,Normal,Null,Null,,\q도와주셔서 감사합니다.\q,Null,Null,,Null,Null,,,,,R0297_P100
-Choice_Story_02942,Choice_Story_0294,2,Normal,Null,Null,,\q짜증나지만 잘 살아남아서 떠나볼게요.\q,Null,Null,,Null,Null,,,,,
+Choice_Story_02942,Choice_Story_0294,2,Normal,Null,Null,,\q짜증나지만 잘 살아남아서 떠나볼게요.\q,Null,Null,,Null,Null,,,,,R0298_P100
 Choice_Story_02971,Choice_Story_0297,1,Normal,Null,Null,,일어난다.,Null,Null,,Null,Null,,,,,R0300_P100
 Choice_Story_02981,Choice_Story_0298,1,Normal,Null,Null,,일어난다.,Null,Null,,Null,Null,,,,,R0300_P100
 Choice_Story_03001,Choice_Story_0300,1,Normal,Null,Null,,\q일단 빨간 모자의 그 망토를 찾아야지.\q,Null,Null,,Null,Null,,,,,R0302_P100
