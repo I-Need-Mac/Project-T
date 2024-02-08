@@ -132,9 +132,9 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
         {
             Add(itemChangeInfo["Target1_type"].ToString(), itemChangeInfo["Target1_change_value"].ToString());
         }
-        if (!string.Equals(itemChangeInfo["Target2_type"], "Null"))
+        if (!string.Equals(itemChangeInfo["Target2_type"].ToString(), "Null"))
         {
-            Add(itemChangeInfo["Target1_type"].ToString(), itemChangeInfo["Target2_change_value"].ToString());
+            Add(itemChangeInfo["Target2_type"].ToString(), itemChangeInfo["Target2_change_value"].ToString());
         }
         if (itemList.ContainsKey("Item_money"))
         {
@@ -209,7 +209,7 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
                         break;
                 }
                 itemList[itemid].Data.SetAmount(result);
-                //DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
+                DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
             }
         }
         else
