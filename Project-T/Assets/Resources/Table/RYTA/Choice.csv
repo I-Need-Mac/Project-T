@@ -165,8 +165,8 @@ Choice_Story_02551,Choice_Story_0255,1,Normal,Null,Null,,\q날 지워버린다�
 Choice_Story_02552,Choice_Story_0255,2,Normal,Null,Null,,\q그럼 전 현실로 돌아갈 수 있나요?\q ,Null,Null,,Null,Null,,,,,R0263_P100
 Choice_Story_02581,Choice_Story_0258,1,Normal,Null,Null,, \q그럼 난 어떻게 되는 거에요?\q,Null,Null,,Null,Null,,,,,R0260_P100
 Choice_Story_02601,Choice_Story_0260,1,Normal,Null,Null,,\q현실의 나는 왜 사라지는데요?\q,Null,Null,,Null,Null,,,,,R0262_P100
-Choice_Story_02621,Choice_Story_0262,1,Normal,Null,Null,, \q왜 나에요?\q,Null,Null,,Null,Null,,,,,R0265_P100
-Choice_Story_02631,Choice_Story_0263,1,Normal,Null,Null,, \q왜 나에요?\q,Null,Null,,Null,Null,,,,,R0265_P100
+Choice_Story_02621,Choice_Story_0262,1,Normal,Null,Null,, \q왜 나예요?\q,Null,Null,,Null,Null,,,,,R0265_P100
+Choice_Story_02631,Choice_Story_0263,1,Normal,Null,Null,, \q왜 나예요?\q,Null,Null,,Null,Null,,,,,R0265_P100
 Choice_Story_02651,Choice_Story_0265,1,Normal,Null,Null,,\q당사자는 무슨 죄야?\q,Null,Null,,Null,Null,,,,,R0268_P100
 Choice_Story_02652,Choice_Story_0265,2,Normal,Null,Null,,\q뭐같네.\q,Null,Null,,Null,Null,,,,,R0270_P100
 Choice_Story_02681,Choice_Story_0268,1,Normal,Null,Null,,\q그쪽이 만나면 전해 줘요. 이런 거 생각보다 거지같다고.\q,Null,Null,,Null,Null,,,,,R0272_P100
@@ -470,3 +470,9 @@ Choice_Story_07331,Choice_Story_0733,1,Normal,Null,Null,,\q죄송합니다.\q,Nu
 Choice_Story_07332,Choice_Story_0733,2,Normal,Null,Null,,\q괜찮으세요?\q,Null,Null,,Null,Null,,,,,R0736_P100
 Choice_Story_07361,Choice_Story_0736,1,Normal,Null,Null,,주워서 건네준다.,Item_photo,More,1,Null,Null,,,R0738_P100,,
 Choice_Story_07381,Choice_Story_0738,1,Normal,Null,Null,, \q마법의 상점에서 구매했는데요.\q,Null,Null,,Null,Null,,,,,R0740_P100
+Choice_Story_07401,Choice_Story_0740,1,Normal,Null,Null,,\q당신 사진을 산 게 아니라 빨간 모자 사진을 산 겁니다.\q,Null,Null,,Null,Null,,,,,R0745_P100
+Choice_Story_07402,Choice_Story_0740,2,Normal,Null,Null,,\q당신이 저한테 필요할 사람이래서요.\q,Null,Null,,Null,Null,,,,,R0747_P100
+Choice_Story_07451,Choice_Story_0745,1,Normal,Null,Null,,\q사기꾼이요?\q,Null,Null,,Null,Null,,,,,R0753_P100
+Choice_Story_07452,Choice_Story_0745,2,Normal,Null,Null,,\q확실해요?\q,Null,Null,,Null,Null,,,,,R0755_P100
+Choice_Story_07471,Choice_Story_0747,1,Normal,Null,Null,,\q이 옆에 있는 사람 누구에요?\q,Null,Null,,Null,Null,,,,,R0750_P100
+Choice_Story_07472,Choice_Story_0747,2,Normal,Null,Null,, \q빨간 모자랑 어떻게 아는 사이예요?\q,Null,Null,,Null,Null,,,,,R0751_P100
