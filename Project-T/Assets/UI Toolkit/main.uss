@@ -178,3 +178,91 @@
     transition-delay: 0s, 1.5s, 1.5s;
     scale: 0.8 0.8;
 }
+
+.unity-progress-bar {
+    border-left-color: rgba(255, 150, 150, 255);
+    border-right-color: rgba(255, 150, 150, 255);
+    border-top-color: rgba(255, 150, 150, 255);
+    border-bottom-color: rgba(255, 150, 150, 255);
+    margin-left: 1000px;
+}
+
+.titleBtn {
+    height: 55px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(17, 18, 18);
+    border-right-color: rgb(17, 18, 18);
+    border-top-color: rgb(17, 18, 18);
+    border-bottom-color: rgb(17, 18, 18);
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 255);
+    color: rgba(17, 18, 18, 255);
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-definition: resource('UI/Font/public/PretendardVariable SDF');
+    -unity-text-align: middle-center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.titleBtn:active {
+    background-color: rgb(178, 178, 178);
+}
+
+.titleTopBtn {
+    height: 55px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(95, 61, 196);
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-definition: resource('UI/Font/public/PretendardVariable SDF');
+    font-size: 16px;
+    color: rgba(255, 255, 255, 255);
+    -unity-text-align: middle-center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+.titleTopBtn:active {
+    background-color: rgba(114, 75, 231, 255);
+}
+
+.titleTopLabel {
+    -unity-font-definition: resource('UI/Font/public/PretendardVariable SDF');
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    -unity-font-style: normal;
+}
+
+.titleLabel {
+}

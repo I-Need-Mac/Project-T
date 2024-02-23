@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/main.uss?fileID=7433441132597879392&amp;guid=e6697b872e172fe43973de1ddec618d6&amp;type=3#main" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: space-between; align-items: center;">
+        <ui:VisualElement style="position: relative; width: 206px; height: 64px; top: 180px; background-image: resource(&apos;UI/Icon/logo_ryta_primary&apos;);" />
+        <ui:VisualElement style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; width: 100%; justify-content: flex-end;">
+            <ui:Button text="게임 이어하기" display-tooltip-when-elided="true" name="loadGameBtn" class="titleTopBtn" />
+            <ui:Button text="새로운 게임" display-tooltip-when-elided="true" name="newGameBtn" class="titleBtn" />
+            <ui:Button text="스토어" display-tooltip-when-elided="true" name="storeBtn" class="titleBtn" />
+            <ui:Button text="설정" display-tooltip-when-elided="true" name="settingBtn" class="titleBtn" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

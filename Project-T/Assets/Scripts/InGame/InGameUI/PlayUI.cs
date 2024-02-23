@@ -36,6 +36,11 @@ public class PlayUI : SingletonBehaviour<PlayUI>
         //Instantiate(ResourcesManager.Load<GameObject>(GAMEOVER_UI_PATH + "TextContent"), storyUi.scrollRect.content);
     }
 
+    public void SetTimer(int timer)
+    {
+        playingUiTK.TimerSetting(timer);
+    }
+
     #region 스토리 조절
     public void GenerateStoryPrepare(Dictionary<string, object> resourseTable, string storyText, List<Dictionary<string, object>> ChoiceList)
     {

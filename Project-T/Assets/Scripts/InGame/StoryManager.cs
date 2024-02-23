@@ -15,15 +15,18 @@ public class StoryManager : SingletonBehaviour<StoryManager>
     public string curStoryId { get; set; }
     protected override void Awake()
     {
-
     }
-        public void StoryManagerInit(string storyPath)
+    public void StoryManagerInit(string storyPath)
     {
-        curStoryId = "Story_0000";
         storyLoadTable = CSVReader.Read(storyPath + "/Story_load");
         storyTable = CSVReader.Read(storyPath + "/Story");
         choiceTable = CSVReader.Read(storyPath + "/Choice");
         resourceTable = CSVReader.Read(storyPath + "/Resource");
+    }
+
+    public void SetStoryId(string storyId)
+    {
+        curStoryId = storyId;
     }
 
     public void StoryUpdate()
