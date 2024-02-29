@@ -23,7 +23,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         StoryManager.Instance.StoryManagerInit(gameFileName);
         InventoryManager.Instance.SetItemList(new Dictionary<string, Item>());
         InventoryManager.Instance.InventoryManagerInit(gameFileName);
-
+        SoundManager.Instance.Clear();
     }
 
     void Start()

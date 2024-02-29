@@ -80,7 +80,7 @@
                 <ui:VisualElement style="position: absolute; width: 18px; height: 18px; background-image: resource(&apos;UI/Icon/ic_shop&apos;); left: 20px;" />
             </ui:Button>
             <ui:VisualElement name="line" style="border-top-width: 1px; border-left-color: rgb(52, 53, 54); border-right-color: rgb(52, 53, 54); border-top-color: rgb(52, 53, 54); border-bottom-color: rgb(52, 53, 54); width: auto; margin-left: 20px; margin-right: 20px;" />
-            <ui:Button text="        설정" display-tooltip-when-elided="true" class="button-setting" style="-unity-font-definition: resource(&apos;UI/Font/public/PretendardVariable SDF&apos;);">
+            <ui:Button text="        설정" display-tooltip-when-elided="true" name="settingBtn" class="button-setting" style="-unity-font-definition: resource(&apos;UI/Font/public/PretendardVariable SDF&apos;);">
                 <ui:VisualElement style="position: absolute; width: 18px; height: 18px; background-image: resource(&apos;UI/Icon/ic_options&apos;); left: 20px;" />
             </ui:Button>
             <ui:Button text="        저장하고 나가기" display-tooltip-when-elided="true" name="saveAndQuitBtn" class="button-setting" style="height: 60px; bottom: 0; position: absolute; width: 100%; -unity-font-definition: resource(&apos;UI/Font/public/PretendardVariable SDF&apos;);">

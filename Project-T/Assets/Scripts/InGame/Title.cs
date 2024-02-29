@@ -23,7 +23,10 @@ public class Title : SingletonBehaviour<Title>
         _loadGameBtn.RegisterCallback<ClickEvent>(LoadGame);
         _newGameBtn.RegisterCallback<ClickEvent>(NewGame);
         //_storeBtn.RegisterCallback<ClickEvent>(OpenStore);
-        //_settingBtn.RegisterCallback<ClickEvent>(OpenSetting);
+        _settingBtn.RegisterCallback<ClickEvent>(OpenSetting);
+
+        SoundManager.Instance.Init();
+        SoundManager.Instance.Clear();
 
         if (SaveLoadManager.Instance.IsSaveData())
         {
@@ -38,7 +41,55 @@ public class Title : SingletonBehaviour<Title>
             _newGameBtn.RemoveFromClassList("titleBtn");
             _newGameBtn.AddToClassList("titleTopBtn");
         }
+
     }
+
+    private void Start()
+    {
+        SoundSetting();
+    }
+
+    public void SoundSetting()
+    {
+        int value = SettingManager.Instance.GetSettingValue(SettingManager.MASTER_SOUND);
+        
+        if(value != -1)
+        {
+            SoundManager.Instance.SetVolume("Master", value);
+        }
+        else
+        {
+            SoundManager.Instance.SetVolume("Master", 10);
+            SettingManager.Instance.SetSettingValue(SettingManager.MASTER_SOUND, 10);
+        }
+
+        value = SettingManager.Instance.GetSettingValue(SettingManager.BGM_SOUND);
+
+        if (value != -1)
+        {
+            SoundManager.Instance.SetVolume("BGM", value);
+        }
+        else
+        {
+            SoundManager.Instance.SetVolume("BGM", 10);
+            SettingManager.Instance.SetSettingValue(SettingManager.BGM_SOUND, 10);
+        }
+
+        value = SettingManager.Instance.GetSettingValue(SettingManager.SFX_SOUND);
+
+        if (value != -1)
+        {
+            SoundManager.Instance.SetVolume("SFX", value);
+        }
+        else
+        {
+            SoundManager.Instance.SetVolume("SFX", 10);
+            SettingManager.Instance.SetSettingValue(SettingManager.SFX_SOUND, 10);
+        }
+
+        SettingManager.Instance.WriteSettingFile();
+    }
+
 
     public void LoadGame(ClickEvent evt)
     {
@@ -55,6 +106,6 @@ public class Title : SingletonBehaviour<Title>
     }
     public void OpenSetting(ClickEvent evt)
     {
-        
+        Instantiate(ResourcesManager.Load<GameObject>(Define.UI_PATH + "SettingUI"));
     }
 }

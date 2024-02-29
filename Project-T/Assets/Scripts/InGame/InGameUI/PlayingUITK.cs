@@ -17,6 +17,8 @@ public class PlayingUITK : MonoBehaviour
     public VisualElement _sidemenu;
     public VisualElement _sidemenuCloseBtn;
 
+    public VisualElement _settingBtn;
+
     public VisualElement _inventoryBtn;
     public VisualElement _inventoryContainer;
     public VisualElement _inventoryCloseBtn;
@@ -54,6 +56,8 @@ public class PlayingUITK : MonoBehaviour
         _sidemenu = root.Q<VisualElement>("sidemenu");
         _sidemenuCloseBtn = root.Q<VisualElement>("sidemenu-close");
 
+        _settingBtn = root.Q<VisualElement>("settingBtn");
+
         _inventoryBtn = root.Q<VisualElement>("inventory-btn");
         _inventoryContainer = root.Q<VisualElement>("inventory-container");
         _inventoryCloseBtn = root.Q<VisualElement>("inventory-close-btn");
@@ -71,11 +75,19 @@ public class PlayingUITK : MonoBehaviour
         _sidemenuBtn.RegisterCallback<ClickEvent>(OnSideMenu);
         _sidemenuCloseBtn.RegisterCallback<ClickEvent>(OffSideMenu);
 
+        _settingBtn.RegisterCallback<ClickEvent>(OpenSetting);
+
         _inventoryBtn.RegisterCallback<ClickEvent>(OnInventoryMenu);
         _inventoryCloseBtn.RegisterCallback<ClickEvent>(OffInventoryMenu);
 
         _saveAndQuitBtn.RegisterCallback<ClickEvent>(SaveAndQuit);
     }
+
+    public void OpenSetting(ClickEvent evt)
+    {
+        Instantiate(ResourcesManager.Load<GameObject>(Define.UI_PATH + "SettingUI"));
+    }
+
 
     public void TimerSetting(int timer)
     {

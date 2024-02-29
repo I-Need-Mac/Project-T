@@ -13,6 +13,8 @@ public class SaveData
     public List<string> saveInvenItemid = new List<string>();
     public List<int> saveInvenItemAmount = new List<int>();
 
+    public string saveBGM;
+
     // 설정 값 세이브
     
 }
@@ -24,7 +26,7 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
     private string SAVE_FILENAME = "/SaveFile.txt"; // 파일 이름
 
 
-    void Start()
+    public SaveLoadManager()
     {
         SAVE_DATA_DIRECTORY = Application.dataPath + @"\SAVE\";
 
@@ -45,6 +47,8 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
                 saveData.saveInvenItemid.Add(entry.Key);
                 saveData.saveInvenItemAmount.Add(entry.Value.Data.amount);
         }
+
+        saveData.saveBGM = SoundManager.Instance.GetCurentBGM();
 
         // 최종 전체 저장
         string json = JsonUtility.ToJson(saveData); // 제이슨화
@@ -69,6 +73,9 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
             // 인벤토리 로드
             for (int i = 0; i < saveData.saveInvenItemid.Count; i++)
                 InventoryManager.Instance.LoadItemList(saveData.saveInvenItemid[i], saveData.saveInvenItemAmount[i]);
+
+            SoundManager.Instance.Play(saveData.saveBGM, Define.Sound.Bgm);
+            SoundManager.Instance.SetCurentBGM(saveData.saveBGM);
 
             Debug.Log("로드 완료");
         }

@@ -8,7 +8,6 @@ public class StoryManager : SingletonBehaviour<StoryManager>
     private Dictionary<string, Dictionary<string, object>> storyLoadTable;
     private Dictionary<string, Dictionary<string, object>> storyTable;
     private Dictionary<string, Dictionary<string, object>> choiceTable;
-    private Dictionary<string, Dictionary<string, object>> itemTable;
     private Dictionary<string, Dictionary<string, object>> resourceTable;
 
     private List<Dictionary<string, object>> outputChoices;
@@ -22,6 +21,7 @@ public class StoryManager : SingletonBehaviour<StoryManager>
         storyTable = CSVReader.Read(storyPath + "/Story");
         choiceTable = CSVReader.Read(storyPath + "/Choice");
         resourceTable = CSVReader.Read(storyPath + "/Resource");
+        PlayUI.Instance.SetStoryName(storyPath);
     }
 
     public void SetStoryId(string storyId)

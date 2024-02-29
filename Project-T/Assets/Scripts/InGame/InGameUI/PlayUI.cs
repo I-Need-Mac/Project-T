@@ -10,7 +10,7 @@ using Image = UnityEngine.UI.Image;
 
 public class PlayUI : SingletonBehaviour<PlayUI>
 {
-    private const string GAMEOVER_UI_PATH = "Prefabs/UI/";
+    private string storyPath;
 
     private StoryUI storyUi;
     private InventoryUI inventoryUi;
@@ -30,7 +30,7 @@ public class PlayUI : SingletonBehaviour<PlayUI>
         playingUiTK = GetComponentInChildren<PlayingUITK>();
     }
         // Start is called before the first frame update
-        void Start()
+    void Start()
     {
         OffInventoryUI();
         //Instantiate(ResourcesManager.Load<GameObject>(GAMEOVER_UI_PATH + "TextContent"), storyUi.scrollRect.content);
@@ -39,6 +39,11 @@ public class PlayUI : SingletonBehaviour<PlayUI>
     public void SetTimer(int timer)
     {
         playingUiTK.TimerSetting(timer);
+    }
+
+    public void SetStoryName(string storyPath)
+    {
+        this.storyPath = storyPath;
     }
 
     #region 스토리 조절
@@ -62,20 +67,21 @@ public class PlayUI : SingletonBehaviour<PlayUI>
     {
         if (!string.Equals(curResourseTable["BGM"].ToString(), ""))
         {
-            //BGM 처리
+            SoundManager.Instance.Play(Define.SOUND_PATH + storyPath + "/" + curResourseTable["BGM"].ToString(), Define.Sound.Bgm);
+            SoundManager.Instance.SetCurentBGM(Define.SOUND_PATH + storyPath + "/" + curResourseTable["BGM"].ToString());
         }
         if (!string.Equals(curResourseTable["Voice"].ToString(), ""))
         {
-            //Voice 처리
+            SoundManager.Instance.Play(Define.SOUND_PATH + storyPath + "/" + curResourseTable["Voice"].ToString(), Define.Sound.Voice);
         }
         if (!string.Equals(curResourseTable["SFX"].ToString(), ""))
         {
-            //SFX 처리
+            SoundManager.Instance.Play(Define.SOUND_PATH + storyPath + "/" + curResourseTable["SFX"].ToString(), Define.Sound.SFX);
         }
         if (!string.Equals(curResourseTable["Illustration"].ToString(), ""))
         {
             //일러스트 처리
-            ImageContent imageInstance = Instantiate(ResourcesManager.Load<GameObject>(GAMEOVER_UI_PATH + "ImageContent"), storyUi.scrollRect.content).GetComponent<ImageContent>();
+            ImageContent imageInstance = Instantiate(ResourcesManager.Load<GameObject>(Define.UI_PATH + "ImageContent"), storyUi.scrollRect.content).GetComponent<ImageContent>();
             Sprite imageSprite = ImageLoader.Instance.LoadLocalImageToSprite(curResourseTable["Illustration"].ToString());
 
             imageInstance.image.sprite = imageSprite;
@@ -96,7 +102,7 @@ public class PlayUI : SingletonBehaviour<PlayUI>
             StartCoroutine(playingUiTK.PopToast(curResourseTable["Toast"].ToString()));
         }
 
-        TextContent textInstance = Instantiate(ResourcesManager.Load<GameObject>(GAMEOVER_UI_PATH + "TextContent"), storyUi.scrollRect.content).GetComponent<TextContent>();
+        TextContent textInstance = Instantiate(ResourcesManager.Load<GameObject>(Define.UI_PATH + "TextContent"), storyUi.scrollRect.content).GetComponent<TextContent>();
         
         StartCoroutine(StartTyping(textInstance));
     }
@@ -131,7 +137,7 @@ public class PlayUI : SingletonBehaviour<PlayUI>
         {
             if (entry.Value.Data.type == 0 && entry.Value.Data.isShow == true && entry.Value.Data.amount != 0)
             {
-                ItemContent itemInstance = Instantiate(ResourcesManager.Load<GameObject>(GAMEOVER_UI_PATH + "ItemContent"), inventoryUi.scrollRect.content).GetComponent<ItemContent>();
+                ItemContent itemInstance = Instantiate(ResourcesManager.Load<GameObject>(Define.UI_PATH + "ItemContent"), inventoryUi.scrollRect.content).GetComponent<ItemContent>();
                 itemInstance.itemName.text = entry.Value.Data.itemname;
                 if (!string.Equals(entry.Value.Data.imagePath, ""))
                 {
@@ -141,7 +147,7 @@ public class PlayUI : SingletonBehaviour<PlayUI>
             }
             else if (entry.Value.Data.type == 1 && entry.Value.Data.isShow == true && entry.Value.Data.amount != 0)
             {
-                ItemContent itemInstance = Instantiate(ResourcesManager.Load<GameObject>(GAMEOVER_UI_PATH + "ItemContent"), inventoryUi.scrollRect.content).GetComponent<ItemContent>();
+                ItemContent itemInstance = Instantiate(ResourcesManager.Load<GameObject>(Define.UI_PATH + "ItemContent"), inventoryUi.scrollRect.content).GetComponent<ItemContent>();
                 itemInstance.itemName.text = entry.Value.Data.itemname;
                 if (!string.Equals(entry.Value.Data.imagePath, ""))
                 {
