@@ -151,13 +151,19 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
         }
         if (itemList.ContainsKey("Item_money"))
         {
-            PlayUI.Instance.SetMoney(itemList["Item_money"].Data.amount.ToString("N0"));
+            SettingMoney();
         }
         else
         {
             PlayUI.Instance.SetMoney("0");
         }
     }
+
+    public void SettingMoney()
+    {
+        PlayUI.Instance.SetMoney(itemList["Item_money"].Data.amount.ToString("N0"));
+    }
+
     //아이템 변동 함수
     public void Add(string itemid, string value)
     {

@@ -5,11 +5,20 @@ using UnityEngine.UIElements;
 
 using Button = UnityEngine.UIElements.Button;
 
+using UnityEngine.SceneManagement;
+
 public class SettingUITK : MonoBehaviour
 {
     public Button[] _minusBtn = new Button[3];
     public Label[] _volumeLabel = new Label[3];
     public Button[] _plusBtn = new Button[3];
+
+    public TextField _cheatInput;
+    public Button _cheatBtn;
+
+    public TextField _cheatItemInput;
+    public TextField _cheatAmountInput;
+    public Button _cheatItemBtn;
 
     public Button _closebtn;
 
@@ -43,6 +52,34 @@ public class SettingUITK : MonoBehaviour
         _closebtn.RegisterCallback<ClickEvent>(CloseSetting);
 
         SetVolumeSetting();
+
+        _cheatInput = root.Q<TextField>("cheatInput");
+        _cheatBtn = root.Q<Button>("cheatBtn");
+
+        _cheatItemInput = root.Q<TextField>("cheatItem");
+        _cheatAmountInput = root.Q<TextField>("cheatAmount");
+        _cheatItemBtn = root.Q<Button>("cheatItemBtn");
+
+        _cheatBtn.RegisterCallback<ClickEvent>(GotoCheat);
+        _cheatItemBtn.RegisterCallback<ClickEvent>(ItemCheat);
+    }
+
+    public void GotoCheat(ClickEvent evt)
+    {
+        if (_cheatInput.value.Contains("Story_"))
+        {
+            SaveLoadManager.Instance.cheatData(_cheatInput.value);
+            SceneManager.LoadScene("Loading");
+        }
+    }
+
+    public void ItemCheat(ClickEvent evt)
+    {
+        if (FindObjectOfType<GameManager>() != null)
+        {
+            InventoryManager.Instance.Add(_cheatItemInput.value, _cheatAmountInput.value);
+            InventoryManager.Instance.SettingMoney();
+        }
     }
 
     public void CloseSetting(ClickEvent evt)

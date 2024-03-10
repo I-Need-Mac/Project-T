@@ -55,8 +55,6 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
 
         File.WriteAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME, json);
 
-        Debug.Log("저장 완료");
-        Debug.Log(json);
     }
 
     public void LoadData()
@@ -77,10 +75,7 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
             SoundManager.Instance.Play(saveData.saveBGM, Define.Sound.Bgm);
             SoundManager.Instance.SetCurentBGM(saveData.saveBGM);
 
-            Debug.Log("로드 완료");
         }
-        else
-            Debug.Log("세이브 파일이 없습니다.");
     }
     
     public bool IsSaveData()
@@ -93,5 +88,21 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
         {
             File.Delete(SAVE_DATA_DIRECTORY + SAVE_FILENAME);
         }
+    }
+
+    public void cheatData(string storyID)
+    {
+        saveData.saveId = storyID;
+
+        saveData.saveInvenItemid = new List<string>();
+        saveData.saveInvenItemAmount = new List<int>();
+
+        saveData.saveBGM = "";
+
+        // 최종 전체 저장
+        string json = JsonUtility.ToJson(saveData); // 제이슨화
+
+        File.WriteAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME, json);
+
     }
 }

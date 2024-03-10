@@ -3,7 +3,7 @@
     <ui:VisualElement style="flex-grow: 1; background-color: rgb(255, 255, 255); background-image: none; align-items: center;">
         <ui:VisualElement style="width: 100%; height: 56px; padding-left: 20px; padding-right: 20px; flex-direction: row; align-items: center; justify-content: center;">
             <ui:VisualElement style="width: 24px; height: 100%; align-items: flex-start; justify-content: center; position: absolute; left: 20px;">
-                <ui:Button display-tooltip-when-elided="true" name="closeSetting" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; background-color: rgb(255, 255, 255); color: rgba(17, 18, 18, 255); background-image: resource(&apos;UI/Icon/ic_close_black&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 20px; height: 20px;" />
+                <ui:Button display-tooltip-when-elided="true" name="closeSetting" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; background-color: rgb(255, 255, 255); color: rgb(17, 18, 18); background-image: resource(&apos;UI/Icon/ic_close_black&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 20px; height: 20px;" />
             </ui:VisualElement>
             <ui:Label text="설정" display-tooltip-when-elided="true" style="position: relative; align-items: center; -unity-font-definition: resource(&apos;UI/Font/public/PretendardVariable SDF&apos;); color: rgb(17, 18, 18); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 16px; -unity-text-align: middle-center;" />
         </ui:VisualElement>
@@ -34,5 +34,16 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement style="border-top-width: 1px; width: 335px; border-left-color: rgba(17, 18, 18, 0.1); border-right-color: rgba(17, 18, 18, 0.1); border-top-color: rgba(17, 18, 18, 0.1); border-bottom-color: rgba(17, 18, 18, 0.1);" />
+        <ui:VisualElement style="position: absolute; bottom: 20px; left: 0; right: 0; flex-direction: column; justify-content: space-between;">
+            <ui:VisualElement>
+                <ui:TextField picking-mode="Ignore" label="치트 원하는 위치 이동" text="STORY ID" name="cheatInput" />
+                <ui:Button text="이동" display-tooltip-when-elided="true" name="cheatBtn" />
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ui:TextField picking-mode="Ignore" label="치트 아이템 추가 id" text="ITEM ID" name="cheatItem" />
+                <ui:TextField picking-mode="Ignore" label="치트 아이템 변경 수" text="0" name="cheatAmount" password="false" />
+                <ui:Button text="추가" display-tooltip-when-elided="true" name="cheatItemBtn" />
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
