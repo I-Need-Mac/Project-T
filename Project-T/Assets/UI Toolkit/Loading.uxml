@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/main.uss?fileID=7433441132597879392&amp;guid=e6697b872e172fe43973de1ddec618d6&amp;type=3#main" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
+        <ui:VisualElement style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; position: relative; width: auto; height: auto; left: auto; top: auto; align-items: center;">
+            <ui:VisualElement name="Logo" style="width: 206px; height: 64px; background-image: resource(&apos;UI/Icon/logo_ryta_primary&apos;); margin-bottom: 20px;" />
+            <ui:VisualElement style="background-color: rgba(243, 240, 255, 255); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 206px; height: 6px; align-items: flex-start; border-top-left-radius: 1px; border-bottom-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px;">
+                <ui:VisualElement name="progressBar" style="height: 0; border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-left-color: rgba(95, 61, 196, 255); border-right-color: rgba(95, 61, 196, 255); border-top-color: rgba(95, 61, 196, 255); border-bottom-color: rgba(95, 61, 196, 255); width: 0; border-top-left-radius: 1px; border-bottom-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

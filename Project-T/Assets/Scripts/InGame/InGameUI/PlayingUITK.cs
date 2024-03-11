@@ -17,6 +17,8 @@ public class PlayingUITK : MonoBehaviour
     public VisualElement _sidemenu;
     public VisualElement _sidemenuCloseBtn;
 
+    public VisualElement _settingBtn;
+
     public VisualElement _inventoryBtn;
     public VisualElement _inventoryContainer;
     public VisualElement _inventoryCloseBtn;
@@ -24,6 +26,10 @@ public class PlayingUITK : MonoBehaviour
     public Label _toast;
     public Label _money_1;
     public Label _money_2;
+
+    public Label _saveTimer;
+
+    public Button _saveAndQuitBtn;
 
     public VisualElement[] _line = new VisualElement[4];
     public Button[] _choiceBtn = new Button[4];
@@ -50,6 +56,8 @@ public class PlayingUITK : MonoBehaviour
         _sidemenu = root.Q<VisualElement>("sidemenu");
         _sidemenuCloseBtn = root.Q<VisualElement>("sidemenu-close");
 
+        _settingBtn = root.Q<VisualElement>("settingBtn");
+
         _inventoryBtn = root.Q<VisualElement>("inventory-btn");
         _inventoryContainer = root.Q<VisualElement>("inventory-container");
         _inventoryCloseBtn = root.Q<VisualElement>("inventory-close-btn");
@@ -58,15 +66,33 @@ public class PlayingUITK : MonoBehaviour
         _money_1 = root.Q<Label>("money_1");
         _money_2 = root.Q<Label>("money_2");
 
+        _saveTimer = root.Q<Label>("saveTimer");
+
+        _saveAndQuitBtn = root.Q<Button>("saveAndQuitBtn");
+
         _handleContainer.RegisterCallback<ClickEvent>(OnOffBottom);
 
         _sidemenuBtn.RegisterCallback<ClickEvent>(OnSideMenu);
         _sidemenuCloseBtn.RegisterCallback<ClickEvent>(OffSideMenu);
 
+        _settingBtn.RegisterCallback<ClickEvent>(OpenSetting);
+
         _inventoryBtn.RegisterCallback<ClickEvent>(OnInventoryMenu);
         _inventoryCloseBtn.RegisterCallback<ClickEvent>(OffInventoryMenu);
+
+        _saveAndQuitBtn.RegisterCallback<ClickEvent>(SaveAndQuit);
     }
 
+    public void OpenSetting(ClickEvent evt)
+    {
+        Instantiate(ResourcesManager.Load<GameObject>(Define.UI_PATH + "SettingUI"));
+    }
+
+
+    public void TimerSetting(int timer)
+    {
+        _saveTimer.text = timer.ToString() + "초전..";
+    }
 
     public IEnumerator PopToast(string toastmessage)
     {
@@ -74,6 +100,12 @@ public class PlayingUITK : MonoBehaviour
         _toast.RemoveFromClassList("toastsetting--pop");
         yield return new WaitForSeconds(0.4f);
         _toast.AddToClassList("toastsetting--pop");
+    }
+
+    public void SaveAndQuit(ClickEvent evt)
+    {
+        SaveLoadManager.Instance.SaveData();
+        GameManager.Instance.QuitGame();
     }
 
     public void OnOffBottom(ClickEvent evt)
