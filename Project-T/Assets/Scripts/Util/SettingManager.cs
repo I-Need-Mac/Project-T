@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class SettingManager
+public class SettingManager : SingleTon<SettingManager>
 {
-    public const string TOTAL_SOUND = "TOTAL_SOUND";
+    public const string MASTER_SOUND = "MASTER_SOUND";
     public const string BGM_SOUND = "BGM_SOUND";
-    public const string EFFECT_SOUND = "EFFECT_SOUND";
+    public const string SFX_SOUND = "SFX_SOUND";
     public const string VOCIE_SOUND = "VOCIE_SOUND";
 
     private Dictionary<string, int> _settings { get; set; }
@@ -25,25 +25,13 @@ public class SettingManager
 
     private FileStream settingFileR;
     private FileStream settingFileW;
-    private Dictionary<string, Dictionary<string, object>> configData;
-
-    private static SettingManager _instance { get; set; }
-    public static SettingManager Instance
-    {
-        get
-        {
-
-            return _instance ?? (_instance = new SettingManager());
-        }
-    }
 
     public SettingManager() { 
         ReadSettingFile();
-        configData = CSVReader.Read("Config");
     }
 
     public void WriteSettingFile() {
-        settingFileW = new FileStream("./setting.txt", FileMode.Create);
+        settingFileW = new FileStream("./Assets/Resources/setting.txt", FileMode.Create);
         StreamWriter sw = new StreamWriter(settingFileW);
         DebugManager.Instance.PrintDrawLine();
         DebugManager.Instance.PrintDebug("셋팅 파일 저장");
@@ -122,12 +110,4 @@ public class SettingManager
 
     }
 
-    public string GetConfigSetting(string id) {
-        if (configData.ContainsKey(id)) { 
-            return configData[id]["Value"].ToString();
-        }
-        else { 
-            return "Wrong ID";
-        }
-    }
 }

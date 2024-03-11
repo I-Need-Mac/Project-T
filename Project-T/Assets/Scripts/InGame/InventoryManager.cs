@@ -12,7 +12,6 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
 
     protected override void Awake()
     {
-
     }
 
     public void InventoryManagerInit(string storyPath)
@@ -20,6 +19,20 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
         itemList = new Dictionary<string, Item>();
         itemTable = CSVReader.Read(storyPath + "/Item_Definition");
     }
+
+    public void SetItemList(Dictionary<string, Item> itemList)
+    {
+        this.itemList = itemList;
+    }
+
+    public void LoadItemList(string itemid, int value)
+    {
+        itemList.Add(itemid, new Item(itemid, itemTable[itemid]["Item_name"].ToString(),
+                    itemTable[itemid]["Item_description"].ToString(), int.Parse(itemTable[itemid]["Item_type"].ToString()),
+                    itemTable[itemid]["Is_Show"].ToString() == "True", itemTable[itemid]["Image_Path"].ToString(),
+                    value));
+    }
+
     public Dictionary<string, Item> GetItemList()
     {
         return itemList;
@@ -138,13 +151,19 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
         }
         if (itemList.ContainsKey("Item_money"))
         {
-            PlayUI.Instance.SetMoney(itemList["Item_money"].Data.amount.ToString("N0"));
+            SettingMoney();
         }
         else
         {
             PlayUI.Instance.SetMoney("0");
         }
     }
+
+    public void SettingMoney()
+    {
+        PlayUI.Instance.SetMoney(itemList["Item_money"].Data.amount.ToString("N0"));
+    }
+
     //아이템 변동 함수
     public void Add(string itemid, string value)
     {
@@ -209,7 +228,7 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
                         break;
                 }
                 itemList[itemid].Data.SetAmount(result);
-                DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
+                //DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
             }
         }
         else
@@ -257,7 +276,7 @@ public class InventoryManager : SingletonBehaviour<InventoryManager>
                     itemT["Item_description"].ToString(), int.Parse(itemT["Item_type"].ToString()),
                     itemT["Is_Show"].ToString() == "True", itemT["Image_Path"].ToString(),
                     result));
-                DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
+                //DebugManager.Instance.PrintDebug(itemList[itemid].Data.amount);
             }
         }
     }

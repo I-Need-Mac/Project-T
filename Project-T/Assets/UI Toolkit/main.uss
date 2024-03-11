@@ -178,3 +178,163 @@
     transition-delay: 0s, 1.5s, 1.5s;
     scale: 0.8 0.8;
 }
+
+.unity-progress-bar {
+    border-left-color: rgb(255, 150, 150);
+    border-right-color: rgb(255, 150, 150);
+    border-top-color: rgb(255, 150, 150);
+    border-bottom-color: rgb(255, 150, 150);
+    margin-left: 1000px;
+}
+
+.titleBtn {
+    height: 55px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(17, 18, 18);
+    border-right-color: rgb(17, 18, 18);
+    border-top-color: rgb(17, 18, 18);
+    border-bottom-color: rgb(17, 18, 18);
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(17, 18, 18);
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-definition: resource('UI/Font/public/PretendardVariable SDF');
+    -unity-text-align: middle-center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.titleBtn:active {
+    background-color: rgb(178, 178, 178);
+}
+
+.titleTopBtn {
+    height: 55px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(95, 61, 196);
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-definition: resource('UI/Font/public/PretendardVariable SDF');
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+.titleTopBtn:active {
+    background-color: rgb(114, 75, 231);
+}
+
+.titleTopLabel {
+    -unity-font-definition: resource('UI/Font/public/PretendardVariable SDF');
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    -unity-font-style: normal;
+}
+
+.titleLabel {
+}
+
+.minusBtn {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(255, 255, 255);
+    background-image: resource('UI/Icon/ic_minus_active');
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.minusBtn:active {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.39);
+}
+
+.minusBtnDisable {
+    background-image: resource('UI/Icon/ic_minus_inactive');
+}
+
+.minusBtnDisable:active {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.plusBtn {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(255, 255, 255);
+    background-image: resource('UI/Icon/ic_plus_active');
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.plusBtn:active {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.39);
+}
+
+.plusBtnDisable {
+    background-image: resource('UI/Icon/ic_plus_inactive');
+}
+
+.plusBtnDisable:active {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
