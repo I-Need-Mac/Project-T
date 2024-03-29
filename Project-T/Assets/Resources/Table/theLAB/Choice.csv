@@ -21,30 +21,31 @@ Choice_Story_00133,Choice_Story_0013,3,Normal,Null,Null,,기억이 나지 않아
 Choice_Story_00141,Choice_Story_0014,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
 Choice_Story_00142,Choice_Story_0014,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
 Choice_Story_00143,Choice_Story_0014,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
-Choice_Story_00181,Choice_Story_0018,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
-Choice_Story_00182,Choice_Story_0018,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00181,Choice_Story_0018,1,Dimmed,Item_c0c2,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00182,Choice_Story_0018,2,Dimmed,Item_c0c3,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
 Choice_Story_00183,Choice_Story_0018,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
 Choice_Story_00184,Choice_Story_0018,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
-Choice_Story_00191,Choice_Story_0019,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
-Choice_Story_00192,Choice_Story_0019,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00191,Choice_Story_0019,1,Dimmed,Item_c0c2,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00192,Choice_Story_0019,2,Dimmed,Item_c0c3,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
 Choice_Story_00193,Choice_Story_0019,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
 Choice_Story_00194,Choice_Story_0019,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
-Choice_Story_00201,Choice_Story_0020,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
-Choice_Story_00202,Choice_Story_0020,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00201,Choice_Story_0020,1,Dimmed,Item_c0c2,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00202,Choice_Story_0020,2,Dimmed,Item_c0c3,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
 Choice_Story_00203,Choice_Story_0020,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
 Choice_Story_00204,Choice_Story_0020,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
-Choice_Story_00251,Choice_Story_0025,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
-Choice_Story_00252,Choice_Story_0025,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00251,Choice_Story_0025,1,Dimmed,Item_c0c2,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00252,Choice_Story_0025,2,Dimmed,Item_c0c3,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
 Choice_Story_00253,Choice_Story_0025,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
 Choice_Story_00254,Choice_Story_0025,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
-Choice_Story_00261,Choice_Story_0026,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
-Choice_Story_00262,Choice_Story_0026,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00261,Choice_Story_0026,1,Dimmed,Item_c0c2,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00262,Choice_Story_0026,2,Dimmed,Item_c0c3,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
 Choice_Story_00263,Choice_Story_0026,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
 Choice_Story_00264,Choice_Story_0026,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
-Choice_Story_00271,Choice_Story_0027,1,Dimmed,Item_c0c1,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
-Choice_Story_00272,Choice_Story_0027,2,Dimmed,Item_c0c2,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
+Choice_Story_00271,Choice_Story_0027,1,Dimmed,Item_c0c2,More,0,이곳은 뭐하는 곳인데?,Null,Null,,Null,Null,,,,,R0025_P100
+Choice_Story_00272,Choice_Story_0027,2,Dimmed,Item_c0c3,More,0,왜 너밖에 없어?,Null,Null,,Null,Null,,,,,R0026_P100
 Choice_Story_00273,Choice_Story_0027,3,Dimmed,Item_c0c3,More,0,쉘터?,Null,Null,,Null,Null,,,,,R0027_P100
 Choice_Story_00274,Choice_Story_0027,4,Normal,Null,Null,,왜 여기에 있어?,Null,Null,,Null,Null,,,,,R0028_P100
+Choice_Story_00281,Choice_Story_0028,1,Normal,Null,Null,,(chap. 1 시작),Null,Null,,Null,Null,,,,,R0042_P100
 Choice_Story_00291,Choice_Story_0029,1,Normal,Null,Null,,저기... (말을 건다),Null,Null,,Null,Null,,,,,R0032_P100
 Choice_Story_00292,Choice_Story_0029,2,Normal,Null,Null,,(기척을 열심히 낸다),Null,Null,,Null,Null,,,,,R0033_P100
 Choice_Story_00321,Choice_Story_0032,1,Normal,Null,Null,,아\c 응\c 왜?,Null,Null,,Null,Null,,,,,R0013_P100
@@ -60,3 +61,123 @@ Choice_Story_00373,Choice_Story_0037,3,Normal,Null,Null,,기억이 나지 않아
 Choice_Story_00401,Choice_Story_0040,1,Normal,Null,Null,,신 (보라+빨강 < 20),Null,Null,,Null,Null,,,,,R0018_P100
 Choice_Story_00402,Choice_Story_0040,2,Normal,Null,Null,,신 (보라+빨강 > 20),Null,Null,,Null,Null,,,,,R0019_P100
 Choice_Story_00403,Choice_Story_0040,3,Normal,Null,Null,,기억이 나지 않아,Null,Null,,Null,Null,,,,,R0020_P100
+Choice_Story_00421,Choice_Story_0042,1,Normal,Null,Null,,(깨운다),Null,Null,,Null,Null,,,,,R0048_P100
+Choice_Story_00422,Choice_Story_0042,2,Normal,Null,Null,,(깨우지 않고 깰때까지 기다린다),Null,Null,,Null,Null,,,,,R0047_P100
+Choice_Story_00423,Choice_Story_0042,3,Normal,Null,Null,,(기다리지 않고 다른 곳으로 이동한다),Null,Null,,Null,Null,,,,,R0046_P100
+Choice_Story_00461,Choice_Story_0046,1,Normal,Null,Null,,(주변의 사물),Null,Null,,Null,Null,,,,,R0060_P100
+Choice_Story_00462,Choice_Story_0046,2,Normal,Null,Null,,(가지고 있는 것),Null,Null,,Null,Null,,,,,R0059_P100
+Choice_Story_00463,Choice_Story_0046,3,Normal,Null,Null,,(무시),Null,Null,,Null,Null,,,,,R0058_P100
+Choice_Story_00471,Choice_Story_0047,1,Normal,Null,Null,,(주변의 사물),Null,Null,,Null,Null,,,,,R0055_P100
+Choice_Story_00472,Choice_Story_0047,2,Normal,Null,Null,,(가지고 있는 것),Null,Null,,Null,Null,,,,,R0056_P100
+Choice_Story_00473,Choice_Story_0047,3,Normal,Null,Null,,(무시),Null,Null,,Null,Null,,,,,R0057_P100
+Choice_Story_00481,Choice_Story_0048,1,Normal,Null,Null,,,Item_anger,More,15,Null,Null,,,R0062_P100,,R0061_P100
+Choice_Story_00551,Choice_Story_0055,1,Normal,Null,Null,,(낚아챈 경우),Null,Null,,Null,Null,,,,,R0066_P100
+Choice_Story_00561,Choice_Story_0056,1,Normal,Null,Null,,(일으킨 경우),Null,Null,,Null,Null,,,,,R0071_P100
+Choice_Story_00571,Choice_Story_0057,1,Normal,Null,Null,,(일으킨 경우),Null,Null,,Null,Null,,,,,R0071_P100
+Choice_Story_00581,Choice_Story_0058,1,Normal,Null,Null,,(복도),Null,Null,,Null,Null,,,,,
+Choice_Story_00591,Choice_Story_0059,1,Normal,Null,Null,,(복도),Null,Null,,Null,Null,,,,,
+Choice_Story_00601,Choice_Story_0060,1,Normal,Null,Null,,(복도),Null,Null,,Null,Null,,,,,
+Choice_Story_00611,Choice_Story_0061,1,Normal,Null,Null,,(일으킨 경우),Null,Null,,Null,Null,,,,,R0071_P100
+Choice_Story_00621,Choice_Story_0062,1,Normal,Null,Null,,(낚아챈 경우),Null,Null,,Null,Null,,,,,R0066_P100
+Choice_Story_00661,Choice_Story_0066,1,Normal,Null,Null,,(당당하게 행동하라고 한다),Null,Null,,Null,Null,,,,,
+Choice_Story_00662,Choice_Story_0066,2,Normal,Null,Null,,(상황을 좀더 지켜본다),Null,Null,,Null,Null,,,,,R0076_P100
+Choice_Story_00691,Choice_Story_0069,1,Normal,Null,Null,,(돌아가자),Null,Null,,Null,Null,,,,,R0108_P100
+Choice_Story_00701,Choice_Story_0070,1,Hidden,Item_waiting,More,0,(추워보여서),Null,Null,,Null,Null,,,,,R0081_P100
+Choice_Story_00702,Choice_Story_0070,2,Normal,Null,Null,,(물어볼 것이 있음),Item_waiting,More,0,Null,Null,,,R0083_P100,,R0082_P100
+Choice_Story_00711,Choice_Story_0071,1,Normal,Null,Null,,,Item_blancket,More,0,Item_scarf,More,0,,R0075_P100,,R0073_P100
+Choice_Story_00731,Choice_Story_0073,1,Normal,Null,Null,,,Null,Null,,Null,Null,,,,,R0107_P100
+Choice_Story_00741,Choice_Story_0074,1,Normal,Null,Null,,(추워보여서),Null,Null,,Null,Null,,,,,R0086_P100
+Choice_Story_00742,Choice_Story_0074,2,Normal,Null,Null,,(물어볼 것이 있음),Null,Null,,Null,Null,,,,,R0087_P100
+Choice_Story_00751,Choice_Story_0075,1,Normal,Null,Null,,(추워보여서),Null,Null,,Null,Null,,,,,R0086_P100
+Choice_Story_00752,Choice_Story_0075,2,Normal,Null,Null,,(물어볼 것이 있음),Null,Null,,Null,Null,,,,,R0087_P100
+Choice_Story_00761,Choice_Story_0076,1,Normal,Null,Null,,(깨울 생각이 아니었다),Item_waiting,More,0,Null,Null,,,R0070_P100,,R0069_P100
+Choice_Story_00762,Choice_Story_0076,2,Hidden,Item_waiting,More,0,(추워보여서),Null,Null,,Null,Null,,,,,R0081_P100
+Choice_Story_00763,Choice_Story_0076,3,Normal,Null,Null,,(물어볼 것이 있음),Item_waiting,More,0,Null,Null,,,R0083_P100,,R0082_P100
+Choice_Story_00771,Choice_Story_0077,1,Normal,Null,Null,,(깨울 생각이 아니었다),Item_waiting,More,0,Null,Null,,,R0070_P100,,R0069_P100
+Choice_Story_00772,Choice_Story_0077,2,Hidden,Item_waiting,More,0,(추워보여서),Null,Null,,Null,Null,,,,,R0081_P100
+Choice_Story_00773,Choice_Story_0077,3,Normal,Null,Null,,(물어볼 것이 있음),Item_waiting,More,0,Null,Null,,,R0083_P100,,R0082_P100
+Choice_Story_00811,Choice_Story_0081,1,Normal,Null,Null,,(돌아가자),Null,Null,,Null,Null,,,,,R0108_P100
+Choice_Story_00812,Choice_Story_0081,2,Normal,Null,Null,,(물어볼 것이 있음),Null,Null,,Null,Null,,,,,R0090_P100
+Choice_Story_00821,Choice_Story_0082,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_00822,Choice_Story_0082,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_00823,Choice_Story_0082,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_00824,Choice_Story_0082,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_00831,Choice_Story_0083,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_00832,Choice_Story_0083,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_00833,Choice_Story_0083,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_00834,Choice_Story_0083,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_00871,Choice_Story_0087,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_00872,Choice_Story_0087,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_00873,Choice_Story_0087,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_00874,Choice_Story_0087,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_00901,Choice_Story_0090,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_00902,Choice_Story_0090,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_00903,Choice_Story_0090,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_00904,Choice_Story_0090,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_00951,Choice_Story_0095,1,Normal,Null,Null,,(추궁한다),Null,Null,,Null,Null,,,,,R0099_P100
+Choice_Story_00952,Choice_Story_0095,2,Normal,Null,Null,,(다른 것을 물어본다),Null,Null,,Null,Null,,,,,R0098_P100
+Choice_Story_00981,Choice_Story_0098,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_00982,Choice_Story_0098,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_00983,Choice_Story_0098,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_00984,Choice_Story_0098,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_00991,Choice_Story_0099,1,Normal,Null,Null,,(추궁한다),Null,Null,,Null,Null,,,,,R0105_P100
+Choice_Story_00992,Choice_Story_0099,2,Normal,Null,Null,,(다른 것을 물어본다),Null,Null,,Null,Null,,,,,R0104_P100
+Choice_Story_01001,Choice_Story_0100,1,Normal,Null,Null,,(추궁한다),Null,Null,,Null,Null,,,,,R0118_P100
+Choice_Story_01002,Choice_Story_0100,2,Normal,Null,Null,,(다른 것을 물어본다),Null,Null,,Null,Null,,,,,R0119_P100
+Choice_Story_01011,Choice_Story_0101,1,Normal,Null,Null,,(추궁한다),Null,Null,,Null,Null,,,,,R0129_P100
+Choice_Story_01012,Choice_Story_0101,2,Normal,Null,Null,,(다른 것을 물어본다),Null,Null,,Null,Null,,,,,R0128_P100
+Choice_Story_01041,Choice_Story_0104,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01042,Choice_Story_0104,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01043,Choice_Story_0104,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01044,Choice_Story_0104,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01051,Choice_Story_0105,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01052,Choice_Story_0105,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01053,Choice_Story_0105,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01054,Choice_Story_0105,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01071,Choice_Story_0107,1,Normal,Null,Null,,(방으로 들어가자),Null,Null,,Null,Null,,,,,R0112_P100
+Choice_Story_01072,Choice_Story_0107,2,Normal,Null,Null,,(그래 나가자),Null,Null,,Null,Null,,,,,R0111_P100
+Choice_Story_01081,Choice_Story_0108,1,Normal,Null,Null,,(방으로 들어가자),Null,Null,,Null,Null,,,,,R0112_P100
+Choice_Story_01082,Choice_Story_0108,2,Normal,Null,Null,,(그래 나가자),Null,Null,,Null,Null,,,,,R0111_P100
+Choice_Story_01111,Choice_Story_0111,1,Normal,Null,Null,,(복도),Null,Null,,Null,Null,,,,,
+Choice_Story_01112,Choice_Story_0111,2,Normal,Null,Null,,(연구실 앞),Null,Null,,Null,Null,,,,,
+Choice_Story_01121,Choice_Story_0112,1,Normal,Null,Null,,(초록이) / (하양이),Item_scarf,More,0,Null,Null,,,R0133_P100,,R0134_P100
+Choice_Story_01151,Choice_Story_0115,1,Normal,Null,Null,,(방으로 들어가자),Null,Null,,Null,Null,,,,,R0112_P100
+Choice_Story_01152,Choice_Story_0115,2,Normal,Null,Null,,(그래 나가자),Null,Null,,Null,Null,,,,,R0111_P100
+Choice_Story_01181,Choice_Story_0118,1,Normal,Null,Null,,(추궁한다),Null,Null,,Null,Null,,,,,R0122_P100
+Choice_Story_01182,Choice_Story_0118,2,Normal,Null,Null,,(다른 것을 물어본다),Null,Null,,Null,Null,,,,,R0123_P100
+Choice_Story_01191,Choice_Story_0119,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01192,Choice_Story_0119,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01193,Choice_Story_0119,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01194,Choice_Story_0119,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01221,Choice_Story_0122,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01222,Choice_Story_0122,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01223,Choice_Story_0122,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01224,Choice_Story_0122,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01231,Choice_Story_0123,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01232,Choice_Story_0123,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01233,Choice_Story_0123,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01234,Choice_Story_0123,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01281,Choice_Story_0128,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01282,Choice_Story_0128,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01283,Choice_Story_0128,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01284,Choice_Story_0128,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01291,Choice_Story_0129,1,Normal,Null,Null,,(추궁한다),Null,Null,,Null,Null,,,,,R0131_P100
+Choice_Story_01292,Choice_Story_0129,2,Normal,Null,Null,,(다른 것을 물어본다),Null,Null,,Null,Null,,,,,R0130_P100
+Choice_Story_01301,Choice_Story_0130,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01302,Choice_Story_0130,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01303,Choice_Story_0130,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01304,Choice_Story_0130,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01311,Choice_Story_0131,1,Dimmed,Item_c1c1,More,0,(여긴 어디),Null,Null,,Null,Null,,,,,R0095_P100
+Choice_Story_01312,Choice_Story_0131,2,Dimmed,Item_c1c2,More,0,(나는 누구),Null,Null,,Null,Null,,,,,R0100_P100
+Choice_Story_01313,Choice_Story_0131,3,Dimmed,Item_c1c3,More,0,(왜 나는 혼자),Null,Null,,Null,Null,,,,,R0101_P100
+Choice_Story_01314,Choice_Story_0131,4,Hidden,Item_c1,More,0,(그만\c 하나 이상을 물어봤을 때),Null,Null,,Null,Null,,,,,R0115_P100
+Choice_Story_01341,Choice_Story_0134,1,Normal,Null,Null,,(지금이 기회다),Null,Null,,Null,Null,,,,,R0138_P100
+Choice_Story_01342,Choice_Story_0134,2,Normal,Null,Null,,(이동하면 안돼),Null,Null,,Null,Null,,,,,R0137_P100
+Choice_Story_01371,Choice_Story_0137,1,Normal,Null,Null,,,Null,Null,,Null,Null,,,,,R0143_P100
+Choice_Story_01381,Choice_Story_0138,1,Normal,Null,Null,,(도망친다),Null,Null,,Null,Null,,,,,R0141_P100
+Choice_Story_01382,Choice_Story_0138,2,Normal,Null,Null,,(도와주세요) - 초록이 뜬 경우 / 초록이 뜨지 않은 경우,Item_green,More,0,Null,Null,,,R0154_P100,,R0155_P100
+Choice_Story_01411,Choice_Story_0141,1,Normal,Null,Null,,,Null,Null,,Null,Null,,,,,R0143_P100
+Choice_Story_01431,Choice_Story_0143,1,Normal,Null,Null,,,Item_black,More,0,Null,Null,,,R0146_P100,,R0145_P100
+Choice_Story_01451,Choice_Story_0145,1,Normal,Null,Null,,,Null,Null,,Null,Null,,,,,R0149_P100
+Choice_Story_01461,Choice_Story_0146,1,Normal,Null,Null,,(당연하지),Null,Null,,Null,Null,,,,,R0152_P100
+Choice_Story_01462,Choice_Story_0146,2,Normal,Null,Null,,(없겠지),Null,Null,,Null,Null,,,,,R0153_P100
