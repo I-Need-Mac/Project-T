@@ -32,6 +32,7 @@ public class PlayingUITK : MonoBehaviour
     public Button _saveAndQuitBtn;
 
     public VisualElement[] _line = new VisualElement[4];
+    public VisualElement[] _choiceArea = new VisualElement[4];
     public Button[] _choiceBtn = new Button[4];
 
     private void Awake()
@@ -45,6 +46,11 @@ public class PlayingUITK : MonoBehaviour
         _line[1] = root.Q<VisualElement>("line-1");
         _line[2] = root.Q<VisualElement>("line-2");
         _line[3] = root.Q<VisualElement>("line-3");
+
+        _choiceArea[0] = root.Q<VisualElement>("choice-area-0");
+        _choiceArea[1] = root.Q<VisualElement>("choice-area-1");
+        _choiceArea[2] = root.Q<VisualElement>("choice-area-2");
+        _choiceArea[3] = root.Q<VisualElement>("choice-area-3");
 
         _choiceBtn[0] = root.Q<Button>("choice-0");
         _choiceBtn[1] = root.Q<Button>("choice-1");
@@ -173,12 +179,12 @@ public class PlayingUITK : MonoBehaviour
         {
             if (i == 0)
             {
-                _choiceBtn[i].style.display = DisplayStyle.None;
+                _choiceArea[i].style.display = DisplayStyle.None;
             }
             else
             {
                 _line[i].style.display = DisplayStyle.None;
-                _choiceBtn[i].style.display = DisplayStyle.None;
+                _choiceArea[i].style.display = DisplayStyle.None;
             }
         }
 
@@ -214,12 +220,12 @@ public class PlayingUITK : MonoBehaviour
             //버튼 켜기 + 라인 포함
             if (choiceCount == 0)
             {
-                _choiceBtn[choiceCount].style.display = DisplayStyle.Flex;
+                _choiceArea[choiceCount].style.display = DisplayStyle.Flex;
             }
             else
             {
                 _line[choiceCount].style.display = DisplayStyle.Flex;
-                _choiceBtn[choiceCount].style.display = DisplayStyle.Flex;
+                _choiceArea[choiceCount].style.display = DisplayStyle.Flex;
             }
 
             choiceCount++;
