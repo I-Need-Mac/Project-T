@@ -31,6 +31,8 @@
     white-space: normal;
     justify-content: center;
     -unity-font: resource('UI/Font/public/variable/PretendardVariable');
+    max-width: 95%;
+    flex-grow: 1;
 }
 
 .btn-choice:active {
