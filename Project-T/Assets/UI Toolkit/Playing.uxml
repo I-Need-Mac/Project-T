@@ -22,22 +22,22 @@
         </ui:VisualElement>
         <ui:VisualElement name="button-list" style="width: 100%; padding-left: 20px; padding-right: 20px; flex-basis: auto; align-items: stretch; height: auto; max-height: none; min-height: auto; justify-content: flex-start; padding-top: 0; padding-bottom: 20px; flex-shrink: 0; display: flex; background-color: rgb(35, 35, 36);">
             <ui:VisualElement name="choice-area-0" style="height: 58px; flex-direction: row; align-items: center; justify-content: space-between;">
-                <ui:Button text="444" display-tooltip-when-elided="true" name="choice-0" focusable="true" enable-rich-text="true" class="btn-choice" />
+                <ui:Button text="444" display-tooltip-when-elided="true" name="choice-0" focusable="true" enable-rich-text="true" class="btn-choice textsetting" />
                 <ui:VisualElement style="background-image: resource(&apos;UI/Icon/ic_right-arrow_active_white&apos;); width: 8px; height: 16px;" />
             </ui:VisualElement>
             <ui:VisualElement name="line-1" style="border-top-width: 1px; border-left-color: rgb(52, 53, 54); border-right-color: rgb(52, 53, 54); border-top-color: rgb(52, 53, 54); border-bottom-color: rgb(52, 53, 54); width: auto;" />
             <ui:VisualElement name="choice-area-1" style="height: 58px; flex-direction: row; align-items: center; justify-content: space-between;">
-                <ui:Button text="1" display-tooltip-when-elided="true" name="choice-1" focusable="true" enable-rich-text="true" class="btn-choice" />
+                <ui:Button text="1" display-tooltip-when-elided="true" name="choice-1" focusable="true" enable-rich-text="true" class="btn-choice textsetting" />
                 <ui:VisualElement style="background-image: resource(&apos;UI/Icon/ic_right-arrow_active_white&apos;); width: 8px; height: 16px;" />
             </ui:VisualElement>
             <ui:VisualElement name="line-2" style="border-top-width: 1px; border-left-color: rgb(52, 53, 54); border-right-color: rgb(52, 53, 54); border-top-color: rgb(52, 53, 54); border-bottom-color: rgb(52, 53, 54); width: auto;" />
             <ui:VisualElement name="choice-area-2" style="height: 58px; flex-direction: row; align-items: center; justify-content: space-between;">
-                <ui:Button text="1" display-tooltip-when-elided="true" name="choice-2" focusable="true" enable-rich-text="true" class="btn-choice" />
+                <ui:Button text="1" display-tooltip-when-elided="true" name="choice-2" focusable="true" enable-rich-text="true" class="btn-choice textsetting" />
                 <ui:VisualElement style="background-image: resource(&apos;UI/Icon/ic_right-arrow_active_white&apos;); width: 8px; height: 16px;" />
             </ui:VisualElement>
             <ui:VisualElement name="line-3" style="border-top-width: 1px; border-left-color: rgb(52, 53, 54); border-right-color: rgb(52, 53, 54); border-top-color: rgb(52, 53, 54); border-bottom-color: rgb(52, 53, 54); width: auto;" />
             <ui:VisualElement name="choice-area-3" style="height: 58px; flex-direction: row; align-items: center; justify-content: space-between;">
-                <ui:Button text="1" display-tooltip-when-elided="true" name="choice-3" focusable="true" enable-rich-text="true" class="btn-choice" />
+                <ui:Button text="1" display-tooltip-when-elided="true" name="choice-3" focusable="true" enable-rich-text="true" class="btn-choice textsetting" />
                 <ui:VisualElement style="background-image: resource(&apos;UI/Icon/ic_right-arrow_active_white&apos;); width: 8px; height: 16px;" />
             </ui:VisualElement>
         </ui:VisualElement>
@@ -53,7 +53,7 @@
                     <ui:VisualElement style="width: 16px; height: 18px; background-image: resource(&apos;UI/Icon/ic_coin&apos;); -unity-background-scale-mode: scale-to-fit;" />
                     <ui:Label text="0" display-tooltip-when-elided="true" name="money_2" style="font-size: 14px; -unity-text-align: middle-right; padding-left: 6px; color: rgb(33, 37, 41); -unity-font-definition: resource(&apos;UI/Font/public/PretendardVariable SDF&apos;);" />
                 </ui:VisualElement>
-                <ui:Label text="인벤토리" display-tooltip-when-elided="true" style="position: absolute; color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 16px; white-space: nowrap; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; left: 50%; right: 50%; -unity-font-style: normal; height: 16px; display: flex; -unity-font-definition: resource(&apos;UI/Font/public/PretendardVariable SDF&apos;);" />
+                <ui:Label text="인벤토리" display-tooltip-when-elided="true" class="textsetting" style="position: absolute; color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 16px; white-space: nowrap; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; left: 50%; right: 50%; -unity-font-style: normal; height: 16px; display: flex;" />
             </ui:VisualElement>
             <ui:VisualElement style="padding-top: 10px; padding-right: 20px; padding-left: 20px; flex-direction: row; justify-content: space-between; display: none; visibility: hidden; overflow: hidden;">
                 <ui:VisualElement style="align-items: center; width: 106px;">

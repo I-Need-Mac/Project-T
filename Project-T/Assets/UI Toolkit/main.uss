@@ -340,3 +340,8 @@
 .plusBtnDisable:active {
     -unity-background-image-tint-color: rgb(255, 255, 255);
 }
+
+.textsetting {
+    -unity-font: none;
+    -unity-font-definition: resource('UI/Font/public/PretendardVariable SDF');
+}
