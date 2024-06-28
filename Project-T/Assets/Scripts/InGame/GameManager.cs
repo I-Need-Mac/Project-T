@@ -31,6 +31,11 @@ public class GameManager : SingletonBehaviour<GameManager>
         if (SaveLoadManager.Instance.IsSaveData())
         {
             SaveLoadManager.Instance.LoadData();
+            StoryManager.Instance.isSaveLoad = true;
+        }
+        else
+        {
+            StoryManager.Instance.isSaveLoad = false;
         }
 
         StoryManager.Instance.StoryUpdate();

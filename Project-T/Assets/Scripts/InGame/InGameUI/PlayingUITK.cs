@@ -35,6 +35,18 @@ public class PlayingUITK : MonoBehaviour
     public VisualElement[] _choiceArea = new VisualElement[4];
     public Button[] _choiceBtn = new Button[4];
 
+    // 엔딩 화면 구성 요소
+    public VisualElement _endingBG;
+    public VisualElement _endingIcon;
+
+    public Label _endingMainText;
+    public Label _endingSubText;
+
+    public VisualElement _goodendContainer;
+    public Button[] _goodendBtn = new Button[3];
+    public VisualElement _badendContainer;
+    public Button[] _badendBtn = new Button[4];
+
     private void Awake()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
@@ -76,6 +88,25 @@ public class PlayingUITK : MonoBehaviour
 
         _saveAndQuitBtn = root.Q<Button>("saveAndQuitBtn");
 
+        // 엔딩 화면 구성 요소
+        _endingBG = root.Q<VisualElement>("ending-bg");
+        _endingIcon = root.Q<VisualElement>("ending-icon");
+
+        _endingMainText = root.Q<Label>("ending-main-text");
+        _endingSubText = root.Q<Label>("ending-sub-text");
+
+        _goodendContainer = root.Q<VisualElement>("goodend-container");
+
+        _goodendBtn[0] = root.Q<Button>("goodend-btn-1");
+        _goodendBtn[1] = root.Q<Button>("goodend-btn-2");
+        _goodendBtn[2] = root.Q<Button>("goodend-btn-3");
+
+        _badendContainer = root.Q<VisualElement>("badend-container");
+
+        _badendBtn[0] = root.Q<Button>("badend-btn-1");
+        _badendBtn[1] = root.Q<Button>("badend-btn-2");
+        _badendBtn[2] = root.Q<Button>("badend-btn-3");
+
         _handleContainer.RegisterCallback<ClickEvent>(OnOffBottom);
 
         _sidemenuBtn.RegisterCallback<ClickEvent>(OnSideMenu);
@@ -87,6 +118,61 @@ public class PlayingUITK : MonoBehaviour
         _inventoryCloseBtn.RegisterCallback<ClickEvent>(OffInventoryMenu);
 
         _saveAndQuitBtn.RegisterCallback<ClickEvent>(SaveAndQuit);
+
+        // 엔딩 화면 버튼
+        _goodendBtn[0].RegisterCallback<ClickEvent>(GotoNewStart);
+        _goodendBtn[1].RegisterCallback<ClickEvent>(GotoTitle);
+        _goodendBtn[2].RegisterCallback<ClickEvent>(Nothing);
+
+        _badendBtn[0].RegisterCallback<ClickEvent>(GotoLastSave);
+        _badendBtn[1].RegisterCallback<ClickEvent>(Nothing);
+        _badendBtn[2].RegisterCallback<ClickEvent>(GotoNewStart);
+    }
+
+    // 엔딩 화면 버튼 요소
+    public void GotoNewStart(ClickEvent evt)
+    {
+        SaveLoadManager.Instance.ResetData();
+        LoadManager.LoadScene("Playing");
+    }
+    public void GotoLastSave(ClickEvent evt)
+    {
+        LoadManager.LoadScene("Playing");
+    }
+    public void GotoTitle(ClickEvent evt)
+    {
+        SaveLoadManager.Instance.ResetData();
+        LoadManager.LoadScene("Title");
+    }
+    public void Nothing(ClickEvent evt)
+    {
+        DebugManager.Instance.PrintDebug("아직 개발 안됨.");
+    }
+
+    public void EndingSetting(Dictionary<string, object> ending)
+    {
+        _endingMainText.text = ending["ending_text"].ToString();
+        _endingSubText.text = ending["ending_description"].ToString();
+
+        string path = ending["ending_BG"].ToString();
+        if (!string.Equals(path, ""))
+        {
+            _endingBG.style.backgroundImage = new StyleBackground(ImageLoader.Instance.LoadLocalImageToSprite(ending["ending_BG"].ToString()));
+        }
+        if (int.Parse(ending["ending_type"].ToString()) == 0)//bad ending
+        {
+            _endingIcon.RemoveFromClassList("goodend-trigger");
+            _goodendContainer.style.display = DisplayStyle.None;
+            _badendContainer.style.display = DisplayStyle.Flex;
+        }
+        else
+        {
+           _endingIcon.AddToClassList("goodend-trigger");
+            _goodendContainer.style.display = DisplayStyle.None;
+            _badendContainer.style.display = DisplayStyle.Flex;
+        }
+
+        _endingBG.AddToClassList("Scenepopup");
     }
 
     public void OpenSetting(ClickEvent evt)
@@ -111,7 +197,7 @@ public class PlayingUITK : MonoBehaviour
     public void SaveAndQuit(ClickEvent evt)
     {
         SaveLoadManager.Instance.SaveData();
-        GameManager.Instance.QuitGame();
+        LoadManager.LoadScene("Title");
     }
 
     public void OnOffBottom(ClickEvent evt)
@@ -193,7 +279,7 @@ public class PlayingUITK : MonoBehaviour
         foreach (Dictionary<string, object> choice in choices)
         {
             //딤드 처리
-            string choiceType = (string)choice["Choice_type"];
+            string choiceType = choice["Choice_type"].ToString();
             if (string.Equals(choiceType, "Dimmed"))
             {
                 if (InventoryManager.Instance.IsCondition(choice["hidden_Choice_condition_type"].ToString(),

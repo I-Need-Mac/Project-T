@@ -1,0 +1,5 @@
+ending_ID,ending_text,ending_description,ending_type,ending_BG
+단어,,,0= 셀수없어서 카운팅이됨1= 있다없다만 판별,
+string,string,string,int,string
+Ending_0000,당신은 사망했습니다.\n최대 2문장까지 들어갑니다., 설명글이 들어갑니다.\n최소 2문장에서 최대 3문장~~\n 문장 스타일은 '다'로 끝납니다.,0,
+Ending_0001,탈출에 성공했습니다.\n최대 2문장까지 들어갑니다., 설명글이 들어갑니다.\n최소 2문장에서 최대 3문장~~\n 문장 스타일은 '다'로 끝납니다.,1,story_ImageSketch_LAB_05
