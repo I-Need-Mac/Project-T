@@ -93,12 +93,12 @@ public class Title : SingletonBehaviour<Title>
 
     public void LoadGame(ClickEvent evt)
     {
-        SceneManager.LoadScene("Loading");
+        LoadManager.LoadScene("Playing");
     }
     public void NewGame(ClickEvent evt)
     {
         SaveLoadManager.Instance.ResetData();
-        SceneManager.LoadScene("Loading");
+        LoadManager.LoadScene("Playing");
     }
     public void OpenStore(ClickEvent evt)
     {
