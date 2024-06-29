@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class LoadManager : SingletonBehaviour<LoadManager>
+public class LoadManager : MonoBehaviour
 {
-    public string sceneName = "Playing";
+    public static string LoadSceneName;
 
     public VisualElement _progressBar;
 
@@ -26,9 +26,15 @@ public class LoadManager : SingletonBehaviour<LoadManager>
         StartCoroutine(LoadCoroutine());
     }
 
+    public static void LoadScene(string sceneName)
+    {
+        LoadSceneName = sceneName;
+        SceneManager.LoadScene("Loading");
+    }
+
     IEnumerator LoadCoroutine()
     {
-        operation = SceneManager.LoadSceneAsync(sceneName);
+        operation = SceneManager.LoadSceneAsync(LoadSceneName);
         operation.allowSceneActivation = false;
 
         float timer = 0f;

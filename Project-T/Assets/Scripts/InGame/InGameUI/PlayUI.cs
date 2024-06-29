@@ -36,6 +36,11 @@ public class PlayUI : SingletonBehaviour<PlayUI>
         //Instantiate(ResourcesManager.Load<GameObject>(GAMEOVER_UI_PATH + "TextContent"), storyUi.scrollRect.content);
     }
 
+    public void SetEnding(Dictionary<string, object> ending)
+    {
+        playingUiTK.EndingSetting(ending);
+    }
+
     public void SetTimer(int timer)
     {
         playingUiTK.TimerSetting(timer);
