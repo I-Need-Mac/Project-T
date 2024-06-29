@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using BFM;
 
@@ -20,22 +21,27 @@ public class SaveData
 }
 public class SaveLoadManager : SingleTon<SaveLoadManager>
 {
+
     private SaveData saveData = new SaveData();
 
     private string SAVE_DATA_DIRECTORY;  // 저장할 폴더 경로
-    private string SAVE_FILENAME = "/SaveFile.txt"; // 파일 이름
-
+    private string SAVE_FILENAME = "SaveFile.save"; // 파일 이름
+    private string SAVE_PATH;
 
     public SaveLoadManager()
     {
-        SAVE_DATA_DIRECTORY = Application.persistentDataPath + @"\SAVE\";
+        SAVE_DATA_DIRECTORY = Path.Combine(Application.persistentDataPath, "SAVE");
 
         if (!Directory.Exists(SAVE_DATA_DIRECTORY)) // 해당 경로가 존재하지 않는다면
             Directory.CreateDirectory(SAVE_DATA_DIRECTORY); // 폴더 생성(경로 생성)
+
+        SAVE_PATH = Path.Combine(SAVE_DATA_DIRECTORY, SAVE_FILENAME);
     }
 
     public void SaveData()
     {
+        BinaryFormatter formatter = new BinaryFormatter();
+
         saveData.saveId = StoryManager.Instance.curStoryId;
 
         saveData.saveInvenItemid = new List<string>();
@@ -50,20 +56,22 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
 
         saveData.saveBGM = SoundManager.Instance.GetCurentBGM();
 
-        // 최종 전체 저장
-        string json = JsonUtility.ToJson(saveData); // 제이슨화
-
-        File.WriteAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME, json);
+        FileStream stream = new FileStream(SAVE_PATH, FileMode.Create);
+        formatter.Serialize(stream, saveData);
+        stream.Close();
 
     }
 
     public void LoadData()
     {
-        if (File.Exists(SAVE_DATA_DIRECTORY + SAVE_FILENAME))
+        if (File.Exists(SAVE_PATH))
         {
             // 전체 읽어오기
-            string loadJson = File.ReadAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME);
-            saveData = JsonUtility.FromJson<SaveData>(loadJson);
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(SAVE_PATH, FileMode.Open);
+
+            saveData = formatter.Deserialize(stream) as SaveData;
+            stream.Close();
 
             StoryManager.Instance.curStoryId = saveData.saveId;
 
@@ -80,29 +88,32 @@ public class SaveLoadManager : SingleTon<SaveLoadManager>
     
     public bool IsSaveData()
     {
-        return File.Exists(SAVE_DATA_DIRECTORY + SAVE_FILENAME);
+        return File.Exists(SAVE_PATH);
     }
     public void ResetData()
     {
-        if (File.Exists(SAVE_DATA_DIRECTORY + SAVE_FILENAME))
+        if (File.Exists(SAVE_PATH))
         {
-            File.Delete(SAVE_DATA_DIRECTORY + SAVE_FILENAME);
+            File.Delete(SAVE_PATH);
         }
     }
 
     public void cheatData(string storyID)
     {
+        BinaryFormatter formatter = new BinaryFormatter();
+
         saveData.saveId = storyID;
 
         saveData.saveInvenItemid = new List<string>();
         saveData.saveInvenItemAmount = new List<int>();
 
-        saveData.saveBGM = "";
+        saveData.saveBGM = null;
 
         // 최종 전체 저장
-        string json = JsonUtility.ToJson(saveData); // 제이슨화
 
-        File.WriteAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME, json);
+        FileStream stream = new FileStream(SAVE_PATH, FileMode.Create);
+        formatter.Serialize(stream, saveData);
+        stream.Close();
 
     }
 }

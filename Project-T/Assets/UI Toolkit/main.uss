@@ -31,6 +31,8 @@
     white-space: normal;
     justify-content: center;
     -unity-font: resource('UI/Font/public/variable/PretendardVariable');
+    max-width: 95%;
+    flex-grow: 1;
 }
 
 .btn-choice:active {
@@ -337,4 +339,42 @@
 
 .plusBtnDisable:active {
     -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.textsetting {
+    -unity-font: none;
+    -unity-font-definition: resource('UI/Font/FontAsset/Pretendard-Regular SDF');
+}
+
+.endingscene {
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    scale: 0.7 0.7;
+}
+
+.Scenepopup {
+    display: flex;
+    scale: 1 1;
+    transition-property: scale;
+    transition-duration: 0.3s;
+}
+
+.ending-icon {
+    width: 48px;
+    height: 48px;
+    background-image: resource('UI/Icon/ic_dead-ending');
+    margin-top: 70px;
+    margin-bottom: 14px;
+}
+
+.goodend-trigger {
+    background-image: resource('UI/Icon/ic_happy-ending');
 }

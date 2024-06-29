@@ -101,13 +101,19 @@ public class SoundManager : SingleTon<SoundManager>
 
     public void Play(string path, Define.Sound type = Define.Sound.SFX, float pitch = 1.0f)
     {
-        AudioClip audioClip = GetOrAddAudioClip(path, type);
-        Play(audioClip, type, pitch);
+        if (path != null) {
+            AudioClip audioClip = GetOrAddAudioClip(path, type);
+            Play(audioClip, type, pitch);
+
+        }
+        
+        
     }
 
     AudioClip GetOrAddAudioClip(string path, Define.Sound type = Define.Sound.SFX)
     {
         AudioClip audioClip = null;
+
 
         if (type == Define.Sound.Bgm) // BGM 배경음악 클립 붙이기
         {

@@ -9,18 +9,24 @@ public class StoryManager : SingletonBehaviour<StoryManager>
     private Dictionary<string, Dictionary<string, object>> storyTable;
     private Dictionary<string, Dictionary<string, object>> choiceTable;
     private Dictionary<string, Dictionary<string, object>> resourceTable;
+    private Dictionary<string, Dictionary<string, object>> endingTable;
 
     private List<Dictionary<string, object>> outputChoices;
     public string curStoryId { get; set; }
     protected override void Awake()
     {
     }
+
+    public bool isSaveLoad = false;
+
     public void StoryManagerInit(string storyPath)
     {
         storyLoadTable = CSVReader.Read(storyPath + "/Story_load");
         storyTable = CSVReader.Read(storyPath + "/Story");
         choiceTable = CSVReader.Read(storyPath + "/Choice");
         resourceTable = CSVReader.Read(storyPath + "/Resource");
+        endingTable = CSVReader.Read(storyPath + "/Ending");
+
         PlayUI.Instance.SetStoryName(storyPath);
     }
 
@@ -31,36 +37,49 @@ public class StoryManager : SingletonBehaviour<StoryManager>
 
     public void StoryUpdate()
     {
-        Dictionary<string, object> curStory = storyTable[curStoryId];
-        Dictionary<string, object> curStoryLoad = storyLoadTable[curStoryId];
-        Dictionary<string, object> curResource = resourceTable[curStoryId];
-
-        string curStoryText = curStory["story"].ToString().Replace("\\c", ",").Replace("\\n", "\n").Replace("\\q", "\"");
-        Dictionary<string, object>[] curChoices = GetChoices(curStoryLoad["choice_group_ID"].ToString());
-        InventoryManager.Instance.ItemChange(curStoryLoad);
-
-        outputChoices = new List<Dictionary<string, object>>();
-
-        //불만족 히든 걸러내기
-        for (int i = 0; i < curChoices.Length; i++)
+        if (curStoryId[0] == 'S') //스토리 진행
         {
-            string choiceType = (string)curChoices[i]["Choice_type"];
-            if (string.Equals(choiceType, "Hidden"))
+            Dictionary<string, object> curStory = storyTable[curStoryId];
+            Dictionary<string, object> curStoryLoad = storyLoadTable[curStoryId];
+            Dictionary<string, object> curResource = resourceTable[curStoryId];
+
+            string curStoryText = curStory["story"].ToString().Replace("\\c", ",").Replace("\\n", "\n").Replace("\\q", "\"");
+            Dictionary<string, object>[] curChoices = GetChoices(curStoryLoad["choice_group_ID"].ToString());
+            if (!isSaveLoad)
             {
-                if (InventoryManager.Instance.IsCondition(curChoices[i]["hidden_Choice_condition_type"].ToString(), 
-                    curChoices[i]["hidden_Choice_condition_Standard"].ToString(), curChoices[i]["hidden_Choice_condition_value"].ToString()))
-                {
-                    outputChoices.Add(curChoices[i]);
-                }
+                InventoryManager.Instance.ItemChange(curStoryLoad);
             }
             else
             {
-                outputChoices.Add(curChoices[i]);
+                InventoryManager.Instance.SettingMoney();
+            }
+            outputChoices = new List<Dictionary<string, object>>();
+
+            //불만족 히든 걸러내기
+            for (int i = 0; i < curChoices.Length; i++)
+            {
+                string choiceType = (string)curChoices[i]["Choice_type"];
+                if (string.Equals(choiceType, "Hidden"))
+                {
+                    if (InventoryManager.Instance.IsCondition(curChoices[i]["hidden_Choice_condition_type"].ToString(),
+                        curChoices[i]["hidden_Choice_condition_Standard"].ToString(), curChoices[i]["hidden_Choice_condition_value"].ToString()))
+                    {
+                        outputChoices.Add(curChoices[i]);
+                    }
+                }
+                else
+                {
+                    outputChoices.Add(curChoices[i]);
+                }
+
             }
 
+            PlayUI.Instance.GenerateStoryPrepare(curResource, curStoryText, outputChoices);
         }
-
-        PlayUI.Instance.GenerateStoryPrepare(curResource, curStoryText, outputChoices);
+        else //엔딩창 호출
+        {
+            PlayUI.Instance.SetEnding(endingTable[curStoryId]);
+        }
     }
 
     private Dictionary<string, object>[] GetChoices(string choiceID)
@@ -127,7 +146,14 @@ public class StoryManager : SingletonBehaviour<StoryManager>
             randomNum -= int.Parse(resultSplit[i * 2 + 1].Substring(1));
             if (randomNum < 0)
             {
-                return resultSplit[i * 2].Replace("R", "Story_");
+                if(resultSplit[i * 2][0] == 'R')
+                {
+                    return resultSplit[i * 2].Replace("R", "Story_");
+                }
+                else 
+                {
+                    return resultSplit[i * 2].Replace("E", "Ending_");
+                }
             }
         }
         return "오류";

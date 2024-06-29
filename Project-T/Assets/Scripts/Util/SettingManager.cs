@@ -1,8 +1,63 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
+
+[System.Serializable]
+public class SettingData
+{
+    public int MASTER_SOUND;
+    public int BGM_SOUND;
+    public int SFX_SOUND;
+    public int VOCIE_SOUND;
+
+    // 설정 값 세이브
+    
+    public SettingData()
+    {
+        MASTER_SOUND = 50;
+        BGM_SOUND = 50;
+        SFX_SOUND = 50;
+        VOCIE_SOUND = 50;
+    }
+
+    public void SetStting(string a, int b)
+    {
+        switch (a)
+        {
+            case "MASTER_SOUND":
+                MASTER_SOUND = b;
+                break;
+            case "BGM_SOUND":
+                BGM_SOUND = b;
+                break; 
+            case "SFX_SOUND":
+                SFX_SOUND = b;
+                break;
+            case "VOCIE_SOUND":
+                VOCIE_SOUND = b;
+                break;
+        }
+    }
+
+    public int GetSetting(string a)
+    {
+        switch (a)
+        {
+            case "MASTER_SOUND":
+                return MASTER_SOUND;
+            case "BGM_SOUND":
+                return BGM_SOUND;
+            case "SFX_SOUND":
+                return SFX_SOUND;
+            case "VOCIE_SOUND":
+                return VOCIE_SOUND;
+        }
+        return 0;
+    }
+}
 
 public class SettingManager : SingleTon<SettingManager>
 {
@@ -11,103 +66,57 @@ public class SettingManager : SingleTon<SettingManager>
     public const string SFX_SOUND = "SFX_SOUND";
     public const string VOCIE_SOUND = "VOCIE_SOUND";
 
-    private Dictionary<string, int> _settings { get; set; }
-    public Dictionary<string, int> settings
-    {
-        set { 
-            _settings = value;
-        }
-
-        get { 
-            return _settings ??( _settings= new Dictionary<string, int>());
-        }
-    }
-
+    private SettingData settingData = new SettingData();
     private FileStream settingFileR;
     private FileStream settingFileW;
 
-    public SettingManager() { 
+    
+    private string SETTING_FILENAME = "SettingFile.save"; // 파일 이름
+    private string SETTING_PATH;
+
+    public SettingManager() {
+        SETTING_PATH = Path.Combine(Application.persistentDataPath, SETTING_FILENAME);
+
         ReadSettingFile();
     }
 
     public void WriteSettingFile() {
-        settingFileW = new FileStream("./Assets/Resources/setting.txt", FileMode.Create);
-        StreamWriter sw = new StreamWriter(settingFileW);
-        DebugManager.Instance.PrintDrawLine();
-        DebugManager.Instance.PrintDebug("셋팅 파일 저장");
-        foreach (KeyValuePair<string, int> item in settings)
-        {
-            sw.Write(item.Key + "=" + item.Value+"\n");
-            DebugManager.Instance.PrintDebug("셋팅 파일 작성", item.Key+" : "+item.Value);
-        }
-        sw.Close();
+        BinaryFormatter formatter = new BinaryFormatter();
+        settingFileW = new FileStream(SETTING_PATH, FileMode.Create);
+
+        formatter.Serialize(settingFileW, settingData);
+        settingFileW.Close();
+
         DebugManager.Instance.PrintDebug("셋팅 파일 저장 종료");
         DebugManager.Instance.PrintDrawLine();
     }
 
 
     public void ReadSettingFile() {
-        settingFileR = new FileStream("./Assets/Resources/setting.txt", FileMode.Open);
-        //settingFileR = new FileStream("./Assets/Resources/setting.txt", FileMode.Open);
-        StreamReader sr = new StreamReader(settingFileR);
 
-        DebugManager.Instance.PrintDrawLine();
-        DebugManager.Instance.PrintDebug("셋팅 파일 로드");
-        
-        string source = sr.ReadLine();       
-        string [] values;
-        while (source != null)
+        if (File.Exists(SETTING_PATH))
         {
-            values = source.Split('=');  // 쉼표로 구분한다. 저장시에 쉼표로 구분하여 저장하였다.           
-            if( values.Length == 0 ){               
-                sr.Close();                
-                return;            
-            }
-            if (!settings.ContainsKey(values[0])) { 
-                settings.Add(values[0],int.Parse(values[1]));
-            }
-            else {
-                settings[values[0]]= int.Parse(values[1]);
+            BinaryFormatter formatter = new BinaryFormatter();
+            settingFileR = new FileStream(SETTING_PATH, FileMode.Open);
 
-            }
-            source = sr.ReadLine();    // 한줄 읽는다.        
-        }
-        sr.Close();
+            settingData = formatter.Deserialize(settingFileR) as SettingData;
 
-        foreach(KeyValuePair<string,int> item in settings)
-        {
-            DebugManager.Instance.PrintDebug(item.Key,item.Value);
+            settingFileR.Close();
+
+            DebugManager.Instance.PrintDebug("셋팅 파일 로드 완료");
+            DebugManager.Instance.PrintDrawLine();
         }
 
-        DebugManager.Instance.PrintDebug("셋팅 파일 로드 완료");
-        DebugManager.Instance.PrintDrawLine();
     }
 
 
-    public int GetSettingValue(string target) { 
-        if(settings.TryGetValue(target, out int value)){
-            DebugManager.Instance.PrintDrawLine();
-            DebugManager.Instance.PrintDebug("Setting 파일 값 호출", target + " : " + value);
-            DebugManager.Instance.PrintDrawLine();
-            return value;
-        }
-        return -1;
+    public int GetSettingValue(string target) {
+        return settingData.GetSetting(target);
         
     }
-    public bool SetSettingValue(string target, int value)
+    public void SetSettingValue(string target, int value)
     {
-        if (settings[target]!= null)
-        {
-            settings[target] = value;
-            DebugManager.Instance.PrintDrawLine();
-            DebugManager.Instance.PrintDebug("Setting 파일 값 세팅", target + " : " + value);
-            DebugManager.Instance.PrintDrawLine();
-
-            WriteSettingFile();
-            return true;
-        }
-        return false;
-
+        settingData.SetStting(target, value);
     }
 
 }
