@@ -1,0 +1,5 @@
+ending_ID,ending_text,ending_description,ending_type,ending_BG
+엔딩아이디,내용,설명,타입,배경
+string,string,string,int,string
+Ending_1703,곰은 사람을 눌러, 가만히 있으니 배 위로 무거운 무언가가 올라온다. 그리고는 그대로 내 배를 꾹 누른다. 살짝이 아니라 엄청 세게....,0,
+Ending_1704,곰은 사람을 내리쳐, 급하게 입에서 살려 달라는 말이 나온다. 하지만 소리가 크게 들려서 그런지 곰이 엄청난 숨소리를 내며 다가온다. 그리고는 손을 들어 올리고는 힘을 가득 담아 내 쪽으로 내리치는데....,0,
