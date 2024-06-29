@@ -63,7 +63,7 @@ public class ImageLoader : SingleTon<ImageLoader>
             if (returnSprite == null)
             {
                 DebugManager.Instance.PrintDebug("[ImageLoader] Dummy 이미지 : 경로 이상");
-                returnSprite = cachedImageSprite[DEFULT_PATH + "Dummy"];
+                returnSprite = cachedImageSprite["Dummy"];
             }
             else
             {
