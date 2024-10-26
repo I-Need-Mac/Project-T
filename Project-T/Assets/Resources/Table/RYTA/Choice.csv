@@ -640,8 +640,8 @@ Choice_Story_10021,Choice_Story_1002,1,Normal,Null,Null,, 주변을 둘러본다
 Choice_Story_10041,Choice_Story_1004,1,Normal,Null,Null,, 들어간다.,Null,Null,,Null,Null,,,,,R1006_P100
 Choice_Story_10061,Choice_Story_1006,1,Normal,Null,Null,, 더 걸어간다.,Null,Null,,Null,Null,,,,,R1008_P100
 Choice_Story_10081,Choice_Story_1008,1,Hidden,Item_map,Equal,0, 왼쪽 길.,Null,Null,,Null,Null,,,,,R1010_P100
-Choice_Story_10082,Choice_Story_1008,2,Hidden,Item_map,Equal,0, 오른쪽 길. ,Null,Null,,Null,Null,,,,,R1043_P100
-Choice_Story_10083,Choice_Story_1008,3,Hidden,Item_map,Equal,1, 오른쪽 길. ,Null,Null,,Null,Null,,,,,R1043_P100
+Choice_Story_10082,Choice_Story_1008,2,Hidden,Item_map,Equal,0, 오른쪽 길. ,Null,Null,,Null,Null,,,,,R1041_P100
+Choice_Story_10083,Choice_Story_1008,3,Hidden,Item_map,Equal,1, 오른쪽 길. ,Null,Null,,Null,Null,,,,,R1041_P100
 Choice_Story_10101,Choice_Story_1010,1,Normal,Null,Null,, 부스럭.,Null,Null,,Null,Null,,,,,R1012_P100
 Choice_Story_10121,Choice_Story_1012,1,Normal,Null,Null,, \q잠깐...\q,Null,Null,,Null,Null,,,,,R1014_P100
 Choice_Story_10141,Choice_Story_1014,1,Normal,Null,Null,, 곰...?,Null,Null,,Null,Null,,,,,R1016_P100
@@ -650,445 +650,446 @@ Choice_Story_10162,Choice_Story_1016,2,Dimmed,Item_knife,Equal,1, 칼을 빼낸�
 Choice_Story_10191,Choice_Story_1019,1,Normal,Null,Null,, 팔을 앞으로 쭉 뻗는다.,Null,Null,,Null,Null,,,,,R1029_P100
 Choice_Story_10201,Choice_Story_1020,1,Normal,Null,Null,, 죽은 척한다.,Null,Null,,Null,Null,,,,,R1023_P100
 Choice_Story_10202,Choice_Story_1020,2,Normal,Null,Null,, 돌을 멀리 던진다.,Null,Null,,Null,Null,,,,,R1026_P100
-Choice_Story_10231,Choice_Story_1023,1,Normal,Null,Null,, 가만히 있는다.,Null,Null,,Null,Null,,,,,E1703_P100
-Choice_Story_10261,Choice_Story_1026,1,Normal,Null,Null,, \q살려 주세요!\q,Null,Null,,Null,Null,,,,,E1704_P100
+Choice_Story_10231,Choice_Story_1023,1,Normal,Null,Null,, 가만히 있는다.,Null,Null,,Null,Null,,,,,E1695_P100
+Choice_Story_10261,Choice_Story_1026,1,Normal,Null,Null,, \q살려 주세요!\q,Null,Null,,Null,Null,,,,,E1696_P100
 Choice_Story_10291,Choice_Story_1029,1,Normal,Null,Null,, 칼을 가슴 쪽으로 던진다.,Null,Null,,Null,Null,,,,,R1031_P100
-Choice_Story_10292,Choice_Story_1029,2,Normal,Null,Null,, 칼을 얼굴 쪽으로 던진다.,Null,Null,,Null,Null,,,,,R1035_P100
-Choice_Story_10293,Choice_Story_1029,3,Normal,Null,Null,, 칼을 다리 쪽으로 던진다.,Null,Null,,Null,Null,,,,,R1040_P100
-Choice_Story_10311,Choice_Story_1031,1,Normal,Null,Null,, 젠장.,Null,Null,,Null,Null,,,,,R1033_P100
-Choice_Story_10351,Choice_Story_1035,1,Normal,Null,Null,, 도망친다.,Null,Null,,Null,Null,,,,,R1037_P100
-Choice_Story_10371,Choice_Story_1037,1,Normal,Null,Null,,  천천히 걸어간다.,Null,Null,,Null,Null,,,,,R1043_P100
-Choice_Story_10401,Choice_Story_1040,1,Normal,Null,Null,, 젠장.,Null,Null,,Null,Null,,,,,R1042_P100
-Choice_Story_10431,Choice_Story_1043,1,Normal,Null,Null,, 뭐야?,Null,Null,,Null,Null,,,,,R1049_P100
-Choice_Story_10432,Choice_Story_1043,2,Normal,Null,Null,, 누가 또 있어?,Null,Null,,Null,Null,,,,,R1049_P100
-Choice_Story_10433,Choice_Story_1043,3,Normal,Null,Null,, 거리도 먼 것 같은데 목소리가 크네.,Null,Null,,Null,Null,,,,,R1049_P100
-Choice_Story_10491,Choice_Story_1049,1,Normal,Null,Null,, 창문으로 안을 살펴본다.,Null,Null,,Null,Null,,,,,R1051_P100
-Choice_Story_10511,Choice_Story_1051,1,Normal,Null,Null,, 멍청한 것들?,Null,Null,,Null,Null,,,,,R1054_P100
-Choice_Story_10512,Choice_Story_1051,2,Normal,Null,Null,, 이게 무슨.,Null,Null,,Null,Null,,,,,R1054_P100
-Choice_Story_10541,Choice_Story_1054,1,Hidden,Item_cam,Equal,0, 가만히 듣는다.,Null,Null,,Null,Null,,,,,R1056_P100
-Choice_Story_10542,Choice_Story_1054,2,Dimmed,Item_cam,More,0, 캠코더를 켜고 녹음한다.,Null,Null,,Null,Null,,,,,R1074_P100
-Choice_Story_10561,Choice_Story_1056,1,Normal,Null,Null,, 근데 미소가 예쁘지는 않네.,Null,Null,,Null,Null,,,,,R1059_P100
-Choice_Story_10562,Choice_Story_1056,2,Normal,Null,Null,, 저 미소로 누굴 또 이용했으려나.,Null,Null,,Null,Null,,,,,R1059_P100
-Choice_Story_10591,Choice_Story_1059,1,Normal,Null,Null,, 처음부터 속일 속셈이었네.,Null,Null,,Null,Null,,,,,R1062_P100
-Choice_Story_10592,Choice_Story_1059,2,Normal,Null,Null,, 진짜 약아빠졌네.,Null,Null,,Null,Null,,,,,R1062_P100
-Choice_Story_10621,Choice_Story_1062,1,Normal,Null,Null,, 저 미친...,Null,Null,,Null,Null,,,,,R1064_P100
-Choice_Story_10641,Choice_Story_1064,1,Normal,Null,Null,, 아니지\c 마녀보다 더한 존재일지도.,Null,Null,,Null,Null,,,,,R1067_P100
-Choice_Story_10642,Choice_Story_1064,2,Normal,Null,Null,, 근데 마녀에게 미안한데...?,Null,Null,,Null,Null,,,,,R1067_P100
-Choice_Story_10671,Choice_Story_1067,1,Normal,Null,Null,, 나 보는 눈이 좀 없네.,Null,Null,,Null,Null,,,,,R1069_P100
-Choice_Story_10672,Choice_Story_1067,2,Normal,Null,Null,, 어후\c 돌겠네.,Null,Null,,Null,Null,,,,,R1071_P100
-Choice_Story_10691,Choice_Story_1069,1,Normal,Null,Null,,  숨는다.,Null,Null,,Null,Null,,,,,R1093_P100
-Choice_Story_10711,Choice_Story_1071,1,Normal,Null,Null,,  숨는다.,Null,Null,,Null,Null,,,,,R1093_P100
-Choice_Story_10741,Choice_Story_1074,1,Normal,Null,Null,, 넌 뒤졌어.,Null,Null,,Null,Null,,,,,R1077_P100
-Choice_Story_10742,Choice_Story_1074,2,Normal,Null,Null,, 너는 내 손안에 있어.,Null,Null,,Null,Null,,,,,R1077_P100
-Choice_Story_10771,Choice_Story_1077,1,Normal,Null,Null,, 난 네 입으로 다 말해 줘서 고마워.,Null,Null,,Null,Null,,,,,R1080_P100
-Choice_Story_10772,Choice_Story_1077,2,Normal,Null,Null,, 변조기를 찾아봐야겠네.,Null,Null,,Null,Null,,,,,R1080_P100
-Choice_Story_10801,Choice_Story_1080,1,Normal,Null,Null,, 잘 녹화되고 있나?,Null,Null,,Null,Null,,,,,R1082_P100
-Choice_Story_10821,Choice_Story_1082,1,Normal,Null,Null,, 어후\c 빡쳐.,Null,Null,,Null,Null,,,,,R1085_P100
-Choice_Story_10822,Choice_Story_1082,2,Normal,Null,Null,, 어후\c 저 사기꾼.,Null,Null,,Null,Null,,,,,R1085_P100
-Choice_Story_10851,Choice_Story_1085,1,Normal,Null,Null,, 나 보는 눈이 좀 없네.,Null,Null,,Null,Null,,,,,R1088_P100
-Choice_Story_10852,Choice_Story_1085,2,Normal,Null,Null,, 아악\c 돌겠네.,Null,Null,,Null,Null,,,,,R1089_P100
-Choice_Story_10881,Choice_Story_1088,1,Normal,Null,Null,, 캠코더의 녹화 저장 버튼을 누른다.,Null,Null,,Null,Null,,,,,R1094_P100
-Choice_Story_10891,Choice_Story_1089,1,Normal,Null,Null,, 캠코더의 녹화 저장 버튼을 누른다.,Null,Null,,Null,Null,,,,,R1094_P100
-Choice_Story_10931,Choice_Story_1093,1,Normal,Null,Null,, 집 쪽으로 붙는다.,Null,Null,,Null,Null,,,,,R1097_P100
-Choice_Story_10932,Choice_Story_1093,2,Normal,Null,Null,, 숲으로 도망친다.,Null,Null,,Null,Null,,,,,R1097_P100
-Choice_Story_10941,Choice_Story_1094,1,Normal,Null,Null,, 집 쪽으로 붙는다.,Null,Null,,Null,Null,,,,,R1097_P100
-Choice_Story_10942,Choice_Story_1094,2,Normal,Null,Null,, 숲으로 도망친다.,Null,Null,,Null,Null,,,,,R1097_P100
-Choice_Story_10971,Choice_Story_1097,1,Normal,Null,Null,, 집 앞으로 간다.,Null,Null,,Null,Null,,,,,R1099_P100
-Choice_Story_10991,Choice_Story_1099,1,Normal,Null,Null,, 큰일났다.,Null,Null,,Null,Null,,,,,R1103_P100
-Choice_Story_10992,Choice_Story_1099,2,Normal,Null,Null,, 젠장.,Null,Null,,Null,Null,,,,,R1103_P100
-Choice_Story_10993,Choice_Story_1099,3,Normal,Null,Null,, 엿 됐네.,Null,Null,,Null,Null,,,,,R1103_P100
-Choice_Story_11031,Choice_Story_1103,1,Normal,Null,Null,, 콰당.,Null,Null,,Null,Null,,,,,R1105_P100
-Choice_Story_11051,Choice_Story_1105,1,Normal,Null,Null,, \q죄송해요!\q,Null,Null,,Null,Null,,,,,R1107_P100
-Choice_Story_11052,Choice_Story_1105,2,Normal,Null,Null,, \q아무것도 못 들었어요!\q,Null,Null,,Null,Null,,,,,R1129_P100
-Choice_Story_11071,Choice_Story_1107,1,Normal,Null,Null,, \q저는 빨간 모자님을 뵙고 싶어서....\q,Null,Null,,Null,Null,,,,,R1112_P100
-Choice_Story_11072,Choice_Story_1107,2,Normal,Null,Null,, \q만나 보고 싶어서 왔는데....\q,Null,Null,,Null,Null,,,,,R1112_P100
-Choice_Story_11073,Choice_Story_1107,3,Normal,Null,Null,, \q팬이에요!\q,Null,Null,,Null,Null,,,,,R1112_P100
-Choice_Story_11121,Choice_Story_1112,1,Normal,Null,Null,, \q방금요. 근데 딱 나오시더라구요...\q,Null,Null,,Null,Null,,,,,R1115_P100
-Choice_Story_11122,Choice_Story_1112,2,Normal,Null,Null,, \q조금 됐긴 한데....\q,Null,Null,,Null,Null,,,,,R1119_P100
-Choice_Story_11151,Choice_Story_1115,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1117_P100
-Choice_Story_11171,Choice_Story_1117,1,Normal,Null,Null,, 빨간 모자 집으로 간다.,Null,Null,,Null,Null,,,,,R1136_P100
-Choice_Story_11191,Choice_Story_1119,1,Normal,Null,Null,, 모르는 척한 게 아니라 그냥 얘기를 안 한 거지.,Null,Null,,Null,Null,,,,,R1122_P100
-Choice_Story_11192,Choice_Story_1119,2,Normal,Null,Null,, 내 맘이다\c 이 가시나야.,Null,Null,,Null,Null,,,,,R1122_P100
-Choice_Story_11221,Choice_Story_1122,1,Normal,Null,Null,, 응?,Null,Null,,Null,Null,,,,,R1124_P100
-Choice_Story_11241,Choice_Story_1124,1,Normal,Null,Null,, 아악-.,Null,Null,,Null,Null,,,,,R1127_P100
-Choice_Story_11242,Choice_Story_1124,2,Normal,Null,Null,, 저 미친 것이-.,Null,Null,,Null,Null,,,,,R1127_P100
-Choice_Story_11291,Choice_Story_1129,1,Normal,Null,Null,, \q아니에요.\q,Null,Null,,Null,Null,,,,,R1132_P100
-Choice_Story_11292,Choice_Story_1129,2,Normal,Null,Null,, \q그게 아니라....\q,Null,Null,,Null,Null,,,,,R1132_P100
-Choice_Story_11321,Choice_Story_1132,1,Normal,Null,Null,, \q잠깐만....\q,Null,Null,,Null,Null,,,,,R1134_P100
-Choice_Story_11361,Choice_Story_1136,1,Normal,Null,Null,, 문을 연다.,Null,Null,,Null,Null,,,,,R1138_P100
-Choice_Story_11381,Choice_Story_1138,1,Normal,Null,Null,, 집이 아깝네.,Null,Null,,Null,Null,,,,,R1141_P100
-Choice_Story_11382,Choice_Story_1138,2,Normal,Null,Null,, 예쁘긴 하네.,Null,Null,,Null,Null,,,,,R1141_P100
-Choice_Story_11411,Choice_Story_1141,1,Normal,Null,Null,, 침대를 살펴본다.,Null,Null,,Null,Null,,,,,R1143_P100
-Choice_Story_11412,Choice_Story_1141,2,Normal,Null,Null,, 주방을 살펴본다.,Null,Null,,Null,Null,,,,,R1164_P100
-Choice_Story_11431,Choice_Story_1143,1,Normal,Null,Null,, 리모컨?,Null,Null,,Null,Null,,,,,R1145_P100
-Choice_Story_11451,Choice_Story_1145,1,Normal,Null,Null,, 침대 밑을 살핀다.,Null,Null,,Null,Null,,,,,R1147_P100
-Choice_Story_11452,Choice_Story_1145,2,Normal,Null,Null,, 식탁 주변을 살핀다.,Null,Null,,Null,Null,,,,,R1149_P100
-Choice_Story_11471,Choice_Story_1147,1,Normal,Null,Null,, 뭐야\c 왜 벌써 오는 거야?,Null,Null,,Null,Null,,,,,R1151_P100
-Choice_Story_11491,Choice_Story_1149,1,Normal,Null,Null,, 뭐야\c 왜 벌써 오는 거야?,Null,Null,,Null,Null,,,,,R1151_P100
-Choice_Story_11511,Choice_Story_1151,1,Normal,Null,Null,, 아씨\c 못 찾았는데.,Null,Null,,Null,Null,,,,,R1155_P100
-Choice_Story_11512,Choice_Story_1151,2,Normal,Null,Null,, 나가야 할 것 같은데.,Null,Null,,Null,Null,,,,,R1155_P100
-Choice_Story_11513,Choice_Story_1151,3,Normal,Null,Null,, 어떡하지.,Null,Null,,Null,Null,,,,,R1155_P100
-Choice_Story_11551,Choice_Story_1155,1,Normal,Null,Null,, 밖으로 나가 집 옆에 숨는다.,Null,Null,,Null,Null,,,,,R1157_P100
-Choice_Story_11571,Choice_Story_1157,1,Normal,Null,Null,, \q저기 오네....\q,Null,Null,,Null,Null,,,,,R1160_P100
-Choice_Story_11572,Choice_Story_1157,2,Normal,Null,Null,, \q내일 또 와야겠네....\q,Null,Null,,Null,Null,,,,,R1160_P100
-Choice_Story_11601,Choice_Story_1160,1,Normal,Null,Null,, 어\c 들어갔다.,Null,Null,,Null,Null,,,,,R1162_P100
-Choice_Story_11621,Choice_Story_1162,1,Normal,Null,Null,, 뭐 하는 걸까.,Null,Null,,Null,Null,,,,,R1172_P100
-Choice_Story_11622,Choice_Story_1162,2,Normal,Null,Null,, 잘하고 있는 거겠지.,Null,Null,,Null,Null,,,,,R1172_P100
-Choice_Story_11623,Choice_Story_1162,3,Normal,Null,Null,, 벌써 3일차였던가.,Null,Null,,Null,Null,,,,,R1172_P100
-Choice_Story_11641,Choice_Story_1164,1,Normal,Null,Null,, 어\c 저기? ,Null,Null,,Null,Null,,,,,R1166_P100
-Choice_Story_11661,Choice_Story_1166,1,Normal,Null,Null,,변조기를 챙긴다.,Null,Null,,Null,Null,,,,,R1168_P100
-Choice_Story_11681,Choice_Story_1168,1,Normal,Null,Null,, 뭐 하는 걸까.,Null,Null,,Null,Null,,,,,R1172_P100
-Choice_Story_11682,Choice_Story_1168,2,Normal,Null,Null,, 잘하고 있는 거겠지.,Null,Null,,Null,Null,,,,,R1172_P100
-Choice_Story_11683,Choice_Story_1168,3,Normal,Null,Null,, 벌써 3일차였던가.,Null,Null,,Null,Null,,,,,R1172_P100
-Choice_Story_11721,Choice_Story_1172,1,Normal,Null,Null,, 근데 뭐 먹지?,Null,Null,,Null,Null,,,,,R1174_P100
-Choice_Story_11741,Choice_Story_1174,1,Normal,Null,Null,, 왜 이래?,Null,Null,,Null,Null,,,,,R1177_P100
-Choice_Story_11742,Choice_Story_1174,2,Normal,Null,Null,, 뭐 해?,Null,Null,,Null,Null,,,,,R1177_P100
-Choice_Story_11771,Choice_Story_1177,1,Normal,Null,Null,, 와- 빈대떡 냄새.,Null,Null,,Null,Null,,,,,R1181_P100
-Choice_Story_11772,Choice_Story_1177,2,Normal,Null,Null,, 헐\c 족발 맛있겠다. ,Null,Null,,Null,Null,,,,,R1183_P100
-Choice_Story_11773,Choice_Story_1177,3,Normal,Null,Null,, 캬- 떡볶이 색깔 죽이네.,Null,Null,,Null,Null,,,,,R1186_P100
-Choice_Story_11811,Choice_Story_1181,1,Normal,Null,Null,, \q사장님- 빈대떡 하나랑 육전 하나 주세요!\q ,Null,Null,,Null,Null,,,,,R1187_P100
-Choice_Story_11831,Choice_Story_1183,1,Normal,Null,Null,, \q사장님- 족발 소짜 하나 주세요!\q,Null,Null,,Null,Null,,,,,R1187_P100
-Choice_Story_11861,Choice_Story_1186,1,Normal,Null,Null,, \q사장님- 세트 1 주세요!\q,Null,Null,,Null,Null,,,,,R1187_P100
-Choice_Story_11871,Choice_Story_1187,1,Normal,Null,Null,, 이게 무슨....,Null,Null,,Null,Null,,,,,R1189_P100
-Choice_Story_11891,Choice_Story_1189,1,Hidden,Item_pp,Equal,0, 지나친다.,Null,Null,,Null,Null,,,,,R1191_P100
-Choice_Story_11892,Choice_Story_1189,2,Hidden,Item_pp,More,0, 줄을 선다.,Null,Null,,Null,Null,,,,,R1193_P100
-Choice_Story_11911,Choice_Story_1191,1,Normal,Null,Null,, 숙소로 향한다.,Null,Null,,Null,Null,,,,,R1213_P100
-Choice_Story_11931,Choice_Story_1193,1,Normal,Null,Null,, 20분 후.,Null,Null,,Null,Null,,,,,R1195_P100
-Choice_Story_11951,Choice_Story_1195,1,Normal,Null,Null,, 다행이다.,Null,Null,,Null,Null,,,,,R1198_P100
-Choice_Story_11952,Choice_Story_1195,2,Normal,Null,Null,, 좋은 건가.,Null,Null,,Null,Null,,,,,R1198_P100
-Choice_Story_11981,Choice_Story_1198,1,Normal,Null,Null,, \q해리예요.\q,Null,Null,,Null,Null,,,,,R1203_P100
-Choice_Story_11982,Choice_Story_1198,2,Normal,Null,Null,, \q시우예요.\q,Null,Null,,Null,Null,,,,,R1203_P100
-Choice_Story_11983,Choice_Story_1198,3,Normal,Null,Null,, \q진영이예요.\q,Null,Null,,Null,Null,,,,,R1203_P100
-Choice_Story_11984,Choice_Story_1198,4,Normal,Null,Null,, \q다원이예요.\q,Null,Null,,Null,Null,,,,,R1203_P100
-Choice_Story_12031,Choice_Story_1203,1,Normal,Null,Null,, \q밑에 '행복하세요' 적어 주세요.\q,Null,Null,,Null,Null,,,,,R1205_P100
-Choice_Story_12032,Choice_Story_1203,2,Normal,Null,Null,, \q밑에 '보고 싶었어요' 적어 주세요.\q,Null,Null,,Null,Null,,,,,R1207_P100
-Choice_Story_12051,Choice_Story_1205,1,Normal,Null,Null,, 자리를 비켜 준다.,Null,Null,,Null,Null,,,,,R1211_P100
-Choice_Story_12071,Choice_Story_1207,1,Normal,Null,Null,, 종이를 확인한다.,Null,Null,,Null,Null,,,,,R1209_P100
-Choice_Story_12091,Choice_Story_1209,1,Normal,Null,Null,, 자리를 비켜 준다.,Null,Null,,Null,Null,,,,,R1211_P100
-Choice_Story_12111,Choice_Story_1211,1,Normal,Null,Null,, 숙소로 향한다.,Null,Null,,Null,Null,,,,,R1213_P100
-Choice_Story_12131,Choice_Story_1213,1,Normal,Null,Null,, 이게 뭐지?,Null,Null,,Null,Null,,,,,R1215_P100
-Choice_Story_12151,Choice_Story_1215,1,Normal,Null,Null,, 일이 있으신가?,Null,Null,,Null,Null,,,,,R1219_P100
-Choice_Story_12152,Choice_Story_1215,2,Normal,Null,Null,, 시장 가셨나?,Null,Null,,Null,Null,,,,,R1219_P100
-Choice_Story_12153,Choice_Story_1215,3,Normal,Null,Null,, 아픈가?,Null,Null,,Null,Null,,,,,R1219_P100
-Choice_Story_12191,Choice_Story_1219,1,Normal,Null,Null,, 아- 좋다.,Null,Null,,Null,Null,,,,,R1221_P100
-Choice_Story_12211,Choice_Story_1221,1,Normal,Null,Null,, 눈을 뜬다.,Null,Null,,Null,Null,,,,,R1223_P100
-Choice_Story_12231,Choice_Story_1223,1,Normal,Null,Null,, 화장실 문을 닫는다.,Null,Null,,Null,Null,,,,,R1226_P100
-Choice_Story_12232,Choice_Story_1223,2,Normal,Null,Null,, 화장실 불을 끈다.,Null,Null,,Null,Null,,,,,R1226_P100
-Choice_Story_12261,Choice_Story_1226,1,Normal,Null,Null,, \q빨간 모자 집에 한 번 더 다녀와야지.\q,Null,Null,,Null,Null,,,,,R1228_P100
-Choice_Story_12281,Choice_Story_1228,1,Normal,Null,Null,, \q김 사장님?\q,Null,Null,,Null,Null,,,,,R1231_P100
-Choice_Story_12282,Choice_Story_1228,2,Normal,Null,Null,, \q안녕히 주무셨어요?\q,Null,Null,,Null,Null,,,,,R1231_P100
-Choice_Story_12311,Choice_Story_1231,1,Normal,Null,Null,, 가방에서 5페이를 꺼낸다.,Null,Null,,Null,Null,,,,,R1233_P100
-Choice_Story_12331,Choice_Story_1233,1,Normal,Null,Null,, 로도드 숲으로 향한다.,Null,Null,,Null,Null,,,,,R1236_P100
-Choice_Story_12332,Choice_Story_1233,2,Normal,Null,Null,, 1번가 끝으로 향한다.,Null,Null,,Null,Null,,,,,R1236_P100
-Choice_Story_12361,Choice_Story_1236,1,Normal,Null,Null,, 보이그룹 노래를 흥얼거린다.,Null,Null,,Null,Null,,,,,R1240_P100
-Choice_Story_12362,Choice_Story_1236,2,Normal,Null,Null,, 걸그룹 노래를 흥얼거린다.,Null,Null,,Null,Null,,,,,R1241_P100
-Choice_Story_12363,Choice_Story_1236,3,Normal,Null,Null,, 힙합 노래를 흥얼거린다.,Null,Null,,Null,Null,,,,,R1242_P100
-Choice_Story_12401,Choice_Story_1240,1,Normal,Null,Null,, 로도드 숲 입구를 지나친다.,Null,Null,,Null,Null,,,,,R1244_P100
-Choice_Story_12411,Choice_Story_1241,1,Normal,Null,Null,, 로도드 숲 입구를 지나친다.,Null,Null,,Null,Null,,,,,R1244_P100
-Choice_Story_12421,Choice_Story_1242,1,Normal,Null,Null,, 로도드 숲 입구를 지나친다.,Null,Null,,Null,Null,,,,,R1244_P100
-Choice_Story_12441,Choice_Story_1244,1,Normal,Null,Null,, 오른쪽 길로 간다.,Null,Null,,Null,Null,,,,,R1246_P100
-Choice_Story_12461,Choice_Story_1246,1,Normal,Null,Null,, 빨간 모자 집의 문 앞으로 간다.,Null,Null,,Null,Null,,,,,R1251_P100
-Choice_Story_12462,Choice_Story_1246,2,Normal,Null,Null,, 옆 창문으로 집 안을 쳐다본다.,Null,Null,,Null,Null,,,,,R1249_P100
-Choice_Story_12491,Choice_Story_1249,1,Normal,Null,Null,,  문으로 발걸음을 옮긴다.,Null,Null,,Null,Null,,,,,R1251_P100
-Choice_Story_12511,Choice_Story_1251,1,Hidden,Item_modulator,More,0,  어\c 이게 뭐야?,Null,Null,,Null,Null,,,,,R1254_P100
-Choice_Story_12512,Choice_Story_1251,2,Hidden,Item_modulator,Equal,0, 문을 연다.,Null,Null,,Null,Null,,,,,R1255_P100
-Choice_Story_12541,Choice_Story_1254,1,Normal,Null,Null,, 뭐야\c 공?,Null,Null,,Null,Null,,,,,R1276_P100
-Choice_Story_12551,Choice_Story_1255,1,Normal,Null,Null,, 방문을 열고 들어간다. ,Null,Null,,Null,Null,,,,,R1258_P100
-Choice_Story_12552,Choice_Story_1255,2,Normal,Null,Null,, 거실을 살핀다.,Null,Null,,Null,Null,,,,,R1262_P100
-Choice_Story_12581,Choice_Story_1258,1,Normal,Null,Null,, 살펴본다.,Null,Null,,Null,Null,,,,,R1260_P100
-Choice_Story_12601,Choice_Story_1260,1,Normal,Null,Null,, 쓸데없는 곳에 시간을 낭비했네.,Null,Null,,Null,Null,,,,,R1267_P100
-Choice_Story_12621,Choice_Story_1262,1,Normal,Null,Null,, 어디 있는 거야.,Null,Null,,Null,Null,,,,,R1265_P100
-Choice_Story_12651,Choice_Story_1265,1,Normal,Null,Null,, 변조기를 챙긴다. ,Null,Null,,Null,Null,,,,,R1266_P100
-Choice_Story_12661,Choice_Story_1266,1,Normal,Null,Null,, 이게 뭐야?,Null,Null,,Null,Null,,,,,R1269_P100
-Choice_Story_12671,Choice_Story_1267,1,Normal,Null,Null,, 이게 뭐야?,Null,Null,,Null,Null,,,,,R1269_P100
-Choice_Story_12691,Choice_Story_1269,1,Normal,Null,Null,, 오고 있다고?,Null,Null,,Null,Null,,,,,R1272_P100
-Choice_Story_12692,Choice_Story_1269,2,Normal,Null,Null,, 다 왔다고?,Null,Null,,Null,Null,,,,,R1272_P100
-Choice_Story_12721,Choice_Story_1272,1,Normal,Null,Null,, 아이씨.,Null,Null,,Null,Null,,,,,R1274_P100
-Choice_Story_12741,Choice_Story_1274,1,Normal,Null,Null,, 뭐야\c 공?,Null,Null,,Null,Null,,,,,R1276_P100
-Choice_Story_12761,Choice_Story_1276,1,Normal,Null,Null,, 깜짝이야.,Null,Null,,Null,Null,,,,,R1280_P100
-Choice_Story_12762,Choice_Story_1276,2,Normal,Null,Null,, 어우씨.,Null,Null,,Null,Null,,,,,R1280_P100
-Choice_Story_12763,Choice_Story_1276,3,Normal,Null,Null,, 뭐\c 뭐야?,Null,Null,,Null,Null,,,,,R1280_P100
-Choice_Story_12801,Choice_Story_1280,1,Normal,Null,Null,, 무섭습니다만.,Null,Null,,Null,Null,,,,,R1284_P100
-Choice_Story_12802,Choice_Story_1280,2,Normal,Null,Null,, 와우....,Null,Null,,Null,Null,,,,,R1284_P100
-Choice_Story_12803,Choice_Story_1280,3,Normal,Null,Null,, 근데 누구...?,Null,Null,,Null,Null,,,,,R1284_P100
-Choice_Story_12841,Choice_Story_1284,1,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1286_P100
-Choice_Story_12861,Choice_Story_1286,1,Normal,Null,Null,, 공을 품에 안는다.,Null,Null,,Null,Null,,,,,R1288_P100
-Choice_Story_12881,Choice_Story_1288,1,Normal,Null,Null,, \q잠깐만....\q,Null,Null,,Null,Null,,,,,R1290_P100
-Choice_Story_12901,Choice_Story_1290,1,Normal,Null,Null,,  공을 떨어뜨린다.,Null,Null,,Null,Null,,,,,R1292_P100
-Choice_Story_12902,Choice_Story_1290,2,Normal,Null,Null,, 공을 던진다.,Null,Null,,Null,Null,,,,,R1407_P100
-Choice_Story_12903,Choice_Story_1290,3,Normal,Null,Null,, 공을 손가락 위에서 굴린다.,Null,Null,,Null,Null,,,,,R1409_P100
-Choice_Story_12904,Choice_Story_1290,4,Normal,Null,Null,, 공을 여자에게 건넨다.,Null,Null,,Null,Null,,,,,R1561_P100
-Choice_Story_12921,Choice_Story_1292,1,Normal,Null,Null,, 저거 늑대야...?,Null,Null,,Null,Null,,,,,R1294_P100
-Choice_Story_12941,Choice_Story_1294,1,Normal,Null,Null,, 그건 사실인 거야?,Null,Null,,Null,Null,,,,,R1297_P100
-Choice_Story_12942,Choice_Story_1294,2,Normal,Null,Null,, 미친 거 아냐?,Null,Null,,Null,Null,,,,,R1297_P100
-Choice_Story_12971,Choice_Story_1297,1,Normal,Null,Null,, \q따라오라고?\q,Null,Null,,Null,Null,,,,,R1299_P100
-Choice_Story_12991,Choice_Story_1299,1,Normal,Null,Null,, 도대체 이게 뭐야.,Null,Null,,Null,Null,,,,,R1302_P100
-Choice_Story_12992,Choice_Story_1299,2,Normal,Null,Null,, 하하하\c 참.,Null,Null,,Null,Null,,,,,R1302_P100
-Choice_Story_13021,Choice_Story_1302,1,Normal,Null,Null,, \q여긴 어디에요?\q,Null,Null,,Null,Null,,,,,R1304_P100
-Choice_Story_13041,Choice_Story_1304,1,Normal,Null,Null,, 아까 걔 맞아?,Null,Null,,Null,Null,,,,,R1307_P100
-Choice_Story_13042,Choice_Story_1304,2,Normal,Null,Null,, 이중인격인가.,Null,Null,,Null,Null,,,,,R1307_P100
-Choice_Story_13071,Choice_Story_1307,1,Normal,Null,Null,, 여긴 다 잘생겼나 봐.,Null,Null,,Null,Null,,,,,R1309_P100
-Choice_Story_13091,Choice_Story_1309,1,Normal,Null,Null,, \q아\c 안녕하세요?\q,Null,Null,,Null,Null,,,,,R1313_P100
-Choice_Story_13092,Choice_Story_1309,2,Normal,Null,Null,, 악수를 건넨다.,Null,Null,,Null,Null,,,,,R1315_P100
-Choice_Story_13093,Choice_Story_1309,3,Normal,Null,Null,, \q어.... 처음 뵙겠습니다?\q,Null,Null,,Null,Null,,,,,R1317_P100
-Choice_Story_13131,Choice_Story_1313,1,Normal,Null,Null,, 가만히 서 있는다.,Null,Null,,Null,Null,,,,,R1319_P100
-Choice_Story_13151,Choice_Story_1315,1,Normal,Null,Null,, 손을 푼다.,Null,Null,,Null,Null,,,,,R1319_P100
-Choice_Story_13171,Choice_Story_1317,1,Normal,Null,Null,, 가만히 서 있는다.,Null,Null,,Null,Null,,,,,R1319_P100
-Choice_Story_13191,Choice_Story_1319,1,Normal,Null,Null,, 뭐 저런 사람이 다 있어.,Null,Null,,Null,Null,,,,,R1323_P100
-Choice_Story_13192,Choice_Story_1319,2,Normal,Null,Null,, 내가 무슨 동물원에 있는 동물도 아니고.,Null,Null,,Null,Null,,,,,R1323_P100
-Choice_Story_13193,Choice_Story_1319,3,Normal,Null,Null,, 겁먹은 건 맞는데 재밌지는 않을 텐데.,Null,Null,,Null,Null,,,,,R1323_P100
-Choice_Story_13231,Choice_Story_1323,1,Normal,Null,Null,, 그러니까요....,Null,Null,,Null,Null,,,,,R1327_P100
-Choice_Story_13232,Choice_Story_1323,2,Normal,Null,Null,, 더 땡겨 주시겠습니까-.,Null,Null,,Null,Null,,,,,R1327_P100
-Choice_Story_13233,Choice_Story_1323,3,Normal,Null,Null,, 쌤통이다-.,Null,Null,,Null,Null,,,,,R1327_P100
-Choice_Story_13271,Choice_Story_1327,1,Normal,Null,Null,, \q아\c 저는-\q,Null,Null,,Null,Null,,,,,R1329_P100
-Choice_Story_13291,Choice_Story_1329,1,Normal,Null,Null,, \q그럼 반장님도....\q,Null,Null,,Null,Null,,,,,R1333_P100
-Choice_Story_13292,Choice_Story_1329,2,Normal,Null,Null,, \q모든 늑대가요?\q,Null,Null,,Null,Null,,,,,R1334_P100
-Choice_Story_13293,Choice_Story_1329,3,Normal,Null,Null,, \q모든 늑대를 아시는 건가요?\q,Null,Null,,Null,Null,,,,,R1335_P100
-Choice_Story_13331,Choice_Story_1333,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1338_P100
-Choice_Story_13341,Choice_Story_1334,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1338_P100
-Choice_Story_13351,Choice_Story_1335,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1338_P100
-Choice_Story_13381,Choice_Story_1338,1,Normal,Null,Null,, \q제가 인간인 건 어떻게 아셨죠?\q,Null,Null,,Null,Null,,,,,R1340_P100
-Choice_Story_13382,Choice_Story_1338,2,Normal,Null,Null,, \q로도드 마을 아세요?\q,Null,Null,,Null,Null,,,,,R1425_P100
-Choice_Story_13401,Choice_Story_1340,1,Normal,Null,Null,, \q인간 냄새요?\q,Null,Null,,Null,Null,,,,,R1342_P100
-Choice_Story_13421,Choice_Story_1342,1,Normal,Null,Null,, \q여긴 늑대만 사나요?\q,Null,Null,,Null,Null,,,,,R1344_P100
-Choice_Story_13422,Choice_Story_1342,2,Normal,Null,Null,, \q그럼 냄새로 사냥을 하나요?\q,Null,Null,,Null,Null,,,,,R1415_P100
-Choice_Story_13423,Choice_Story_1342,3,Normal,Null,Null,, \q혹시 인간 냄새는 언제 마지막으로 맡으셨나요?\q,Null,Null,,Null,Null,,,,,R1419_P100
-Choice_Story_13441,Choice_Story_1344,1,Normal,Null,Null,, \q저 여기 있어도 되는 건가요?\q,Null,Null,,Null,Null,,,,,R1346_P100
-Choice_Story_13442,Choice_Story_1344,2,Normal,Null,Null,, \q저 죽나요?\q,Null,Null,,Null,Null,,,,,R1348_P100
-Choice_Story_13461,Choice_Story_1346,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1350_P100
-Choice_Story_13481,Choice_Story_1348,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1350_P100
-Choice_Story_13501,Choice_Story_1350,1,Normal,Null,Null,, \q어떤 일이 있어도 그런가요?\q,Null,Null,,Null,Null,,,,,R1352_P100
-Choice_Story_13502,Choice_Story_1350,2,Normal,Null,Null,, \q혹시 로도드 숲의 소문에 대해 알고 계신가요?\q,Null,Null,,Null,Null,,,,,R1356_P100
-Choice_Story_13521,Choice_Story_1352,1,Normal,Null,Null,, \q최근에 사람을 해친 늑대는 없나요?\q,Null,Null,,Null,Null,,,,,R1354_P100
-Choice_Story_13541,Choice_Story_1354,1,Normal,Null,Null,, \q이 이야기를 들어 보셔야 할 것 같은데....\q,Null,Null,,Null,Null,,,,,R1358_P100
-Choice_Story_13561,Choice_Story_1356,1,Normal,Null,Null,, \q이 이야기를 들어 보셔야 할 것 같은데....\q,Null,Null,,Null,Null,,,,,R1358_P100
-Choice_Story_13581,Choice_Story_1358,1,Normal,Null,Null,, \q그러니까요.\q,Null,Null,,Null,Null,,,,,R1360_P100
-Choice_Story_13582,Choice_Story_1358,2,Normal,Null,Null,, \q말도 안 되는 걸까요?\q,Null,Null,,Null,Null,,,,,R1366_P100
-Choice_Story_13601,Choice_Story_1360,1,Normal,Null,Null,, \q저는....\q,Null,Null,,Null,Null,,,,,R1362_P100
-Choice_Story_13621,Choice_Story_1362,1,Normal,Null,Null,, \q잠깐만요!\q,Null,Null,,Null,Null,,,,,R1364_P100
-Choice_Story_13641,Choice_Story_1364,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1487_P100
-Choice_Story_13661,Choice_Story_1366,1,Normal,Null,Null,, \q 말이 되게 만든 사람이 있어요.\q,Null,Null,,Null,Null,,,,,R1368_P100
-Choice_Story_13681,Choice_Story_1368,1,Normal,Null,Null,, \q전 그 사람한테 불만이 있어요.\q,Null,Null,,Null,Null,,,,,R1372_P100
-Choice_Story_13682,Choice_Story_1368,2,Normal,Null,Null,, \q전 그 사람에게 복수해야 하거든요.\q,Null,Null,,Null,Null,,,,,R1372_P100
-Choice_Story_13683,Choice_Story_1368,3,Normal,Null,Null,, \q전 그 사람을 이겨야 하거든요.\q,Null,Null,,Null,Null,,,,,R1372_P100
-Choice_Story_13721,Choice_Story_1372,1,Normal,Null,Null,, \q절 도와주시겠습니까?\q,Null,Null,,Null,Null,,,,,R1376_P100
-Choice_Story_13722,Choice_Story_1372,2,Normal,Null,Null,, \q저와 함께하시는 건 어떠세요?\q,Null,Null,,Null,Null,,,,,R1376_P100
-Choice_Story_13723,Choice_Story_1372,3,Normal,Null,Null,, \q제 편이 되어 주실래요?\q,Null,Null,,Null,Null,,,,,R1376_P100
-Choice_Story_13761,Choice_Story_1376,1,Normal,Null,Null,, \q증명할 만한 것이 있을까요?\q,Null,Null,,Null,Null,,,,,R1378_P100
-Choice_Story_13781,Choice_Story_1378,1,Normal,Null,Null,, 뭐길래...?,Null,Null,,Null,Null,,,,,R1381_P100
-Choice_Story_13782,Choice_Story_1378,2,Normal,Null,Null,, 괜찮지 않을 건 또 뭐야.,Null,Null,,Null,Null,,,,,R1381_P100
-Choice_Story_13811,Choice_Story_1381,1,Normal,Null,Null,, \q뭐가요?\q,Null,Null,,Null,Null,,,,,R1383_P100
-Choice_Story_13831,Choice_Story_1383,1,Normal,Null,Null,, \q아....\q,Null,Null,,Null,Null,,,,,R1386_P100
-Choice_Story_13832,Choice_Story_1383,2,Normal,Null,Null,, \q그래서 도와주시는 겁니까?\q,Null,Null,,Null,Null,,,,,R1387_P100
-Choice_Story_13861,Choice_Story_1386,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1389_P100
-Choice_Story_13871,Choice_Story_1387,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1389_P100
-Choice_Story_13891,Choice_Story_1389,1,Normal,Null,Null,, \q이건 뭐죠?\q,Null,Null,,Null,Null,,,,,R1392_P100
-Choice_Story_13892,Choice_Story_1389,2,Normal,Null,Null,, \q열어 봐도 되나요?\q,Null,Null,,Null,Null,,,,,R1392_P100
-Choice_Story_13921,Choice_Story_1392,1,Normal,Null,Null,, \q도장이네요?\q,Null,Null,,Null,Null,,,,,R1394_P100
-Choice_Story_13941,Choice_Story_1394,1,Normal,Null,Null,, 중요하다 못해 무서울 정도인데....,Null,Null,,Null,Null,,,,,R1398_P100
-Choice_Story_13942,Choice_Story_1394,2,Normal,Null,Null,, \q이걸 제가 받아 가도 될까요?\q,Null,Null,,Null,Null,,,,,R1399_P100
-Choice_Story_13943,Choice_Story_1394,3,Normal,Null,Null,, \q목숨이요...?\q,Null,Null,,Null,Null,,,,,R1400_P100
-Choice_Story_13981,Choice_Story_1398,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1402_P100
-Choice_Story_13991,Choice_Story_1399,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1402_P100
-Choice_Story_14001,Choice_Story_1400,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1402_P100
-Choice_Story_14021,Choice_Story_1402,1,Normal,Null,Null,, \q도와주셔서 진심으로 감사합니다.\q,Null,Null,,Null,Null,,,,,R1406_P100
-Choice_Story_14022,Choice_Story_1402,2,Normal,Null,Null,, \q덕분에 잘할 수 있을 것 같네요.\q,Null,Null,,Null,Null,,,,,R1406_P100
-Choice_Story_14023,Choice_Story_1402,3,Normal,Null,Null,, 고개를 숙여 인사한다.,Null,Null,,Null,Null,,,,,R1406_P100
-Choice_Story_14061,Choice_Story_1406,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1487_P100
-Choice_Story_14071,Choice_Story_1407,1,Normal,Null,Null,, 숨을 몰아쉰다.,Null,Null,,Null,Null,,,,,R1545_P100
-Choice_Story_14072,Choice_Story_1407,2,Normal,Null,Null,, \q하하하....\q,Null,Null,,Null,Null,,,,,R1547_P100
-Choice_Story_14073,Choice_Story_1407,3,Normal,Null,Null,, \q지금 이게 뭘까...?\q,Null,Null,,Null,Null,,,,,R1559_P100
-Choice_Story_14091,Choice_Story_1409,1,Normal,Null,Null,, 공을 잡는다.,Null,Null,,Null,Null,,,,,R1411_P100
-Choice_Story_14111,Choice_Story_1411,1,Normal,Null,Null,, 따라간다.,Null,Null,,Null,Null,,,,,R1413_P100
-Choice_Story_14112,Choice_Story_1411,2,Normal,Null,Null,, 움직이지 않는다.,Null,Null,,Null,Null,,,,,R1491_P100
-Choice_Story_14131,Choice_Story_1413,1,Normal,Null,Null,, \q같이 가야 해요?\q,Null,Null,,Null,Null,,,,,R1495_P100
-Choice_Story_14132,Choice_Story_1413,2,Normal,Null,Null,, \q어디 가시는데요?\q,Null,Null,,Null,Null,,,,,R1494_P100
-Choice_Story_14151,Choice_Story_1415,1,Normal,Null,Null,, \q그게 무슨....\q,Null,Null,,Null,Null,,,,,R1417_P100
-Choice_Story_14171,Choice_Story_1417,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1350_P100
-Choice_Story_14191,Choice_Story_1419,1,Normal,Null,Null,, \q저 여기 있어도 되는 건가요?\q,Null,Null,,Null,Null,,,,,R1421_P100
-Choice_Story_14192,Choice_Story_1419,2,Normal,Null,Null,, \q저 죽나요?\q,Null,Null,,Null,Null,,,,,R1423_P100
-Choice_Story_14211,Choice_Story_1421,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1350_P100
-Choice_Story_14231,Choice_Story_1423,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1350_P100
-Choice_Story_14251,Choice_Story_1425,1,Normal,Null,Null,, \q갈 일이 없다고요?\q,Null,Null,,Null,Null,,,,,R1427_P100
-Choice_Story_14271,Choice_Story_1427,1,Normal,Null,Null,, \q거기는 늑대에 대한 소문이 많던데.\q,Null,Null,,Null,Null,,,,,R1429_P100
-Choice_Story_14272,Choice_Story_1427,2,Normal,Null,Null,, \q그럼 로도드 마을의 늑대 소문도 모르시겠네요.\q,Null,Null,,Null,Null,,,,,R1431_P100
-Choice_Story_14273,Choice_Story_1427,3,Normal,Null,Null,, \q사람 죽인 늑대 이야기 모르세요?\q,Null,Null,,Null,Null,,,,,R1433_P100
-Choice_Story_14291,Choice_Story_1429,1,Normal,Null,Null,, \q이런 소문이 있어요.\q,Null,Null,,Null,Null,,,,,R1435_P100
-Choice_Story_14311,Choice_Story_1431,1,Normal,Null,Null,, \q이런 소문이 있어요.\q,Null,Null,,Null,Null,,,,,R1435_P100
-Choice_Story_14331,Choice_Story_1433,1,Normal,Null,Null,, \q이런 소문이 있어요.\q,Null,Null,,Null,Null,,,,,R1435_P100
-Choice_Story_14351,Choice_Story_1435,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1437_P100
-Choice_Story_14352,Choice_Story_1435,2,Normal,Null,Null,, \q어떤 일이 있어도 그런가요?\q,Null,Null,,Null,Null,,,,,R1439_P100
-Choice_Story_14371,Choice_Story_1437,1,Normal,Null,Null,,  \q최근에 사람을 해친 늑대는 없나요?\q,Null,Null,,Null,Null,,,,,R1441_P100
-Choice_Story_14391,Choice_Story_1439,1,Normal,Null,Null,,  \q최근에 사람을 해친 늑대는 없나요?\q,Null,Null,,Null,Null,,,,,R1441_P100
-Choice_Story_14411,Choice_Story_1441,1,Normal,Null,Null,, \q그거 확실한 거죠?\q,Null,Null,,Null,Null,,,,,R1443_P100
-Choice_Story_14412,Choice_Story_1441,2,Normal,Null,Null,, \q그 말 믿을게요.\q,Null,Null,,Null,Null,,,,,R1447_P100
-Choice_Story_14431,Choice_Story_1443,1,Normal,Null,Null,, \q아니에요. 그런 게 아니에요.\q,Null,Null,,Null,Null,,,,,R1445_P100
-Choice_Story_14451,Choice_Story_1445,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1487_P100
-Choice_Story_14471,Choice_Story_1447,1,Normal,Null,Null,, \q전 그 사람한테 불만이 있어요.\q,Null,Null,,Null,Null,,,,,R1451_P100
-Choice_Story_14472,Choice_Story_1447,2,Normal,Null,Null,, \q전 그 사람에게 복수해야 하거든요.\q,Null,Null,,Null,Null,,,,,R1451_P100
-Choice_Story_14473,Choice_Story_1447,3,Normal,Null,Null,, \q전 그 사람을 이겨야 하거든요.\q,Null,Null,,Null,Null,,,,,R1451_P100
-Choice_Story_14511,Choice_Story_1451,1,Normal,Null,Null,, \q절 도와주세요.\q,Null,Null,,Null,Null,,,,,R1455_P100
-Choice_Story_14512,Choice_Story_1451,2,Normal,Null,Null,, \q저와 함께하시는 건 어떠세요?\q,Null,Null,,Null,Null,,,,,R1455_P100
-Choice_Story_14513,Choice_Story_1451,3,Normal,Null,Null,, \q제 편이 되어 주실래요?\q,Null,Null,,Null,Null,,,,,R1455_P100
-Choice_Story_14551,Choice_Story_1455,1,Normal,Null,Null,, \q증명할 만한 것이 있을까요?\q,Null,Null,,Null,Null,,,,,R1457_P100
-Choice_Story_14571,Choice_Story_1457,1,Normal,Null,Null,, 뭐길래...?,Null,Null,,Null,Null,,,,,R1460_P100
-Choice_Story_14572,Choice_Story_1457,2,Normal,Null,Null,,  괜찮지 않을 건 또 뭐야.,Null,Null,,Null,Null,,,,,R1460_P100
-Choice_Story_14601,Choice_Story_1460,1,Normal,Null,Null,, \q뭐가요?\q,Null,Null,,Null,Null,,,,,R1462_P100
-Choice_Story_14621,Choice_Story_1462,1,Normal,Null,Null,, \q아....\q,Null,Null,,Null,Null,,,,,R1465_P100
-Choice_Story_14622,Choice_Story_1462,2,Normal,Null,Null,, \q그래서 도와주시는 겁니까?\q,Null,Null,,Null,Null,,,,,R1466_P100
-Choice_Story_14651,Choice_Story_1465,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1468_P100
-Choice_Story_14661,Choice_Story_1466,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1468_P100
-Choice_Story_14681,Choice_Story_1468,1,Normal,Null,Null,, \q이건 뭐죠?\q,Null,Null,,Null,Null,,,,,R1471_P100
-Choice_Story_14682,Choice_Story_1468,2,Normal,Null,Null,, \q열어 봐도 되나요?\q,Null,Null,,Null,Null,,,,,R1471_P100
-Choice_Story_14711,Choice_Story_1471,1,Normal,Null,Null,, \q도장이네요?\q,Null,Null,,Null,Null,,,,,R1473_P100
-Choice_Story_14731,Choice_Story_1473,1,Normal,Null,Null,, 중요하다 못해 무서울 정도인데....,Null,Null,,Null,Null,,,,,R1475_P100
-Choice_Story_14732,Choice_Story_1473,2,Normal,Null,Null,, \q이걸 제가 받아가도 될까요?\q,Null,Null,,Null,Null,,,,,R1477_P100
-Choice_Story_14733,Choice_Story_1473,3,Normal,Null,Null,, \q목숨이요...?\q,Null,Null,,Null,Null,,,,,R1479_P100
-Choice_Story_14751,Choice_Story_1475,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1481_P100
-Choice_Story_14771,Choice_Story_1477,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1481_P100
-Choice_Story_14791,Choice_Story_1479,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1481_P100
-Choice_Story_14811,Choice_Story_1481,1,Normal,Null,Null,, \q도와주셔서 진심으로 감사합니다.\q,Null,Null,,Null,Null,,,,,R1485_P100
-Choice_Story_14812,Choice_Story_1481,2,Normal,Null,Null,, \q덕분에 잘할 수 있을 것 같네요.\q,Null,Null,,Null,Null,,,,,R1485_P100
-Choice_Story_14813,Choice_Story_1481,3,Normal,Null,Null,, 고개를 숙여 인사한다.,Null,Null,,Null,Null,,,,,R1485_P100
-Choice_Story_14851,Choice_Story_1485,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1487_P100
-Choice_Story_14871,Choice_Story_1487,1,Normal,Null,Null,, 주변을 살핀다.,Null,Null,,Null,Null,,,,,R1489_P100
-Choice_Story_14891,Choice_Story_1489,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1571_P100
-Choice_Story_14911,Choice_Story_1491,1,Normal,Null,Null,, \q같이 가야 해요?\q,Null,Null,,Null,Null,,,,,R1495_P100
-Choice_Story_14912,Choice_Story_1491,2,Normal,Null,Null,, \q어디 가시는데요?\q,Null,Null,,Null,Null,,,,,R1494_P100
-Choice_Story_14941,Choice_Story_1494,1,Normal,Null,Null,, \q여기가 어디에요?\q,Null,Null,,Null,Null,,,,,R1497_P100
-Choice_Story_14951,Choice_Story_1495,1,Normal,Null,Null,, \q여기가 어디에요?\q,Null,Null,,Null,Null,,,,,R1497_P100
-Choice_Story_14971,Choice_Story_1497,1,Normal,Null,Null,, \q우와-.\q,Null,Null,,Null,Null,,,,,R1500_P100
-Choice_Story_14972,Choice_Story_1497,2,Normal,Null,Null,, \q여기 어디냐니깐요?\q,Null,Null,,Null,Null,,,,,R1501_P100
-Choice_Story_14973,Choice_Story_1497,3,Normal,Null,Null,, \q....\q,Null,Null,,Null,Null,,,,,R1503_P100
-Choice_Story_15001,Choice_Story_1500,1,Normal,Null,Null,, \q같이 가요.\q,Null,Null,,Null,Null,,,,,R1505_P100
-Choice_Story_15011,Choice_Story_1501,1,Normal,Null,Null,, \q같이 가요.\q,Null,Null,,Null,Null,,,,,R1505_P100
-Choice_Story_15031,Choice_Story_1503,1,Normal,Null,Null,, \q같이 가요.\q,Null,Null,,Null,Null,,,,,R1505_P100
-Choice_Story_15051,Choice_Story_1505,1,Normal,Null,Null,, 반장님?,Null,Null,,Null,Null,,,,,R1507_P100
-Choice_Story_15071,Choice_Story_1507,1,Normal,Null,Null,, \q아\c 안녕하세요?\q,Null,Null,,Null,Null,,,,,R1511_P100
-Choice_Story_15072,Choice_Story_1507,2,Normal,Null,Null,, 악수를 건넨다.,Null,Null,,Null,Null,,,,,R1512_P100
-Choice_Story_15073,Choice_Story_1507,3,Normal,Null,Null,, \q어.... 처음 뵙겠습니다?\q,Null,Null,,Null,Null,,,,,R1513_P100
-Choice_Story_15111,Choice_Story_1511,1,Normal,Null,Null,, 음.... 가만히 있어야겠지?,Null,Null,,Null,Null,,,,,R1515_P100
-Choice_Story_15121,Choice_Story_1512,1,Normal,Null,Null,, 음.... 가만히 있어야겠지?,Null,Null,,Null,Null,,,,,R1515_P100
-Choice_Story_15131,Choice_Story_1513,1,Normal,Null,Null,, 음.... 가만히 있어야겠지?,Null,Null,,Null,Null,,,,,R1515_P100
-Choice_Story_15151,Choice_Story_1515,1,Normal,Null,Null,, 크흠.,Null,Null,,Null,Null,,,,,R1518_P100
-Choice_Story_15152,Choice_Story_1515,2,Normal,Null,Null,, 푸웁.,Null,Null,,Null,Null,,,,,R1519_P100
-Choice_Story_15181,Choice_Story_1518,1,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1521_P100
-Choice_Story_15182,Choice_Story_1518,2,Normal,Null,Null,, \q늑대요?\q,Null,Null,,Null,Null,,,,,R1525_P100
-Choice_Story_15191,Choice_Story_1519,1,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1521_P100
-Choice_Story_15192,Choice_Story_1519,2,Normal,Null,Null,, \q늑대요?\q,Null,Null,,Null,Null,,,,,R1525_P100
-Choice_Story_15211,Choice_Story_1521,1,Normal,Null,Null,, \q아\c 네....\q,Null,Null,,Null,Null,,,,,R1523_P100
-Choice_Story_15231,Choice_Story_1523,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1527_P100
-Choice_Story_15251,Choice_Story_1525,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1527_P100
-Choice_Story_15271,Choice_Story_1527,1,Normal,Null,Null,, \q그럼 그 여자분도...?\q,Null,Null,,Null,Null,,,,,R1529_P100
-Choice_Story_15272,Choice_Story_1527,2,Normal,Null,Null,, \q아\c 그럼 반장님도...?\q,Null,Null,,Null,Null,,,,,R1533_P100
-Choice_Story_15291,Choice_Story_1529,1,Normal,Null,Null,, \q아....\q,Null,Null,,Null,Null,,,,,R1531_P100
-Choice_Story_15311,Choice_Story_1531,1,Normal,Null,Null,, 지금 내가 있는 곳이 수인물이었던가.,Null,Null,,Null,Null,,,,,R1535_P100
-Choice_Story_15331,Choice_Story_1533,1,Normal,Null,Null,, 지금 내가 있는 곳이 수인물이었던가.,Null,Null,,Null,Null,,,,,R1535_P100
-Choice_Story_15351,Choice_Story_1535,1,Normal,Null,Null,, \q네. 괜찮아요.\q,Null,Null,,Null,Null,,,,,R1537_P100
-Choice_Story_15371,Choice_Story_1537,1,Normal,Null,Null,, \q모든 늑대가 여기 사나요?\q,Null,Null,,Null,Null,,,,,R1539_P100
-Choice_Story_15372,Choice_Story_1537,2,Normal,Null,Null,, \q그럼 반장님은 모든 늑대를 아시는 건가요?\q,Null,Null,,Null,Null,,,,,R1541_P100
-Choice_Story_15391,Choice_Story_1539,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1338_P100
-Choice_Story_15411,Choice_Story_1541,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1338_P100
-Choice_Story_15451,Choice_Story_1545,1,Normal,Null,Null,, 숲을 빠져나간다.,Null,Null,,Null,Null,,,,,R1549_P100
-Choice_Story_15471,Choice_Story_1547,1,Normal,Null,Null,, 숲을 빠져나간다.,Null,Null,,Null,Null,,,,,R1549_P100
-Choice_Story_15491,Choice_Story_1549,1,Normal,Null,Null,, 숨을 참는다.,Null,Null,,Null,Null,,,,,R1552_P100
-Choice_Story_15492,Choice_Story_1549,2,Normal,Null,Null,, 손으로 입을 가린다.,Null,Null,,Null,Null,,,,,R1555_P100
-Choice_Story_15521,Choice_Story_1552,1,Normal,Null,Null,, 숨을 쉰다.,Null,Null,,Null,Null,,,,,R1554_P100
-Choice_Story_15541,Choice_Story_1554,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1571_P100
-Choice_Story_15551,Choice_Story_1555,1,Normal,Null,Null,, 손을 내린다.,Null,Null,,Null,Null,,,,,R1557_P100
-Choice_Story_15571,Choice_Story_1557,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1571_P100
-Choice_Story_15591,Choice_Story_1559,1,Normal,Null,Null,, 숲을 빠져나간다.,Null,Null,,Null,Null,,,,,R1549_P100
-Choice_Story_15611,Choice_Story_1561,1,Normal,Null,Null,, 주저앉는다.,Null,Null,,Null,Null,,,,,R1563_P100
-Choice_Story_15612,Choice_Story_1561,2,Normal,Null,Null,, \q하하하하하....\q,Null,Null,,Null,Null,,,,,R1565_P100
-Choice_Story_15631,Choice_Story_1563,1,Normal,Null,Null,, 정신을 차린다.,Null,Null,,Null,Null,,,,,R1567_P100
-Choice_Story_15651,Choice_Story_1565,1,Normal,Null,Null,, 정신을 차린다.,Null,Null,,Null,Null,,,,,R1567_P100
-Choice_Story_15671,Choice_Story_1567,1,Normal,Null,Null,, 몸을 숨긴다.,Null,Null,,Null,Null,,,,,R1569_P100
-Choice_Story_15691,Choice_Story_1569,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1571_P100
-Choice_Story_15711,Choice_Story_1571,1,Normal,Null,Null,, 또 뭘까.,Null,Null,,Null,Null,,,,,R1574_P100
-Choice_Story_15712,Choice_Story_1571,2,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1574_P100
-Choice_Story_15741,Choice_Story_1574,1,Normal,Null,Null,, \q아마도요?\q,Null,Null,,Null,Null,,,,,R1577_P100
-Choice_Story_15742,Choice_Story_1574,2,Normal,Null,Null,, \q네.\q,Null,Null,,Null,Null,,,,,R1577_P100
-Choice_Story_15771,Choice_Story_1577,1,Normal,Null,Null,, \q내일까지만 있을 것 같아요.\q,Null,Null,,Null,Null,,,,,R1579_P100
-Choice_Story_15791,Choice_Story_1579,1,Normal,Null,Null,, \q내일 다 끝날 것 같아요.\q,Null,Null,,Null,Null,,,,,R1583_P100
-Choice_Story_15792,Choice_Story_1579,2,Normal,Null,Null,, \q뭐\c 나쁘지 않아요.\q,Null,Null,,Null,Null,,,,,R1583_P100
-Choice_Story_15793,Choice_Story_1579,3,Normal,Null,Null,, \q잘 모르겠네요.\q,Null,Null,,Null,Null,,,,,R1583_P100
-Choice_Story_15831,Choice_Story_1583,1,Normal,Null,Null,, 왜 뭔가 익숙하지?,Null,Null,,Null,Null,,,,,R1585_P100
-Choice_Story_15851,Choice_Story_1585,1,Normal,Null,Null,, \q지금은 괜찮을 것 같아요.\q,Null,Null,,Null,Null,,,,,R1589_P100
-Choice_Story_15852,Choice_Story_1585,2,Normal,Null,Null,, \q지금은 마음만 받을게요.\q,Null,Null,,Null,Null,,,,,R1589_P100
-Choice_Story_15853,Choice_Story_1585,3,Normal,Null,Null,, \q필요할 때 말씀드릴게요.\q,Null,Null,,Null,Null,,,,,R1589_P100
-Choice_Story_15891,Choice_Story_1589,1,Normal,Null,Null,, \q오늘 숙박비 드릴게요.\q,Null,Null,,Null,Null,,,,,R1591_P100
-Choice_Story_15911,Choice_Story_1591,1,Normal,Null,Null,, 201호로 간다.,Null,Null,,Null,Null,,,,,R1621_P100
-Choice_Story_15912,Choice_Story_1591,2,Hidden,Item_book,More,0, 김 사장에게 메모지를 얻는다.,Null,Null,,Null,Null,,,,,R1595_P100
-Choice_Story_15913,Choice_Story_1591,3,Hidden,Item_card,More,0, 분수대로 간다.,Null,Null,,Null,Null,,,,,R1605_P100
-Choice_Story_15951,Choice_Story_1595,1,Normal,Null,Null,, 메모를 쓴다.,Null,Null,,Null,Null,,,,,R1597_P100
-Choice_Story_15971,Choice_Story_1597,1,Normal,Null,Null,, 2번가 27로 간다.,Null,Null,,Null,Null,,,,,R1599_P100
-Choice_Story_15991,Choice_Story_1599,1,Normal,Null,Null,, 우체통에 붙어 있는 파일을 열어 본다.,Null,Null,,Null,Null,,,,,R1601_P100
-Choice_Story_16011,Choice_Story_1601,1,Normal,Null,Null,, 우체통에 책을 넣는다.,Null,Null,,Null,Null,,,,,R1603_P100
-Choice_Story_16031,Choice_Story_1603,1,Normal,Null,Null,, 숙소로 간다.,Null,Null,,Null,Null,,,,,R1621_P100
-Choice_Story_16051,Choice_Story_1605,1,Normal,Null,Null,, 안내판 앞으로 간다.,Null,Null,,Null,Null,,,,,R1607_P100
-Choice_Story_16071,Choice_Story_1607,1,Normal,Null,Null,, \q정 가이드님!\q,Null,Null,,Null,Null,,,,,R1609_P100
-Choice_Story_16091,Choice_Story_1609,1,Normal,Null,Null,, \q그 날 봤던 종이\c 제가 하루만 가지고 있어도 될까요?\q,Null,Null,,Null,Null,,,,,R1611_P100
-Choice_Story_16111,Choice_Story_1611,1,Normal,Null,Null,, \q저한테는 꼭 필요한 자료라서요.\q,Null,Null,,Null,Null,,,,,R1614_P100
-Choice_Story_16112,Choice_Story_1611,2,Normal,Null,Null,, \q도움이 필요하면 말하라면서요. 그게 필요한 도움인데요.\q,Null,Null,,Null,Null,,,,,R1615_P100
-Choice_Story_16141,Choice_Story_1614,1,Normal,Null,Null,, \q딱 하루면 됩니다.\q,Null,Null,,Null,Null,,,,,R1617_P100
-Choice_Story_16151,Choice_Story_1615,1,Normal,Null,Null,, \q딱 하루면 됩니다.\q,Null,Null,,Null,Null,,,,,R1617_P100
-Choice_Story_16171,Choice_Story_1617,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1619_P100
-Choice_Story_16191,Choice_Story_1619,1,Normal,Null,Null,, 숙소로 간다.,Null,Null,,Null,Null,,,,,R1621_P100
-Choice_Story_16211,Choice_Story_1621,1,Normal,Null,Null,, 하루를 마무리한다.,Null,Null,,Null,Null,,,,,R1623_P100
-Choice_Story_16231,Choice_Story_1623,1,Normal,Null,Null,, 나갈 준비를 한다.,Null,Null,,Null,Null,,,,,R1625_P100
-Choice_Story_16251,Choice_Story_1625,1,Normal,Null,Null,, \q저... 사장님?\q,Null,Null,,Null,Null,,,,,R1628_P100
-Choice_Story_16252,Choice_Story_1625,2,Normal,Null,Null,, \q김 사장님!\q,Null,Null,,Null,Null,,,,,R1628_P100
-Choice_Story_16253,Choice_Story_1625,3,Normal,Null,Null,, \q계세요?\q,Null,Null,,Null,Null,,,,,R1628_P100
-Choice_Story_16281,Choice_Story_1628,1,Normal,Null,Null,, 김 사장을 일으켜 준다.,Null,Null,,Null,Null,,,,,R1632_P100
-Choice_Story_16282,Choice_Story_1628,2,Normal,Null,Null,, 김 사장에게 손을 내민다.,Null,Null,,Null,Null,,,,,R1632_P100
-Choice_Story_16321,Choice_Story_1632,1,Normal,Null,Null,, \q저 이제 나가려구요.\q,Null,Null,,Null,Null,,,,,R1634_P100
-Choice_Story_16322,Choice_Story_1632,2,Normal,Null,Null,, \q없어요.\q,Null,Null,,Null,Null,,,,,R1639_P100
-Choice_Story_16323,Choice_Story_1632,3,Normal,Null,Null,, \q방 잘 썼어요\c 사장님.\q,Null,Null,,Null,Null,,,,,R1641_P100
-Choice_Story_16324,Choice_Story_1632,4,Normal,Null,Null,, \q전혀요. 그냥 인사?\q,Null,Null,,Null,Null,,,,,R1645_P100
-Choice_Story_16341,Choice_Story_1634,1,Normal,Null,Null,, \q나쁘지 않았어요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16342,Choice_Story_1634,2,Normal,Null,Null,, \q좋았어요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16343,Choice_Story_1634,3,Normal,Null,Null,, \q잘 쉬었어요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16391,Choice_Story_1639,1,Normal,Null,Null,, \q나쁘지 않았어요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16392,Choice_Story_1639,2,Normal,Null,Null,, \q좋았어요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16393,Choice_Story_1639,3,Normal,Null,Null,, \q잘 쉬었어요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16411,Choice_Story_1641,1,Normal,Null,Null,, \q덕분에요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16412,Choice_Story_1641,2,Normal,Null,Null,, \q감사해요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16451,Choice_Story_1645,1,Normal,Null,Null,, \q당연하더라도요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16452,Choice_Story_1645,2,Normal,Null,Null,, \q진심이에요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16453,Choice_Story_1645,3,Normal,Null,Null,, \q시원섭섭하네요.\q,Null,Null,,Null,Null,,,,,R1649_P100
-Choice_Story_16491,Choice_Story_1649,1,Normal,Null,Null,, 악수를 청한다. ,Null,Null,,Null,Null,,,,,R1651_P100
-Choice_Story_16492,Choice_Story_1649,2,Normal,Null,Null,, 고개를 숙인다.,Null,Null,,Null,Null,,,,,R1653_P100
-Choice_Story_16511,Choice_Story_1651,1,Hidden,Item_postit,Equal,0, 거리로 나선다.,Null,Null,,Null,Null,,,,,R1655_P100
-Choice_Story_16512,Choice_Story_1651,2,Hidden,Item_postit,More,0, 기다린다. ,Null,Null,,Null,Null,,,,,R1674_P100
-Choice_Story_16531,Choice_Story_1653,1,Hidden,Item_postit,Equal,0, 거리로 나선다.,Null,Null,,Null,Null,,,,,R1655_P100
-Choice_Story_16532,Choice_Story_1653,2,Hidden,Item_postit,More,0, 기다린다. ,Null,Null,,Null,Null,,,,,R1674_P100
-Choice_Story_16551,Choice_Story_1655,1,Normal,Null,Null,, 하하.,Null,Null,,Null,Null,,,,,R1657_P100
-Choice_Story_16552,Choice_Story_1655,2,Normal,Null,Null,, 빨간 모자의 시작.,Null,Null,,Null,Null,,,,,R1666_P100
-Choice_Story_16553,Choice_Story_1655,3,Normal,Null,Null,, 사람이 가장 많은 곳.,Null,Null,,Null,Null,,,,,R1668_P100
-Choice_Story_16571,Choice_Story_1657,1,Normal,Null,Null,, 텔레비전 속?,Null,Null,,Null,Null,,,,,R1659_P100
-Choice_Story_16572,Choice_Story_1657,2,Normal,Null,Null,, 마법의 상점?,Null,Null,,Null,Null,,,,,R1662_P100
-Choice_Story_16591,Choice_Story_1659,1,Normal,Null,Null,, 사무실로 걸어간다. ,Null,Null,,Null,Null,,,,,
-Choice_Story_16621,Choice_Story_1662,1,Normal,Null,Null,, 어디로 가야 할까.,Null,Null,,Null,Null,,,,,R1664_P100
-Choice_Story_16641,Choice_Story_1664,1,Normal,Null,Null,, 빨간 모자의 시작.,Null,Null,,Null,Null,,,,,R1666_P100
-Choice_Story_16642,Choice_Story_1664,2,Normal,Null,Null,, 사람이 가장 많은 곳. ,Null,Null,,Null,Null,,,,,R1668_P100
-Choice_Story_16661,Choice_Story_1666,1,Normal,Null,Null,, 로도드 숲 앞에 도착한다.,Null,Null,,Null,Null,,,,,
-Choice_Story_16681,Choice_Story_1668,1,Normal,Null,Null,, 분수대에 도착한다.,Null,Null,,Null,Null,,,,,
-Choice_Story_16741,Choice_Story_1674,1,Normal,Null,Null,, 몇 시야.,Null,Null,,Null,Null,,,,,R1678_P100
-Choice_Story_16742,Choice_Story_1674,2,Normal,Null,Null,, 왜 안 오지?,Null,Null,,Null,Null,,,,,R1678_P100
-Choice_Story_16743,Choice_Story_1674,3,Normal,Null,Null,, 아직 11시 안 되긴 했으니까....,Null,Null,,Null,Null,,,,,R1678_P100
-Choice_Story_16781,Choice_Story_1678,1,Normal,Null,Null,, \q괜찮아요.\q,Null,Null,,Null,Null,,,,,R1682_P100
-Choice_Story_16782,Choice_Story_1678,2,Normal,Null,Null,, \q안 늦었어요.\q,Null,Null,,Null,Null,,,,,R1682_P100
-Choice_Story_16783,Choice_Story_1678,3,Normal,Null,Null,, \q아니에요. 와 주셔서 감사합니다.\q,Null,Null,,Null,Null,,,,,R1682_P100
-Choice_Story_16821,Choice_Story_1682,1,Normal,Null,Null,, \q사람들에게 빨간 모자에 대해 알려 줘야죠.\q,Null,Null,,Null,Null,,,,,R1684_P100
-Choice_Story_16822,Choice_Story_1682,2,Normal,Null,Null,, \q이 마을을 뒤집어 엎으면 됩니다.\q,Null,Null,,Null,Null,,,,,R1686_P100
-Choice_Story_16823,Choice_Story_1682,3,Normal,Null,Null,, \q빨간 모자를 망가뜨려 줄 거예요.\q,Null,Null,,Null,Null,,,,,R1688_P100
-Choice_Story_16841,Choice_Story_1684,1,Normal,Null,Null,, \q어디에서 해야 효과가 크려나.\q,Null,Null,,Null,Null,,,,,R1690_P100
-Choice_Story_16861,Choice_Story_1686,1,Normal,Null,Null,, \q어디에서 해야 효과가 크려나.\q,Null,Null,,Null,Null,,,,,R1690_P100
-Choice_Story_16881,Choice_Story_1688,1,Normal,Null,Null,, \q어디에서 해야 효과가 크려나.\q,Null,Null,,Null,Null,,,,,R1690_P100
-Choice_Story_16901,Choice_Story_1690,1,Normal,Null,Null,, 사람이 가장 많은 곳.,Null,Null,,Null,Null,,,,,R1692_P100
-Choice_Story_16902,Choice_Story_1690,2,Normal,Null,Null,, 사람들이 많이 보는 방송.,Null,Null,,Null,Null,,,,,R1695_P100
-Choice_Story_16921,Choice_Story_1692,1,Normal,Null,Null,,  분수대에 도착한다. ,Null,Null,,Null,Null,,,,,
-Choice_Story_16951,Choice_Story_1695,1,Normal,Null,Null,, 김 사장.,Null,Null,,Null,Null,,,,,R1697_P100
-Choice_Story_16952,Choice_Story_1695,2,Normal,Null,Null,, 마법의 상점 사장.,Null,Null,,Null,Null,,,,,R1699_P100
-Choice_Story_16991,Choice_Story_1699,1,Normal,Null,Null,, \q'오로라'의 DJ 알아요?\q,Null,Null,,Null,Null,,,,,R1701_P100
-Choice_Story_17011,Choice_Story_1701,1,Normal,Null,Null,, 분수대에 도착한다.,Null,Null,,Null,Null,,,,,
+Choice_Story_10292,Choice_Story_1029,2,Normal,Null,Null,, 칼을 얼굴 쪽으로 던진다.,Null,Null,,Null,Null,,,,,R1034_P100
+Choice_Story_10293,Choice_Story_1029,3,Normal,Null,Null,, 칼을 다리 쪽으로 던진다.,Null,Null,,Null,Null,,,,,R1039_P100
+Choice_Story_10311,Choice_Story_1031,1,Normal,Null,Null,, 젠장.,Null,Null,,Null,Null,,,,,E1697_P100
+Choice_Story_10341,Choice_Story_1034,1,Normal,Null,Null,, 도망친다.,Null,Null,,Null,Null,,,,,R1036_P100
+Choice_Story_10361,Choice_Story_1036,1,Normal,Null,Null,,  천천히 걸어간다.,Null,Null,,Null,Null,,,,,R1041_P100
+Choice_Story_10391,Choice_Story_1039,1,Normal,Null,Null,, 젠장.,Null,Null,,Null,Null,,,,,E1698_P100
+Choice_Story_10411,Choice_Story_1041,1,Normal,Null,Null,, 뭐야?,Null,Null,,Null,Null,,,,,R1047_P100
+Choice_Story_10412,Choice_Story_1041,2,Normal,Null,Null,, 누가 또 있어?,Null,Null,,Null,Null,,,,,R1047_P100
+Choice_Story_10413,Choice_Story_1041,3,Normal,Null,Null,, 거리도 먼 것 같은데 목소리가 크네.,Null,Null,,Null,Null,,,,,R1047_P100
+Choice_Story_10471,Choice_Story_1047,1,Normal,Null,Null,, 창문으로 안을 살펴본다.,Null,Null,,Null,Null,,,,,R1049_P100
+Choice_Story_10491,Choice_Story_1049,1,Normal,Null,Null,, 멍청한 것들?,Null,Null,,Null,Null,,,,,R1052_P100
+Choice_Story_10492,Choice_Story_1049,2,Normal,Null,Null,, 이게 무슨.,Null,Null,,Null,Null,,,,,R1052_P100
+Choice_Story_10521,Choice_Story_1052,1,Hidden,Item_cam,Equal,0, 가만히 듣는다.,Null,Null,,Null,Null,,,,,R1054_P100
+Choice_Story_10522,Choice_Story_1052,2,Dimmed,Item_cam,More,0, 캠코더를 켜고 녹음한다.,Null,Null,,Null,Null,,,,,R1072_P100
+Choice_Story_10541,Choice_Story_1054,1,Normal,Null,Null,, 근데 미소가 예쁘지는 않네.,Null,Null,,Null,Null,,,,,R1057_P100
+Choice_Story_10542,Choice_Story_1054,2,Normal,Null,Null,, 저 미소로 누굴 또 이용했으려나.,Null,Null,,Null,Null,,,,,R1057_P100
+Choice_Story_10571,Choice_Story_1057,1,Normal,Null,Null,, 처음부터 속일 속셈이었네.,Null,Null,,Null,Null,,,,,R1060_P100
+Choice_Story_10572,Choice_Story_1057,2,Normal,Null,Null,, 진짜 약아빠졌네.,Null,Null,,Null,Null,,,,,R1060_P100
+Choice_Story_10601,Choice_Story_1060,1,Normal,Null,Null,, 저 미친...,Null,Null,,Null,Null,,,,,R1062_P100
+Choice_Story_10621,Choice_Story_1062,1,Normal,Null,Null,, 아니지\c 마녀보다 더한 존재일지도.,Null,Null,,Null,Null,,,,,R1065_P100
+Choice_Story_10622,Choice_Story_1062,2,Normal,Null,Null,, 근데 마녀에게 미안한데...?,Null,Null,,Null,Null,,,,,R1065_P100
+Choice_Story_10651,Choice_Story_1065,1,Normal,Null,Null,, 나 보는 눈이 좀 없네.,Null,Null,,Null,Null,,,,,R1067_P100
+Choice_Story_10652,Choice_Story_1065,2,Normal,Null,Null,, 어후\c 돌겠네.,Null,Null,,Null,Null,,,,,R1069_P100
+Choice_Story_10671,Choice_Story_1067,1,Normal,Null,Null,,  숨는다.,Null,Null,,Null,Null,,,,,R1089_P100
+Choice_Story_10691,Choice_Story_1069,1,Normal,Null,Null,,  숨는다.,Null,Null,,Null,Null,,,,,R1089_P100
+Choice_Story_10721,Choice_Story_1072,1,Normal,Null,Null,, 넌 뒤졌어.,Null,Null,,Null,Null,,,,,R1075_P100
+Choice_Story_10722,Choice_Story_1072,2,Normal,Null,Null,, 너는 내 손안에 있어.,Null,Null,,Null,Null,,,,,R1075_P100
+Choice_Story_10751,Choice_Story_1075,1,Normal,Null,Null,, 난 네 입으로 다 말해 줘서 고마워.,Null,Null,,Null,Null,,,,,R1078_P100
+Choice_Story_10752,Choice_Story_1075,2,Normal,Null,Null,, 변조기를 찾아봐야겠네.,Null,Null,,Null,Null,,,,,R1078_P100
+Choice_Story_10781,Choice_Story_1078,1,Normal,Null,Null,, 잘 녹화되고 있나?,Null,Null,,Null,Null,,,,,R1080_P100
+Choice_Story_10801,Choice_Story_1080,1,Normal,Null,Null,, 어후\c 빡쳐.,Null,Null,,Null,Null,,,,,R1083_P100
+Choice_Story_10802,Choice_Story_1080,2,Normal,Null,Null,, 어후\c 저 사기꾼.,Null,Null,,Null,Null,,,,,R1083_P100
+Choice_Story_10831,Choice_Story_1083,1,Normal,Null,Null,, 나 보는 눈이 좀 없네.,Null,Null,,Null,Null,,,,,R1086_P100
+Choice_Story_10832,Choice_Story_1083,2,Normal,Null,Null,, 아악\c 돌겠네.,Null,Null,,Null,Null,,,,,R1087_P100
+Choice_Story_10861,Choice_Story_1086,1,Normal,Null,Null,, 캠코더의 녹화 저장 버튼을 누른다.,Null,Null,,Null,Null,,,,,R1090_P100
+Choice_Story_10871,Choice_Story_1087,1,Normal,Null,Null,, 캠코더의 녹화 저장 버튼을 누른다.,Null,Null,,Null,Null,,,,,R1090_P100
+Choice_Story_10891,Choice_Story_1089,1,Normal,Null,Null,, 집 쪽으로 붙는다.,Null,Null,,Null,Null,,,,,R1093_P100
+Choice_Story_10892,Choice_Story_1089,2,Normal,Null,Null,, 숲으로 도망친다.,Null,Null,,Null,Null,,,,,R1093_P100
+Choice_Story_10901,Choice_Story_1090,1,Normal,Null,Null,, 집 쪽으로 붙는다.,Null,Null,,Null,Null,,,,,R1093_P100
+Choice_Story_10902,Choice_Story_1090,2,Normal,Null,Null,, 숲으로 도망친다.,Null,Null,,Null,Null,,,,,R1093_P100
+Choice_Story_10931,Choice_Story_1093,1,Normal,Null,Null,, 집 앞으로 간다.,Null,Null,,Null,Null,,,,,R1095_P100
+Choice_Story_10951,Choice_Story_1095,1,Normal,Null,Null,, 큰일났다.,Null,Null,,Null,Null,,,,,R1099_P100
+Choice_Story_10952,Choice_Story_1095,2,Normal,Null,Null,, 젠장.,Null,Null,,Null,Null,,,,,R1099_P100
+Choice_Story_10953,Choice_Story_1095,3,Normal,Null,Null,, 엿 됐네.,Null,Null,,Null,Null,,,,,R1099_P100
+Choice_Story_10991,Choice_Story_1099,1,Normal,Null,Null,, 콰당.,Null,Null,,Null,Null,,,,,R1101_P100
+Choice_Story_11011,Choice_Story_1101,1,Normal,Null,Null,, \q죄송해요!\q,Null,Null,,Null,Null,,,,,R1103_P100
+Choice_Story_11012,Choice_Story_1101,2,Normal,Null,Null,, \q아무것도 못 들었어요!\q,Null,Null,,Null,Null,,,,,R1123_P100
+Choice_Story_11031,Choice_Story_1103,1,Normal,Null,Null,, \q저는 빨간 모자님을 뵙고 싶어서....\q,Null,Null,,Null,Null,,,,,R1108_P100
+Choice_Story_11032,Choice_Story_1103,2,Normal,Null,Null,, \q만나 보고 싶어서 왔는데....\q,Null,Null,,Null,Null,,,,,R1108_P100
+Choice_Story_11033,Choice_Story_1103,3,Normal,Null,Null,, \q팬이에요!\q,Null,Null,,Null,Null,,,,,R1108_P100
+Choice_Story_11081,Choice_Story_1108,1,Normal,Null,Null,, \q방금요. 근데 딱 나오시더라구요...\q,Null,Null,,Null,Null,,,,,R1111_P100
+Choice_Story_11082,Choice_Story_1108,2,Normal,Null,Null,, \q조금 됐긴 한데....\q,Null,Null,,Null,Null,,,,,R1115_P100
+Choice_Story_11111,Choice_Story_1111,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1113_P100
+Choice_Story_11131,Choice_Story_1113,1,Normal,Null,Null,, 빨간 모자 집으로 간다.,Null,Null,,Null,Null,,,,,R1128_P100
+Choice_Story_11151,Choice_Story_1115,1,Normal,Null,Null,, 모르는 척한 게 아니라 그냥 얘기를 안 한 거지.,Null,Null,,Null,Null,,,,,R1118_P100
+Choice_Story_11152,Choice_Story_1115,2,Normal,Null,Null,, 내 맘이다\c 이 가시나야.,Null,Null,,Null,Null,,,,,R1118_P100
+Choice_Story_11181,Choice_Story_1118,1,Normal,Null,Null,, 응?,Null,Null,,Null,Null,,,,,R1120_P100
+Choice_Story_11201,Choice_Story_1120,1,Normal,Null,Null,, 아악-.,Null,Null,,Null,Null,,,,,E1699_P100
+Choice_Story_11202,Choice_Story_1120,2,Normal,Null,Null,, 저 미친 것이-.,Null,Null,,Null,Null,,,,,E1699_P100
+Choice_Story_11231,Choice_Story_1123,1,Normal,Null,Null,, \q아니에요.\q,Null,Null,,Null,Null,,,,,R1126_P100
+Choice_Story_11232,Choice_Story_1123,2,Normal,Null,Null,, \q그게 아니라....\q,Null,Null,,Null,Null,,,,,R1126_P100
+Choice_Story_11261,Choice_Story_1126,1,Normal,Null,Null,, \q잠깐만....\q,Null,Null,,Null,Null,,,,,E1700_P100
+Choice_Story_11281,Choice_Story_1128,1,Normal,Null,Null,, 문을 연다.,Null,Null,,Null,Null,,,,,R1130_P100
+Choice_Story_11301,Choice_Story_1130,1,Normal,Null,Null,, 집이 아깝네.,Null,Null,,Null,Null,,,,,R1133_P100
+Choice_Story_11302,Choice_Story_1130,2,Normal,Null,Null,, 예쁘긴 하네.,Null,Null,,Null,Null,,,,,R1133_P100
+Choice_Story_11331,Choice_Story_1133,1,Normal,Null,Null,, 침대를 살펴본다.,Null,Null,,Null,Null,,,,,R1135_P100
+Choice_Story_11332,Choice_Story_1133,2,Normal,Null,Null,, 주방을 살펴본다.,Null,Null,,Null,Null,,,,,R1156_P100
+Choice_Story_11351,Choice_Story_1135,1,Normal,Null,Null,, 리모컨?,Null,Null,,Null,Null,,,,,R1137_P100
+Choice_Story_11371,Choice_Story_1137,1,Normal,Null,Null,, 침대 밑을 살핀다.,Null,Null,,Null,Null,,,,,R1139_P100
+Choice_Story_11372,Choice_Story_1137,2,Normal,Null,Null,, 식탁 주변을 살핀다.,Null,Null,,Null,Null,,,,,R1141_P100
+Choice_Story_11391,Choice_Story_1139,1,Normal,Null,Null,, 뭐야\c 왜 벌써 오는 거야?,Null,Null,,Null,Null,,,,,R1143_P100
+Choice_Story_11411,Choice_Story_1141,1,Normal,Null,Null,, 뭐야\c 왜 벌써 오는 거야?,Null,Null,,Null,Null,,,,,R1143_P100
+Choice_Story_11431,Choice_Story_1143,1,Normal,Null,Null,, 아씨\c 못 찾았는데.,Null,Null,,Null,Null,,,,,R1147_P100
+Choice_Story_11432,Choice_Story_1143,2,Normal,Null,Null,, 나가야 할 것 같은데.,Null,Null,,Null,Null,,,,,R1147_P100
+Choice_Story_11433,Choice_Story_1143,3,Normal,Null,Null,, 어떡하지.,Null,Null,,Null,Null,,,,,R1147_P100
+Choice_Story_11471,Choice_Story_1147,1,Normal,Null,Null,, 밖으로 나가 집 옆에 숨는다.,Null,Null,,Null,Null,,,,,R1149_P100
+Choice_Story_11491,Choice_Story_1149,1,Normal,Null,Null,, \q저기 오네....\q,Null,Null,,Null,Null,,,,,R1152_P100
+Choice_Story_11492,Choice_Story_1149,2,Normal,Null,Null,, \q내일 또 와야겠네....\q,Null,Null,,Null,Null,,,,,R1152_P100
+Choice_Story_11521,Choice_Story_1152,1,Normal,Null,Null,, 어\c 들어갔다.,Null,Null,,Null,Null,,,,,R1154_P100
+Choice_Story_11541,Choice_Story_1154,1,Normal,Null,Null,, 뭐 하는 걸까.,Null,Null,,Null,Null,,,,,R1164_P100
+Choice_Story_11542,Choice_Story_1154,2,Normal,Null,Null,, 잘하고 있는 거겠지.,Null,Null,,Null,Null,,,,,R1164_P100
+Choice_Story_11543,Choice_Story_1154,3,Normal,Null,Null,, 벌써 3일차였던가.,Null,Null,,Null,Null,,,,,R1164_P100
+Choice_Story_11561,Choice_Story_1156,1,Normal,Null,Null,, 어\c 저기? ,Null,Null,,Null,Null,,,,,R1158_P100
+Choice_Story_11581,Choice_Story_1158,1,Normal,Null,Null,,변조기를 챙긴다.,Null,Null,,Null,Null,,,,,R1160_P100
+Choice_Story_11601,Choice_Story_1160,1,Normal,Null,Null,, 뭐 하는 걸까.,Null,Null,,Null,Null,,,,,R1164_P100
+Choice_Story_11602,Choice_Story_1160,2,Normal,Null,Null,, 잘하고 있는 거겠지.,Null,Null,,Null,Null,,,,,R1164_P100
+Choice_Story_11603,Choice_Story_1160,3,Normal,Null,Null,, 벌써 3일차였던가.,Null,Null,,Null,Null,,,,,R1164_P100
+Choice_Story_11641,Choice_Story_1164,1,Normal,Null,Null,, 근데 뭐 먹지?,Null,Null,,Null,Null,,,,,R1166_P100
+Choice_Story_11661,Choice_Story_1166,1,Normal,Null,Null,, 왜 이래?,Null,Null,,Null,Null,,,,,R1169_P100
+Choice_Story_11662,Choice_Story_1166,2,Normal,Null,Null,, 뭐 해?,Null,Null,,Null,Null,,,,,R1169_P100
+Choice_Story_11691,Choice_Story_1169,1,Normal,Null,Null,, 와- 빈대떡 냄새.,Null,Null,,Null,Null,,,,,R1173_P100
+Choice_Story_11692,Choice_Story_1169,2,Normal,Null,Null,, 헐\c 족발 맛있겠다. ,Null,Null,,Null,Null,,,,,R1175_P100
+Choice_Story_11693,Choice_Story_1169,3,Normal,Null,Null,, 캬- 떡볶이 색깔 죽이네.,Null,Null,,Null,Null,,,,,R1178_P100
+Choice_Story_11731,Choice_Story_1173,1,Normal,Null,Null,, \q사장님- 빈대떡 하나랑 육전 하나 주세요!\q ,Null,Null,,Null,Null,,,,,R1179_P100
+Choice_Story_11751,Choice_Story_1175,1,Normal,Null,Null,, \q사장님- 족발 소짜 하나 주세요!\q,Null,Null,,Null,Null,,,,,R1179_P100
+Choice_Story_11781,Choice_Story_1178,1,Normal,Null,Null,, \q사장님- 세트 1 주세요!\q,Null,Null,,Null,Null,,,,,R1179_P100
+Choice_Story_11791,Choice_Story_1179,1,Normal,Null,Null,, 이게 무슨....,Null,Null,,Null,Null,,,,,R1181_P100
+Choice_Story_11811,Choice_Story_1181,1,Hidden,Item_pp,Equal,0, 지나친다.,Null,Null,,Null,Null,,,,,R1183_P100
+Choice_Story_11812,Choice_Story_1181,2,Hidden,Item_pp,More,0, 줄을 선다.,Null,Null,,Null,Null,,,,,R1185_P100
+Choice_Story_11831,Choice_Story_1183,1,Normal,Null,Null,, 숙소로 향한다.,Null,Null,,Null,Null,,,,,R1205_P100
+Choice_Story_11851,Choice_Story_1185,1,Normal,Null,Null,, 20분 후.,Null,Null,,Null,Null,,,,,R1187_P100
+Choice_Story_11871,Choice_Story_1187,1,Normal,Null,Null,, 다행이다.,Null,Null,,Null,Null,,,,,R1190_P100
+Choice_Story_11872,Choice_Story_1187,2,Normal,Null,Null,, 좋은 건가.,Null,Null,,Null,Null,,,,,R1190_P100
+Choice_Story_11901,Choice_Story_1190,1,Normal,Null,Null,, \q해리예요.\q,Null,Null,,Null,Null,,,,,R1195_P100
+Choice_Story_11902,Choice_Story_1190,2,Normal,Null,Null,, \q시우예요.\q,Null,Null,,Null,Null,,,,,R1195_P100
+Choice_Story_11903,Choice_Story_1190,3,Normal,Null,Null,, \q진영이예요.\q,Null,Null,,Null,Null,,,,,R1195_P100
+Choice_Story_11904,Choice_Story_1190,4,Normal,Null,Null,, \q다원이예요.\q,Null,Null,,Null,Null,,,,,R1195_P100
+Choice_Story_11951,Choice_Story_1195,1,Normal,Null,Null,, \q밑에 '행복하세요' 적어 주세요.\q,Null,Null,,Null,Null,,,,,R1197_P100
+Choice_Story_11952,Choice_Story_1195,2,Normal,Null,Null,, \q밑에 '보고 싶었어요' 적어 주세요.\q,Null,Null,,Null,Null,,,,,R1199_P100
+Choice_Story_11971,Choice_Story_1197,1,Normal,Null,Null,, 자리를 비켜 준다.,Null,Null,,Null,Null,,,,,R1203_P100
+Choice_Story_11991,Choice_Story_1199,1,Normal,Null,Null,, 종이를 확인한다.,Null,Null,,Null,Null,,,,,R1201_P100
+Choice_Story_12011,Choice_Story_1201,1,Normal,Null,Null,, 자리를 비켜 준다.,Null,Null,,Null,Null,,,,,R1203_P100
+Choice_Story_12031,Choice_Story_1203,1,Normal,Null,Null,, 숙소로 향한다.,Null,Null,,Null,Null,,,,,R1205_P100
+Choice_Story_12051,Choice_Story_1205,1,Normal,Null,Null,, 이게 뭐지?,Null,Null,,Null,Null,,,,,R1207_P100
+Choice_Story_12071,Choice_Story_1207,1,Normal,Null,Null,, 일이 있으신가?,Null,Null,,Null,Null,,,,,R1211_P100
+Choice_Story_12072,Choice_Story_1207,2,Normal,Null,Null,, 시장 가셨나?,Null,Null,,Null,Null,,,,,R1211_P100
+Choice_Story_12073,Choice_Story_1207,3,Normal,Null,Null,, 아픈가?,Null,Null,,Null,Null,,,,,R1211_P100
+Choice_Story_12111,Choice_Story_1211,1,Normal,Null,Null,, 아- 좋다.,Null,Null,,Null,Null,,,,,R1213_P100
+Choice_Story_12131,Choice_Story_1213,1,Normal,Null,Null,, 눈을 뜬다.,Null,Null,,Null,Null,,,,,R1215_P100
+Choice_Story_12151,Choice_Story_1215,1,Normal,Null,Null,, 화장실 문을 닫는다.,Null,Null,,Null,Null,,,,,R1218_P100
+Choice_Story_12152,Choice_Story_1215,2,Normal,Null,Null,, 화장실 불을 끈다.,Null,Null,,Null,Null,,,,,R1218_P100
+Choice_Story_12181,Choice_Story_1218,1,Normal,Null,Null,, \q빨간 모자 집에 한 번 더 다녀와야지.\q,Null,Null,,Null,Null,,,,,R1220_P100
+Choice_Story_12201,Choice_Story_1220,1,Normal,Null,Null,, \q김 사장님?\q,Null,Null,,Null,Null,,,,,R1223_P100
+Choice_Story_12202,Choice_Story_1220,2,Normal,Null,Null,, \q안녕히 주무셨어요?\q,Null,Null,,Null,Null,,,,,R1223_P100
+Choice_Story_12231,Choice_Story_1223,1,Normal,Null,Null,, 가방에서 5페이를 꺼낸다.,Null,Null,,Null,Null,,,,,R1225_P100
+Choice_Story_12251,Choice_Story_1225,1,Normal,Null,Null,, 로도드 숲으로 향한다.,Null,Null,,Null,Null,,,,,R1228_P100
+Choice_Story_12252,Choice_Story_1225,2,Normal,Null,Null,, 1번가 끝으로 향한다.,Null,Null,,Null,Null,,,,,R1228_P100
+Choice_Story_12281,Choice_Story_1228,1,Normal,Null,Null,, 보이그룹 노래를 흥얼거린다.,Null,Null,,Null,Null,,,,,R1232_P100
+Choice_Story_12282,Choice_Story_1228,2,Normal,Null,Null,, 걸그룹 노래를 흥얼거린다.,Null,Null,,Null,Null,,,,,R1233_P100
+Choice_Story_12283,Choice_Story_1228,3,Normal,Null,Null,, 힙합 노래를 흥얼거린다.,Null,Null,,Null,Null,,,,,R1234_P100
+Choice_Story_12321,Choice_Story_1232,1,Normal,Null,Null,, 로도드 숲 입구를 지나친다.,Null,Null,,Null,Null,,,,,R1236_P100
+Choice_Story_12331,Choice_Story_1233,1,Normal,Null,Null,, 로도드 숲 입구를 지나친다.,Null,Null,,Null,Null,,,,,R1236_P100
+Choice_Story_12341,Choice_Story_1234,1,Normal,Null,Null,, 로도드 숲 입구를 지나친다.,Null,Null,,Null,Null,,,,,R1236_P100
+Choice_Story_12361,Choice_Story_1236,1,Normal,Null,Null,, 오른쪽 길로 간다.,Null,Null,,Null,Null,,,,,R1238_P100
+Choice_Story_12381,Choice_Story_1238,1,Normal,Null,Null,, 빨간 모자 집의 문 앞으로 간다.,Null,Null,,Null,Null,,,,,R1243_P100
+Choice_Story_12382,Choice_Story_1238,2,Normal,Null,Null,, 옆 창문으로 집 안을 쳐다본다.,Null,Null,,Null,Null,,,,,R1241_P100
+Choice_Story_12411,Choice_Story_1241,1,Normal,Null,Null,,  문으로 발걸음을 옮긴다.,Null,Null,,Null,Null,,,,,R1243_P100
+Choice_Story_12431,Choice_Story_1243,1,Hidden,Item_modulator,More,0,  어\c 이게 뭐야?,Null,Null,,Null,Null,,,,,R1246_P100
+Choice_Story_12432,Choice_Story_1243,2,Hidden,Item_modulator,Equal,0, 문을 연다.,Null,Null,,Null,Null,,,,,R1247_P100
+Choice_Story_12461,Choice_Story_1246,1,Normal,Null,Null,, 뭐야\c 공?,Null,Null,,Null,Null,,,,,R1268_P100
+Choice_Story_12471,Choice_Story_1247,1,Normal,Null,Null,, 방문을 열고 들어간다. ,Null,Null,,Null,Null,,,,,R1250_P100
+Choice_Story_12472,Choice_Story_1247,2,Normal,Null,Null,, 거실을 살핀다.,Null,Null,,Null,Null,,,,,R1254_P100
+Choice_Story_12501,Choice_Story_1250,1,Normal,Null,Null,, 살펴본다.,Null,Null,,Null,Null,,,,,R1252_P100
+Choice_Story_12521,Choice_Story_1252,1,Normal,Null,Null,, 쓸데없는 곳에 시간을 낭비했네.,Null,Null,,Null,Null,,,,,R1259_P100
+Choice_Story_12541,Choice_Story_1254,1,Normal,Null,Null,, 어디 있는 거야.,Null,Null,,Null,Null,,,,,R1257_P100
+Choice_Story_12571,Choice_Story_1257,1,Normal,Null,Null,, 변조기를 챙긴다. ,Null,Null,,Null,Null,,,,,R1258_P100
+Choice_Story_12581,Choice_Story_1258,1,Normal,Null,Null,, 이게 뭐야?,Null,Null,,Null,Null,,,,,R1261_P100
+Choice_Story_12591,Choice_Story_1259,1,Normal,Null,Null,, 이게 뭐야?,Null,Null,,Null,Null,,,,,R1261_P100
+Choice_Story_12611,Choice_Story_1261,1,Normal,Null,Null,, 오고 있다고?,Null,Null,,Null,Null,,,,,R1264_P100
+Choice_Story_12612,Choice_Story_1261,2,Normal,Null,Null,, 다 왔다고?,Null,Null,,Null,Null,,,,,R1264_P100
+Choice_Story_12641,Choice_Story_1264,1,Normal,Null,Null,, 아이씨.,Null,Null,,Null,Null,,,,,R1266_P100
+Choice_Story_12661,Choice_Story_1266,1,Normal,Null,Null,, 뭐야\c 공?,Null,Null,,Null,Null,,,,,R1268_P100
+Choice_Story_12681,Choice_Story_1268,1,Normal,Null,Null,, 깜짝이야.,Null,Null,,Null,Null,,,,,R1272_P100
+Choice_Story_12682,Choice_Story_1268,2,Normal,Null,Null,, 어우씨.,Null,Null,,Null,Null,,,,,R1272_P100
+Choice_Story_12683,Choice_Story_1268,3,Normal,Null,Null,, 뭐\c 뭐야?,Null,Null,,Null,Null,,,,,R1272_P100
+Choice_Story_12721,Choice_Story_1272,1,Normal,Null,Null,, 무섭습니다만.,Null,Null,,Null,Null,,,,,R1276_P100
+Choice_Story_12722,Choice_Story_1272,2,Normal,Null,Null,, 와우....,Null,Null,,Null,Null,,,,,R1276_P100
+Choice_Story_12723,Choice_Story_1272,3,Normal,Null,Null,, 근데 누구...?,Null,Null,,Null,Null,,,,,R1276_P100
+Choice_Story_12761,Choice_Story_1276,1,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1278_P100
+Choice_Story_12781,Choice_Story_1278,1,Normal,Null,Null,, 공을 품에 안는다.,Null,Null,,Null,Null,,,,,R1280_P100
+Choice_Story_12801,Choice_Story_1280,1,Normal,Null,Null,, \q잠깐만....\q,Null,Null,,Null,Null,,,,,R1282_P100
+Choice_Story_12821,Choice_Story_1282,1,Normal,Null,Null,,  공을 떨어뜨린다.,Null,Null,,Null,Null,,,,,R1284_P100
+Choice_Story_12822,Choice_Story_1282,2,Normal,Null,Null,, 공을 던진다.,Null,Null,,Null,Null,,,,,R1399_P100
+Choice_Story_12823,Choice_Story_1282,3,Normal,Null,Null,, 공을 손가락 위에서 굴린다.,Null,Null,,Null,Null,,,,,R1401_P100
+Choice_Story_12824,Choice_Story_1282,4,Normal,Null,Null,, 공을 여자에게 건넨다.,Null,Null,,Null,Null,,,,,R1553_P100
+Choice_Story_12841,Choice_Story_1284,1,Normal,Null,Null,, 저거 늑대야...?,Null,Null,,Null,Null,,,,,R1286_P100
+Choice_Story_12861,Choice_Story_1286,1,Normal,Null,Null,, 그건 사실인 거야?,Null,Null,,Null,Null,,,,,R1289_P100
+Choice_Story_12862,Choice_Story_1286,2,Normal,Null,Null,, 미친 거 아냐?,Null,Null,,Null,Null,,,,,R1289_P100
+Choice_Story_12891,Choice_Story_1289,1,Normal,Null,Null,, \q따라오라고?\q,Null,Null,,Null,Null,,,,,R1291_P100
+Choice_Story_12911,Choice_Story_1291,1,Normal,Null,Null,, 도대체 이게 뭐야.,Null,Null,,Null,Null,,,,,R1294_P100
+Choice_Story_12912,Choice_Story_1291,2,Normal,Null,Null,, 하하하\c 참.,Null,Null,,Null,Null,,,,,R1294_P100
+Choice_Story_12941,Choice_Story_1294,1,Normal,Null,Null,, \q여긴 어디에요?\q,Null,Null,,Null,Null,,,,,R1296_P100
+Choice_Story_12961,Choice_Story_1296,1,Normal,Null,Null,, 아까 걔 맞아?,Null,Null,,Null,Null,,,,,R1299_P100
+Choice_Story_12962,Choice_Story_1296,2,Normal,Null,Null,, 이중인격인가.,Null,Null,,Null,Null,,,,,R1299_P100
+Choice_Story_12991,Choice_Story_1299,1,Normal,Null,Null,, 여긴 다 잘생겼나 봐.,Null,Null,,Null,Null,,,,,R1301_P100
+Choice_Story_13011,Choice_Story_1301,1,Normal,Null,Null,, \q아\c 안녕하세요?\q,Null,Null,,Null,Null,,,,,R1305_P100
+Choice_Story_13012,Choice_Story_1301,2,Normal,Null,Null,, 악수를 건넨다.,Null,Null,,Null,Null,,,,,R1307_P100
+Choice_Story_13013,Choice_Story_1301,3,Normal,Null,Null,, \q어.... 처음 뵙겠습니다?\q,Null,Null,,Null,Null,,,,,R1309_P100
+Choice_Story_13051,Choice_Story_1305,1,Normal,Null,Null,, 가만히 서 있는다.,Null,Null,,Null,Null,,,,,R1311_P100
+Choice_Story_13071,Choice_Story_1307,1,Normal,Null,Null,, 손을 푼다.,Null,Null,,Null,Null,,,,,R1311_P100
+Choice_Story_13091,Choice_Story_1309,1,Normal,Null,Null,, 가만히 서 있는다.,Null,Null,,Null,Null,,,,,R1311_P100
+Choice_Story_13111,Choice_Story_1311,1,Normal,Null,Null,, 뭐 저런 사람이 다 있어.,Null,Null,,Null,Null,,,,,R1315_P100
+Choice_Story_13112,Choice_Story_1311,2,Normal,Null,Null,, 내가 무슨 동물원에 있는 동물도 아니고.,Null,Null,,Null,Null,,,,,R1315_P100
+Choice_Story_13113,Choice_Story_1311,3,Normal,Null,Null,, 겁먹은 건 맞는데 재밌지는 않을 텐데.,Null,Null,,Null,Null,,,,,R1315_P100
+Choice_Story_13151,Choice_Story_1315,1,Normal,Null,Null,, 그러니까요....,Null,Null,,Null,Null,,,,,R1319_P100
+Choice_Story_13152,Choice_Story_1315,2,Normal,Null,Null,, 더 땡겨 주시겠습니까-.,Null,Null,,Null,Null,,,,,R1319_P100
+Choice_Story_13153,Choice_Story_1315,3,Normal,Null,Null,, 쌤통이다-.,Null,Null,,Null,Null,,,,,R1319_P100
+Choice_Story_13191,Choice_Story_1319,1,Normal,Null,Null,, \q아\c 저는-\q,Null,Null,,Null,Null,,,,,R1321_P100
+Choice_Story_13211,Choice_Story_1321,1,Normal,Null,Null,, \q그럼 반장님도....\q,Null,Null,,Null,Null,,,,,R1325_P100
+Choice_Story_13212,Choice_Story_1321,2,Normal,Null,Null,, \q모든 늑대가요?\q,Null,Null,,Null,Null,,,,,R1326_P100
+Choice_Story_13213,Choice_Story_1321,3,Normal,Null,Null,, \q모든 늑대를 아시는 건가요?\q,Null,Null,,Null,Null,,,,,R1327_P100
+Choice_Story_13251,Choice_Story_1325,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1330_P100
+Choice_Story_13261,Choice_Story_1326,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1330_P100
+Choice_Story_13271,Choice_Story_1327,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1330_P100
+Choice_Story_13301,Choice_Story_1330,1,Normal,Null,Null,, \q제가 인간인 건 어떻게 아셨죠?\q,Null,Null,,Null,Null,,,,,R1332_P100
+Choice_Story_13302,Choice_Story_1330,2,Normal,Null,Null,, \q로도드 마을 아세요?\q,Null,Null,,Null,Null,,,,,R1417_P100
+Choice_Story_13321,Choice_Story_1332,1,Normal,Null,Null,, \q인간 냄새요?\q,Null,Null,,Null,Null,,,,,R1334_P100
+Choice_Story_13341,Choice_Story_1334,1,Normal,Null,Null,, \q여긴 늑대만 사나요?\q,Null,Null,,Null,Null,,,,,R1336_P100
+Choice_Story_13342,Choice_Story_1334,2,Normal,Null,Null,, \q그럼 냄새로 사냥을 하나요?\q,Null,Null,,Null,Null,,,,,R1407_P100
+Choice_Story_13343,Choice_Story_1334,3,Normal,Null,Null,, \q혹시 인간 냄새는 언제 마지막으로 맡으셨나요?\q,Null,Null,,Null,Null,,,,,R1411_P100
+Choice_Story_13361,Choice_Story_1336,1,Normal,Null,Null,, \q저 여기 있어도 되는 건가요?\q,Null,Null,,Null,Null,,,,,R1338_P100
+Choice_Story_13362,Choice_Story_1336,2,Normal,Null,Null,, \q저 죽나요?\q,Null,Null,,Null,Null,,,,,R1340_P100
+Choice_Story_13381,Choice_Story_1338,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1342_P100
+Choice_Story_13401,Choice_Story_1340,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1342_P100
+Choice_Story_13421,Choice_Story_1342,1,Normal,Null,Null,, \q어떤 일이 있어도 그런가요?\q,Null,Null,,Null,Null,,,,,R1344_P100
+Choice_Story_13422,Choice_Story_1342,2,Normal,Null,Null,, \q혹시 로도드 숲의 소문에 대해 알고 계신가요?\q,Null,Null,,Null,Null,,,,,R1348_P100
+Choice_Story_13441,Choice_Story_1344,1,Normal,Null,Null,, \q최근에 사람을 해친 늑대는 없나요?\q,Null,Null,,Null,Null,,,,,R1346_P100
+Choice_Story_13461,Choice_Story_1346,1,Normal,Null,Null,, \q이 이야기를 들어 보셔야 할 것 같은데....\q,Null,Null,,Null,Null,,,,,R1350_P100
+Choice_Story_13481,Choice_Story_1348,1,Normal,Null,Null,, \q이 이야기를 들어 보셔야 할 것 같은데....\q,Null,Null,,Null,Null,,,,,R1350_P100
+Choice_Story_13501,Choice_Story_1350,1,Normal,Null,Null,, \q그러니까요.\q,Null,Null,,Null,Null,,,,,R1352_P100
+Choice_Story_13502,Choice_Story_1350,2,Normal,Null,Null,, \q말도 안 되는 걸까요?\q,Null,Null,,Null,Null,,,,,R1358_P100
+Choice_Story_13521,Choice_Story_1352,1,Normal,Null,Null,, \q저는....\q,Null,Null,,Null,Null,,,,,R1354_P100
+Choice_Story_13541,Choice_Story_1354,1,Normal,Null,Null,, \q잠깐만요!\q,Null,Null,,Null,Null,,,,,R1356_P100
+Choice_Story_13561,Choice_Story_1356,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1479_P100
+Choice_Story_13581,Choice_Story_1358,1,Normal,Null,Null,, \q 말이 되게 만든 사람이 있어요.\q,Null,Null,,Null,Null,,,,,R1360_P100
+Choice_Story_13601,Choice_Story_1360,1,Normal,Null,Null,, \q전 그 사람한테 불만이 있어요.\q,Null,Null,,Null,Null,,,,,R1364_P100
+Choice_Story_13602,Choice_Story_1360,2,Normal,Null,Null,, \q전 그 사람에게 복수해야 하거든요.\q,Null,Null,,Null,Null,,,,,R1364_P100
+Choice_Story_13603,Choice_Story_1360,3,Normal,Null,Null,, \q전 그 사람을 이겨야 하거든요.\q,Null,Null,,Null,Null,,,,,R1364_P100
+Choice_Story_13641,Choice_Story_1364,1,Normal,Null,Null,, \q절 도와주시겠습니까?\q,Null,Null,,Null,Null,,,,,R1368_P100
+Choice_Story_13642,Choice_Story_1364,2,Normal,Null,Null,, \q저와 함께하시는 건 어떠세요?\q,Null,Null,,Null,Null,,,,,R1368_P100
+Choice_Story_13643,Choice_Story_1364,3,Normal,Null,Null,, \q제 편이 되어 주실래요?\q,Null,Null,,Null,Null,,,,,R1368_P100
+Choice_Story_13681,Choice_Story_1368,1,Normal,Null,Null,, \q증명할 만한 것이 있을까요?\q,Null,Null,,Null,Null,,,,,R1370_P100
+Choice_Story_13701,Choice_Story_1370,1,Normal,Null,Null,, 뭐길래...?,Null,Null,,Null,Null,,,,,R1373_P100
+Choice_Story_13702,Choice_Story_1370,2,Normal,Null,Null,, 괜찮지 않을 건 또 뭐야.,Null,Null,,Null,Null,,,,,R1373_P100
+Choice_Story_13731,Choice_Story_1373,1,Normal,Null,Null,, \q뭐가요?\q,Null,Null,,Null,Null,,,,,R1375_P100
+Choice_Story_13751,Choice_Story_1375,1,Normal,Null,Null,, \q아....\q,Null,Null,,Null,Null,,,,,R1378_P100
+Choice_Story_13752,Choice_Story_1375,2,Normal,Null,Null,, \q그래서 도와주시는 겁니까?\q,Null,Null,,Null,Null,,,,,R1379_P100
+Choice_Story_13781,Choice_Story_1378,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1381_P100
+Choice_Story_13791,Choice_Story_1379,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1381_P100
+Choice_Story_13811,Choice_Story_1381,1,Normal,Null,Null,, \q이건 뭐죠?\q,Null,Null,,Null,Null,,,,,R1384_P100
+Choice_Story_13812,Choice_Story_1381,2,Normal,Null,Null,, \q열어 봐도 되나요?\q,Null,Null,,Null,Null,,,,,R1384_P100
+Choice_Story_13841,Choice_Story_1384,1,Normal,Null,Null,, \q도장이네요?\q,Null,Null,,Null,Null,,,,,R1386_P100
+Choice_Story_13861,Choice_Story_1386,1,Normal,Null,Null,, 중요하다 못해 무서울 정도인데....,Null,Null,,Null,Null,,,,,R1390_P100
+Choice_Story_13862,Choice_Story_1386,2,Normal,Null,Null,, \q이걸 제가 받아 가도 될까요?\q,Null,Null,,Null,Null,,,,,R1391_P100
+Choice_Story_13863,Choice_Story_1386,3,Normal,Null,Null,, \q목숨이요...?\q,Null,Null,,Null,Null,,,,,R1392_P100
+Choice_Story_13901,Choice_Story_1390,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1394_P100
+Choice_Story_13911,Choice_Story_1391,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1394_P100
+Choice_Story_13921,Choice_Story_1392,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1394_P100
+Choice_Story_13941,Choice_Story_1394,1,Normal,Null,Null,, \q도와주셔서 진심으로 감사합니다.\q,Null,Null,,Null,Null,,,,,R1398_P100
+Choice_Story_13942,Choice_Story_1394,2,Normal,Null,Null,, \q덕분에 잘할 수 있을 것 같네요.\q,Null,Null,,Null,Null,,,,,R1398_P100
+Choice_Story_13943,Choice_Story_1394,3,Normal,Null,Null,, 고개를 숙여 인사한다.,Null,Null,,Null,Null,,,,,R1398_P100
+Choice_Story_13981,Choice_Story_1398,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1479_P100
+Choice_Story_13991,Choice_Story_1399,1,Normal,Null,Null,, 숨을 몰아쉰다.,Null,Null,,Null,Null,,,,,R1537_P100
+Choice_Story_13992,Choice_Story_1399,2,Normal,Null,Null,, \q하하하....\q,Null,Null,,Null,Null,,,,,R1539_P100
+Choice_Story_13993,Choice_Story_1399,3,Normal,Null,Null,, \q지금 이게 뭘까...?\q,Null,Null,,Null,Null,,,,,R1551_P100
+Choice_Story_14011,Choice_Story_1401,1,Normal,Null,Null,, 공을 잡는다.,Null,Null,,Null,Null,,,,,R1403_P100
+Choice_Story_14031,Choice_Story_1403,1,Normal,Null,Null,, 따라간다.,Null,Null,,Null,Null,,,,,R1405_P100
+Choice_Story_14032,Choice_Story_1403,2,Normal,Null,Null,, 움직이지 않는다.,Null,Null,,Null,Null,,,,,R1483_P100
+Choice_Story_14051,Choice_Story_1405,1,Normal,Null,Null,, \q같이 가야 해요?\q,Null,Null,,Null,Null,,,,,R1487_P100
+Choice_Story_14052,Choice_Story_1405,2,Normal,Null,Null,, \q어디 가시는데요?\q,Null,Null,,Null,Null,,,,,R1486_P100
+Choice_Story_14071,Choice_Story_1407,1,Normal,Null,Null,, \q그게 무슨....\q,Null,Null,,Null,Null,,,,,R1409_P100
+Choice_Story_14091,Choice_Story_1409,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1342_P100
+Choice_Story_14111,Choice_Story_1411,1,Normal,Null,Null,, \q저 여기 있어도 되는 건가요?\q,Null,Null,,Null,Null,,,,,R1413_P100
+Choice_Story_14112,Choice_Story_1411,2,Normal,Null,Null,, \q저 죽나요?\q,Null,Null,,Null,Null,,,,,R1415_P100
+Choice_Story_14131,Choice_Story_1413,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1342_P100
+Choice_Story_14151,Choice_Story_1415,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1342_P100
+Choice_Story_14171,Choice_Story_1417,1,Normal,Null,Null,, \q갈 일이 없다고요?\q,Null,Null,,Null,Null,,,,,R1419_P100
+Choice_Story_14191,Choice_Story_1419,1,Normal,Null,Null,, \q거기는 늑대에 대한 소문이 많던데.\q,Null,Null,,Null,Null,,,,,R1421_P100
+Choice_Story_14192,Choice_Story_1419,2,Normal,Null,Null,, \q그럼 로도드 마을의 늑대 소문도 모르시겠네요.\q,Null,Null,,Null,Null,,,,,R1423_P100
+Choice_Story_14193,Choice_Story_1419,3,Normal,Null,Null,, \q사람 죽인 늑대 이야기 모르세요?\q,Null,Null,,Null,Null,,,,,R1425_P100
+Choice_Story_14211,Choice_Story_1421,1,Normal,Null,Null,, \q이런 소문이 있어요.\q,Null,Null,,Null,Null,,,,,R1427_P100
+Choice_Story_14231,Choice_Story_1423,1,Normal,Null,Null,, \q이런 소문이 있어요.\q,Null,Null,,Null,Null,,,,,R1427_P100
+Choice_Story_14251,Choice_Story_1425,1,Normal,Null,Null,, \q이런 소문이 있어요.\q,Null,Null,,Null,Null,,,,,R1427_P100
+Choice_Story_14271,Choice_Story_1427,1,Normal,Null,Null,, \q인간을 죽이지 않는다는 건가요?\q,Null,Null,,Null,Null,,,,,R1429_P100
+Choice_Story_14272,Choice_Story_1427,2,Normal,Null,Null,, \q어떤 일이 있어도 그런가요?\q,Null,Null,,Null,Null,,,,,R1431_P100
+Choice_Story_14291,Choice_Story_1429,1,Normal,Null,Null,,  \q최근에 사람을 해친 늑대는 없나요?\q,Null,Null,,Null,Null,,,,,R1433_P100
+Choice_Story_14311,Choice_Story_1431,1,Normal,Null,Null,,  \q최근에 사람을 해친 늑대는 없나요?\q,Null,Null,,Null,Null,,,,,R1433_P100
+Choice_Story_14331,Choice_Story_1433,1,Normal,Null,Null,, \q그거 확실한 거죠?\q,Null,Null,,Null,Null,,,,,R1435_P100
+Choice_Story_14332,Choice_Story_1433,2,Normal,Null,Null,, \q그 말 믿을게요.\q,Null,Null,,Null,Null,,,,,R1439_P100
+Choice_Story_14351,Choice_Story_1435,1,Normal,Null,Null,, \q아니에요. 그런 게 아니에요.\q,Null,Null,,Null,Null,,,,,R1437_P100
+Choice_Story_14371,Choice_Story_1437,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1479_P100
+Choice_Story_14391,Choice_Story_1439,1,Normal,Null,Null,, \q전 그 사람한테 불만이 있어요.\q,Null,Null,,Null,Null,,,,,R1443_P100
+Choice_Story_14392,Choice_Story_1439,2,Normal,Null,Null,, \q전 그 사람에게 복수해야 하거든요.\q,Null,Null,,Null,Null,,,,,R1443_P100
+Choice_Story_14393,Choice_Story_1439,3,Normal,Null,Null,, \q전 그 사람을 이겨야 하거든요.\q,Null,Null,,Null,Null,,,,,R1443_P100
+Choice_Story_14431,Choice_Story_1443,1,Normal,Null,Null,, \q절 도와주세요.\q,Null,Null,,Null,Null,,,,,R1447_P100
+Choice_Story_14432,Choice_Story_1443,2,Normal,Null,Null,, \q저와 함께하시는 건 어떠세요?\q,Null,Null,,Null,Null,,,,,R1447_P100
+Choice_Story_14433,Choice_Story_1443,3,Normal,Null,Null,, \q제 편이 되어 주실래요?\q,Null,Null,,Null,Null,,,,,R1447_P100
+Choice_Story_14471,Choice_Story_1447,1,Normal,Null,Null,, \q증명할 만한 것이 있을까요?\q,Null,Null,,Null,Null,,,,,R1449_P100
+Choice_Story_14491,Choice_Story_1449,1,Normal,Null,Null,, 뭐길래...?,Null,Null,,Null,Null,,,,,R1452_P100
+Choice_Story_14492,Choice_Story_1449,2,Normal,Null,Null,,  괜찮지 않을 건 또 뭐야.,Null,Null,,Null,Null,,,,,R1452_P100
+Choice_Story_14521,Choice_Story_1452,1,Normal,Null,Null,, \q뭐가요?\q,Null,Null,,Null,Null,,,,,R1454_P100
+Choice_Story_14541,Choice_Story_1454,1,Normal,Null,Null,, \q아....\q,Null,Null,,Null,Null,,,,,R1457_P100
+Choice_Story_14542,Choice_Story_1454,2,Normal,Null,Null,, \q그래서 도와주시는 겁니까?\q,Null,Null,,Null,Null,,,,,R1458_P100
+Choice_Story_14571,Choice_Story_1457,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1460_P100
+Choice_Story_14581,Choice_Story_1458,1,Normal,Null,Null,, \q걱정 마세요. 반드시 성공할 겁니다.\q,Null,Null,,Null,Null,,,,,R1460_P100
+Choice_Story_14601,Choice_Story_1460,1,Normal,Null,Null,, \q이건 뭐죠?\q,Null,Null,,Null,Null,,,,,R1463_P100
+Choice_Story_14602,Choice_Story_1460,2,Normal,Null,Null,, \q열어 봐도 되나요?\q,Null,Null,,Null,Null,,,,,R1463_P100
+Choice_Story_14631,Choice_Story_1463,1,Normal,Null,Null,, \q도장이네요?\q,Null,Null,,Null,Null,,,,,R1465_P100
+Choice_Story_14651,Choice_Story_1465,1,Normal,Null,Null,, 중요하다 못해 무서울 정도인데....,Null,Null,,Null,Null,,,,,R1467_P100
+Choice_Story_14652,Choice_Story_1465,2,Normal,Null,Null,, \q이걸 제가 받아가도 될까요?\q,Null,Null,,Null,Null,,,,,R1469_P100
+Choice_Story_14653,Choice_Story_1465,3,Normal,Null,Null,, \q목숨이요...?\q,Null,Null,,Null,Null,,,,,R1471_P100
+Choice_Story_14671,Choice_Story_1467,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1473_P100
+Choice_Story_14691,Choice_Story_1469,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1473_P100
+Choice_Story_14711,Choice_Story_1471,1,Normal,Null,Null,, 종이를 가방에 넣는다.,Null,Null,,Null,Null,,,,,R1473_P100
+Choice_Story_14731,Choice_Story_1473,1,Normal,Null,Null,, \q도와주셔서 진심으로 감사합니다.\q,Null,Null,,Null,Null,,,,,R1477_P100
+Choice_Story_14732,Choice_Story_1473,2,Normal,Null,Null,, \q덕분에 잘할 수 있을 것 같네요.\q,Null,Null,,Null,Null,,,,,R1477_P100
+Choice_Story_14733,Choice_Story_1473,3,Normal,Null,Null,, 고개를 숙여 인사한다.,Null,Null,,Null,Null,,,,,R1477_P100
+Choice_Story_14771,Choice_Story_1477,1,Normal,Null,Null,, 빨간 모자의 집으로 향한다.,Null,Null,,Null,Null,,,,,R1479_P100
+Choice_Story_14791,Choice_Story_1479,1,Normal,Null,Null,, 주변을 살핀다.,Null,Null,,Null,Null,,,,,R1481_P100
+Choice_Story_14811,Choice_Story_1481,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1563_P100
+Choice_Story_14831,Choice_Story_1483,1,Normal,Null,Null,, \q같이 가야 해요?\q,Null,Null,,Null,Null,,,,,R1487_P100
+Choice_Story_14832,Choice_Story_1483,2,Normal,Null,Null,, \q어디 가시는데요?\q,Null,Null,,Null,Null,,,,,R1486_P100
+Choice_Story_14861,Choice_Story_1486,1,Normal,Null,Null,, \q여기가 어디에요?\q,Null,Null,,Null,Null,,,,,R1489_P100
+Choice_Story_14871,Choice_Story_1487,1,Normal,Null,Null,, \q여기가 어디에요?\q,Null,Null,,Null,Null,,,,,R1489_P100
+Choice_Story_14891,Choice_Story_1489,1,Normal,Null,Null,, \q우와-.\q,Null,Null,,Null,Null,,,,,R1492_P100
+Choice_Story_14892,Choice_Story_1489,2,Normal,Null,Null,, \q여기 어디냐니깐요?\q,Null,Null,,Null,Null,,,,,R1493_P100
+Choice_Story_14893,Choice_Story_1489,3,Normal,Null,Null,, \q....\q,Null,Null,,Null,Null,,,,,R1495_P100
+Choice_Story_14921,Choice_Story_1492,1,Normal,Null,Null,, \q같이 가요.\q,Null,Null,,Null,Null,,,,,R1497_P100
+Choice_Story_14931,Choice_Story_1493,1,Normal,Null,Null,, \q같이 가요.\q,Null,Null,,Null,Null,,,,,R1497_P100
+Choice_Story_14951,Choice_Story_1495,1,Normal,Null,Null,, \q같이 가요.\q,Null,Null,,Null,Null,,,,,R1497_P100
+Choice_Story_14971,Choice_Story_1497,1,Normal,Null,Null,, 반장님?,Null,Null,,Null,Null,,,,,R1499_P100
+Choice_Story_14991,Choice_Story_1499,1,Normal,Null,Null,, \q아\c 안녕하세요?\q,Null,Null,,Null,Null,,,,,R1503_P100
+Choice_Story_14992,Choice_Story_1499,2,Normal,Null,Null,, 악수를 건넨다.,Null,Null,,Null,Null,,,,,R1504_P100
+Choice_Story_14993,Choice_Story_1499,3,Normal,Null,Null,, \q어.... 처음 뵙겠습니다?\q,Null,Null,,Null,Null,,,,,R1505_P100
+Choice_Story_15031,Choice_Story_1503,1,Normal,Null,Null,, 음.... 가만히 있어야겠지?,Null,Null,,Null,Null,,,,,R1507_P100
+Choice_Story_15041,Choice_Story_1504,1,Normal,Null,Null,, 음.... 가만히 있어야겠지?,Null,Null,,Null,Null,,,,,R1507_P100
+Choice_Story_15051,Choice_Story_1505,1,Normal,Null,Null,, 음.... 가만히 있어야겠지?,Null,Null,,Null,Null,,,,,R1507_P100
+Choice_Story_15071,Choice_Story_1507,1,Normal,Null,Null,, 크흠.,Null,Null,,Null,Null,,,,,R1510_P100
+Choice_Story_15072,Choice_Story_1507,2,Normal,Null,Null,, 푸웁.,Null,Null,,Null,Null,,,,,R1511_P100
+Choice_Story_15101,Choice_Story_1510,1,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1513_P100
+Choice_Story_15102,Choice_Story_1510,2,Normal,Null,Null,, \q늑대요?\q,Null,Null,,Null,Null,,,,,R1517_P100
+Choice_Story_15111,Choice_Story_1511,1,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1513_P100
+Choice_Story_15112,Choice_Story_1511,2,Normal,Null,Null,, \q늑대요?\q,Null,Null,,Null,Null,,,,,R1517_P100
+Choice_Story_15131,Choice_Story_1513,1,Normal,Null,Null,, \q아\c 네....\q,Null,Null,,Null,Null,,,,,R1515_P100
+Choice_Story_15151,Choice_Story_1515,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1519_P100
+Choice_Story_15171,Choice_Story_1517,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1519_P100
+Choice_Story_15191,Choice_Story_1519,1,Normal,Null,Null,, \q그럼 그 여자분도...?\q,Null,Null,,Null,Null,,,,,R1521_P100
+Choice_Story_15192,Choice_Story_1519,2,Normal,Null,Null,, \q아\c 그럼 반장님도...?\q,Null,Null,,Null,Null,,,,,R1525_P100
+Choice_Story_15211,Choice_Story_1521,1,Normal,Null,Null,, \q아....\q,Null,Null,,Null,Null,,,,,R1523_P100
+Choice_Story_15231,Choice_Story_1523,1,Normal,Null,Null,, 지금 내가 있는 곳이 수인물이었던가.,Null,Null,,Null,Null,,,,,R1527_P100
+Choice_Story_15251,Choice_Story_1525,1,Normal,Null,Null,, 지금 내가 있는 곳이 수인물이었던가.,Null,Null,,Null,Null,,,,,R1527_P100
+Choice_Story_15271,Choice_Story_1527,1,Normal,Null,Null,, \q네. 괜찮아요.\q,Null,Null,,Null,Null,,,,,R1529_P100
+Choice_Story_15291,Choice_Story_1529,1,Normal,Null,Null,, \q모든 늑대가 여기 사나요?\q,Null,Null,,Null,Null,,,,,R1531_P100
+Choice_Story_15292,Choice_Story_1529,2,Normal,Null,Null,, \q그럼 반장님은 모든 늑대를 아시는 건가요?\q,Null,Null,,Null,Null,,,,,R1533_P100
+Choice_Story_15311,Choice_Story_1531,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1330_P100
+Choice_Story_15331,Choice_Story_1533,1,Normal,Null,Null,, \q그렇군요.\q,Null,Null,,Null,Null,,,,,R1330_P100
+Choice_Story_15371,Choice_Story_1537,1,Normal,Null,Null,, 숲을 빠져나간다.,Null,Null,,Null,Null,,,,,R1541_P100
+Choice_Story_15391,Choice_Story_1539,1,Normal,Null,Null,, 숲을 빠져나간다.,Null,Null,,Null,Null,,,,,R1541_P100
+Choice_Story_15411,Choice_Story_1541,1,Normal,Null,Null,, 숨을 참는다.,Null,Null,,Null,Null,,,,,R1544_P100
+Choice_Story_15412,Choice_Story_1541,2,Normal,Null,Null,, 손으로 입을 가린다.,Null,Null,,Null,Null,,,,,R1547_P100
+Choice_Story_15441,Choice_Story_1544,1,Normal,Null,Null,, 숨을 쉰다.,Null,Null,,Null,Null,,,,,R1546_P100
+Choice_Story_15461,Choice_Story_1546,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1563_P100
+Choice_Story_15471,Choice_Story_1547,1,Normal,Null,Null,, 손을 내린다.,Null,Null,,Null,Null,,,,,R1549_P100
+Choice_Story_15491,Choice_Story_1549,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1563_P100
+Choice_Story_15511,Choice_Story_1551,1,Normal,Null,Null,, 숲을 빠져나간다.,Null,Null,,Null,Null,,,,,R1541_P100
+Choice_Story_15531,Choice_Story_1553,1,Normal,Null,Null,, 주저앉는다.,Null,Null,,Null,Null,,,,,R1555_P100
+Choice_Story_15532,Choice_Story_1553,2,Normal,Null,Null,, \q하하하하하....\q,Null,Null,,Null,Null,,,,,R1557_P100
+Choice_Story_15551,Choice_Story_1555,1,Normal,Null,Null,, 정신을 차린다.,Null,Null,,Null,Null,,,,,R1559_P100
+Choice_Story_15571,Choice_Story_1557,1,Normal,Null,Null,, 정신을 차린다.,Null,Null,,Null,Null,,,,,R1559_P100
+Choice_Story_15591,Choice_Story_1559,1,Normal,Null,Null,, 몸을 숨긴다.,Null,Null,,Null,Null,,,,,R1561_P100
+Choice_Story_15611,Choice_Story_1561,1,Normal,Null,Null,, 벌써 여기 온 지 4일이나 됐네.,Null,Null,,Null,Null,,,,,R1563_P100
+Choice_Story_15631,Choice_Story_1563,1,Normal,Null,Null,, 또 뭘까.,Null,Null,,Null,Null,,,,,R1566_P100
+Choice_Story_15632,Choice_Story_1563,2,Normal,Null,Null,, \q네?\q,Null,Null,,Null,Null,,,,,R1566_P100
+Choice_Story_15661,Choice_Story_1566,1,Normal,Null,Null,, \q아마도요?\q,Null,Null,,Null,Null,,,,,R1569_P100
+Choice_Story_15662,Choice_Story_1566,2,Normal,Null,Null,, \q네.\q,Null,Null,,Null,Null,,,,,R1569_P100
+Choice_Story_15691,Choice_Story_1569,1,Normal,Null,Null,, \q내일까지만 있을 것 같아요.\q,Null,Null,,Null,Null,,,,,R1571_P100
+Choice_Story_15711,Choice_Story_1571,1,Normal,Null,Null,, \q내일 다 끝날 것 같아요.\q,Null,Null,,Null,Null,,,,,R1575_P100
+Choice_Story_15712,Choice_Story_1571,2,Normal,Null,Null,, \q뭐\c 나쁘지 않아요.\q,Null,Null,,Null,Null,,,,,R1575_P100
+Choice_Story_15713,Choice_Story_1571,3,Normal,Null,Null,, \q잘 모르겠네요.\q,Null,Null,,Null,Null,,,,,R1575_P100
+Choice_Story_15751,Choice_Story_1575,1,Normal,Null,Null,, 왜 뭔가 익숙하지?,Null,Null,,Null,Null,,,,,R1577_P100
+Choice_Story_15771,Choice_Story_1577,1,Normal,Null,Null,, \q지금은 괜찮을 것 같아요.\q,Null,Null,,Null,Null,,,,,R1581_P100
+Choice_Story_15772,Choice_Story_1577,2,Normal,Null,Null,, \q지금은 마음만 받을게요.\q,Null,Null,,Null,Null,,,,,R1581_P100
+Choice_Story_15773,Choice_Story_1577,3,Normal,Null,Null,, \q필요할 때 말씀드릴게요.\q,Null,Null,,Null,Null,,,,,R1581_P100
+Choice_Story_15811,Choice_Story_1581,1,Normal,Null,Null,, \q오늘 숙박비 드릴게요.\q,Null,Null,,Null,Null,,,,,R1583_P100
+Choice_Story_15831,Choice_Story_1583,1,Normal,Null,Null,, 201호로 간다.,Null,Null,,Null,Null,,,,,R1613_P100
+Choice_Story_15832,Choice_Story_1583,2,Hidden,Item_book,More,0, 김 사장에게 메모지를 얻는다.,Null,Null,,Null,Null,,,,,R1587_P100
+Choice_Story_15833,Choice_Story_1583,3,Hidden,Item_card,More,0, 분수대로 간다.,Null,Null,,Null,Null,,,,,R1597_P100
+Choice_Story_15871,Choice_Story_1587,1,Normal,Null,Null,, 메모를 쓴다.,Null,Null,,Null,Null,,,,,R1589_P100
+Choice_Story_15891,Choice_Story_1589,1,Normal,Null,Null,, 2번가 27로 간다.,Null,Null,,Null,Null,,,,,R1591_P100
+Choice_Story_15911,Choice_Story_1591,1,Normal,Null,Null,, 우체통에 붙어 있는 파일을 열어 본다.,Null,Null,,Null,Null,,,,,R1593_P100
+Choice_Story_15931,Choice_Story_1593,1,Normal,Null,Null,, 우체통에 책을 넣는다.,Null,Null,,Null,Null,,,,,R1595_P100
+Choice_Story_15951,Choice_Story_1595,1,Normal,Null,Null,, 숙소로 간다.,Null,Null,,Null,Null,,,,,R1613_P100
+Choice_Story_15971,Choice_Story_1597,1,Normal,Null,Null,, 안내판 앞으로 간다.,Null,Null,,Null,Null,,,,,R1599_P100
+Choice_Story_15991,Choice_Story_1599,1,Normal,Null,Null,, \q정 가이드님!\q,Null,Null,,Null,Null,,,,,R1601_P100
+Choice_Story_16011,Choice_Story_1601,1,Normal,Null,Null,, \q그 날 봤던 종이\c 제가 하루만 가지고 있어도 될까요?\q,Null,Null,,Null,Null,,,,,R1603_P100
+Choice_Story_16031,Choice_Story_1603,1,Normal,Null,Null,, \q저한테는 꼭 필요한 자료라서요.\q,Null,Null,,Null,Null,,,,,R1606_P100
+Choice_Story_16032,Choice_Story_1603,2,Normal,Null,Null,, \q도움이 필요하면 말하라면서요. 그게 필요한 도움인데요.\q,Null,Null,,Null,Null,,,,,R1607_P100
+Choice_Story_16061,Choice_Story_1606,1,Normal,Null,Null,, \q딱 하루면 됩니다.\q,Null,Null,,Null,Null,,,,,R1609_P100
+Choice_Story_16071,Choice_Story_1607,1,Normal,Null,Null,, \q딱 하루면 됩니다.\q,Null,Null,,Null,Null,,,,,R1609_P100
+Choice_Story_16091,Choice_Story_1609,1,Normal,Null,Null,, 고개를 끄덕인다.,Null,Null,,Null,Null,,,,,R1611_P100
+Choice_Story_16111,Choice_Story_1611,1,Normal,Null,Null,, 숙소로 간다.,Null,Null,,Null,Null,,,,,R1613_P100
+Choice_Story_16131,Choice_Story_1613,1,Normal,Null,Null,, 하루를 마무리한다.,Null,Null,,Null,Null,,,,,R1615_P100
+Choice_Story_16151,Choice_Story_1615,1,Normal,Null,Null,, 나갈 준비를 한다.,Null,Null,,Null,Null,,,,,R1617_P100
+Choice_Story_16171,Choice_Story_1617,1,Normal,Null,Null,, \q저... 사장님?\q,Null,Null,,Null,Null,,,,,R1620_P100
+Choice_Story_16172,Choice_Story_1617,2,Normal,Null,Null,, \q김 사장님!\q,Null,Null,,Null,Null,,,,,R1620_P100
+Choice_Story_16173,Choice_Story_1617,3,Normal,Null,Null,, \q계세요?\q,Null,Null,,Null,Null,,,,,R1620_P100
+Choice_Story_16201,Choice_Story_1620,1,Normal,Null,Null,, 김 사장을 일으켜 준다.,Null,Null,,Null,Null,,,,,R1624_P100
+Choice_Story_16202,Choice_Story_1620,2,Normal,Null,Null,, 김 사장에게 손을 내민다.,Null,Null,,Null,Null,,,,,R1624_P100
+Choice_Story_16241,Choice_Story_1624,1,Normal,Null,Null,, \q저 이제 나가려구요.\q,Null,Null,,Null,Null,,,,,R1626_P100
+Choice_Story_16242,Choice_Story_1624,2,Normal,Null,Null,, \q없어요.\q,Null,Null,,Null,Null,,,,,R1631_P100
+Choice_Story_16243,Choice_Story_1624,3,Normal,Null,Null,, \q방 잘 썼어요\c 사장님.\q,Null,Null,,Null,Null,,,,,R1633_P100
+Choice_Story_16244,Choice_Story_1624,4,Normal,Null,Null,, \q전혀요. 그냥 인사?\q,Null,Null,,Null,Null,,,,,R1637_P100
+Choice_Story_16261,Choice_Story_1626,1,Normal,Null,Null,, \q나쁘지 않았어요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16262,Choice_Story_1626,2,Normal,Null,Null,, \q좋았어요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16263,Choice_Story_1626,3,Normal,Null,Null,, \q잘 쉬었어요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16311,Choice_Story_1631,1,Normal,Null,Null,, \q나쁘지 않았어요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16312,Choice_Story_1631,2,Normal,Null,Null,, \q좋았어요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16313,Choice_Story_1631,3,Normal,Null,Null,, \q잘 쉬었어요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16331,Choice_Story_1633,1,Normal,Null,Null,, \q덕분에요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16332,Choice_Story_1633,2,Normal,Null,Null,, \q감사해요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16371,Choice_Story_1637,1,Normal,Null,Null,, \q당연하더라도요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16372,Choice_Story_1637,2,Normal,Null,Null,, \q진심이에요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16373,Choice_Story_1637,3,Normal,Null,Null,, \q시원섭섭하네요.\q,Null,Null,,Null,Null,,,,,R1641_P100
+Choice_Story_16411,Choice_Story_1641,1,Normal,Null,Null,, 악수를 청한다. ,Null,Null,,Null,Null,,,,,R1643_P100
+Choice_Story_16412,Choice_Story_1641,2,Normal,Null,Null,, 고개를 숙인다.,Null,Null,,Null,Null,,,,,R1645_P100
+Choice_Story_16431,Choice_Story_1643,1,Hidden,Item_postit,Equal,0, 거리로 나선다.,Null,Null,,Null,Null,,,,,R1647_P100
+Choice_Story_16432,Choice_Story_1643,2,Hidden,Item_postit,More,0, 기다린다. ,Null,Null,,Null,Null,,,,,R1666_P100
+Choice_Story_16451,Choice_Story_1645,1,Hidden,Item_postit,Equal,0, 거리로 나선다.,Null,Null,,Null,Null,,,,,R1647_P100
+Choice_Story_16452,Choice_Story_1645,2,Hidden,Item_postit,More,0, 기다린다. ,Null,Null,,Null,Null,,,,,R1666_P100
+Choice_Story_16471,Choice_Story_1647,1,Normal,Null,Null,, 하하.,Null,Null,,Null,Null,,,,,R1649_P100
+Choice_Story_16472,Choice_Story_1647,2,Normal,Null,Null,, 빨간 모자의 시작.,Null,Null,,Null,Null,,,,,R1658_P100
+Choice_Story_16473,Choice_Story_1647,3,Normal,Null,Null,, 사람이 가장 많은 곳.,Null,Null,,Null,Null,,,,,R1660_P100
+Choice_Story_16491,Choice_Story_1649,1,Normal,Null,Null,, 텔레비전 속?,Null,Null,,Null,Null,,,,,R1651_P100
+Choice_Story_16492,Choice_Story_1649,2,Normal,Null,Null,, 마법의 상점?,Null,Null,,Null,Null,,,,,R1654_P100
+Choice_Story_16511,Choice_Story_1651,1,Normal,Null,Null,, 사무실로 걸어간다. ,Null,Null,,Null,Null,,,,,
+Choice_Story_16541,Choice_Story_1654,1,Normal,Null,Null,, 어디로 가야 할까.,Null,Null,,Null,Null,,,,,R1656_P100
+Choice_Story_16561,Choice_Story_1656,1,Normal,Null,Null,, 빨간 모자의 시작.,Null,Null,,Null,Null,,,,,R1658_P100
+Choice_Story_16562,Choice_Story_1656,2,Normal,Null,Null,, 사람이 가장 많은 곳. ,Null,Null,,Null,Null,,,,,R1660_P100
+Choice_Story_16581,Choice_Story_1658,1,Normal,Null,Null,, 로도드 숲 앞에 도착한다.,Null,Null,,Null,Null,,,,,
+Choice_Story_16601,Choice_Story_1660,1,Normal,Null,Null,, 분수대에 도착한다.,Null,Null,,Null,Null,,,,,
+Choice_Story_16661,Choice_Story_1666,1,Normal,Null,Null,, 몇 시야.,Null,Null,,Null,Null,,,,,R1670_P100
+Choice_Story_16662,Choice_Story_1666,2,Normal,Null,Null,, 왜 안 오지?,Null,Null,,Null,Null,,,,,R1670_P100
+Choice_Story_16663,Choice_Story_1666,3,Normal,Null,Null,, 아직 11시 안 되긴 했으니까....,Null,Null,,Null,Null,,,,,R1670_P100
+Choice_Story_16701,Choice_Story_1670,1,Normal,Null,Null,, \q괜찮아요.\q,Null,Null,,Null,Null,,,,,R1674_P100
+Choice_Story_16702,Choice_Story_1670,2,Normal,Null,Null,, \q안 늦었어요.\q,Null,Null,,Null,Null,,,,,R1674_P100
+Choice_Story_16703,Choice_Story_1670,3,Normal,Null,Null,, \q아니에요. 와 주셔서 감사합니다.\q,Null,Null,,Null,Null,,,,,R1674_P100
+Choice_Story_16741,Choice_Story_1674,1,Normal,Null,Null,, \q사람들에게 빨간 모자에 대해 알려 줘야죠.\q,Null,Null,,Null,Null,,,,,R1676_P100
+Choice_Story_16742,Choice_Story_1674,2,Normal,Null,Null,, \q이 마을을 뒤집어 엎으면 됩니다.\q,Null,Null,,Null,Null,,,,,R1678_P100
+Choice_Story_16743,Choice_Story_1674,3,Normal,Null,Null,, \q빨간 모자를 망가뜨려 줄 거예요.\q,Null,Null,,Null,Null,,,,,R1680_P100
+Choice_Story_16761,Choice_Story_1676,1,Normal,Null,Null,, \q어디에서 해야 효과가 크려나.\q,Null,Null,,Null,Null,,,,,R1682_P100
+Choice_Story_16781,Choice_Story_1678,1,Normal,Null,Null,, \q어디에서 해야 효과가 크려나.\q,Null,Null,,Null,Null,,,,,R1682_P100
+Choice_Story_16801,Choice_Story_1680,1,Normal,Null,Null,, \q어디에서 해야 효과가 크려나.\q,Null,Null,,Null,Null,,,,,R1682_P100
+Choice_Story_16821,Choice_Story_1682,1,Normal,Null,Null,, 사람이 가장 많은 곳.,Null,Null,,Null,Null,,,,,R1684_P100
+Choice_Story_16822,Choice_Story_1682,2,Normal,Null,Null,, 사람들이 많이 보는 방송.,Null,Null,,Null,Null,,,,,R1687_P100
+Choice_Story_16841,Choice_Story_1684,1,Normal,Null,Null,,  분수대에 도착한다. ,Null,Null,,Null,Null,,,,,
+Choice_Story_16871,Choice_Story_1687,1,Normal,Null,Null,, 김 사장.,Null,Null,,Null,Null,,,,,R1689_P100
+Choice_Story_16872,Choice_Story_1687,2,Normal,Null,Null,, 마법의 상점 사장.,Null,Null,,Null,Null,,,,,R1691_P100
+Choice_Story_16891,Choice_Story_1689,1,Normal,Null,Null,,  \q들어가시죠.\q,Null,Null,,Null,Null,,,,,
+Choice_Story_16911,Choice_Story_1691,1,Normal,Null,Null,, \q'오로라'의 DJ 알아요?\q,Null,Null,,Null,Null,,,,,R1693_P100
+Choice_Story_16931,Choice_Story_1693,1,Normal,Null,Null,, 분수대에 도착한다.,Null,Null,,Null,Null,,,,,
